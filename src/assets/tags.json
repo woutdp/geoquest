@@ -1,0 +1,9 @@
+{
+    "World": {
+        "Asia": ["Asia", "Middle East", "Southeast Asia", "Central Asia"],
+        "Europe": ["Europe", "Balkans"],
+        "America": ["North America", "South America", "Central America", "Caribbean"],
+        "Africa": ["Africa", "North Africa", "Southern Africa", "West Africa", "East Africa", "Central Africa"],
+        "Oceania": ["Oceania"]
+    }
+}

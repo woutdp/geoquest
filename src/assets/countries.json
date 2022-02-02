@@ -1,0 +1,1789 @@
+{
+    "Andorra": {
+        "ISO2": "AD",
+        "ISO3": "AND",
+        "color": 1,
+        "tags": ["Europe"],
+        "difficulty": 1
+    },
+    "United Arab Emirates": {
+        "ISO2": "AE",
+        "ISO3": "ARE",
+        "color": 3,
+        "tags": ["Asia", "Middle East"],
+        "difficulty": 2
+    },
+    "Afghanistan": {
+        "ISO2": "AF",
+        "ISO3": "AFG",
+        "color": 0,
+        "tags": ["Asia", "Middle East", "Central Asia"],
+        "difficulty": 1
+    },
+    "Antigua and Barbuda": {
+        "ISO2": "AG",
+        "ISO3": "ATG",
+        "color": 3,
+        "tags": ["Caribbean"],
+        "difficulty": 3
+    },
+    "Anguilla": {
+        "ISO2": "AI",
+        "ISO3": "AIA",
+        "color": 3,
+        "belongsTo": "United Kingdom",
+        "tags": ["North America", "Caribbean"],
+        "difficulty": 3
+    },
+    "Albania": {
+        "ISO2": "AL",
+        "ISO3": "ALB",
+        "color": 3,
+        "tags": ["Europe", "Balkans", "Nato Members"],
+        "difficulty": 2
+    },
+    "Armenia": {
+        "ISO2": "AM",
+        "ISO3": "ARM",
+        "color": 1,
+        "tags": ["Middle East", "Asia"],
+        "difficulty": 1
+    },
+    "Angola": {
+        "ISO2": "AO",
+        "ISO3": "ANG",
+        "color": 2,
+        "tags": ["Africa", "Central Africa"],
+        "difficulty": 2
+    },
+    "Argentina": {
+        "ISO2": "AR",
+        "ISO3": "ARG",
+        "color": 3,
+        "tags": ["South America"],
+        "difficulty": 1
+    },
+    "American Samoa": {
+        "ISO2": "AS",
+        "ISO3": "ASM",
+        "color": 0,
+        "belongsTo": "United States of America",
+        "tags": ["Oceania"],
+        "difficulty": 3
+    },
+    "Austria": {
+        "ISO2": "AT",
+        "ISO3": "AUT",
+        "color": 0,
+        "tags": ["Europe"],
+        "difficulty": 0
+    },
+    "Australia": {
+        "ISO2": "AU",
+        "ISO3": "AUS",
+        "color": 3,
+        "tags": ["Oceania"],
+        "center": [133.47670515346655, -23.802641786690405],
+        "difficulty": 0
+    },
+    "Aruba": {
+        "ISO2": "AW",
+        "ISO3": "ABW",
+        "belongsTo": "Netherlands",
+        "color": 3,
+        "tags": ["Europe"],
+        "difficulty": 3
+    },
+    "Azerbaijan": {
+        "ISO2": "AZ",
+        "ISO3": "AZE",
+        "color": 3,
+        "tags": ["Middle East", "Asia"],
+        "difficulty": 2
+    },
+    "Bosnia and Herzegovina": {
+        "ISO2": "BA",
+        "ISO3": "BIH",
+        "color": 3,
+        "tags": ["Europe", "Balkans"],
+        "difficulty": 2
+    },
+    "Barbados": {
+        "ISO2": "BB",
+        "ISO3": "BRB",
+        "color": 3,
+        "tags": ["Caribbean"],
+        "difficulty": 3
+    },
+    "Bangladesh": {
+        "ISO2": "BD",
+        "ISO3": "BGD",
+        "color": 2,
+        "tags": ["Asia"],
+        "difficulty": 2
+    },
+    "Belgium": {
+        "ISO2": "BE",
+        "ISO3": "BEL",
+        "color": 0,
+        "tags": ["Europe", "Nato Members"],
+        "difficulty": 0
+    },
+    "Burkina Faso": {
+        "ISO2": "BF",
+        "ISO3": "BFA",
+        "color": 2,
+        "tags": ["Africa", "West Africa"],
+        "difficulty": 2
+    },
+    "Bulgaria": {
+        "ISO2": "BG",
+        "ISO3": "BGR",
+        "color": 3,
+        "tags": ["Europe", "Balkans", "Nato Members"],
+        "difficulty": 2
+    },
+    "Bahrain": {
+        "ISO2": "BH",
+        "ISO3": "BHR",
+        "color": 3,
+        "tags": ["Middle East", "Asia"],
+        "difficulty": 2
+    },
+    "Burundi": {
+        "ISO2": "BI",
+        "ISO3": "BDI",
+        "color": 2,
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 3
+    },
+    "Benin": {
+        "ISO2": "BJ",
+        "ISO3": "BEN",
+        "color": 1,
+        "tags": ["Africa", "West Africa"],
+        "center": [2.172378097907435, 8.85544250828145],
+        "difficulty": 2
+    },
+    "Bermuda": {
+        "ISO2": "BM",
+        "ISO3": "BMU",
+        "color": 0,
+        "belongsTo": "United Kingdom",
+        "tags": ["North America"],
+        "difficulty": 2
+    },
+    "Bolivia": {
+        "ISO2": "BO",
+        "ISO3": "BOL",
+        "color": 2,
+        "tags": ["South America"],
+        "difficulty": 1
+    },
+    "Brazil": {
+        "ISO2": "BR",
+        "ISO3": "BRA",
+        "color": 0,
+        "tags": ["South America"],
+        "difficulty": 0
+    },
+    "Bhutan": {
+        "ISO2": "BT",
+        "ISO3": "BTN",
+        "color": 3,
+        "tags": ["Asia"],
+        "difficulty": 2
+    },
+    "Botswana": {
+        "ISO2": "BW",
+        "ISO3": "BWA",
+        "color": 2,
+        "tags": ["Africa", "Southern Africa"],
+        "difficulty": 2
+    },
+    "Belarus": {
+        "ISO2": "BY",
+        "ISO3": "BLR",
+        "color": 3,
+        "tags": ["Europe"],
+        "difficulty": 1
+    },
+    "Belize": {
+        "ISO2": "BZ",
+        "ISO3": "BLZ",
+        "color": 2,
+        "tags": ["Central America"],
+        "difficulty": 1
+    },
+    "Canada": {
+        "ISO2": "CA",
+        "ISO3": "CAN",
+        "color": 1,
+        "tags": ["North America", "Nato Members"],
+        "center": [-105.70728654359463, 58.48437067755612],
+        "difficulty": 0
+    },
+    "Central African Republic": {
+        "ISO2": "CF",
+        "ISO3": "CAF",
+        "color": 2,
+        "tags": ["Africa", "Central Africa"],
+        "difficulty": 2
+    },
+    "Switzerland": {
+        "ISO2": "CH",
+        "ISO3": "CHE",
+        "color": 1,
+        "tags": ["Europe"],
+        "difficulty": 0
+    },
+    "Cook Islands": {
+        "ISO2": "CK",
+        "ISO3": "COK",
+        "color": 0,
+        "belongsTo": "New Zealand",
+        "tags": ["Oceania"],
+        "difficulty": 3
+    },
+    "Chile": {
+        "ISO2": "CL",
+        "ISO3": "CHL",
+        "color": 0,
+        "tags": ["South America"],
+        "center": [-70.76867620861314, -28.81400028445949],
+        "difficulty": 1
+    },
+    "Cameroon": {
+        "ISO2": "CM",
+        "ISO3": "CMR",
+        "color": 1,
+        "tags": ["Africa", "Central Africa"],
+        "center": [12.401950934239693, 4.997120863908812],
+        "difficulty": 2
+    },
+    "China": {
+        "ISO2": "CN",
+        "ISO3": "CHN",
+        "color": 2,
+        "tags": ["Asia"],
+        "difficulty": 0
+    },
+    "Colombia": {
+        "ISO2": "CO",
+        "ISO3": "COL",
+        "color": 1,
+        "tags": ["South America"],
+        "difficulty": 1
+    },
+    "Costa Rica": {
+        "ISO2": "CR",
+        "ISO3": "CRI",
+        "color": 2,
+        "tags": ["Central America"],
+        "center": [-83.9941012302606, 9.99734217084615],
+        "difficulty": 1
+    },
+    "Cuba": {
+        "ISO2": "CU",
+        "ISO3": "CUB",
+        "color": 1,
+        "tags": ["Caribbean"],
+        "difficulty": 0
+    },
+    "Cape Verde": {
+        "ISO2": "CV",
+        "ISO3": "CPV",
+        "color": 0,
+        "tags": ["Africa", "West Africa"],
+        "difficulty": 3
+    },
+    "Curaçao": {
+        "ISO2": "CW",
+        "ISO3": "CUW",
+        "belongsTo": "Netherlands",
+        "color": 0,
+        "tags": ["Europe"],
+        "difficulty": 3
+    },
+    "Cyprus": {
+        "ISO2": "CY",
+        "ISO3": "CYP",
+        "color": 1,
+        "tags": ["Europe", "Asia", "Middle East"],
+        "difficulty": 1
+    },
+    "Czech Republic": {
+        "ISO2": "CZ",
+        "ISO3": "CZE",
+        "color": 2,
+        "tags": ["Europe", "Nato Members"],
+        "difficulty": 1
+    },
+    "Germany": {
+        "ISO2": "DE",
+        "ISO3": "DEU",
+        "color": 3,
+        "tags": ["Europe", "Nato Members"],
+        "difficulty": 0
+    },
+    "Djibouti": {
+        "ISO2": "DJ",
+        "ISO3": "DJI",
+        "color": 1,
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 3
+    },
+    "Denmark": {
+        "ISO2": "DK",
+        "ISO3": "DNK",
+        "color": 0,
+        "tags": ["Europe", "Nato Members"],
+        "center": [9.335752921550553, 55.97380721039201],
+        "difficulty": 1
+    },
+    "Dominica": {
+        "ISO2": "DM",
+        "ISO3": "DMA",
+        "color": 3,
+        "tags": ["Caribbean"],
+        "difficulty": 3
+    },
+    "Dominican Republic": {
+        "ISO2": "DO",
+        "ISO3": "DOM",
+        "color": 1,
+        "tags": ["Caribbean"],
+        "difficulty": 2
+    },
+    "Algeria": {
+        "ISO2": "DZ",
+        "ISO3": "DZA",
+        "color": 1,
+        "tags": ["Africa", "North Africa"],
+        "difficulty": 2
+    },
+    "Ecuador": {
+        "ISO2": "EC",
+        "ISO3": "ECU",
+        "color": 0,
+        "tags": ["South America"],
+        "center": [-78.62946370514271, -1.214686887656204],
+        "difficulty": 2
+    },
+    "Estonia": {
+        "ISO2": "EE",
+        "ISO3": "EST",
+        "color": 2,
+        "tags": ["Europe", "Nato Members"],
+        "difficulty": 1
+    },
+    "Egypt": {
+        "ISO2": "EG",
+        "ISO3": "EGY",
+        "color": 0,
+        "tags": ["Africa", "North Africa"],
+        "difficulty": 1
+    },
+    "Western Sahara": {
+        "ISO2": "EH",
+        "ISO3": "ESH",
+        "color": 2,
+        "tags": ["Africa", "West Africa", "North Africa"],
+        "difficulty": 2
+    },
+    "Eritrea": {
+        "ISO2": "ER",
+        "ISO3": "ERI",
+        "color": 0,
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 2
+    },
+    "Spain": {
+        "ISO2": "ES",
+        "ISO3": "ESP",
+        "color": 3,
+        "tags": ["Europe", "Nato Members"],
+        "center": [-3.0717044174509396, 40.424401294661195],
+        "difficulty": 0
+    },
+    "Ethiopia": {
+        "ISO2": "ET",
+        "ISO3": "ETH",
+        "color": 2,
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 1
+    },
+    "Finland": {
+        "ISO2": "FI",
+        "ISO3": "FIN",
+        "color": 3,
+        "tags": ["Europe"],
+        "difficulty": 0
+    },
+    "Fiji": {
+        "ISO2": "FJ",
+        "ISO3": "FJI",
+        "squareKm": 18274,
+        "color": 0,
+        "tags": ["Oceania"],
+        "center": [177.99382674530062, -17.79562720702393],
+        "difficulty": 3
+    },
+    "Faeroe Islands": {
+        "ISO2": "FO",
+        "ISO3": "FRO",
+        "color": 0,
+        "belongsTo": "Denmark",
+        "tags": ["Europe"],
+        "difficulty": 3
+    },
+    "France": {
+        "ISO2": "FR",
+        "ISO3": "FRA",
+        "color": 2,
+        "tags": ["Europe", "Nato Members", "Nato Members"],
+        "center": [2.66231112736339, 47.03617643043381],
+        "difficulty": 0
+    },
+    "Gabon": {
+        "ISO2": "GA",
+        "ISO3": "GAB",
+        "color": 3,
+        "tags": ["Africa", "Central Africa"],
+        "difficulty": 2
+    },
+    "United Kingdom": {
+        "ISO2": "GB",
+        "ISO3": "GBR",
+        "color": 1,
+        "tags": ["Europe", "Nato Members"],
+        "center": [-1.7925572146753699, 53.47866617698413],
+        "difficulty": 0
+    },
+    "Grenada": {
+        "ISO2": "GD",
+        "ISO3": "GRD",
+        "color": 1,
+        "tags": ["Caribbean"],
+        "difficulty": 3
+    },
+    "Georgia": {
+        "ISO2": "GE",
+        "ISO3": "GEO",
+        "color": 2,
+        "tags": ["Asia", "Middle East"],
+        "difficulty": 2
+    },
+    "Guernsey": {
+        "ISO2": "GG",
+        "ISO3": "GGY",
+        "color": 3,
+        "belongsTo": "United Kingdom",
+        "tags": ["Europe"],
+        "difficulty": 3
+    },
+    "Ghana": {
+        "ISO2": "GH",
+        "ISO3": "GHA",
+        "color": 0,
+        "tags": ["Africa", "West Africa"],
+        "difficulty": 2
+    },
+    "Gibraltar": {
+        "ISO2": "GI",
+        "ISO3": "GIB",
+        "color": 2,
+        "belongsTo": "United Kingdom",
+        "tags": ["Europe"],
+        "difficulty": 1
+    },
+    "Greenland": {
+        "ISO2": "GL",
+        "ISO3": "GRL",
+        "color": 0,
+        "tags": ["North America"],
+        "difficulty": 0
+    },
+    "Gambia": {
+        "ISO2": "GM",
+        "ISO3": "GMB",
+        "color": 3,
+        "tags": ["Africa", "West Africa"],
+        "difficulty": 2
+    },
+    "Guinea": {
+        "ISO2": "GN",
+        "ISO3": "GIN",
+        "color": 2,
+        "tags": ["Africa", "West Africa"],
+        "center": [-10.717036643858407, 10.905978767176759],
+        "difficulty": 2
+    },
+    "Equatorial Guinea": {
+        "ISO2": "GQ",
+        "ISO3": "GNQ",
+        "color": 0,
+        "tags": ["Africa", "Central Africa"],
+        "center": [10.439171327788834, 1.6017293986379673],
+        "difficulty": 2
+    },
+    "Greece": {
+        "ISO2": "GR",
+        "ISO3": "GRC",
+        "color": 2,
+        "tags": ["Europe", "Balkans", "Nato Members"],
+        "difficulty": 0
+    },
+    "Guatemala": {
+        "ISO2": "GT",
+        "ISO3": "GTM",
+        "color": 1,
+        "tags": ["Central America"],
+        "difficulty": 1
+    },
+    "Guam": {
+        "ISO2": "GU",
+        "ISO3": "GUM",
+        "color": 0,
+        "belongsTo": "United States of America",
+        "difficulty": 3
+    },
+    "Guinea-Bissau": {
+        "ISO2": "GW",
+        "ISO3": "GNB",
+        "color": 0,
+        "tags": ["Africa", "West Africa"],
+        "difficulty": 2
+    },
+    "Guyana": {
+        "ISO2": "GY",
+        "ISO3": "GUY",
+        "color": 3,
+        "tags": ["South America"],
+        "difficulty": 3
+    },
+    "Hong Kong": {
+        "ISO2": "HK",
+        "ISO3": "HKG",
+        "color": 0,
+        "belongsTo": "China",
+        "tags": ["Asia"],
+        "difficulty": 1
+    },
+    "Honduras": {
+        "ISO2": "HN",
+        "ISO3": "HND",
+        "color": 0,
+        "tags": ["Central America"],
+        "difficulty": 2
+    },
+    "Croatia": {
+        "ISO2": "HR",
+        "ISO3": "HRV",
+        "color": 0,
+        "tags": ["Europe", "Balkans", "Nato Members"],
+        "difficulty": 1
+    },
+    "Haiti": {
+        "ISO2": "HT",
+        "ISO3": "HTI",
+        "color": 0,
+        "tags": ["Caribbean"],
+        "difficulty": 1
+    },
+    "Hungary": {
+        "ISO2": "HU",
+        "ISO3": "HUN",
+        "color": 3,
+        "tags": ["Europe", "Nato Members"],
+        "difficulty": 1
+    },
+    "Indonesia": {
+        "ISO2": "ID",
+        "ISO3": "IDN",
+        "color": 2,
+        "tags": ["Asia", "Oceania", "Southeast Asia"],
+        "difficulty": 1
+    },
+    "Ireland": {
+        "ISO2": "IE",
+        "ISO3": "IRL",
+        "color": 2,
+        "tags": ["Europe"],
+        "difficulty": 0
+    },
+    "Israel": {
+        "ISO2": "IL",
+        "ISO3": "ISR",
+        "color": 3,
+        "tags": ["Asia", "Middle East"],
+        "difficulty": 1
+    },
+    "Isle of Man": {
+        "ISO2": "IM",
+        "ISO3": "IMN",
+        "color": 3,
+        "belongsTo": "United Kingdom",
+        "tags": ["Europe"],
+        "difficulty": 3
+    },
+    "India": {
+        "ISO2": "IN",
+        "ISO3": "IND",
+        "color": 1,
+        "tags": ["Asia"],
+        "center": [79.21957187989874, 22.726114056408363],
+        "difficulty": 0
+    },
+    "British Indian Ocean Territory": {
+        "ISO2": "IO",
+        "ISO3": "IOT",
+        "color": 1,
+        "belongsTo": "United Kingdom",
+        "difficulty": 3
+    },
+    "Iraq": {
+        "ISO2": "IQ",
+        "ISO3": "IRQ",
+        "color": 3,
+        "tags": ["Asia", "Middle East"],
+        "difficulty": 1
+    },
+    "Iran": {
+        "ISO2": "IR",
+        "ISO3": "IRN",
+        "color": 2,
+        "tags": ["Asia", "Middle East"],
+        "difficulty": 1
+    },
+    "Iceland": {
+        "ISO2": "IS",
+        "ISO3": "ISL",
+        "color": 3,
+        "tags": ["Europe", "Nato Members"],
+        "difficulty": 0
+    },
+    "Italy": {
+        "ISO2": "IT",
+        "ISO3": "ITA",
+        "color": 3,
+        "tags": ["Europe", "Nato Members"],
+        "center": [12.275743711963917, 43.06343709650746],
+        "difficulty": 0
+    },
+    "Jersey": {
+        "ISO2": "JE",
+        "ISO3": "JEY",
+        "color": 0,
+        "belongsTo": "United Kingdom",
+        "tags": ["Europe"],
+        "difficulty": 3
+    },
+    "Jamaica": {
+        "ISO2": "JM",
+        "ISO3": "JAM",
+        "color": 3,
+        "tags": ["Caribbean"],
+        "difficulty": 1
+    },
+    "Jordan": {
+        "ISO2": "JO",
+        "ISO3": "JOR",
+        "color": 0,
+        "tags": ["Asia", "Middle East"],
+        "difficulty": 2
+    },
+    "Japan": {
+        "ISO2": "JP",
+        "ISO3": "JPN",
+        "color": 0,
+        "tags": ["Asia"],
+        "difficulty": 0
+    },
+    "Kenya": {
+        "ISO2": "KE",
+        "ISO3": "KEN",
+        "color": 0,
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 2
+    },
+    "Kyrgyzstan": {
+        "ISO2": "KG",
+        "ISO3": "KGZ",
+        "color": 1,
+        "tags": ["Asia", "Central Asia"],
+        "difficulty": 2
+    },
+    "Cambodia": {
+        "ISO2": "KH",
+        "ISO3": "KHM",
+        "color": 0,
+        "tags": ["Asia", "Southeast Asia"],
+        "difficulty": 2
+    },
+    "Kiribati": {
+        "ISO2": "KI",
+        "ISO3": "KIR",
+        "color": 1,
+        "tags": ["Oceania"],
+        "center": [-171.79135921304464, -3.394810671139621],
+        "difficulty": 3
+    },
+    "Comoros": {
+        "ISO2": "KM",
+        "ISO3": "COM",
+        "color": 3,
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 3
+    },
+    "Saint Kitts and Nevis": {
+        "ISO2": "KN",
+        "ISO3": "KNA",
+        "color": 0,
+        "tags": ["Caribbean"],
+        "difficulty": 3
+    },
+    "North Korea": {
+        "ISO2": "KP",
+        "ISO3": "PRK",
+        "color": 3,
+        "tags": ["Asia"],
+        "difficulty": 0
+    },
+    "South Korea": {
+        "ISO2": "KR",
+        "ISO3": "KOR",
+        "color": 1,
+        "tags": ["Asia"],
+        "difficulty": 0
+    },
+    "Kuwait": {
+        "ISO2": "KW",
+        "ISO3": "KWT",
+        "color": 0,
+        "tags": ["Asia", "Middle East"],
+        "difficulty": 2
+    },
+    "Cayman Islands": {
+        "ISO2": "KY",
+        "ISO3": "CYM",
+        "color": 2,
+        "belongsTo": "United Kingdom",
+        "difficulty": 3
+    },
+    "Kazakhstan": {
+        "ISO2": "KZ",
+        "ISO3": "KAZ",
+        "color": 3,
+        "tags": ["Asia", "Central Asia"],
+        "difficulty": 2
+    },
+    "Lebanon": {
+        "ISO2": "LB",
+        "ISO3": "LBN",
+        "color": 2,
+        "tags": ["Asia", "Middle East"],
+        "difficulty": 2
+    },
+    "Saint Lucia": {
+        "ISO2": "LC",
+        "ISO3": "LCA",
+        "color": 1,
+        "tags": ["Caribbean"],
+        "difficulty": 3
+    },
+    "Liechtenstein": {
+        "ISO2": "LI",
+        "ISO3": "LIE",
+        "color": 2,
+        "tags": ["Europe"],
+        "difficulty": 2
+    },
+    "Sri Lanka": {
+        "ISO2": "LK",
+        "ISO3": "LKA",
+        "color": 3,
+        "tags": ["Asia"],
+        "difficulty": 1
+    },
+    "Liberia": {
+        "ISO2": "LR",
+        "ISO3": "LBR",
+        "color": 3,
+        "tags": ["Africa", "West Africa"],
+        "difficulty": 2
+    },
+    "Lesotho": {
+        "ISO2": "LS",
+        "ISO3": "LSO",
+        "color": 1,
+        "tags": ["Africa", "Southern Africa"],
+        "difficulty": 2
+    },
+    "Lithuania": {
+        "ISO2": "LT",
+        "ISO3": "LTU",
+        "color": 2,
+        "tags": ["Europe", "Nato Members"],
+        "difficulty": 1
+    },
+    "Luxembourg": {
+        "ISO2": "LU",
+        "ISO3": "LUX",
+        "color": 1,
+        "tags": ["Europe", "Nato Members"],
+        "difficulty": 1
+    },
+    "Latvia": {
+        "ISO2": "LV",
+        "ISO3": "LVA",
+        "color": 0,
+        "tags": ["Europe", "Nato Members"],
+        "difficulty": 1
+    },
+    "Libya": {
+        "ISO2": "LY",
+        "ISO3": "LBY",
+        "color": 2,
+        "tags": ["Africa", "North Africa"],
+        "difficulty": 2
+    },
+    "Morocco": {
+        "ISO2": "MA",
+        "ISO3": "MAR",
+        "color": 0,
+        "tags": ["Africa", "North Africa"],
+        "difficulty": 1
+    },
+    "Monaco": {
+        "ISO2": "MC",
+        "ISO3": "MCO",
+        "color": 0,
+        "tags": ["Europe"],
+        "difficulty": 2
+    },
+    "Moldova": {
+        "ISO2": "MD",
+        "ISO3": "MDA",
+        "color": 1,
+        "tags": ["Europe"],
+        "difficulty": 2
+    },
+    "Montenegro": {
+        "ISO2": "ME",
+        "ISO3": "MNE",
+        "color": 1,
+        "tags": ["Europe", "Balkans", "Nato Members"],
+        "difficulty": 2
+    },
+    "Madagascar": {
+        "ISO2": "MG",
+        "ISO3": "MDG",
+        "color": 1,
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 1
+    },
+    "Marshall Islands": {
+        "ISO2": "MH",
+        "ISO3": "MHL",
+        "color": 2,
+        "tags": ["Oceania"],
+        "difficulty": 3
+    },
+    "North Macedonia": {
+        "ISO2": "MK",
+        "ISO3": "MKD",
+        "color": 1,
+        "tags": ["Europe", "Balkans", "Nato Members"],
+        "difficulty": 2
+    },
+    "Mali": {
+        "ISO2": "ML",
+        "ISO3": "MLI",
+        "color": 0,
+        "tags": ["Africa", "West Africa"],
+        "difficulty": 2
+    },
+    "Myanmar": {
+        "ISO2": "MM",
+        "ISO3": "MMR",
+        "color": 0,
+        "tags": ["Asia", "Southeast Asia"],
+        "difficulty": 2
+    },
+    "Mongolia": {
+        "ISO2": "MN",
+        "ISO3": "MNG",
+        "color": 0,
+        "tags": ["Asia"],
+        "difficulty": 1
+    },
+    "Macao": {
+        "ISO2": "MO",
+        "ISO3": "MAC",
+        "color": 1,
+        "belongsTo": "China",
+        "tags": ["Asia"],
+        "difficulty": 2
+    },
+    "Northern Mariana Islands": {
+        "ISO2": "MP",
+        "ISO3": "MNP",
+        "color": 1,
+        "belongsTo": "United States of America",
+        "difficulty": 3
+    },
+    "Mauritania": {
+        "ISO2": "MR",
+        "ISO3": "MRT",
+        "color": 3,
+        "tags": ["Africa", "West Africa"],
+        "difficulty": 2
+    },
+    "Montserrat": {
+        "ISO2": "MS",
+        "ISO3": "MSR",
+        "color": 1,
+        "belongsTo": "United Kingdom",
+        "tags": ["Caribbean"],
+        "difficulty": 3
+    },
+    "Malta": {
+        "ISO2": "MT",
+        "ISO3": "MLT",
+        "color": 1,
+        "tags": ["Europe"],
+        "difficulty": 1
+    },
+    "Mauritius": {
+        "ISO2": "MU",
+        "ISO3": "MUS",
+        "color": 3,
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 3
+    },
+    "Maldives": {
+        "ISO2": "MV",
+        "ISO3": "MDV",
+        "color": 2,
+        "tags": ["Asia"],
+        "difficulty": 3
+    },
+    "Malawi": {
+        "ISO2": "MW",
+        "ISO3": "MWI",
+        "color": 3,
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 2
+    },
+    "Mexico": {
+        "ISO2": "MX",
+        "ISO3": "MEX",
+        "color": 3,
+        "tags": ["North America", "Central America"],
+        "difficulty": 0
+    },
+    "Malaysia": {
+        "ISO2": "MY",
+        "ISO3": "MYS",
+        "color": 3,
+        "tags": ["Asia", "Southeast Asia"],
+        "difficulty": 2
+    },
+    "Mozambique": {
+        "ISO2": "MZ",
+        "ISO3": "MOZ",
+        "color": 2,
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 2
+    },
+    "Namibia": {
+        "ISO2": "NA",
+        "ISO3": "NAM",
+        "color": 1,
+        "tags": ["Africa", "Southern Africa"],
+        "difficulty": 2
+    },
+    "New Caledonia": {
+        "ISO2": "NC",
+        "ISO3": "NCL",
+        "color": 2,
+        "belongsTo": "France",
+        "difficulty": 3
+    },
+    "Niger": {
+        "ISO2": "NE",
+        "ISO3": "NER",
+        "color": 3,
+        "tags": ["Africa", "West Africa"],
+        "difficulty": 2
+    },
+    "Norfolk Island": {
+        "ISO2": "NF",
+        "ISO3": "NFK",
+        "color": 0,
+        "belongsTo": "Australia",
+        "difficulty": 3
+    },
+    "Nigeria": {
+        "ISO2": "NG",
+        "ISO3": "NGA",
+        "color": 2,
+        "tags": ["Africa", "West Africa"],
+        "difficulty": 2
+    },
+    "Nicaragua": {
+        "ISO2": "NI",
+        "ISO3": "NIC",
+        "color": 1,
+        "tags": ["Central America"],
+        "difficulty": 1
+    },
+    "Netherlands": {
+        "ISO2": "NL",
+        "ISO3": "NLD",
+        "color": 1,
+        "tags": ["Europe", "Nato Members"],
+        "center": [5.509617166307586, 52.18745956172407],
+        "difficulty": 0
+    },
+    "Norway": {
+        "ISO2": "NO",
+        "ISO3": "NOR",
+        "color": 2,
+        "tags": ["Europe", "Nato Members"],
+        "center": [8.67580392555911, 61.13375262526373],
+        "difficulty": 0
+    },
+    "Nepal": {
+        "ISO2": "NP",
+        "ISO3": "NPL",
+        "color": 0,
+        "tags": ["Asia"],
+        "difficulty": 1
+    },
+    "Nauru": {
+        "ISO2": "NR",
+        "ISO3": "NRU",
+        "color": 0,
+        "tags": ["Oceania"],
+        "difficulty": 3
+    },
+    "Niue": {
+        "ISO2": "NU",
+        "ISO3": "NIU",
+        "color": 2,
+        "belongsTo": "New Zealand",
+        "difficulty": 3
+    },
+    "New Zealand": {
+        "ISO2": "NZ",
+        "ISO3": "NZL",
+        "color": 1,
+        "tags": ["Oceania"],
+        "center": [172.6616426092364, -41.99853425216095],
+        "difficulty": 0
+    },
+    "Oman": {
+        "ISO2": "OM",
+        "ISO3": "OMN",
+        "color": 2,
+        "tags": ["Asia", "Middle East"],
+        "difficulty": 2
+    },
+    "Panama": {
+        "ISO2": "PA",
+        "ISO3": "PAN",
+        "color": 0,
+        "tags": ["Central America"],
+        "difficulty": 1
+    },
+    "Peru": {
+        "ISO2": "PE",
+        "ISO3": "PER",
+        "color": 3,
+        "tags": ["South America"],
+        "difficulty": 1
+    },
+    "French Polynesia": {
+        "ISO2": "PF",
+        "ISO3": "PYF",
+        "color": 2,
+        "belongsTo": "France",
+        "difficulty": 3
+    },
+    "Papua New Guinea": {
+        "ISO2": "PG",
+        "ISO3": "PNG",
+        "color": 0,
+        "tags": ["Oceania"],
+        "difficulty": 2
+    },
+    "Philippines": {
+        "ISO2": "PH",
+        "ISO3": "PHL",
+        "color": 0,
+        "tags": ["Asia", "Southeast Asia"],
+        "difficulty": 1
+    },
+    "Pakistan": {
+        "ISO2": "PK",
+        "ISO3": "PAK",
+        "color": 3,
+        "tags": ["Asia"],
+        "difficulty": 2
+    },
+    "Poland": {
+        "ISO2": "PL",
+        "ISO3": "POL",
+        "color": 0,
+        "tags": ["Europe", "Nato Members"],
+        "difficulty": 1
+    },
+    "Saint Pierre and Miquelon": {
+        "ISO2": "PM",
+        "ISO3": "SPM",
+        "color": 3,
+        "belongsTo": "France",
+        "difficulty": 3
+    },
+    "Puerto Rico": {
+        "ISO2": "PR",
+        "ISO3": "PRI",
+        "color": 2,
+        "belongsTo": "United States of America",
+        "difficulty": 2
+    },
+    "Portugal": {
+        "ISO2": "PT",
+        "ISO3": "PRT",
+        "color": 1,
+        "tags": ["Europe", "Nato Members"],
+        "center": [-8.166088176121546, 39.855589136969044],
+        "difficulty": 0
+    },
+    "Palau": {
+        "ISO2": "PW",
+        "ISO3": "PLW",
+        "color": 1,
+        "tags": ["Oceania"],
+        "difficulty": 3
+    },
+    "Paraguay": {
+        "ISO2": "PY",
+        "ISO3": "PRY",
+        "color": 1,
+        "tags": ["South America"],
+        "difficulty": 2
+    },
+    "Qatar": {
+        "ISO2": "QA",
+        "ISO3": "QAT",
+        "color": 0,
+        "tags": ["Asia", "Middle East"],
+        "difficulty": 2
+    },
+    "Romania": {
+        "ISO2": "RO",
+        "ISO3": "ROU",
+        "color": 0,
+        "tags": ["Europe", "Nato Members"],
+        "difficulty": 2
+    },
+    "Serbia": {
+        "ISO2": "RS",
+        "ISO3": "SRB",
+        "color": 2,
+        "tags": ["Europe", "Balkans"],
+        "difficulty": 2
+    },
+    "Russia": {
+        "ISO2": "RU",
+        "ISO3": "RUS",
+        "color": 1,
+        "tags": ["Europe", "Asia"],
+        "center": [90.05634453708623, 62.61934523897718],
+        "difficulty": 0
+    },
+    "Rwanda": {
+        "ISO2": "RW",
+        "ISO3": "RWA",
+        "color": 0,
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 2
+    },
+    "Saudi Arabia": {
+        "ISO2": "SA",
+        "ISO3": "SAU",
+        "color": 1,
+        "tags": ["Asia", "Middle East"],
+        "difficulty": 2
+    },
+    "Solomon Islands": {
+        "ISO2": "SB",
+        "ISO3": "SLB",
+        "color": 1,
+        "tags": ["Oceania"],
+        "difficulty": 3
+    },
+    "Seychelles": {
+        "ISO2": "SC",
+        "ISO3": "SYC",
+        "color": 0,
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 3
+    },
+    "Sudan": {
+        "ISO2": "SD",
+        "ISO3": "SDN",
+        "color": 3,
+        "tags": ["Africa", "North Africa"],
+        "difficulty": 2
+    },
+    "Sweden": {
+        "ISO2": "SE",
+        "ISO3": "SWE",
+        "color": 1,
+        "tags": ["Europe"],
+        "difficulty": 0
+    },
+    "Singapore": {
+        "ISO2": "SG",
+        "ISO3": "SGP",
+        "helper": true,
+        "color": 0,
+        "tags": ["Asia", "Southeast Asia"],
+        "difficulty": 2
+    },
+    "Slovenia": {
+        "ISO2": "SI",
+        "ISO3": "SVN",
+        "color": 2,
+        "tags": ["Europe", "Balkans", "Nato Members"],
+        "difficulty": 1
+    },
+    "Slovakia": {
+        "ISO2": "SK",
+        "ISO3": "SVK",
+        "color": 1,
+        "tags": ["Europe", "Nato Members"],
+        "difficulty": 2
+    },
+    "Sierra Leone": {
+        "ISO2": "SL",
+        "ISO3": "SLE",
+        "color": 0,
+        "tags": ["Africa", "West Africa"],
+        "difficulty": 2
+    },
+    "San Marino": {
+        "ISO2": "SM",
+        "ISO3": "SMR",
+        "color": 2,
+        "tags": ["Europe"],
+        "difficulty": 2
+    },
+    "Senegal": {
+        "ISO2": "SN",
+        "ISO3": "SEN",
+        "color": 1,
+        "tags": ["Africa", "West Africa"],
+        "difficulty": 2
+    },
+    "Somalia": {
+        "ISO2": "SO",
+        "ISO3": "SOM",
+        "color": 3,
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 2
+    },
+    "Suriname": {
+        "ISO2": "SR",
+        "ISO3": "SUR",
+        "color": 1,
+        "tags": ["South America"],
+        "difficulty": 2
+    },
+    "South Sudan": {
+        "ISO2": "SS",
+        "ISO3": "SSD",
+        "color": 1,
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 2
+    },
+    "São Tomé and Principe": {
+        "ISO2": "ST",
+        "ISO3": "STP",
+        "color": 1,
+        "tags": ["Africa", "Central Africa"],
+        "difficulty": 3
+    },
+    "El Salvador": {
+        "ISO2": "SV",
+        "ISO3": "SLV",
+        "color": 3,
+        "tags": ["Central America"],
+        "difficulty": 2
+    },
+    "Turks and Caicos Islands": {
+        "ISO2": "TC",
+        "ISO3": "TCA",
+        "color": 2,
+        "belongsTo": "United Kingdom",
+        "tags": ["Caribbean"],
+        "difficulty": 3
+    },
+    "Chad": {
+        "ISO2": "TD",
+        "ISO3": "TCD",
+        "color": 0,
+        "tags": ["Africa", "Central Africa"],
+        "difficulty": 2
+    },
+    "Togo": {
+        "ISO2": "TG",
+        "ISO3": "TGO",
+        "color": 3,
+        "tags": ["Africa", "West Africa"],
+        "difficulty": 2
+    },
+    "Thailand": {
+        "ISO2": "TH",
+        "ISO3": "THA",
+        "color": 2,
+        "tags": ["Asia", "Southeast Asia"],
+        "difficulty": 2
+    },
+    "Tajikistan": {
+        "ISO2": "TJ",
+        "ISO3": "TJK",
+        "color": 3,
+        "tags": ["Asia", "Central Asia"],
+        "difficulty": 2
+    },
+    "Turkmenistan": {
+        "ISO2": "TM",
+        "ISO3": "TKM",
+        "color": 1,
+        "tags": ["Asia", "Central Asia"],
+        "difficulty": 2
+    },
+    "Tunisia": {
+        "ISO2": "TN",
+        "ISO3": "TUN",
+        "color": 0,
+        "tags": ["Africa", "North Africa"],
+        "difficulty": 2
+    },
+    "Tonga": {
+        "ISO2": "TO",
+        "ISO3": "TON",
+        "color": 1,
+        "tags": ["Oceania"],
+        "difficulty": 3
+    },
+    "Turkey": {
+        "ISO2": "TR",
+        "ISO3": "TUR",
+        "color": 0,
+        "tags": ["Europe", "Asia", "Middle East", "Nato Members"],
+        "difficulty": 1
+    },
+    "Trinidad and Tobago": {
+        "ISO2": "TT",
+        "ISO3": "TTO",
+        "color": 0,
+        "tags": ["Caribbean"],
+        "difficulty": 3
+    },
+    "Tuvalu": {
+        "ISO2": "TV",
+        "ISO3": "TUV",
+        "color": 2,
+        "tags": ["Oceania"],
+        "difficulty": 3
+    },
+    "Taiwan": {
+        "ISO2": "TW",
+        "ISO3": "TWN",
+        "color": 3,
+        "tags": ["Asia"],
+        "difficulty": 1
+    },
+    "Tanzania": {
+        "ISO2": "TZ",
+        "ISO3": "TZA",
+        "color": 1,
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 2
+    },
+    "Ukraine": {
+        "ISO2": "UA",
+        "ISO3": "UKR",
+        "color": 2,
+        "tags": ["Europe"],
+        "difficulty": 0
+    },
+    "Uganda": {
+        "ISO2": "UG",
+        "ISO3": "UGA",
+        "color": 2,
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 2
+    },
+    "United States Minor Outlying Islands": {
+        "ISO2": "UM",
+        "ISO3": "UMI",
+        "belongsTo": "United States of America",
+        "difficulty": 3
+    },
+    "Uruguay": {
+        "ISO2": "UY",
+        "ISO3": "URY",
+        "color": 1,
+        "tags": ["South America"],
+        "difficulty": 2
+    },
+    "Uzbekistan": {
+        "ISO2": "UZ",
+        "ISO3": "UZB",
+        "color": 2,
+        "tags": ["Asia", "Central Asia"],
+        "difficulty": 2
+    },
+    "Venezuela": {
+        "ISO2": "VE",
+        "ISO3": "VEN",
+        "color": 2,
+        "tags": ["South America"],
+        "difficulty": 2
+    },
+    "Vanuatu": {
+        "ISO2": "VU",
+        "ISO3": "VUT",
+        "color": 3,
+        "tags": ["Oceania"],
+        "difficulty": 3
+    },
+    "Wallis and Futuna": {
+        "ISO2": "WF",
+        "ISO3": "WLF",
+        "color": 2,
+        "belongsTo": "France",
+        "tags": ["Caribbean"],
+        "difficulty": 3
+    },
+    "Samoa": {
+        "ISO2": "WS",
+        "ISO3": "WSM",
+        "color": 3,
+        "tags": ["Oceania"],
+        "difficulty": 3
+    },
+    "Kosovo": {
+        "ISO2": "XK",
+        "color": 0,
+        "tags": ["Europe", "Balkans"],
+        "difficulty": 2
+    },
+    "Yemen": {
+        "ISO2": "YE",
+        "ISO3": "YEM",
+        "color": 3,
+        "tags": ["Asia", "Middle East"],
+        "difficulty": 2
+    },
+    "South Africa": {
+        "ISO2": "ZA",
+        "ISO3": "ZAF",
+        "color": 0,
+        "tags": ["Africa", "Southern Africa"],
+        "center": [25.595185174592803, -28.73348553536983],
+        "difficulty": 0
+    },
+    "Zambia": {
+        "ISO2": "ZM",
+        "ISO3": "ZMB",
+        "color": 0,
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 2
+    },
+    "Zimbabwe": {
+        "ISO2": "ZW",
+        "ISO3": "ZWE",
+        "color": 3,
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 2
+    },
+    "Åland": {
+        "ISO2": "AX",
+        "ISO3": "ALA",
+        "color": 0,
+        "belongsTo": "Finland",
+        "tags": ["Europe"],
+        "difficulty": 3
+    },
+    "Ashmore and Cartier Islands": {
+        "color": 0,
+        "belongsTo": "Australia",
+        "difficulty": 3
+    },
+    "The Bahamas": {
+        "ISO2": "BS",
+        "ISO3": "BHS",
+        "color": 3,
+        "tags": ["Caribbean"],
+        "difficulty": 3
+    },
+    "Saint-Barthélemy": {
+        "ISO3": "BLM",
+        "color": 2,
+        "belongsTo": "France",
+        "tags": ["Caribbean"],
+        "difficulty": 3
+    },
+    "Brunei": {
+        "ISO2": "BN",
+        "ISO3": "BRN",
+        "color": 1,
+        "helper": true,
+        "tags": ["Asia", "Southeast Asia"],
+        "difficulty": 3
+    },
+    "Côte d'Ivoire": {
+        "ISO2": "CI",
+        "ISO3": "CIV",
+        "color": 1,
+        "tags": ["Africa", "West Africa"],
+        "difficulty": 2
+    },
+    "Democratic Republic of the Congo": {
+        "ISO2": "CD",
+        "ISO3": "COD",
+        "color": 3,
+        "tags": ["Africa", "Central Africa"],
+        "difficulty": 2
+    },
+    "Republic of the Congo": {
+        "ISO2": "CG",
+        "ISO3": "COG",
+        "color": 0,
+        "tags": ["Africa", "Central Africa"],
+        "difficulty": 2
+    },
+    "Northern Cyprus": {
+        "color": 3,
+        "belongsTo": "Cyprus",
+        "tags": ["Europe", "Middle East", "Asia"],
+        "difficulty": 2
+    },
+    "Eswatini": {
+        "ISO2": "SZ",
+        "ISO3": "SWZ",
+        "color": 3,
+        "tags": ["Africa", "Southern Africa"],
+        "difficulty": 2
+    },
+    "Falkland Islands": {
+        "ISO2": "FK",
+        "ISO3": "FLK",
+        "color": 1,
+        "belongsTo": "United Kingdom",
+        "tags": ["South America"],
+        "difficulty": 3
+    },
+    "French Southern and Antarctic Lands": {
+        "ISO2": "TF",
+        "color": 2,
+        "belongsTo": "France",
+        "difficulty": 3
+    },
+    "Federated States of Micronesia": {
+        "ISO2": "FM",
+        "ISO3": "FSM",
+        "color": 3,
+        "tags": ["Oceania"],
+        "difficulty": 3
+    },
+    "Heard Island and McDonald Islands": {
+        "ISO2": "HM",
+        "ISO3": "HMD",
+        "color": 1,
+        "belongsTo": "Australia",
+        "tags": ["Oceania"],
+        "difficulty": 3
+    },
+    "Indian Ocean Territories": {
+        "color": 0,
+        "belongsTo": "Australia",
+        "tags": ["Oceania"],
+        "difficulty": 3
+    },
+    "Laos": {
+        "ISO2": "LA",
+        "ISO3": "LAO",
+        "color": 3,
+        "tags": ["Asia", "Southeast Asia"],
+        "difficulty": 2
+    },
+    "Saint-Martin": {
+        "ISO2": "MF",
+        "ISO3": "MAF",
+        "color": 2,
+        "belongsTo": "France",
+        "difficulty": 3
+    },
+    "Pitcairn Islands": {
+        "ISO2": "PN",
+        "ISO3": "PCN",
+        "color": 1,
+        "belongsTo": "United Kingdom",
+        "difficulty": 3
+    },
+    "Palestine": {
+        "ISO2": "PS",
+        "ISO3": "PSE",
+        "color": 2,
+        "tags": ["Asia", "Middle East"],
+        "difficulty": 1
+    },
+    "South Georgia and South Sandwich Islands": {
+        "ISO3": "SGS",
+        "color": 0,
+        "belongsTo": "United Kingdom",
+        "difficulty": 3
+    },
+    "Saint Helena": {
+        "ISO2": "SH",
+        "ISO3": "SHN",
+        "color": 3,
+        "belongsTo": "United Kingdom",
+        "difficulty": 3
+    },
+    "Somaliland": {
+        "color": 0,
+        "belongsTo": "Somalia",
+        "tags": ["Africa", "East Africa"],
+        "difficulty": 2
+    },
+    "Sint Maarten": {
+        "ISO2": "SX",
+        "ISO3": "SXM",
+        "color": 0,
+        "belongsTo": "Netherlands",
+        "tags": ["Caribbean"],
+        "difficulty": 3
+    },
+    "Syria": {
+        "ISO2": "SY",
+        "ISO3": "SYR",
+        "color": 1,
+        "tags": ["Asia", "Middle East"],
+        "difficulty": 2
+    },
+    "East Timor": {
+        "ISO2": "TL",
+        "ISO3": "TLS",
+        "color": 1,
+        "helper": true,
+        "tags": ["Oceania", "Southeast Asia"],
+        "difficulty": 3
+    },
+    "United States of America": {
+        "ISO2": "US",
+        "ISO3": "USA",
+        "color": 2,
+        "tags": ["North America", "Nato Members"],
+        "center": [-99.59960333023501, 39.17941584039857],
+        "difficulty": 0
+    },
+    "Vatican": {
+        "ISO2": "VA",
+        "ISO3": "VAT",
+        "color": 0,
+        "tags": ["Europe"],
+        "difficulty": 1
+    },
+    "Saint Vincent and the Grenadines": {
+        "ISO2": "VC",
+        "ISO3": "VCT",
+        "color": 0,
+        "tags": ["Caribbean"],
+        "difficulty": 3
+    },
+    "British Virgin Islands": {
+        "ISO2": "VG",
+        "ISO3": "VGB",
+        "color": 1,
+        "belongsTo": "United Kingdom",
+        "difficulty": 3
+    },
+    "United States Virgin Islands": {
+        "ISO2": "VI",
+        "ISO3": "VIR",
+        "color": 0,
+        "belongsTo": "United States of America",
+        "difficulty": 3
+    },
+    "Vietnam": {
+        "ISO2": "VN",
+        "ISO3": "VNM",
+        "color": 1,
+        "tags": ["Asia", "Southeast Asia"],
+        "center": [107.57079944802854, 16.251859352109328],
+        "difficulty": 2
+    },
+    "Baikonur": {
+        "belongsTo": "Kazakhstan",
+        "tags": ["Asia"],
+        "difficulty": 2
+    },
+    "Siachen Glacier": {
+        "belongsTo": "India",
+        "tags": ["Asia"],
+        "difficulty": 3
+    },
+    "Akrotiri": {
+        "belongsTo": "Cyprus",
+        "tags": ["Europe", "Asia", "Middle East"],
+        "difficulty": 3
+    },
+    "Guantanamo Bay": {
+        "belongsTo": "United States of America",
+        "difficulty": 2
+    },
+    "Bajo Nuevo Bank": {
+        "belongsTo": "Colombia",
+        "difficulty": 3
+    },
+    "Serranilla Bank": {
+        "belongsTo": "Colombia",
+        "difficulty": 3
+    },
+    "Clipperton Island": {
+        "belongsTo": "France",
+        "difficulty": 3
+    },
+    "Coral Sea Islands": {
+        "belongsTo": "Australia",
+        "difficulty": 3
+    },
+    "Spratly Islands": {
+        "color": 2,
+        "difficulty": 3
+    },
+    "Scarborough Shoal": {
+        "color": 1,
+        "difficulty": 3
+    },
+    "Cyprus U.N. Buffer Zone": {
+        "belongsTo": "Cyprus",
+        "tags": ["Europe", "Asia", "Middle East"],
+        "difficulty": 2
+    },
+    "Dhekelia": {
+        "belongsTo": "Cyprus",
+        "tags": ["Europe", "Asia", "Middle East"],
+        "difficulty": 3
+    }
+}

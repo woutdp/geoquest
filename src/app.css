@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    @apply text-foreground;
+}
+
+body {
+    overscroll-behavior: contain;
+}
+
+:root {
+    /* color */
+    --json-tree-string-color: #cb3f41;
+    --json-tree-symbol-color: #cb3f41;
+    --json-tree-boolean-color: #4858a7;
+    --json-tree-function-color: #4858a7;
+    --json-tree-number-color: #635eca;
+    --json-tree-label-color: #9b51a0;
+    --json-tree-property-color: #ebdbb2;
+    --json-tree-arrow-color: #727272;
+    --json-tree-operator-color: #727272;
+    --json-tree-null-color: #8d8d8d;
+    --json-tree-undefined-color: #8d8d8d;
+    --json-tree-date-color: #8d8d8d;
+    --json-tree-internal-color: grey;
+    --json-tree-regex-color: #cb3f41;
+    /* font */
+    --json-tree-font-size: 16px;
+    --json-tree-font-family: 'Roboto';
+}
