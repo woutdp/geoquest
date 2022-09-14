@@ -7,6 +7,9 @@ npm run dev
 
 # or start the server and open the app in a new browser tab
 npm run dev -- --open
+
+# to automatically format the code
+npm run format
 ```
 
 ## Building
@@ -19,4 +22,6 @@ npm run build
 
 You can preview the production build with `npm run preview`.
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment.
+## Contributing
+
+The code at the moment is still a bit messy, especially the code for handling different 'game modes'. Feel free to refactor, fix or add features.
