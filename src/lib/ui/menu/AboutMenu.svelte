@@ -14,5 +14,6 @@
     <p>
         It would mean a lot to me if you gave me your feedback and answered <a class="font-bold underline" target="_blank" href="https://forms.gle/gXjQB1KHA4vZNND19">4 quick questions</a>
     </p>
+    <p class="mt-4">Contribute on <a class="underline" target="_blank" href="https://github.com/woutdp/geoquest">Github</a></p>
     <p class="mt-4">For any enquiries: <a class="underline" target="_blank" href="mailto:geoquest@wout.space">geoquest@wout.space</a></p>
 </div>
