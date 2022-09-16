@@ -25,6 +25,11 @@
         "description": "Find 30 countries in a row."
     },
     {
+        "slug": "daily-challenge",
+        "name": "Daily Dose",
+        "description": "Complete a daily challenge without making a mistake."
+    },
+    {
         "slug": "all-north-america",
         "name": "Cultural Victory",
         "description": "Find all North American countries without making a mistake.",

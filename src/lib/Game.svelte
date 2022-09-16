@@ -36,8 +36,8 @@
     let toFind = []
     let originalToFind = []
     let correctCountries = []
-    let mistakes = 0
     let streak = 0
+    let mistakes = 0
     let mistakesThisGuess = 0
     let successSound: HTMLAudioElement
     let interfaceLoaded = false
@@ -185,6 +185,7 @@
                 showWinScreen = true
                 focusedCountry = undefined
                 unfoundFeatures = []
+                if (mistakes === 0 && gameConfiguration.mode === 'dailyQuest') achieveAchievement('daily-challenge')
             }
 
             achieveAchievement('1-country')
