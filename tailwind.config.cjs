@@ -20,7 +20,11 @@ module.exports = {
             'bright-blue': '#1DA1F2',
             purple: '#D3869B',
             aqua: '#8EC07C',
-            orange: '#FE8019'
+            orange: '#FE8019',
+            brand: {
+                github: '#4078c0',
+                'buy-me-a-coffee': '#FFDD00'
+            }
         },
         fontFamily: {
             sans: ['Twemoji Country Flags', 'Roboto', 'sans-serif'],
