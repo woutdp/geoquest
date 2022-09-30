@@ -30,7 +30,7 @@
         </a>
     </div>
     {#if inIframe || dev}
-        <a class="bg-background text-foreground p-3 rounded-full hover:scale-[1.02] transition-all flex items-center" href="https://geoquest.wout.space/">
+        <a class="bg-background text-foreground p-3 rounded-full hover:scale-[1.02] transition-all flex items-center" target="_blank" href="https://geoquest.wout.space/">
             <span class="ml-3 mr-2 text-foreground"><IconWorld /></span><span class="font-black underline">geoquest.wout.space</span>
         </a>
     {/if}
