@@ -1,4 +1,5 @@
 /src/lib/assets/*
+/static
 .DS_Store
 node_modules
 /build
