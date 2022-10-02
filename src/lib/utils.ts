@@ -4,11 +4,10 @@ import _ from 'lodash'
 import {get} from 'svelte/store'
 import * as topojsonClient from 'topojson-client'
 
-import {notifications, save} from '$lib/store'
-import {topojson} from '$lib/store'
-
 import achievements from '$lib/assets/data/achievements.json'
 import countries from '$lib/assets/data/countries.json'
+import {notifications, save} from '$lib/store'
+import {topojson} from '$lib/store'
 
 export const CORRECT = 'correct'
 export const WRONG = 'wrong'

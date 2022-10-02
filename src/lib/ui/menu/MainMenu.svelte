@@ -1,4 +1,5 @@
 <script lang="ts">
+    import achievements from '$lib/assets/data/achievements.json'
     import IconInfo from '$lib/icons/IconInfo.svelte'
     import IconLock from '$lib/icons/IconLock.svelte'
     import IconVolumeOff from '$lib/icons/IconVolumeOff.svelte'
@@ -8,8 +9,6 @@
     import Achievements from '$lib/ui/menu/Achievements.svelte'
     import NewGameMenu from '$lib/ui/menu/NewGameMenu.svelte'
     import WinScreen from '$lib/ui/menu/WinScreen.svelte'
-
-    import achievements from '$lib/assets/data/achievements.json'
 
     export let restart
     export let toggleMenu
