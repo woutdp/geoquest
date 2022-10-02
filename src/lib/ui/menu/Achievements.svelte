@@ -4,7 +4,7 @@
     import {save} from '$lib/store'
     import Achievement from '$lib/ui/menu/Achievement.svelte'
 
-    import achievements from '../../../assets/achievements.json'
+    import achievements from '$lib/assets/data/achievements.json'
 
     $: sortedAchievements = _(achievements)
         .orderBy(a => !$save.achievements.includes(a.slug))

@@ -9,7 +9,7 @@
     import NewGameMenu from '$lib/ui/menu/NewGameMenu.svelte'
     import WinScreen from '$lib/ui/menu/WinScreen.svelte'
 
-    import achievements from '../../../assets/achievements.json'
+    import achievements from '$lib/assets/data/achievements.json'
 
     export let restart
     export let toggleMenu

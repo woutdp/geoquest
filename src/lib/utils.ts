@@ -7,8 +7,8 @@ import * as topojsonClient from 'topojson-client'
 import {notifications, save} from '$lib/store'
 import {topojson} from '$lib/store'
 
-import achievements from '../assets/achievements.json'
-import countries from '../assets/countries.json'
+import achievements from '$lib/assets/data/achievements.json'
+import countries from '$lib/assets/data/countries.json'
 
 export const CORRECT = 'correct'
 export const WRONG = 'wrong'

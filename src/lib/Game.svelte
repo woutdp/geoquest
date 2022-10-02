@@ -15,7 +15,7 @@
     import {achieveAchievement, ALREADY_GUESSED, CORRECT, getGeojsonByName, getTags, preprocessTopojson, processAchievements, WRONG} from '$lib/utils'
 
     polyfillCountryFlagEmojis()
-    import dailyQuestCountries from '../assets/daily-quest.json'
+    import dailyQuestCountries from '$lib/assets/data/daily-quest.json'
 
     const dev = import.meta.env.DEV
 
@@ -227,9 +227,9 @@
     }
 
     onMount(async () => {
-        successSound = new Audio((await import('../assets/sounds/tap.wav')).default)
+        successSound = new Audio((await import('$lib/assets/sounds/tap.wav')).default)
 
-        $topojson = await import('../assets/maps/topojson/optimized.json')
+        $topojson = await import('$lib/assets/maps/topojson/optimized.json')
         $topojson = preprocessTopojson($topojson)
         $tags = getTags()
         $tags = _(getTags())
