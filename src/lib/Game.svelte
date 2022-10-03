@@ -264,7 +264,7 @@
 />
 
 {#if $topojson && interfaceLoaded}
-    <Map bind:this={map} topojson={$topojson} {clickCountryHandler} {countryFocusedHandler} {foundFeatures} {unfoundFeatures} {toFind} />
+    <Map bind:this={map} {clickCountryHandler} {countryFocusedHandler} {foundFeatures} {unfoundFeatures} {toFind} />
 {/if}
 
 {#if showLoadingScreen}

@@ -7,9 +7,7 @@
     import Country from '$lib/map/Country.svelte'
     import CountryHelper from '$lib/map/CountryHelper.svelte'
     import IslandHelper from '$lib/map/IslandHelper.svelte'
-    import {clientX, clientY, geojson, mousePos, projection} from '$lib/store'
-
-    export let topojson
+    import {clientX, clientY, geojson, mousePos, projection, topojson} from '$lib/store'
 
     let transform = d3.zoomIdentity
     let svg
@@ -18,7 +16,7 @@
 
     $: path = getPath(scale)
     $: strokeWidth = 0.002 * scale
-    $: mapData = _.zip($geojson.features, topojson.objects.countries.geometries)
+    $: mapData = _.zip($geojson.features, $topojson.objects.countries.geometries)
     $: bounds = d3
         .geoPath()
         .projection($projection.scale(1).translate([0, 0]).rotate([-11, 0]))
