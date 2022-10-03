@@ -5,7 +5,8 @@
     import {onMount} from 'svelte'
 
     import Map from '$lib/map/Map.svelte'
-    import {clientX, clientY, day, geojson, mousePos, save, soundEffects, tags, topojson, maps, showDebug} from '$lib/store'
+    import {successSound} from '$lib/sounds'
+    import {clientX, clientY, day, geojson, maps, mousePos, save, showDebug, tags, topojson} from '$lib/store'
     import DebugInterface from '$lib/ui/DebugInterface.svelte'
     import LoadingScreen from '$lib/ui/LoadingScreen.svelte'
     import MouseTooltip from '$lib/ui/MouseTooltip.svelte'
@@ -28,7 +29,6 @@
     let streak = 0
     let mistakes = 0
     let mistakesThisGuess = 0
-    let successSound: HTMLAudioElement
     let interfaceLoaded = false
     let showMenu: boolean
     let showWinScreen = false
@@ -152,7 +152,7 @@
         if (!unfoundFeatures.includes(feature)) return ALREADY_GUESSED
 
         if (questionFeature?.properties?.name === feature.properties.name) {
-            if ($soundEffects) successSound.play()
+            successSound.play()
 
             if (gameConfiguration.mode === 'dailyQuest') logGuess(feature.properties.name)
 
@@ -215,8 +215,6 @@
     }
 
     onMount(async () => {
-        successSound = new Audio((await import('$lib/assets/sounds/tap.wav')).default)
-
         $topojson = await maps[0].load
         $topojson = preprocessTopojson($topojson)
         $tags = getTags()
