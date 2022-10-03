@@ -52,6 +52,7 @@ export const timeLeft = derived(time, $time => {
         .padStart(2, '0')
     return `${hours}:${minutes}:${seconds}`
 })
+export const showDebug = writable(false)
 
 // Save files
 export const initialSave = {achievements: [], dailyQuestProgress: {}}

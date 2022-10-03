@@ -2,9 +2,7 @@
     import _ from 'lodash'
     import JSONTree from 'svelte-json-tree'
 
-    import {clientX, clientY, day, initialSave, mousePos, notifications, projection, projections, save, time} from '$lib/store'
-
-    export let showDebug
+    import {clientX, clientY, day, initialSave, mousePos, notifications, projection, projections, save, showDebug, time} from '$lib/store'
 
     export let lastFocusedCountry
     export let toFind
@@ -12,7 +10,7 @@
     export let mistakesThisGuess
 </script>
 
-<div class="absolute z-50 flex flex-col max-w-2xl bg-background-dark" class:hidden={!showDebug}>
+<div class="absolute z-50 flex flex-col max-w-2xl bg-background-dark" class:hidden={!$showDebug}>
     <p>{$time}</p>
     <p>{$day}</p>
     <p>Mistakes this guess: {mistakesThisGuess}</p>

@@ -5,7 +5,7 @@
     import {onMount} from 'svelte'
 
     import Map from '$lib/map/Map.svelte'
-    import {clientX, clientY, day, geojson, mousePos, save, soundEffects, tags, topojson, maps} from '$lib/store'
+    import {clientX, clientY, day, geojson, mousePos, save, soundEffects, tags, topojson, maps, showDebug} from '$lib/store'
     import DebugInterface from '$lib/ui/DebugInterface.svelte'
     import LoadingScreen from '$lib/ui/LoadingScreen.svelte'
     import MouseTooltip from '$lib/ui/MouseTooltip.svelte'
@@ -32,7 +32,6 @@
     let interfaceLoaded = false
     let showMenu: boolean
     let showWinScreen = false
-    let showDebug = false
     let ui
     let map
     let gameConfiguration = {
@@ -234,14 +233,14 @@
     }
 
     function handleKeypress(e) {
-        if (dev && e.key === 'd') showDebug = !showDebug
+        if (dev && e.key === 'd') $showDebug = !$showDebug
     }
 </script>
 
 <svelte:window on:keypress={handleKeypress} on:mousemove={handleMousemove} bind:innerWidth={$clientX} bind:innerHeight={$clientY} />
 
 {#if dev}
-    <DebugInterface {mistakesThisGuess} {toFind} {unfoundFeatures} {showDebug} {lastFocusedCountry} />
+    <DebugInterface {mistakesThisGuess} {toFind} {unfoundFeatures} {lastFocusedCountry} />
 {/if}
 
 <UI
