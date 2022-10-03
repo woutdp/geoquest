@@ -7,6 +7,7 @@
     import {onMount} from 'svelte'
 
     import Map from '$lib/map/Map.svelte'
+    import OlMap from '$lib/map/OlMap.svelte'
     import {clientX, clientY, day, geojson, mousePos, save, soundEffects, tags, topojson} from '$lib/store'
     import DebugInterface from '$lib/ui/DebugInterface.svelte'
     import LoadingScreen from '$lib/ui/LoadingScreen.svelte'
@@ -275,7 +276,7 @@
 />
 
 {#if $topojson && interfaceLoaded}
-    <Map bind:this={map} topojson={$topojson} {projection} {clickCountryHandler} {countryFocusedHandler} {foundFeatures} {unfoundFeatures} {toFind} />
+    <OlMap bind:this={map} topojson={$topojson} {projection} {clickCountryHandler} {countryFocusedHandler} {foundFeatures} {unfoundFeatures} {toFind} />
 {/if}
 
 {#if showLoadingScreen}
