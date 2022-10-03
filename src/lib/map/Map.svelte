@@ -7,10 +7,9 @@
     import Country from '$lib/map/Country.svelte'
     import CountryHelper from '$lib/map/CountryHelper.svelte'
     import IslandHelper from '$lib/map/IslandHelper.svelte'
-    import {clientX, clientY, geojson, mousePos} from '$lib/store'
+    import {clientX, clientY, geojson, mousePos, projection} from '$lib/store'
 
     export let topojson
-    export let projection
 
     let transform = d3.zoomIdentity
     let svg
@@ -22,13 +21,13 @@
     $: mapData = _.zip($geojson.features, topojson.objects.countries.geometries)
     $: bounds = d3
         .geoPath()
-        .projection(projection.scale(1).translate([0, 0]).rotate([-11, 0]))
+        .projection($projection.scale(1).translate([0, 0]).rotate([-11, 0]))
         .bounds($geojson)
 
     function getPath(s) {
         return d3
             .geoPath()
-            .projection({stream: stream => projection.stream(stream)})
+            .projection({stream: stream => $projection.stream(stream)})
             .pointRadius(0.01 * s)
     }
 
@@ -44,7 +43,7 @@
 
     function centerMap() {
         scale = 0.95 / Math.max((bounds[1][0] - bounds[0][0]) / $clientX, (bounds[1][1] - bounds[0][1]) / $clientY)
-        projection.scale(scale).translate([($clientX - scale * (bounds[1][0] + bounds[0][0])) / 2, ($clientY - scale * (bounds[1][1] + bounds[0][1])) / 2])
+        $projection.scale(scale).translate([($clientX - scale * (bounds[1][0] + bounds[0][0])) / 2, ($clientY - scale * (bounds[1][1] + bounds[0][1])) / 2])
         path = getPath(scale) // It's important to reset the path, otherwise an height change such as full screen might screw up the map
 
         if ($clientX < 800) d3Svg.transition().duration(750).call(zoom.transform, d3.zoomIdentity)

@@ -1,8 +1,6 @@
 <script lang="ts">
     import * as turf from '@turf/turf'
     import {polyfillCountryFlagEmojis} from 'country-flag-emoji-polyfill'
-    import * as d3 from 'd3'
-    import {geoMiller, geoPatterson, geoRobinson} from 'd3-geo-projection'
     import _ from 'lodash'
     import {onMount} from 'svelte'
 
@@ -19,15 +17,6 @@
 
     const dev = import.meta.env.DEV
 
-    let projections = [
-        {func: geoPatterson(), name: 'Patterson'},
-        {func: geoRobinson(), name: 'Robinson'},
-        {func: geoMiller(), name: 'Miller'},
-        {func: d3.geoMercator(), name: 'Mercator'},
-        {func: d3.geoOrthographic(), name: 'Globe'}
-    ]
-
-    let projection = projections[0].func
     let questionFeature
     let lastFocusedCountry
     let focusedCountry
@@ -252,7 +241,7 @@
 <svelte:window on:keypress={handleKeypress} on:mousemove={handleMousemove} bind:innerWidth={$clientX} bind:innerHeight={$clientY} />
 
 {#if dev}
-    <DebugInterface {mistakesThisGuess} {toFind} {unfoundFeatures} {showDebug} {projections} {lastFocusedCountry} bind:projection />
+    <DebugInterface {mistakesThisGuess} {toFind} {unfoundFeatures} {showDebug} {lastFocusedCountry} />
 {/if}
 
 <UI
@@ -275,7 +264,7 @@
 />
 
 {#if $topojson && interfaceLoaded}
-    <Map bind:this={map} topojson={$topojson} {projection} {clickCountryHandler} {countryFocusedHandler} {foundFeatures} {unfoundFeatures} {toFind} />
+    <Map bind:this={map} topojson={$topojson} {clickCountryHandler} {countryFocusedHandler} {foundFeatures} {unfoundFeatures} {toFind} />
 {/if}
 
 {#if showLoadingScreen}

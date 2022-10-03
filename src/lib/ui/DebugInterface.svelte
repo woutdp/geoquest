@@ -2,12 +2,10 @@
     import _ from 'lodash'
     import JSONTree from 'svelte-json-tree'
 
-    import {clientX, clientY, day, initialSave, mousePos, notifications, save, time} from '$lib/store'
+    import {clientX, clientY, day, initialSave, mousePos, notifications, projection, projections, save, time} from '$lib/store'
 
     export let showDebug
 
-    export let projections
-    export let projection
     export let lastFocusedCountry
     export let toFind
     export let unfoundFeatures
@@ -18,7 +16,7 @@
     <p>{$time}</p>
     <p>{$day}</p>
     <p>Mistakes this guess: {mistakesThisGuess}</p>
-    <select class="bg-background-dark" bind:value={projection}>
+    <select class="bg-background-dark" bind:value={$projection}>
         {#each projections as projection}
             <option value={projection.func}>{projection.name}</option>
         {/each}

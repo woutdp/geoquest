@@ -1,3 +1,5 @@
+import * as d3 from 'd3'
+import {geoMiller, geoPatterson, geoRobinson} from 'd3-geo-projection'
 import {derived, readable, writable} from 'svelte/store'
 import * as topojsonClient from 'topojson-client'
 
@@ -5,11 +7,23 @@ import {browser} from '$app/environment'
 
 const dateZero = new Date('February 19, 2022 03:00:00')
 const oneDay = 24 * 3600 * 1000
+export const projections = [
+    {func: geoPatterson(), name: 'Patterson'},
+    {func: geoRobinson(), name: 'Robinson'},
+    {func: geoMiller(), name: 'Miller'},
+    {func: d3.geoMercator(), name: 'Mercator'},
+    {func: d3.geoOrthographic(), name: 'Globe'}
+]
 
+// Map
 export const topojson = writable()
 export const geojson = derived(topojson, $topojson => ($topojson ? topojsonClient.feature($topojson, $topojson.objects.countries) : undefined))
 
+// Settings
 export const soundEffects = writable(true)
+export const projection = writable(projections[0].func)
+
+// Game
 export const mousePos = writable({x: 0, y: 0})
 export const clientX = writable(0)
 export const clientY = writable(0)
