@@ -5,6 +5,7 @@ import * as topojsonClient from 'topojson-client'
 
 import {browser} from '$app/environment'
 
+// Constants
 const dateZero = new Date('February 19, 2022 03:00:00')
 const oneDay = 24 * 3600 * 1000
 export const projections = [
@@ -16,12 +17,16 @@ export const projections = [
 ]
 
 // Map
+export const maps = [
+    {load: import('$lib/assets/maps/topojson/world.json'), name: 'World'},
+    {load: import('$lib/assets/maps/topojson/us-states.json'), name: 'US States'}
+]
 export const topojson = writable()
 export const geojson = derived(topojson, $topojson => ($topojson ? topojsonClient.feature($topojson, $topojson.objects.countries) : undefined))
+export const projection = writable(projections[0].func)
 
 // Settings
 export const soundEffects = writable(true)
-export const projection = writable(projections[0].func)
 
 // Game
 export const mousePos = writable({x: 0, y: 0})
@@ -51,6 +56,7 @@ export const timeLeft = derived(time, $time => {
 // Save files
 export const initialSave = {achievements: [], dailyQuestProgress: {}}
 const saveKey = 'save'
+
 let localStorageSave = initialSave
 
 try {

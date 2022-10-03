@@ -5,7 +5,7 @@
     import {onMount} from 'svelte'
 
     import Map from '$lib/map/Map.svelte'
-    import {clientX, clientY, day, geojson, mousePos, save, soundEffects, tags, topojson} from '$lib/store'
+    import {clientX, clientY, day, geojson, mousePos, save, soundEffects, tags, topojson, maps} from '$lib/store'
     import DebugInterface from '$lib/ui/DebugInterface.svelte'
     import LoadingScreen from '$lib/ui/LoadingScreen.svelte'
     import MouseTooltip from '$lib/ui/MouseTooltip.svelte'
@@ -218,7 +218,7 @@
     onMount(async () => {
         successSound = new Audio((await import('$lib/assets/sounds/tap.wav')).default)
 
-        $topojson = await import('$lib/assets/maps/topojson/optimized.json')
+        $topojson = await maps[0].load
         $topojson = preprocessTopojson($topojson)
         $tags = getTags()
         $tags = _(getTags())

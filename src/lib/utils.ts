@@ -15,7 +15,7 @@ export const ALREADY_GUESSED = 'already_guessed'
 export const COUNTRY_COLORS = ['fill-blue', 'fill-yellow', 'fill-green', 'fill-red']
 
 export function preprocessTopojson(json) {
-    const geometriesByName = _.keyBy(json.objects.countries.geometries, 'properties.name')
+    const geometriesByName = _.keyBy(json.objects['countries'].geometries, 'properties.name')
     const mergeGroups = _(countries)
         .pickBy(value => _.has(value, 'belongsTo'))
         .map((value, key) => {
