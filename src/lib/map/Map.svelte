@@ -16,7 +16,7 @@
 
     $: path = getPath(scale)
     $: strokeWidth = 0.002 * scale
-    $: mapData = _.zip($geojson.features, $topojson.objects.countries.geometries)
+    $: mapData = _.zip($geojson.features, Object.values($topojson.objects)[0].geometries)
     $: bounds = d3
         .geoPath()
         .projection($projection.scale(1).translate([0, 0]).rotate([-11, 0]))
