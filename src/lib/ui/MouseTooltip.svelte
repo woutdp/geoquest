@@ -16,7 +16,7 @@
 
 {#if show}
     <span bind:clientHeight={h} class="fixed z-50 inline-block px-2 py-1 font-bold rounded-md pointer-events-none bg-background-dark whitespace-nowrap" style:left="{x}px" style:top="{y - h}px">
-        {flag}
+        {#if flag}{flag}{/if}
         {focusedCountry?.properties?.name}
     </span>
 {/if}
