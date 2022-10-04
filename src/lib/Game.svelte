@@ -4,6 +4,7 @@
     import _ from 'lodash'
     import {onMount} from 'svelte'
 
+    import {loadMap} from '$lib/map'
     import Map from '$lib/map/Map.svelte'
     import {successSound} from '$lib/sounds'
     import {clientX, clientY, day, geojson, maps, mousePos, save, showDebug, tags, topojson} from '$lib/store'
@@ -11,7 +12,7 @@
     import LoadingScreen from '$lib/ui/LoadingScreen.svelte'
     import MouseTooltip from '$lib/ui/MouseTooltip.svelte'
     import UI from '$lib/ui/UI.svelte'
-    import {achieveAchievement, ALREADY_GUESSED, CORRECT, getGeojsonByName, getTags, preprocessTopojson, processAchievements, WRONG} from '$lib/utils'
+    import {achieveAchievement, ALREADY_GUESSED, CORRECT, getGeojsonByName, getTags, processAchievements, WRONG} from '$lib/utils'
 
     polyfillCountryFlagEmojis()
     import dailyQuestCountries from '$lib/assets/data/daily-quest.json'
@@ -215,9 +216,8 @@
     }
 
     onMount(async () => {
-        $topojson = await maps[0].load
-        $topojson = preprocessTopojson($topojson)
-        $tags = getTags()
+        await loadMap(maps[0])
+
         $tags = _(getTags())
             .sort()
             .map(tag => ({name: tag, checked: tag === 'North America'}))

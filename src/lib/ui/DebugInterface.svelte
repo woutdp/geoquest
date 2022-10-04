@@ -2,12 +2,15 @@
     import _ from 'lodash'
     import JSONTree from 'svelte-json-tree'
 
-    import {clientX, clientY, day, initialSave, mousePos, notifications, projection, projections, save, showDebug, time} from '$lib/store'
+    import {loadMap} from '$lib/map'
+    import {clientX, clientY, day, initialSave, maps, mousePos, notifications, projection, projections, save, showDebug, time} from '$lib/store'
 
     export let lastFocusedCountry
     export let toFind
     export let unfoundFeatures
     export let mistakesThisGuess
+
+    let mapId = 0
 </script>
 
 <div class="absolute z-50 flex flex-col max-w-2xl bg-background-dark" class:hidden={!$showDebug}>
@@ -17,6 +20,11 @@
     <select class="bg-background-dark" bind:value={$projection}>
         {#each projections as projection}
             <option value={projection.func}>{projection.name}</option>
+        {/each}
+    </select>
+    <select class="bg-background-dark" bind:value={mapId} on:change={() => loadMap(maps[mapId])}>
+        {#each maps as map, i}
+            <option value={i}>{map.name}</option>
         {/each}
     </select>
     <JSONTree value={lastFocusedCountry?.properties} />

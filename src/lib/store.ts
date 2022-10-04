@@ -15,12 +15,12 @@ export const projections = [
     {func: d3.geoMercator(), name: 'Mercator'},
     {func: d3.geoOrthographic(), name: 'Globe'}
 ]
+export const maps = [
+    {topojson: import('$lib/assets/maps/topojson/world.json'), name: 'World', data: {countries: import('$lib/assets/data/countries.json')}},
+    {topojson: import('$lib/assets/maps/topojson/us-states.json'), name: 'US States', data: {}}
+]
 
 // Map
-export const maps = [
-    {load: import('$lib/assets/maps/topojson/world.json'), name: 'World'},
-    {load: import('$lib/assets/maps/topojson/us-states.json'), name: 'US States'}
-]
 export const topojson = writable()
 export const geojson = derived(topojson, $topojson => ($topojson ? topojsonClient.feature($topojson, $topojson.objects.countries) : undefined))
 export const projection = writable(projections[0].func)
