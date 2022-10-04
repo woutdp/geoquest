@@ -7,7 +7,7 @@
     import {loadMap} from '$lib/map'
     import Map from '$lib/map/Map.svelte'
     import {successSound} from '$lib/sounds'
-    import {clientX, clientY, day, geojson, maps, mousePos, save, showDebug, tags, topojson} from '$lib/store'
+    import {clientX, clientY, day, geojson, geometries, maps, mousePos, save, showDebug, tags, topojson} from '$lib/store'
     import DebugInterface from '$lib/ui/DebugInterface.svelte'
     import LoadingScreen from '$lib/ui/LoadingScreen.svelte'
     import MouseTooltip from '$lib/ui/MouseTooltip.svelte'
@@ -62,7 +62,7 @@
         foundFeatures = []
         correctCountries = []
 
-        if (gameConfiguration.possibleCountries === 'all') unfoundFeatures = $topojson.objects.countries.geometries
+        if (gameConfiguration.possibleCountries === 'all') unfoundFeatures = $geometries
         else unfoundFeatures = toFind
 
         questionFeature = undefined
@@ -71,7 +71,7 @@
 
     function newGame(configuration) {
         gameConfiguration = configuration
-        toFind = _($topojson.objects.countries.geometries)
+        toFind = _($geometries)
             .filter(geometry => configuration.countries.includes(geometry.properties.name))
             .sortBy(g => _(configuration.countries).findIndex(c => c === g.properties.name))
             .value()
@@ -82,7 +82,7 @@
         if (configuration?.mode === 'dailyQuest') {
             const progress = $save.dailyQuestProgress.progress
 
-            if (gameConfiguration.possibleCountries === 'all') unfoundFeatures = $topojson.objects.countries.geometries
+            if (gameConfiguration.possibleCountries === 'all') unfoundFeatures = $geometries
             else unfoundFeatures = toFind
 
             const alreadyFound = _(progress)
@@ -114,7 +114,7 @@
                 else streak = i
             }
 
-            toFind = _($topojson.objects.countries.geometries)
+            toFind = _($geometries)
                 .filter(geometry =>
                     _(configuration.countries)
                         .reject(c => alreadyFound.includes(c))

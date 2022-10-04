@@ -5,7 +5,7 @@ import {get} from 'svelte/store'
 import achievements from '$lib/assets/data/achievements.json'
 import countries from '$lib/assets/data/countries.json'
 import {notifications, save} from '$lib/store'
-import {topojson} from '$lib/store'
+import {geometries} from '$lib/store'
 
 export const CORRECT = 'correct'
 export const WRONG = 'wrong'
@@ -56,7 +56,7 @@ export function getCountriesFromTags(tags) {
 }
 
 export function getActiveCountries() {
-    return _(get(topojson).objects.countries.geometries)
+    return _(get(geometries))
         .map(country => country.properties.name)
         .value()
 }
