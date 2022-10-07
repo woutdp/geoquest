@@ -4,7 +4,6 @@ import _ from 'lodash'
 import * as topojsonClient from 'topojson-client'
 
 import {tags, topojson} from '$lib/store'
-import {getTags} from '$lib/utils'
 
 export async function loadMap(map) {
     let json = await map.topojson
@@ -14,7 +13,11 @@ export async function loadMap(map) {
         json = preprocessTopojson(json, key, data)
 
         tags.set(
-            _(getTags())
+            _(Object.values(data))
+                .map(feature => feature.tags)
+                .flatten()
+                .compact()
+                .uniq()
                 .sort()
                 .map(tag => ({name: tag, checked: tag === 'North America'}))
                 .value()

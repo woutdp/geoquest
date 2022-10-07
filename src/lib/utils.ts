@@ -36,15 +36,6 @@ export function dictToArray(d) {
     })
 }
 
-export function getTags() {
-    return _(Object.values(countries))
-        .map(country => country.tags)
-        .flatten()
-        .compact()
-        .uniq()
-        .value()
-}
-
 export function getCountriesFromTags(tags) {
     return _(dictToArray(countries))
         .filter(country => _.intersection(country.tags, tags).length > 0)
