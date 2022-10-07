@@ -5,9 +5,14 @@
         "America": ["North America", "South America", "Central America", "Caribbean"],
         "Africa": ["Africa", "North Africa", "Southern Africa", "West Africa", "East Africa", "Central Africa"],
         "Oceania": ["Oceania"],
-        "defaults": ["North America"]
+        "meta": {
+            "defaults": ["North America"]
+        }
     },
     "US States": {
-        "defaults": ["West"]
+        "North America": ["West", "Midwest", "Southwest", "Southeast", "Northeast"],
+        "meta": {
+            "defaults": ["West"]
+        }
     }
 }

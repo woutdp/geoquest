@@ -3,8 +3,7 @@ import bboxCalc from 'geojson-bbox'
 import _ from 'lodash'
 import * as topojsonClient from 'topojson-client'
 
-import tagsGroup from '$lib/assets/data/tags.json'
-import {selectedMap, tags, topojson} from '$lib/store'
+import {selectedMap, topojson} from '$lib/store'
 
 export async function loadMap(map) {
     const loadedMap = map
@@ -16,17 +15,6 @@ export async function loadMap(map) {
         const data = (await dataPromise).default
         loadedMap.data[key] = data
         json = preprocessTopojson(json, key, data)
-
-        tags.set(
-            _(Object.values(data))
-                .map(feature => feature.tags)
-                .flatten()
-                .compact()
-                .uniq()
-                .sort()
-                .map(tag => ({name: tag, checked: tagsGroup[map.name].defaults.includes(tag)}))
-                .value()
-        )
     }
 
     topojson.set(json)

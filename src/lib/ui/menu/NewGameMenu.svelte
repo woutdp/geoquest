@@ -2,17 +2,28 @@
     import _ from 'lodash'
     import {fade} from 'svelte/transition'
 
-    import {tags} from '$lib/store'
+    import tagsGroup from '$lib/assets/data/tags.json'
+    import {maps} from '$lib/store'
     import {getFeaturesFromTags} from '$lib/utils'
 
     export let newGame
     export let toggleMenu
 
-    $: selectedTags = _($tags)
+    let map = maps[0]
+    let group = tagsGroup[map.name]
+    let tags = _(group)
+        .omit(['meta'])
+        .map(g => Object.values(g))
+        .flatten()
+        .uniq()
+        .sort()
+        .map(tag => ({name: tag, checked: group.meta.defaults.includes(tag)}))
+        .value()
+    $: selectedTags = _(tags)
         .filter(tag => tag.checked)
         .map(tag => tag.name)
         .value()
-    $: unselected = _($tags)
+    $: unselected = _(tags)
         .filter(tag => !tag.checked)
         .map(tag => tag.name)
         .value()
@@ -23,7 +34,7 @@
 <div class="flex flex-col">
     <div class="flex flex-col mb-4 min-h-[300px] justify-between">
         <div class="flex flex-wrap">
-            {#each $tags as tag}
+            {#each tags as tag}
                 <input id={tag.name} type="checkbox" hidden bind:checked={tag.checked} />
             {/each}
             {#each unselected as tag}
@@ -57,12 +68,12 @@
         </div>
     </div>
     <button
-        on:click={() => {
+        on:click={async () => {
             newGame({countries: getFeaturesFromTags(selectedTags)})
             toggleMenu()
         }}
         {disabled}
-        class="p-2 mb-2 text-xl font-bold transition-colors rounded-md disabled:bg-red disabled:hover:text-black disabled:cursor-not-allowed bg-foreground-light text-background hover:bg-green outline outline-4"
+        class="p-2 mb-2 text-xl font-bold transition-colors rounded-md disabled:hover:bg-foreground disabled:opacity-10 disabled:hover:text-black disabled:cursor-not-allowed bg-foreground-light text-background hover:bg-green outline outline-4 transition-opacity"
     >
         START
     </button>

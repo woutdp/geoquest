@@ -36,7 +36,6 @@ export const clientX = writable(0)
 export const clientY = writable(0)
 export const debug = writable()
 export const notifications = writable([])
-export const tags = writable([])
 export const time = readable(new Date(), function start(set) {
     setInterval(() => set(new Date()), 1000)
 })
