@@ -2,8 +2,8 @@ import * as turf from '@turf/turf'
 import bboxCalc from 'geojson-bbox'
 import _ from 'lodash'
 import * as topojsonClient from 'topojson-client'
-import tagsGroup from '$lib/assets/data/tags.json'
 
+import tagsGroup from '$lib/assets/data/tags.json'
 import {tags, topojson} from '$lib/store'
 
 export async function loadMap(map) {
