@@ -7,12 +7,12 @@
     import {loadMap} from '$lib/map'
     import Map from '$lib/map/Map.svelte'
     import {successSound} from '$lib/sounds'
-    import {clientX, clientY, day, geojson, geometries, maps, mousePos, save, showDebug, tags, topojson} from '$lib/store'
+    import {clientX, clientY, day, geojson, geometries, maps, mousePos, save, showDebug, topojson} from '$lib/store'
     import DebugInterface from '$lib/ui/DebugInterface.svelte'
     import LoadingScreen from '$lib/ui/LoadingScreen.svelte'
     import MouseTooltip from '$lib/ui/MouseTooltip.svelte'
     import UI from '$lib/ui/UI.svelte'
-    import {achieveAchievement, ALREADY_GUESSED, CORRECT, getGeojsonByName, getTags, processAchievements, WRONG} from '$lib/utils'
+    import {achieveAchievement, ALREADY_GUESSED, CORRECT, getGeojsonByName, processAchievements, WRONG} from '$lib/utils'
 
     polyfillCountryFlagEmojis()
     import dailyQuestCountries from '$lib/assets/data/daily-quest.json'
@@ -215,17 +215,6 @@
         $save.dailyQuestProgress = {...$save.dailyQuestProgress, progress: progress}
     }
 
-    onMount(async () => {
-        await loadMap(maps[0])
-
-        $tags = _(getTags())
-            .sort()
-            .map(tag => ({name: tag, checked: tag === 'North America'}))
-            .value()
-
-        newDailyQuest()
-    })
-
     function handleMousemove(e) {
         $mousePos = {x: e.clientX, y: e.clientY}
     }
@@ -233,6 +222,11 @@
     function handleKeypress(e) {
         if (dev && e.key === 'd') $showDebug = !$showDebug
     }
+
+    onMount(async () => {
+        await loadMap(maps[0])
+        newDailyQuest()
+    })
 </script>
 
 <svelte:window on:keypress={handleKeypress} on:mousemove={handleMousemove} bind:innerWidth={$clientX} bind:innerHeight={$clientY} />
