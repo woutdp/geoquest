@@ -17,7 +17,7 @@ export const projections = [
 ]
 export const maps = [
     {topojson: import('$lib/assets/maps/topojson/world.json'), name: 'World', data: {countries: import('$lib/assets/data/countries.json')}},
-    {topojson: import('$lib/assets/maps/topojson/us-states.json'), name: 'US States', data: {}}
+    {topojson: import('$lib/assets/maps/topojson/us-states.json'), name: 'US States', data: {states: import('$lib/assets/data/us-states.json')}}
 ]
 
 // Map
