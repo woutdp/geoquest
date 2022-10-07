@@ -3,9 +3,14 @@ import bboxCalc from 'geojson-bbox'
 import _ from 'lodash'
 import * as topojsonClient from 'topojson-client'
 
-import {selectedMap, topojson} from '$lib/store'
+import {loadedMap as loadedMapStore} from '$lib/store'
 
 export async function loadMap(map) {
+    if (map?.loaded) {
+        loadedMapStore.set(map)
+        return
+    }
+
     const loadedMap = map
     loadedMap.topojson = await loadedMap.topojson
 
@@ -17,8 +22,8 @@ export async function loadMap(map) {
         json = preprocessTopojson(json, key, data)
     }
 
-    topojson.set(json)
-    selectedMap.set(loadedMap)
+    map.loaded = true
+    loadedMapStore.set(loadedMap)
 }
 
 function preprocessTopojson(json, dataKey, data) {

@@ -7,7 +7,7 @@
     import {loadMap} from '$lib/map'
     import Map from '$lib/map/Map.svelte'
     import {successSound} from '$lib/sounds'
-    import {clientX, clientY, day, geojson, geometries, maps, mousePos, save, selectedMap, showDebug, topojson} from '$lib/store'
+    import {clientX, clientY, day, geojson, geometries, loadedMap, maps, mousePos, save, showDebug} from '$lib/store'
     import DebugInterface from '$lib/ui/DebugInterface.svelte'
     import LoadingScreen from '$lib/ui/LoadingScreen.svelte'
     import MouseTooltip from '$lib/ui/MouseTooltip.svelte'
@@ -44,7 +44,7 @@
         maxGuesses: 5
     }
 
-    $: showLoadingScreen = Boolean(!$topojson)
+    $: showLoadingScreen = Boolean(!$loadedMap)
     $: correct = correctCountries.length
     $: canRestart = gameConfiguration.restart ?? true
 
@@ -177,7 +177,7 @@
                 if (mistakes === 0 && gameConfiguration.mode === 'dailyQuest') achieveAchievement('daily-challenge')
             }
 
-            if ($selectedMap.name === 'World') {
+            if ($loadedMap.name === 'World') {
                 achieveAchievement('1-streak')
                 if (streak === 5) achieveAchievement('5-streak')
                 if (streak === 10) achieveAchievement('10-streak')
@@ -256,7 +256,7 @@
     bind:showMenu
 />
 
-{#if $topojson && interfaceLoaded}
+{#if $loadedMap && interfaceLoaded}
     <Map bind:this={map} {clickCountryHandler} {countryFocusedHandler} {foundFeatures} {unfoundFeatures} {toFind} />
 {/if}
 

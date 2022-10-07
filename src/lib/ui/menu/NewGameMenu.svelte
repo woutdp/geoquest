@@ -9,16 +9,24 @@
     export let newGame
     export let toggleMenu
 
-    let map = maps[0]
-    let group = tagsGroup[map.name]
-    let tags = _(group)
-        .omit(['meta'])
-        .map(g => Object.values(g))
-        .flatten()
-        .uniq()
-        .sort()
-        .map(tag => ({name: tag, checked: group.meta.defaults.includes(tag)}))
-        .value()
+    let mapId = 0
+    let tags = []
+
+    function loadTags() {
+        const group = tagsGroup[maps[mapId].name]
+        tags = _(group)
+            .omit(['meta'])
+            .map(g => Object.values(g))
+            .flatten()
+            .uniq()
+            .sort()
+            .map(tag => ({name: tag, checked: group.meta.defaults.includes(tag)}))
+            .value()
+    }
+
+    loadTags()
+
+    $: map = maps[mapId]
     $: selectedTags = _(tags)
         .filter(tag => tag.checked)
         .map(tag => tag.name)

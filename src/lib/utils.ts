@@ -4,7 +4,7 @@ import {get} from 'svelte/store'
 
 import achievements from '$lib/assets/data/achievements.json'
 import {notifications, save} from '$lib/store'
-import {geometries, selectedMap} from '$lib/store'
+import {geometries, loadedMap} from '$lib/store'
 
 export const CORRECT = 'correct'
 export const WRONG = 'wrong'
@@ -36,7 +36,7 @@ export function dictToArray(d) {
 }
 
 export function getFeaturesFromTags(tags) {
-    return _(dictToArray(Object.values(get(selectedMap).data)[0]))
+    return _(dictToArray(Object.values(get(loadedMap).data)[0]))
         .filter(feature => _.intersection(feature.tags, tags).length > 0)
         .map(feature => feature.name)
         .compact()
@@ -79,7 +79,7 @@ export function achieveAchievement(slug) {
 }
 
 export function processWorldAchievements(features) {
-    if (get(selectedMap).name !== 'World') return
+    if (get(loadedMap).name !== 'World') return
     const achievementsWithTags = _(achievements)
         .filter(achievement => achievement?.extra?.tags)
         .value()
