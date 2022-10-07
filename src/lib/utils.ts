@@ -3,9 +3,8 @@ import _ from 'lodash'
 import {get} from 'svelte/store'
 
 import achievements from '$lib/assets/data/achievements.json'
-import countries from '$lib/assets/data/countries.json'
 import {notifications, save} from '$lib/store'
-import {geometries} from '$lib/store'
+import {geometries, selectedMap} from '$lib/store'
 
 export const CORRECT = 'correct'
 export const WRONG = 'wrong'
@@ -36,10 +35,10 @@ export function dictToArray(d) {
     })
 }
 
-export function getCountriesFromTags(tags) {
-    return _(dictToArray(countries))
-        .filter(country => _.intersection(country.tags, tags).length > 0)
-        .map(country => country.name)
+export function getFeaturesFromTags(tags) {
+    return _(dictToArray(Object.values(get(selectedMap).data)[0]))
+        .filter(feature => _.intersection(feature.tags, tags).length > 0)
+        .map(feature => feature.name)
         .compact()
         .uniq()
         .intersection(getActiveCountries())
@@ -79,12 +78,13 @@ export function achieveAchievement(slug) {
     }
 }
 
-export function processAchievements(countries) {
+export function processWorldAchievements(features) {
+    if (get(selectedMap).name !== 'World') return
     const achievementsWithTags = _(achievements)
-        .filter(a => a?.extra?.tags)
+        .filter(achievement => achievement?.extra?.tags)
         .value()
 
     for (const achievement of achievementsWithTags) {
-        if (_.difference(getCountriesFromTags(achievement.extra.tags), countries).length === 0) achieveAchievement(achievement.slug)
+        if (_.difference(getFeaturesFromTags(achievement.extra.tags), features).length === 0) achieveAchievement(achievement.slug)
     }
 }

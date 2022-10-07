@@ -1,5 +1,202 @@
 {
+    "Alabama": {
+        "color": 3,
+        "tags": ["Southeast"]
+    },
+    "Alaska": {
+        "color": 1,
+        "tags": ["West"]
+    },
+    "Arizona": {
+        "color": 3,
+        "tags": ["Southwest"]
+    },
+    "Arkansas": {
+        "color": 1,
+        "tags": ["Southeast"]
+    },
+    "California": {
+        "color": 0,
+        "tags": ["West"]
+    },
+    "Colorado": {
+        "color": 0,
+        "tags": ["West"]
+    },
+    "Connecticut": {
+        "color": 1,
+        "tags": ["Northeast"]
+    },
+    "Delaware": {
+        "color": 2,
+        "tags": ["Southeast"]
+    },
+    "Florida": {
+        "color": 2,
+        "tags": ["Southeast"]
+    },
+    "Georgia": {
+        "color": 0,
+        "tags": ["Southeast"]
+    },
+    "Hawaii": {
+        "color": 2,
+        "tags": ["West"]
+    },
+    "Idaho": {
+        "color": 0,
+        "tags": ["West"]
+    },
+    "Illinois": {
+        "color": 2,
+        "tags": ["Midwest"]
+    },
+    "Indiana": {
+        "color": 3,
+        "tags": ["Midwest"]
+    },
+    "Iowa": {
+        "color": 1,
+        "tags": ["Midwest"]
+    },
+    "Kansas": {
+        "color": 3,
+        "tags": ["Midwest"]
+    },
+    "Kentucky": {
+        "color": 1,
+        "tags": ["Southeast"]
+    },
+    "Louisiana": {
+        "color": 3,
+        "tags": ["Southeast"]
+    },
+    "Maine": {
+        "color": 0,
+        "tags": ["Northeast"]
+    },
+    "Maryland": {
+        "color": 3,
+        "tags": ["Southeast"]
+    },
+    "Massachusetts": {
+        "color": 0,
+        "tags": ["Northeast"]
+    },
+    "Michigan": {
+        "color": 1,
+        "tags": ["Midwest"]
+    },
+    "Minnesota": {
+        "color": 2,
+        "tags": ["Midwest"]
+    },
+    "Mississippi": {
+        "color": 0,
+        "tags": ["Southeast"]
+    },
+    "Missouri": {
+        "color": 0,
+        "tags": ["Midwest"]
+    },
+    "Montana": {
+        "color": 2,
+        "tags": ["West"]
+    },
+    "Nebraska": {
+        "color": 2,
+        "tags": ["Midwest"]
+    },
+    "Nevada": {
+        "color": 1,
+        "tags": ["West"]
+    },
+    "New Hampshire": {
+        "color": 2,
+        "tags": ["Northeast"]
+    },
+    "New Jersey": {
+        "color": 0,
+        "tags": ["Northeast"]
+    },
+    "New Mexico": {
+        "color": 1,
+        "tags": ["Southwest"]
+    },
+    "New York": {
+        "color": 3,
+        "tags": ["Northeast"]
+    },
+    "North Carolina": {
+        "color": 1,
+        "tags": ["Southeast"]
+    },
+    "North Dakota": {
+        "color": 0,
+        "tags": ["Midwest"]
+    },
+    "Ohio": {
+        "color": 0,
+        "tags": ["Midwest"]
+    },
+    "Oklahoma": {
+        "color": 2,
+        "tags": ["Southwest"]
+    },
+    "Oregon": {
+        "color": 3,
+        "tags": ["West"]
+    },
+    "Pennsylvania": {
+        "color": 1,
+        "tags": ["Northeast"]
+    },
+    "Rhode Island": {
+        "color": 3,
+        "tags": ["Northeast"],
+        "helper": true
+    },
+    "South Carolina": {
+        "color": 3,
+        "tags": ["Southeast"]
+    },
+    "South Dakota": {
+        "color": 3,
+        "tags": ["Midwest"]
+    },
+    "Tennessee": {
+        "color": 2,
+        "tags": ["Southeast"]
+    },
+    "Texas": {
+        "color": 0,
+        "tags": ["Southwest"]
+    },
+    "Utah": {
+        "color": 2,
+        "tags": ["West"]
+    },
+    "Vermont": {
+        "color": 1,
+        "tags": ["Northeast"]
+    },
+    "Virginia": {
+        "color": 0,
+        "tags": ["Southeast"]
+    },
     "Washington": {
+        "color": 2,
+        "tags": ["West"]
+    },
+    "West Virginia": {
+        "color": 2,
+        "tags": ["Southeast"]
+    },
+    "Wisconsin": {
+        "color": 3,
+        "tags": ["Midwest"]
+    },
+    "Wyoming": {
         "color": 1,
         "tags": ["West"]
     }

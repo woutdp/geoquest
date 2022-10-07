@@ -3,7 +3,7 @@
     import {fade} from 'svelte/transition'
 
     import {tags} from '$lib/store'
-    import {getCountriesFromTags} from '$lib/utils'
+    import {getFeaturesFromTags} from '$lib/utils'
 
     export let newGame
     export let toggleMenu
@@ -58,7 +58,7 @@
     </div>
     <button
         on:click={() => {
-            newGame({countries: getCountriesFromTags(selectedTags)})
+            newGame({countries: getFeaturesFromTags(selectedTags)})
             toggleMenu()
         }}
         {disabled}

@@ -4,13 +4,17 @@ import _ from 'lodash'
 import * as topojsonClient from 'topojson-client'
 
 import tagsGroup from '$lib/assets/data/tags.json'
-import {tags, topojson} from '$lib/store'
+import {selectedMap, tags, topojson} from '$lib/store'
 
 export async function loadMap(map) {
-    let json = await map.topojson
+    const loadedMap = map
+    loadedMap.topojson = await loadedMap.topojson
+
+    let json = loadedMap.topojson
 
     for (const [key, dataPromise] of Object.entries(map.data)) {
         const data = (await dataPromise).default
+        loadedMap.data[key] = data
         json = preprocessTopojson(json, key, data)
 
         tags.set(
@@ -26,6 +30,7 @@ export async function loadMap(map) {
     }
 
     topojson.set(json)
+    selectedMap.set(loadedMap)
 }
 
 function preprocessTopojson(json, dataKey, data) {

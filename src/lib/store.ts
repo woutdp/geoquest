@@ -21,6 +21,7 @@ export const maps = [
 ]
 
 // Map
+export const selectedMap = writable()
 export const topojson = writable()
 export const geojson = derived(topojson, $topojson => ($topojson ? topojsonClient.feature($topojson, Object.keys($topojson?.objects)[0]) : undefined))
 export const geometries = derived(topojson, $topojson => ($topojson ? Object.values($topojson?.objects)[0].geometries : undefined))

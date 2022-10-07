@@ -7,12 +7,12 @@
     import {loadMap} from '$lib/map'
     import Map from '$lib/map/Map.svelte'
     import {successSound} from '$lib/sounds'
-    import {clientX, clientY, day, geojson, geometries, maps, mousePos, save, showDebug, topojson} from '$lib/store'
+    import {clientX, clientY, day, geojson, geometries, maps, mousePos, save, selectedMap, showDebug, topojson} from '$lib/store'
     import DebugInterface from '$lib/ui/DebugInterface.svelte'
     import LoadingScreen from '$lib/ui/LoadingScreen.svelte'
     import MouseTooltip from '$lib/ui/MouseTooltip.svelte'
     import UI from '$lib/ui/UI.svelte'
-    import {achieveAchievement, ALREADY_GUESSED, CORRECT, getGeojsonByName, processAchievements, WRONG} from '$lib/utils'
+    import {achieveAchievement, ALREADY_GUESSED, CORRECT, getGeojsonByName, processWorldAchievements, WRONG} from '$lib/utils'
 
     polyfillCountryFlagEmojis()
     import dailyQuestCountries from '$lib/assets/data/daily-quest.json'
@@ -177,11 +177,13 @@
                 if (mistakes === 0 && gameConfiguration.mode === 'dailyQuest') achieveAchievement('daily-challenge')
             }
 
-            achieveAchievement('1-country')
-            if (streak === 5) achieveAchievement('5-streak')
-            if (streak === 10) achieveAchievement('10-streak')
-            if (streak === 30) achieveAchievement('30-streak')
-            processAchievements(correctCountries)
+            if ($selectedMap.name === 'World') {
+                achieveAchievement('1-streak')
+                if (streak === 5) achieveAchievement('5-streak')
+                if (streak === 10) achieveAchievement('10-streak')
+                if (streak === 30) achieveAchievement('30-streak')
+                processWorldAchievements(correctCountries)
+            }
 
             return CORRECT
         }
