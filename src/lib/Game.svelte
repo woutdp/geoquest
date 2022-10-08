@@ -178,7 +178,7 @@
             }
 
             if ($loadedMap.name === 'World') {
-                achieveAchievement('1-streak')
+                achieveAchievement('1-country')
                 if (streak === 5) achieveAchievement('5-streak')
                 if (streak === 10) achieveAchievement('10-streak')
                 if (streak === 30) achieveAchievement('30-streak')
