@@ -44,7 +44,7 @@
         "topojson-simplify": "^3.0.3",
         "tslib": "^2.4.0",
         "typescript": "^4.8.4",
-        "vite": "^3.1.4"
+        "vite": "^3.2.4"
     },
     "dependencies": {
         "lodash": "^4.17.21",
