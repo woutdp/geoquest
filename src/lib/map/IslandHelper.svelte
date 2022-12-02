@@ -1,6 +1,7 @@
 <script lang="ts">
     import * as turf from '@turf/turf'
 
+    import {countryColors} from '$lib/store'
     import {antimeridian, buffer, getCountryColor} from '$lib/utils'
 
     export let data
@@ -17,6 +18,7 @@
 
     $: found = foundFeatures.includes(topojson)
     $: disabled = !unfoundFeatures.includes(topojson)
+    $: color = getCountryColor(feature, $countryColors)
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
@@ -31,7 +33,7 @@
         ? 'fill-transparent opacity-20'
         : `
             cursor-pointer
-            ${getCountryColor(feature)} 
+            ${color}
             opacity-40
             hover:opacity-90
             hover:fill-foreground

@@ -8,6 +8,7 @@ import {browser} from '$app/environment'
 // Constants
 const dateZero = new Date('February 19, 2022 03:00:00')
 const oneDay = 24 * 3600 * 1000
+export const countryColors = writable(['fill-blue', 'fill-yellow', 'fill-green', 'fill-red'])
 export const projections = [
     {func: geoPatterson(), name: 'Patterson'},
     {func: geoRobinson(), name: 'Robinson'},

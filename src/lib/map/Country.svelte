@@ -1,4 +1,5 @@
 <script lang="ts">
+    import {countryColors} from '$lib/store'
     import {getCountryColor} from '$lib/utils'
 
     export let data
@@ -10,8 +11,8 @@
 
     let feature = data[0]
     let topojson = data[1]
-    let color = getCountryColor(topojson)
 
+    $: color = getCountryColor(topojson, $countryColors)
     $: found = foundFeatures.includes(topojson)
     $: disabled = !unfoundFeatures.includes(topojson)
 </script>
