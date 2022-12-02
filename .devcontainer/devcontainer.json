@@ -11,7 +11,16 @@
 	"forwardPorts": [ 5173 ],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	 "postCreateCommand": "npm install",
+	"postCreateCommand": "npm install",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"svelte.svelte-vscode",
+				"ardenivanov.svelte-intellisense",
+				"fivethree.vscode-svelte-snippets"
+			]
+		}
+	},
 
 	// Configure tool-specific properties.
 	// "customizations": {},
