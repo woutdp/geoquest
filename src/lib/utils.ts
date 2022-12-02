@@ -4,15 +4,23 @@ import {get} from 'svelte/store'
 
 import achievements from '$lib/assets/data/achievements.json'
 import {notifications, save} from '$lib/store'
-import {geometries, loadedMap} from '$lib/store'
+import {geometries, loadedMap, countryColors} from '$lib/store'
 
 export const CORRECT = 'correct'
 export const WRONG = 'wrong'
 export const ALREADY_GUESSED = 'already_guessed'
 export const COUNTRY_COLORS = ['fill-blue', 'fill-yellow', 'fill-green', 'fill-red']
 
-export function getCountryColor(feature) {
-    return COUNTRY_COLORS[feature?.properties?.color] || 'fill-[#F0F]'
+
+
+export function getCountryColor(feature, countryColors) {
+    let color = countryColors[feature?.properties?.color] || 'fill-[#F0F]'
+    return color
+}
+export function shuffleColors() {
+    console.log('shuffle')
+    countryColors.set(_.shuffle(get(countryColors)))
+    console.log(get(countryColors))
 }
 
 export function antimeridian(featureCollection) {
