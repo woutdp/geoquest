@@ -8,6 +8,7 @@
     import AboutMenu from '$lib/ui/menu/AboutMenu.svelte'
     import Achievements from '$lib/ui/menu/Achievements.svelte'
     import NewGameMenu from '$lib/ui/menu/NewGameMenu.svelte'
+    import SettingsMenu from '$lib/ui/menu/SettingsMenu.svelte'
     import WinScreen from '$lib/ui/menu/WinScreen.svelte'
 
     export let restart
@@ -48,6 +49,9 @@
         <span class="w-1/3">ACHIEVEMENTS</span>
         <span class="flex justify-end w-1/3 text-sm">{$save.achievements.length} / {achievements.length}</span>
     </button>
+    <button on:click={() => setActiveMenu(SettingsMenu)} class="p-2 mb-2 text-xl text-black transition-colors rounded-md bg-foreground-light hover:bg-background hover:text-foreground">
+        SETTINGS
+    </button>
     <button
         on:click={() => {
             restart()
@@ -63,7 +67,7 @@
             <IconInfo />
         </button>
         <div class="flex justify-end ml-4">
-            <input hidden id="Effects" type="checkbox" bind:checked={$soundEffects} />
+            <input hidden id="Effects" type="checkbox" class="hidden" bind:checked={$soundEffects} />
             <label for="Effects" class="p-2 transition-colors rounded-full cursor-pointer bg-foreground-light text-background hover:bg-background hover:text-foreground">
                 {#if $soundEffects}<IconVolumeUp />{:else}<IconVolumeOff />{/if}
             </label>

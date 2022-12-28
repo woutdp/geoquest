@@ -43,13 +43,12 @@
     <div class="flex flex-col mb-4 min-h-[300px] justify-between">
         <div class="flex flex-wrap">
             {#each tags as tag}
-                <input id={tag.name} type="checkbox" hidden bind:checked={tag.checked} />
+                <input id={tag.name} type="checkbox" class="hidden" hidden bind:checked={tag.checked} />
             {/each}
             {#each unselected as tag}
                 <div class="flex justify-center mb-2 mr-2">
                     <label
                         for={tag}
-                        type="checkbox"
                         class="px-3 py-1 text-sm font-semibold uppercase transition-all border-2 rounded-full cursor-pointer whitespace-nowrap text-background bg-foreground hover:border-background last:mr-0 border-foreground"
                     >
                         {tag}
@@ -64,7 +63,6 @@
                         <div class="flex justify-center my-1 mr-2">
                             <label
                                 for={tag}
-                                type="checkbox"
                                 class="px-3 py-1 text-sm font-semibold uppercase transition-all border-2 rounded-full cursor-pointer whitespace-nowrap text-background bg-foreground-light hover:border-background last:mr-0 border-foreground"
                             >
                                 {tag}

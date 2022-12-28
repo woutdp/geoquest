@@ -9,6 +9,7 @@
     import IconFullScreen from '$lib/icons/IconFullScreen.svelte'
     import IconMenu from '$lib/icons/IconMenu.svelte'
     import IconMistake from '$lib/icons/IconMistake.svelte'
+    import {showFlagOnly} from '$lib/store'
     import Menu from '$lib/ui/menu/Menu.svelte'
     import Notifications from '$lib/ui/Notifications.svelte'
     import {achieveAchievement} from '$lib/utils'
@@ -96,7 +97,7 @@
                         >
                             {#if flag}
                                 <div
-                                    class="select-none mr-2 sm:mr-3 cursor-pointer {rotateFlag ? 'animate-double-spin' : ''}"
+                                    class="select-none cursor-pointer {$showFlagOnly ? 'text-5xl' : 'mr-2 sm:mr-3'} {rotateFlag ? 'animate-double-spin' : ''}"
                                     on:click={() => {
                                         toggleSpin()
                                         achieveAchievement('spin-flag')
@@ -105,7 +106,9 @@
                                     {flag}
                                 </div>
                             {/if}
-                            {questionFeature?.properties?.name}
+                            {#if !$showFlagOnly}
+                                {questionFeature?.properties?.name}
+                            {/if}
                         </span>
                     </div>
                 {/key}

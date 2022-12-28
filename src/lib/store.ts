@@ -30,6 +30,7 @@ export const projection = writable(projections[0].func)
 
 // Settings
 export const soundEffects = writable(true)
+export const showFlagOnly = writable(false)
 
 // Game
 export const mousePos = writable({x: 0, y: 0})
