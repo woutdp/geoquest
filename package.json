@@ -14,6 +14,7 @@
     "devDependencies": {
         "@sveltejs/adapter-cloudflare": "^1.0.0-next.38",
         "@sveltejs/kit": "^1.0.0-next.507",
+        "@tailwindcss/forms": "^0.5.3",
         "@turf/turf": "^6.5.0",
         "@typescript-eslint/eslint-plugin": "^5.38.1",
         "@typescript-eslint/parser": "^5.38.1",
@@ -39,7 +40,7 @@
         "svelte": "^3.50.1",
         "svelte-check": "^2.9.1",
         "svelte-preprocess": "^4.10.7",
-        "tailwindcss": "^3.1.8",
+        "tailwindcss": "^3.2.4",
         "topojson-client": "^3.1.0",
         "topojson-simplify": "^3.0.3",
         "tslib": "^2.4.0",
