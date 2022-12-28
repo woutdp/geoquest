@@ -1,10 +1,9 @@
 <script lang="ts">
+    import {dev} from '$app/environment'
     import IconEmail from '$lib/icons/IconEmail.svelte'
     import IconGithub from '$lib/icons/IconGithub.svelte'
     import IconLightbulb from '$lib/icons/IconLightbulb.svelte'
     import IconWorld from '$lib/icons/IconWorld.svelte'
-
-    const dev = import.meta.env.DEV
 
     $: inIframe = window.location !== window.parent.location
 </script>

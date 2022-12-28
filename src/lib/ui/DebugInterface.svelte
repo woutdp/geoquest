@@ -1,7 +1,7 @@
 <script lang="ts">
     import _ from 'lodash'
-    import JSONTree from 'svelte-json-tree'
 
+    // import JSONTree from 'svelte-json-tree'
     import {loadMap} from '$lib/map'
     import {clientX, clientY, day, initialSave, maps, mousePos, notifications, projection, projections, save, showDebug, time} from '$lib/store'
 
@@ -27,7 +27,7 @@
             <option value={i}>{map.name}</option>
         {/each}
     </select>
-    <JSONTree value={lastFocusedCountry?.properties} />
+    <!-- <JSONTree value={lastFocusedCountry?.properties} />
     <p>
         ToFind: <JSONTree
             value={_(toFind)
@@ -45,6 +45,6 @@
     <JSONTree value={$mousePos} />
     <JSONTree value={{x: $clientX, y: $clientY}} />
     <JSONTree value={$save} />
-    <JSONTree value={$notifications} />
+    <JSONTree value={$notifications} /> -->
     <button on:click={() => ($save = {...initialSave})} class="mt-4 rounded-md bg-foreground text-background hover:bg-foreground-light">Reset Savefile</button>
 </div>

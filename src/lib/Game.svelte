@@ -4,6 +4,7 @@
     import _ from 'lodash'
     import {onMount} from 'svelte'
 
+    import {dev} from '$app/environment'
     import {loadMap} from '$lib/map'
     import Map from '$lib/map/Map.svelte'
     import {successSound} from '$lib/sounds'
@@ -16,8 +17,6 @@
 
     polyfillCountryFlagEmojis()
     import dailyQuestCountries from '$lib/assets/data/daily-quest.json'
-
-    const dev = import.meta.env.DEV
 
     let questionFeature
     let lastFocusedCountry
