@@ -48,4 +48,7 @@
         transform translateY(100px)
         &.show
             transform translateY(0)
+
+        @media screen and (max-width: 767px)
+            display none !important
 </style>
