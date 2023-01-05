@@ -6,7 +6,7 @@
     "singleQuote": true,
     "svelteAllowShorthand": true,
     "svelteIndentScriptAndStyle": true,
-    "svelteSortOrder": "options-styles-scripts-markup",
+    "svelteSortOrder": "options-scripts-markup-styles",
     "svelteStrictMode": false,
     "tabWidth": 4,
     "trailingComma": "none",
