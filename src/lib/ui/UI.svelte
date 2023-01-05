@@ -10,6 +10,7 @@
     import IconMenu from '$lib/icons/IconMenu.svelte'
     import IconMistake from '$lib/icons/IconMistake.svelte'
     import {showFlagOnly} from '$lib/store'
+    import BuyMeACoffee from '$lib/ui/BuyMeACoffee.svelte'
     import Menu from '$lib/ui/menu/Menu.svelte'
     import Notifications from '$lib/ui/Notifications.svelte'
     import {achieveAchievement} from '$lib/utils'
@@ -161,3 +162,5 @@
 {/if}
 
 <Notifications />
+
+<BuyMeACoffee />
