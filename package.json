@@ -32,6 +32,7 @@
         "eslint-plugin-simple-import-sort": "^8.0.0",
         "eslint-plugin-svelte3": "^4.0.0",
         "geojson-bbox": "^0.0.1",
+        "js-cookie": "^3.0.1",
         "mapshaper": "^0.6.15",
         "postcss": "^8.4.20",
         "prettier": "^2.8.1",
