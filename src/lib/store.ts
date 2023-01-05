@@ -29,8 +29,8 @@ export const geometries = derived(topojson, $topojson => ($topojson ? Object.val
 export const projection = writable(projections[0].func)
 
 // Settings
-export const soundEffects = writable(true)
-export const showFlagOnly = writable(false)
+export const soundEffects = localStorageWritable('settingsSoundEffects', true)
+export const showFlagOnly = localStorageWritable('settingsShowFlagOnly', false)
 
 // Game
 export const mousePos = writable({x: 0, y: 0})
@@ -59,17 +59,21 @@ export const showDebug = writable(false)
 
 // Save files
 export const initialSave = {achievements: [], dailyQuestProgress: {}}
-const saveKey = 'save'
+export const save = localStorageWritable('save', initialSave)
 
-let localStorageSave = initialSave
+// Utils
+function localStorageWritable(key: string, initial: any) {
+    let savedValue
 
-try {
-    localStorageSave = browser ? JSON.parse(window.localStorage.getItem(saveKey)) ?? initialSave : initialSave
-} catch (err) {
-    console.error(err)
+    try {
+        savedValue = browser ? JSON.parse(window.localStorage.getItem(key)) ?? initial : initial
+    } catch (err) {
+        console.error(err)
+    }
+
+    const w = writable(savedValue)
+    w.subscribe(value => {
+        if (browser) window.localStorage.setItem(key, JSON.stringify(value))
+    })
+    return w
 }
-
-export const save = writable(localStorageSave)
-save.subscribe(value => {
-    if (browser) window.localStorage.setItem(saveKey, JSON.stringify(value))
-})
