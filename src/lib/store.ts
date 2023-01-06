@@ -4,6 +4,7 @@ import {derived, readable, writable} from 'svelte/store'
 import * as topojsonClient from 'topojson-client'
 
 import {browser} from '$app/environment'
+import {pushNotification} from '$lib/utils'
 
 // Constants
 const dateZero = new Date('February 19, 2022 03:00:00')
@@ -20,6 +21,15 @@ export const maps = [
     {topojson: import('$lib/assets/maps/topojson/world.json'), name: 'World', data: {countries: import('$lib/assets/data/countries.json')}},
     {topojson: import('$lib/assets/maps/topojson/us-states.json'), name: 'US States', data: {states: import('$lib/assets/data/us-states.json')}}
 ]
+export const notificationsPermission = readable(browser ? Notification.permission : 'denied', function start(set) {
+    navigator.permissions.query({name: 'notifications'}).then(function (permission) {
+        if (permission.state !== 'granted') enableDailyQuestNotification.update(() => false)
+        permission.onchange = function () {
+            if (permission.state !== 'granted') enableDailyQuestNotification.update(() => false)
+            set(permission.state)
+        }
+    })
+})
 
 // Map
 export const loadedMap = writable()
@@ -31,6 +41,31 @@ export const projection = writable(projections[0].func)
 // Settings
 export const soundEffects = localStorageWritable('settingsSoundEffects', true)
 export const showFlagOnly = localStorageWritable('settingsShowFlagOnly', false)
+export const enableDailyQuestNotification = localStorageWritable('settingsEnableDailyQuestNotification', false)
+subscribeIgnoreFirst(enableDailyQuestNotification, value => {
+    if (!browser) return
+    if (value) {
+        Notification.requestPermission().then(permission => {
+            if (permission === 'granted') {
+                window.deferredInstallEvent.prompt()
+                window.deferredInstallEvent.userChoice.then((choice) =>{
+                    if (choice.outcome === "accepted") pushNotification('Succ')
+                    else {
+                        pushNotification('Install GeoQuest for notifications to work')
+                        enableDailyQuestNotification.update(() => false)
+                    }
+                    window.deferredInstallEvent = undefined
+                })
+            } 
+            if (permission === 'denied') {
+                console.warn('Denied notifications')
+                enableDailyQuestNotification.update(() => false)
+            }
+        })
+    } else {
+        pushNotification('Disabled Daily Quest Reminder')
+    }
+})
 
 // Game
 export const mousePos = writable({x: 0, y: 0})
@@ -76,4 +111,12 @@ function localStorageWritable(key: string, initial: any) {
         if (browser) window.localStorage.setItem(key, JSON.stringify(value))
     })
     return w
+}
+
+function subscribeIgnoreFirst(store, fn) {
+    let firedFirst = false
+    return store.subscribe(state => {
+        if (!firedFirst) firedFirst = true
+        else fn(state)
+    })
 }

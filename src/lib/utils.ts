@@ -91,3 +91,60 @@ export function processWorldAchievements(features) {
         if (_.difference(getFeaturesFromTags(achievement.extra.tags), features).length === 0) achieveAchievement(achievement.slug)
     }
 }
+
+export async function pushNotification(message: string) {
+    const registration = await navigator.serviceWorker.getRegistration()
+
+    if ('showTrigger' in Notification.prototype) {
+        console.log('supported')
+        /* Notification Triggers supported */
+    } else {
+        console.log('unsupported')
+    }
+
+
+    window.setTimeout(() => (
+        registration.showNotification(
+            'GeoQuest',
+            {
+            //   tag: timestamp, // a unique ID
+            body: message, // content of the push notification
+            // timestamp: timestamp, // set the time for the push notification
+            //   data: {
+                // url: window.location.href, // pass the current url to the notification
+            //   },
+            //   badge: 'https://geoquest.wout.space/favicon.png',
+              icon: 'https://geoquest.wout.space/favicon.png'
+            }
+        )
+        // new Notification('GeoQuest', {body: message, icon: 'https://geoquest.wout.space/favicon.png'})
+    ), 1)
+    // const registration = await navigator.serviceWorker.getRegistration()
+    // // console.log(serviceWorker)
+    // const timestamp = new Date().getTime() + 5 * 1000 // now plus 5000ms
+
+    // try {
+    //     await registration.periodicSync.register('get-latest-news', {
+    //         minInterval: 5 * 1000
+    //     })
+    // } catch (error) {
+    //     console.error('Periodic Sync could not be registered!')
+    //     console.error(error)
+    // }
+
+    // registration.showNotification(
+    //     'GeoQuest',
+    //     {
+    //     //   tag: timestamp, // a unique ID
+    //       body: message, // content of the push notification
+    //       timestamp: timestamp, // set the time for the push notification
+    //     //   data: {
+    //         // url: window.location.href, // pass the current url to the notification
+    //     //   },
+    //     //   badge: 'https://geoquest.wout.space/favicon.png',
+    //     //   icon: 'https://geoquest.wout.space/favicon.png'
+    //     }
+    //   );
+
+    // return new Notification('GeoQuest', {body: message, icon: 'https://geoquest.wout.space/favicon.png'})
+}
