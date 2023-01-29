@@ -1,6 +1,6 @@
 # Authors and Contributors of `geoquest`
 
--   Project page: <https://geoquest.wout.space/>.
+-   Project page: <https://geoquest.gg/>.
 -   Source Code: <https://github.com/woutdp/geoquest>.
 
 ## Author/Maintainer

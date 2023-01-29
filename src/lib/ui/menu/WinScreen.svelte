@@ -23,7 +23,7 @@
             .value()
             .join('')
 
-        navigator.clipboard.writeText(`GeoQuest #${$save.dailyQuestProgress.day} ${correct}/${$save.dailyQuestProgress.progress.length}\n${emojis}\n\ngeoquest.wout.space`)
+        navigator.clipboard.writeText(`GeoQuest #${$save.dailyQuestProgress.day} ${correct}/${$save.dailyQuestProgress.progress.length}\n${emojis}\n\ngeoquest.gg`)
     }
 </script>
 
