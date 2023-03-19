@@ -23,7 +23,7 @@
             .value()
             .join('')
 
-        navigator.clipboard.writeText(`GeoQuest #${$save.dailyQuestProgress.day} ${correct}/${$save.dailyQuestProgress.progress.length}\n${emojis}\n\ngeoquest.gg`)
+        navigator.clipboard.writeText(`GeoQuest #${$save.dailyQuestProgress.day} ${correct}/${$save.dailyQuestProgress.progress.length}\n${emojis}\n\nhttps://geoquest.gg`)
     }
 </script>
 
@@ -54,12 +54,14 @@
             </span>
         </div>
     </div>
-    <button on:click={copyToClipboard} class="flex group relative bg-background-dark text-foreground rounded mt-4 justify-center items-center p-2 font-bold">
-        <IconShare /><span class="ml-2">Share</span>
-        <span
-            class="absolute hidden group-hover:flex -top-2 -translate-y-full rounded-lg text-center text-foreground text-base py-2 px-4 bg-background-dark justify-center after:content-[''] after:absolute  after:top-[100%] after:border-8 after:border-x-transparent after:border-b-transparent after:border-background-dark"
-        >
-            {copytext}
-        </span>
-    </button>
+    {#if gameConfiguration.mode === 'dailyQuest'}
+        <button on:click={copyToClipboard} class="flex group relative bg-background-dark text-foreground rounded mt-4 justify-center items-center p-2 font-bold">
+            <IconShare /><span class="ml-2">Share</span>
+            <span
+                class="absolute hidden group-hover:flex -top-2 -translate-y-full rounded-lg text-center text-foreground text-base py-2 px-4 bg-background-dark justify-center after:content-[''] after:absolute  after:top-[100%] after:border-8 after:border-x-transparent after:border-b-transparent after:border-background-dark"
+            >
+                {copytext}
+            </span>
+        </button>
+    {/if}
 </div>
