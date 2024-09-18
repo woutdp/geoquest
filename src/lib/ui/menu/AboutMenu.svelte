@@ -13,19 +13,11 @@
     <p class="mb-0">
         It would mean a lot to me if you answered <a class="font-bold underline" target="_blank" href="https://forms.gle/gXjQB1KHA4vZNND19" rel="noreferrer">4 quick questions</a>
     </p>
-    <hr class="mb-4 mt-3 text-gray" />
-    <a
-        class="font-medium rounded-full bg-foreground p-2 min-w-full flex items-center hover:bg-foreground hover:scale-[1.02] transition-all"
-        target="_blank"
-        href="https://geoquest.sleekplan.app/"
-        rel="noreferrer"
-    >
         <span class="ml-4 mr-2 text-gray"><IconLightbulb /></span>Suggestions
-    </a>
     <a
         class="font-medium rounded-full bg-foreground p-2 min-w-full flex items-center hover:bg-foreground hover:scale-[1.02] transition-all"
         target="_blank"
-        href="https://github.com/woutdp/geoquest"
+        href="https://github.com/spiriospirio/geoquest"
         rel="noreferrer"
     >
         <span class="ml-4 mr-2 text-gray"><IconGithub /></span>Contribute
@@ -33,10 +25,10 @@
     <a
         class="font-medium rounded-full bg-foreground p-2 min-w-full flex items-center hover:bg-foreground hover:scale-[1.02] transition-all"
         target="_blank"
-        href="mailto:geoquest@wout.space"
+        href="mailto:contact@spirio.fr"
         rel="noreferrer"
     >
-        <span class="ml-4 mr-2 text-gray"><IconEmail /></span>geoquest@wout.space
+        <span class="ml-4 mr-2 text-gray"><IconEmail /></span>contact@spirio.fr
     </a>
     <div class="min-w-full bg-brand-buy-me-a-coffee rounded-full hover:scale-[1.02] transition-all">
         <a href="https://www.buymeacoffee.com/woutdp" target="_blank" class="flex" rel="noreferrer">
@@ -44,8 +36,8 @@
         </a>
     </div>
     {#if inIframe || dev}
-        <a class="bg-background text-foreground p-3 rounded-full hover:scale-[1.02] transition-all flex items-center" target="_blank" href="https://geoquest.gg/">
-            <span class="ml-3 mr-2 text-foreground"><IconWorld /></span><span class="font-black underline">geoquest.gg</span>
+        <a class="bg-background text-foreground p-3 rounded-full hover:scale-[1.02] transition-all flex items-center" target="_blank" href="https://geoquest.spirio.fr/">
+            <span class="ml-3 mr-2 text-foreground"><IconWorld /></span><span class="font-black underline">geoquest.spirio.fr</span>
         </a>
     {/if}
 </div>
