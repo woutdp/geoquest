@@ -58,7 +58,7 @@
         </div>
         <div>
             {#if selectedTags.length > 0}
-                <div in:fade={{duration: 200}} class="flex flex-wrap p-2 rounded-md bg-foreground">
+                <div in:fade|global={{duration: 200}} class="flex flex-wrap p-2 rounded-md bg-foreground">
                     {#each selectedTags as tag}
                         <div class="flex justify-center my-1 mr-2">
                             <label

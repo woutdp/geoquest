@@ -65,7 +65,7 @@
 
 <svelte:window on:resize={centerMap} />
 
-<svg bind:this={svg} transition:fly={{y: 20, duration: 1500}} width={$clientX} height={$clientY} viewBox="0 0 {$clientX} {$clientY}">
+<svg bind:this={svg} transition:fly|global={{y: 20, duration: 1500}} width={$clientX} height={$clientY} viewBox="0 0 {$clientX} {$clientY}">
     <g shape-rendering="auto" {transform}>
         {#each mapData as data}
             <Country {data} {path} {...$$restProps} />
