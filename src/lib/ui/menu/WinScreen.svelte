@@ -38,13 +38,13 @@
                     {#if originalToFind.length === 1}country{:else}countries{/if}:
                 {/if}
             </span>
-            <span in:fly={{x: -10, delay: 400}} class="flex items-center justify-start text-red">
+            <span in:fly|global={{x: -10, delay: 400}} class="flex items-center justify-start text-red">
                 <IconMistake />
                 <span class="ml-1">
                     {mistakes} mistake{#if mistakes !== 1}s{/if}
                 </span>
             </span>
-            <span in:fly={{x: -10, delay: 800}} class="flex items-center justify-start text-green">
+            <span in:fly|global={{x: -10, delay: 800}} class="flex items-center justify-start text-green">
                 <IconCheckmark />
                 {#if perfectScore}
                     <span class="ml-1">All found!</span>

@@ -10,7 +10,7 @@
 </script>
 
 <div
-    transition:fly={{y: 100}}
+    transition:fly|global={{y: 100}}
     class="flex items-center justify-between p-4 mb-6 shadow-md pointer-events-auto shrink-0 ring-offset-4 ring-offset-black bg-foreground text-background rounded-xl ring-4 ring-yellow"
 >
     <div class="flex items-center">
