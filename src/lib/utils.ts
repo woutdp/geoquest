@@ -54,11 +54,11 @@ export function getActiveCountries() {
         .value()
 }
 
-export function getGeojsonByName(geojson, name) {
+export function getGeojsonByName(geojson, name: string) {
     return _(geojson.features).find(['properties.name', name])
 }
 
-export function achieveAchievement(slug) {
+export function achieveAchievement(slug: string) {
     const achievement = _(achievements).find({slug})
     const saveFile = get(save)
 
@@ -67,7 +67,7 @@ export function achieveAchievement(slug) {
             .uniq()
             .value()
         save.set(saveFile)
-        const notification = {type: 'achievement', title: achievement.name, description: achievement.description}
+        const notification = {type: 'achievement', slug: achievement.slug}
         notifications.set([...get(notifications), notification])
         window.setTimeout(
             () =>

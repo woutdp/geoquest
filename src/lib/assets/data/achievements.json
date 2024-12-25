@@ -1,98 +1,118 @@
 [
     {
-        "slug": "spin-flag",
-        "name": "Spin The Flag",
-        "description": "Maybe you should try spinning the flag..."
+        "slug": "spin-flag"
     },
     {
-        "slug": "1-country",
-        "name": "We're just getting started",
-        "description": "Find any country on the map."
+        "slug": "1-country"
     },
     {
-        "slug": "5-streak",
-        "name": "M-M-M-Monster Kill",
-        "description": "Find 5 countries in a row."
+        "slug": "5-streak"
     },
     {
-        "slug": "10-streak",
-        "name": "Chopper Gunner Inbound",
-        "description": "Find 10 countries in a row."
+        "slug": "10-streak"
     },
     {
-        "slug": "30-streak",
-        "name": "Tactical Nuke",
-        "description": "Find 30 countries in a row."
+        "slug": "30-streak"
     },
     {
-        "slug": "daily-challenge",
-        "name": "Daily Dose",
-        "description": "Complete a daily challenge without making a mistake."
+        "slug": "daily-challenge"
     },
     {
         "slug": "all-north-america",
-        "name": "Cultural Victory",
-        "description": "Find all North American countries without making a mistake.",
-        "extra": {"tags": ["North America"]}
+        "extra": {
+            "tags": [
+                "North America"
+            ]
+        }
     },
     {
         "slug": "all-balkans",
-        "name": "Goran Bregović",
-        "description": "Find all Balkan countries without making a mistake.",
-        "extra": {"tags": ["Balkans"]}
+        "extra": {
+            "tags": [
+                "Balkans"
+            ]
+        }
     },
     {
         "slug": "all-caribbean",
-        "name": "Arr, Matey!",
-        "description": "Find all Caribbean countries without making a mistake.",
-        "extra": {"tags": ["Caribbean"]}
+        "extra": {
+            "tags": [
+                "Caribbean"
+            ]
+        }
     },
     {
         "slug": "all-middle-east",
-        "name": "Where It All Began",
-        "description": "Find all Middle Eastern countries without making a mistake.",
-        "extra": {"tags": ["Middle East"]}
+        "extra": {
+            "tags": [
+                "Middle East"
+            ]
+        }
     },
     {
         "slug": "all-europe",
-        "name": "12 Golden Stars",
-        "description": "Find all European countries without making a mistake.",
-        "extra": {"tags": ["Europe"]}
+        "extra": {
+            "tags": [
+                "Europe"
+            ]
+        }
     },
     {
         "slug": "all-oceania",
-        "name": "Waterworld",
-        "description": "Find all Oceanian countries without making a mistake.",
-        "extra": {"tags": ["Oceania"]}
+        "extra": {
+            "tags": [
+                "Oceania"
+            ]
+        }
     },
     {
         "slug": "all-asia",
-        "name": "7 Troops Each Turn",
-        "description": "Find all Asian countries without making a mistake.",
-        "extra": {"tags": ["Asia"]}
+        "extra": {
+            "tags": [
+                "Asia"
+            ]
+        }
     },
     {
         "slug": "all-southeast-asia",
-        "name": "Island Hopping",
-        "description": "Find all Southeast Asian countries without making a mistake.",
-        "extra": {"tags": ["Southeast Asia"]}
+        "extra": {
+            "tags": [
+                "Southeast Asia"
+            ]
+        }
     },
     {
         "slug": "all-africa",
-        "name": "King of the Jungle",
-        "description": "Find all African countries without making a mistake.",
-        "extra": {"tags": ["Africa"]}
+        "extra": {
+            "tags": [
+                "Africa"
+            ]
+        }
     },
     {
         "slug": "all-america",
-        "name": "Amerigo Vespucci",
-        "description": "Find all American countries without making a mistake.",
-        "extra": {"tags": ["Caribbean", "North America", "Central America", "South America"]}
+        "extra": {
+            "tags": [
+                "Caribbean",
+                "North America",
+                "Central America",
+                "South America"
+            ]
+        }
     },
     {
         "slug": "all-world",
-        "name": "Literal 5Head",
-        "description": "Find ALL countries without making a mistake.",
-        "extra": {"tags": ["Caribbean", "North America", "Central America", "South America", "Europe", "Africa", "Asia", "Oceania"]}
+        "extra": {
+            "tags": [
+                "Caribbean",
+                "North America",
+                "Central America",
+                "South America",
+                "Europe",
+                "Africa",
+                "Asia",
+                "Oceania"
+            ]
+        }
     }
 ]
