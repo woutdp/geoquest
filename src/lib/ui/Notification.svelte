@@ -5,6 +5,7 @@
     import IconClose from '$lib/icons/IconClose.svelte'
     import IconTrophy from '$lib/icons/IconTrophy.svelte'
     import {notifications} from '$lib/store'
+    import {t} from '$lib/translations'
 
     export let notification
 </script>
@@ -18,8 +19,10 @@
             <IconTrophy />
         </div>
         <div class="mx-4 text-lg">
-            <h1 class="text-sm">Achievement Unlocked!</h1>
-            <p class="font-extrabold">{notification.title}</p>
+            {#if notification.type === 'achievement'}
+                <h1 class="text-sm">Achievement Unlocked!</h1>
+                <p class="font-extrabold">{$t(`geoquest.achivements.${notification.slug}.name`)}</p>
+            {/if}
         </div>
     </div>
     <button
@@ -28,7 +31,7 @@
                 .filter(n => n !== notification)
                 .value()
         }}
-        class="items-start transition-all rounded-full opacity-50 cursor-pointer hover:opacity-80 "
+        class="items-start transition-all rounded-full opacity-50 cursor-pointer hover:opacity-80"
     >
         <IconClose />
     </button>
