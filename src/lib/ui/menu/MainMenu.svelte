@@ -5,6 +5,7 @@
     import IconVolumeOff from '$lib/icons/IconVolumeOff.svelte'
     import IconVolumeUp from '$lib/icons/IconVolumeUp.svelte'
     import {day, save, soundEffects, timeLeft} from '$lib/store'
+    import {t} from '$lib/translations'
     import AboutMenu from '$lib/ui/menu/AboutMenu.svelte'
     import Achievements from '$lib/ui/menu/Achievements.svelte'
     import NewGameMenu from '$lib/ui/menu/NewGameMenu.svelte'
@@ -35,22 +36,22 @@
         class="flex items-center justify-between p-2 mb-2 text-xl text-black transition rounded-md bg-foreground-light hover:bg-background hover:text-foreground disabled:bg-background-dark disabled:text-foreground disabled:cursor-not-allowed disabled:hover:scale-105"
     >
         <span class="w-1/3" />
-        <span class="flex items-center justify-center w-1/3 whitespace-nowrap"><span class:hidden={!disabledDailyQuest} class="mr-2"><IconLock /></span>DAILY QUEST</span>
+        <span class="flex items-center justify-center w-1/3 whitespace-nowrap uppercase"><span class:hidden={!disabledDailyQuest} class="mr-2"><IconLock /></span>{$t('geoquest.ui.dailyQuest')}</span>
         <span class="flex justify-end w-1/3 text-sm">{$timeLeft}</span>
     </button>
-    <button on:click={() => setActiveMenu(NewGameMenu)} class="p-2 mb-2 text-xl text-black transition-colors rounded-md bg-foreground-light hover:bg-background hover:text-foreground">
-        PRACTICE
+    <button on:click={() => setActiveMenu(NewGameMenu)} class="p-2 mb-2 text-xl uppercase text-black transition-colors rounded-md bg-foreground-light hover:bg-background hover:text-foreground">
+        {$t('geoquest.ui.practice')}
     </button>
     <button
         on:click={() => setActiveMenu(Achievements)}
         class="flex items-center justify-between p-2 mb-2 text-xl text-black transition-colors rounded-md bg-foreground-light hover:bg-background hover:text-foreground"
     >
         <span class="w-1/3" />
-        <span class="w-1/3">ACHIEVEMENTS</span>
+        <span class="w-1/3 uppercase">{$t('geoquest.ui.achivements')}</span>
         <span class="flex justify-end w-1/3 text-sm">{$save.achievements.length} / {achievements.length}</span>
     </button>
-    <button on:click={() => setActiveMenu(SettingsMenu)} class="p-2 mb-2 text-xl text-black transition-colors rounded-md bg-foreground-light hover:bg-background hover:text-foreground">
-        SETTINGS
+    <button on:click={() => setActiveMenu(SettingsMenu)} class="p-2 mb-2 text-xl uppercase text-black transition-colors rounded-md bg-foreground-light hover:bg-background hover:text-foreground">
+        {$t('geoquest.ui.settings')}
     </button>
     <button
         on:click={() => {
@@ -58,9 +59,9 @@
             toggleMenu()
         }}
         disabled={!canRestart}
-        class="p-2 mb-2 text-xl text-black transition-colors rounded-md bg-foreground-light hover:bg-background hover:text-foreground disabled:opacity-30 disabled:hover:bg-foreground disabled:hover:text-background"
+        class="p-2 mb-2 text-xl text-black uppercase transition-colors rounded-md bg-foreground-light hover:bg-background hover:text-foreground disabled:opacity-30 disabled:hover:bg-foreground disabled:hover:text-background"
     >
-        RESTART
+        {$t('geoquest.ui.restart')}
     </button>
     <div class="flex items-center justify-between mt-3">
         <button on:click={() => setActiveMenu(AboutMenu)} class="p-2 transition-colors rounded-full cursor-pointer bg-foreground-light text-background hover:bg-background hover:text-foreground">

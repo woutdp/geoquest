@@ -1,10 +1,9 @@
 <script lang="ts">
     import IconTrophy from '$lib/icons/IconTrophy.svelte'
     import {save} from '$lib/store'
+    import {t} from '$lib/translations'
 
     export let slug
-    export let name
-    export let description
 
     let unlocked = false
 
@@ -17,8 +16,8 @@
     </div>
     <div>
         <h1 class="font-black">
-            {#if unlocked}{name}{:else}???{/if}
+            {#if unlocked}{$t(`geoquest.achivements.${slug}.name`)}{:else}???{/if}
         </h1>
-        <p>{description}</p>
+        <p>{$t(`geoquest.achivements.${slug}.description`)}</p>
     </div>
 </div>

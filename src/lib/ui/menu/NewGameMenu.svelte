@@ -5,6 +5,7 @@
     import tagsGroup from '$lib/assets/data/tags.json'
     import {maps} from '$lib/store'
     import {getFeaturesFromTags} from '$lib/utils'
+    import {t} from '$lib/translations'
 
     export let newGame
     export let toggleMenu
@@ -51,7 +52,7 @@
                         for={tag}
                         class="px-3 py-1 text-sm font-semibold uppercase transition-all border-2 rounded-full cursor-pointer whitespace-nowrap text-background bg-foreground hover:border-background last:mr-0 border-foreground"
                     >
-                        {tag}
+                        {$t(`geoquest.regions.${tag}`)}
                     </label>
                 </div>
             {/each}
@@ -65,7 +66,7 @@
                                 for={tag}
                                 class="px-3 py-1 text-sm font-semibold uppercase transition-all border-2 rounded-full cursor-pointer whitespace-nowrap text-background bg-foreground-light hover:border-background last:mr-0 border-foreground"
                             >
-                                {tag}
+                                {$t(`geoquest.regions.${tag}`)}
                             </label>
                         </div>
                     {/each}
@@ -81,6 +82,6 @@
         {disabled}
         class="p-2 mb-2 text-xl font-bold transition-colors rounded-md disabled:hover:bg-foreground disabled:opacity-10 disabled:hover:text-black disabled:cursor-not-allowed bg-foreground-light text-background hover:bg-green outline outline-4 transition-opacity"
     >
-        START
+        {$t('geoquest.ui.start')}
     </button>
 </div>
