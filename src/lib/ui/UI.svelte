@@ -14,6 +14,7 @@
     import Menu from '$lib/ui/menu/Menu.svelte'
     import Notifications from '$lib/ui/Notifications.svelte'
     import {achieveAchievement} from '$lib/utils'
+    import {t} from '$lib/translations'
 
     export let foundFeatures
     export let originalToFind
@@ -25,8 +26,8 @@
     export let correct
     export let interfaceLoaded = false
     export let showWinScreen
-    export let arrowRotation
-    export let arrowTimeout
+    export let arrowRotation: undefined | number
+    export let arrowTimeout: number
     export let map
 
     let rotateFlag = false
@@ -51,7 +52,7 @@
         showMenu = !showMenu
     }
 
-    export function triggerArrow(bearing) {
+    export function triggerArrow(bearing?: number) {
         clearTimeout(arrowTimeout)
         arrowRotation = bearing ? [360, 45, 90, 135, 180, 225, 270, 315][Math.round(bearing / 45) % 8] : undefined
         arrowTimeout = window.setTimeout(() => (arrowRotation = undefined), 4000)
@@ -70,7 +71,7 @@
                     <span class="flex items-center justify-center mx-2 text-red">
                         <IconMistake />
                         {#key mistakes}
-                            <span in:scale|global={{start: 1.5}} class="ml-1">{mistakes}</span>
+                            <span in:scale|global={{start: 1.5}} class="ml-1"> {mistakes}</span>
                         {/key}
                     </span>
                     <span class="flex items-center justify-center mx-2 text-green">
@@ -108,7 +109,7 @@
                                 </div>
                             {/if}
                             {#if !$showFlagOnly}
-                                {questionFeature?.properties?.name}
+                                {$t(`geoquest.countries.${questionFeature?.properties?.name}`)}
                             {/if}
                         </span>
                     </div>
@@ -138,7 +139,7 @@
         </div>
         <div class="flex">
             <button on:click={toggleMenu} class="flex p-2 transition rounded-md shadow-md pointer-events-auto text-background bg-foreground hover:bg-foreground-light">
-                <IconMenu /><span class="ml-2">Menu</span>
+                <IconMenu /><span class="ml-2">{$t('geoquest.ui.menu')}</span>
             </button>
             <button on:click={toggleFullScreen} class="mx-4 transition-transform pointer-events-auto hover:scale-110 text-foreground-light">
                 <IconFullScreen />
