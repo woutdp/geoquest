@@ -1,6 +1,8 @@
 import i18n, {type Config} from 'sveltekit-i18n'
 
-const config: Config = {
+type ParserPayload = {[count: string]: number | string}
+
+const config: Config<ParserPayload> = {
     initLocale: 'en',
     fallbackLocale: 'en',
     loaders: [
@@ -10,4 +12,4 @@ const config: Config = {
     ]
 }
 
-export const {t, locale, locales, loading, loadTranslations} = new i18n<any, any>(config)
+export const {t, locale, locales, loading, loadTranslations} = new i18n(config)

@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import Cookies from 'js-cookie'
     import {onMount} from 'svelte'
 
@@ -7,7 +7,7 @@
     const cookieName = 'buymeacoffeevisible'
 
     let timer = 300
-    let el
+    let el: HTMLElement | null
 
     if (browser) {
         const interval = setInterval(() => {
