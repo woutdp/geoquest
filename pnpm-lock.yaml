@@ -18,6 +18,12 @@ importers:
         specifier: ^2.4.2
         version: 2.4.2(svelte@4.2.19)
     devDependencies:
+      '@eslint/compat':
+        specifier: ^1.2.4
+        version: 1.2.4(eslint@9.17.0(jiti@1.21.7))
+      '@eslint/js':
+        specifier: ^9.17.0
+        version: 9.17.0
       '@sveltejs/adapter-cloudflare':
         specifier: ^3.0.0
         version: 3.0.2(@sveltejs/kit@2.15.0(@sveltejs/vite-plugin-svelte@3.1.2(svelte@4.2.19)(vite@5.4.11(stylus@0.55.0)))(svelte@4.2.19)(vite@5.4.11(stylus@0.55.0)))
@@ -39,9 +45,6 @@ importers:
       '@types/lodash':
         specifier: ^4.17.13
         version: 4.17.13
-      '@typescript-eslint/eslint-plugin':
-        specifier: ^8.18.2
-        version: 8.18.2(@typescript-eslint/parser@8.18.2(eslint@9.17.0(jiti@1.21.7))(typescript@5.7.2))(eslint@9.17.0(jiti@1.21.7))(typescript@5.7.2)
       '@typescript-eslint/parser':
         specifier: ^8.18.2
         version: 8.18.2(eslint@9.17.0(jiti@1.21.7))(typescript@5.7.2)
@@ -76,8 +79,8 @@ importers:
         specifier: ^9.17.0
         version: 9.17.0(jiti@1.21.7)
       eslint-config-prettier:
-        specifier: ^8.5.0
-        version: 8.10.0(eslint@9.17.0(jiti@1.21.7))
+        specifier: ^9.1.0
+        version: 9.1.0(eslint@9.17.0(jiti@1.21.7))
       eslint-plugin-simple-import-sort:
         specifier: ^10.0.0
         version: 10.0.0(eslint@9.17.0(jiti@1.21.7))
@@ -87,6 +90,9 @@ importers:
       geojson-bbox:
         specifier: ^0.0.1
         version: 0.0.1
+      globals:
+        specifier: ^15.14.0
+        version: 15.14.0
       js-cookie:
         specifier: ^3.0.1
         version: 3.0.5
@@ -111,6 +117,9 @@ importers:
       svelte-check:
         specifier: ^3.4.3
         version: 3.8.6(postcss-load-config@4.0.2(postcss@8.4.49))(postcss@8.4.49)(stylus@0.55.0)(svelte@4.2.19)
+      svelte-eslint-parser:
+        specifier: ^0.43.0
+        version: 0.43.0(svelte@4.2.19)
       svelte-preprocess:
         specifier: ^5.1.4
         version: 5.1.4(postcss-load-config@4.0.2(postcss@8.4.49))(postcss@8.4.49)(stylus@0.55.0)(svelte@4.2.19)(typescript@5.7.2)
@@ -129,6 +138,9 @@ importers:
       typescript:
         specifier: ^5.0.2
         version: 5.7.2
+      typescript-eslint:
+        specifier: ^8.18.2
+        version: 8.18.2(eslint@9.17.0(jiti@1.21.7))(typescript@5.7.2)
       vite:
         specifier: ^5.0.0
         version: 5.4.11(stylus@0.55.0)
@@ -431,6 +443,15 @@ packages:
   '@eslint-community/regexpp@4.12.1':
     resolution: {integrity: sha512-CCZCDJuduB9OUkFkY2IgppNZMi2lBQgD2qzwXkEia16cge2pijY/aXi96CJMquDMn3nJdlPV1A5KrJEXwfLNzQ==}
     engines: {node: ^12.0.0 || ^14.0.0 || >=16.0.0}
+
+  '@eslint/compat@1.2.4':
+    resolution: {integrity: sha512-S8ZdQj/N69YAtuqFt7653jwcvuUj131+6qGLUyDqfDg1OIoBQ66OCuXC473YQfO2AaxITTutiRQiDwoo7ZLYyg==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      eslint: ^9.10.0
+    peerDependenciesMeta:
+      eslint:
+        optional: true
 
   '@eslint/config-array@0.19.1':
     resolution: {integrity: sha512-fo6Mtm5mWyKjA/Chy1BYTdn5mGJoDNjC7C64ug20ADsRDGrA85bN3uK3MaKbeRkRuuIEAR5N33Jr1pbm411/PA==}
@@ -1608,8 +1629,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  eslint-config-prettier@8.10.0:
-    resolution: {integrity: sha512-SM8AMJdeQqRYT9O9zguiruQZaN7+z+E4eAP9oiLNGKMtomwaB1E9dcgUD6ZAn/eQAb52USbvezbiljfZUhbJcg==}
+  eslint-config-prettier@9.1.0:
+    resolution: {integrity: sha512-NSWl5BFQWEPi1j4TjVNItzYV7dZXZ+wP6I6ZhrBGpChQhZRUaElihE9uRRkcbRnNb76UMKDF3r+WTmNcGPKsqw==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
@@ -1796,6 +1817,10 @@ packages:
 
   globals@14.0.0:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
+    engines: {node: '>=18'}
+
+  globals@15.14.0:
+    resolution: {integrity: sha512-OkToC372DtlQeje9/zHIo5CT8lRP/FUgEOKBEhU4e0abL7J7CD24fD9ohiLN5hagG/kWCYj4K5oaxxtj2Z0Dig==}
     engines: {node: '>=18'}
 
   globalyzer@0.1.0:
@@ -2692,6 +2717,13 @@ packages:
   typedarray@0.0.6:
     resolution: {integrity: sha512-/aCDEGatGvZ2BIk+HmLf4ifCJFwvKFNb9/JeZPMulfgFracn9QFcAf5GO8B/mweUjSoblS5In0cWhqpfs/5PQA==}
 
+  typescript-eslint@8.18.2:
+    resolution: {integrity: sha512-KuXezG6jHkvC3MvizeXgupZzaG5wjhU3yE8E7e6viOvAvD9xAWYp8/vy0WULTGe9DYDWcQu7aW03YIV3mSitrQ==}
+    engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    peerDependencies:
+      eslint: ^8.57.0 || ^9.0.0
+      typescript: '>=4.8.4 <5.8.0'
+
   typescript@5.7.2:
     resolution: {integrity: sha512-i5t66RHxDvVN40HfDd1PsEThGNnlMCMT3jMUuoh9/0TaqWevNontacunWyN02LA9/fIbEWlcHZcgTKb9QoaLfg==}
     engines: {node: '>=14.17'}
@@ -2943,6 +2975,10 @@ snapshots:
       eslint-visitor-keys: 3.4.3
 
   '@eslint-community/regexpp@4.12.1': {}
+
+  '@eslint/compat@1.2.4(eslint@9.17.0(jiti@1.21.7))':
+    optionalDependencies:
+      eslint: 9.17.0(jiti@1.21.7)
 
   '@eslint/config-array@0.19.1':
     dependencies:
@@ -4641,7 +4677,7 @@ snapshots:
       eslint: 9.17.0(jiti@1.21.7)
       semver: 7.6.3
 
-  eslint-config-prettier@8.10.0(eslint@9.17.0(jiti@1.21.7)):
+  eslint-config-prettier@9.1.0(eslint@9.17.0(jiti@1.21.7)):
     dependencies:
       eslint: 9.17.0(jiti@1.21.7)
 
@@ -4884,6 +4920,8 @@ snapshots:
       path-is-absolute: 1.0.1
 
   globals@14.0.0: {}
+
+  globals@15.14.0: {}
 
   globalyzer@0.1.0: {}
 
@@ -5810,6 +5848,16 @@ snapshots:
       prelude-ls: 1.2.1
 
   typedarray@0.0.6: {}
+
+  typescript-eslint@8.18.2(eslint@9.17.0(jiti@1.21.7))(typescript@5.7.2):
+    dependencies:
+      '@typescript-eslint/eslint-plugin': 8.18.2(@typescript-eslint/parser@8.18.2(eslint@9.17.0(jiti@1.21.7))(typescript@5.7.2))(eslint@9.17.0(jiti@1.21.7))(typescript@5.7.2)
+      '@typescript-eslint/parser': 8.18.2(eslint@9.17.0(jiti@1.21.7))(typescript@5.7.2)
+      '@typescript-eslint/utils': 8.18.2(eslint@9.17.0(jiti@1.21.7))(typescript@5.7.2)
+      eslint: 9.17.0(jiti@1.21.7)
+      typescript: 5.7.2
+    transitivePeerDependencies:
+      - supports-color
 
   typescript@5.7.2: {}
 
