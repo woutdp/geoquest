@@ -1,11 +1,11 @@
 <script lang="ts">
-    import {dev} from '$app/environment'
+    import {browser, dev} from '$app/environment'
     import IconEmail from '$lib/icons/IconEmail.svelte'
     import IconGithub from '$lib/icons/IconGithub.svelte'
     import IconLightbulb from '$lib/icons/IconLightbulb.svelte'
     import IconWorld from '$lib/icons/IconWorld.svelte'
 
-    $: inIframe = window.location !== window.parent.location
+    $: inIframe = browser && window.location !== window.parent.location
 </script>
 
 <div class="bg-foreground-light rounded-xl p-5 flex flex-col gap-y-2 mb-2">

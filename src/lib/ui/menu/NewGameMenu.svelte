@@ -4,30 +4,30 @@
 
     import tagsGroup from '$lib/assets/data/tags.json'
     import {maps} from '$lib/store'
-    import {getFeaturesFromTags} from '$lib/utils'
     import {t} from '$lib/translations'
+    import {getFeaturesFromTags} from '$lib/utils'
 
     export let newGame
     export let toggleMenu
 
+    type Tag = {checked: boolean; name: string}
     let mapId = 0
-    let tags = []
+    let tags: Tag[] = []
 
     function loadTags() {
         const group = tagsGroup[maps[mapId].name]
         tags = _(group)
             .omit(['meta'])
-            .map(g => Object.values(g))
+            .map(g => Object.values(g) as string[])
             .flatten()
             .uniq()
             .sort()
-            .map(tag => ({name: tag, checked: group.meta.defaults.includes(tag)}))
+            .map(tag => ({name: tag, checked: (group.meta.defaults as string[]).includes(tag)}))
             .value()
     }
 
     loadTags()
 
-    $: map = maps[mapId]
     $: selectedTags = _(tags)
         .filter(tag => tag.checked)
         .map(tag => tag.name)

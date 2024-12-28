@@ -1,7 +1,8 @@
 <script lang="ts">
+    import {DE, ES,GB} from 'emoji-flags'
+
     import {showFlagOnly} from '$lib/store'
     import {t} from '$lib/translations'
-    import {DE, GB, ES} from 'emoji-flags'
 </script>
 
 <div class="flex flex-col">

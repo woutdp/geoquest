@@ -10,7 +10,7 @@
 
     export let mistakes: number
     export let correct: number
-    export let originalToFind: any[]
+    export let originalToFind: unknown[]
     export let gameConfiguration
 
     let copytext = 'Copy to clipboard'
