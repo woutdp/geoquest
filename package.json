@@ -9,9 +9,11 @@
         "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
         "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
         "lint": "prettier --check --plugin-search-dir=. . && eslint --ignore-path .gitignore .",
-        "format": "eslint --fix --ignore-path .gitignore . && prettier --write --plugin-search-dir=. ."
+        "format": "eslint --fix . && prettier --write --plugin-search-dir=. ."
     },
     "devDependencies": {
+        "@eslint/compat": "^1.2.4",
+        "@eslint/js": "^9.17.0",
         "@sveltejs/adapter-cloudflare": "^3.0.0",
         "@sveltejs/kit": "^2.0.0",
         "@sveltejs/vite-plugin-svelte": "^3.0.0",
@@ -19,7 +21,6 @@
         "@turf/turf": "^6.5.0",
         "@types/emoji-flags": "^1.3.3",
         "@types/lodash": "^4.17.13",
-        "@typescript-eslint/eslint-plugin": "^8.18.2",
         "@typescript-eslint/parser": "^8.18.2",
         "autoprefixer": "^10.4.13",
         "country-flag-emoji-polyfill": "^0.1.4",
@@ -31,10 +32,11 @@
         "d3-zoom": "^3.0.0",
         "emoji-flags": "^1.3.0",
         "eslint": "^9.17.0",
-        "eslint-config-prettier": "^8.5.0",
+        "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-simple-import-sort": "^10.0.0",
         "eslint-plugin-svelte": "^2.0.0",
         "geojson-bbox": "^0.0.1",
+        "globals": "^15.14.0",
         "js-cookie": "^3.0.1",
         "mapshaper": "^0.6.15",
         "postcss": "^8.4.20",
@@ -43,12 +45,14 @@
         "stylus": "^0.55.0",
         "svelte": "^4.0.0",
         "svelte-check": "^3.4.3",
+        "svelte-eslint-parser": "^0.43.0",
         "svelte-preprocess": "^5.1.4",
         "tailwindcss": "^3.2.4",
         "topojson-client": "^3.1.0",
         "topojson-simplify": "^3.0.3",
         "tslib": "^2.4.1",
         "typescript": "^5.0.2",
+        "typescript-eslint": "^8.18.2",
         "vite": "^5.0.0"
     },
     "dependencies": {

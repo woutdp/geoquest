@@ -14,13 +14,7 @@
     "postCreateCommand": "npm install",
     "customizations": {
         "vscode": {
-            "extensions": [
-                "svelte.svelte-vscode",
-                "ardenivanov.svelte-intellisense",
-                "fivethree.vscode-svelte-snippets",
-                "eamodio.gitlens-insiders",
-                "esbenp.prettier-vscode"
-            ]
+            "extensions": ["svelte.svelte-vscode", "ardenivanov.svelte-intellisense", "fivethree.vscode-svelte-snippets", "eamodio.gitlens-insiders", "esbenp.prettier-vscode"]
         }
     }
 
