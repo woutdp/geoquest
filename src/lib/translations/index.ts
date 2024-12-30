@@ -2,9 +2,11 @@ import i18n, {type Config} from 'sveltekit-i18n'
 
 type ParserPayload = {[count: string]: number | string}
 
-const config: Config<ParserPayload> = {
+export const fallbackLocale = 'en'
+
+const translationConfig: Config<ParserPayload> = {
     initLocale: 'en',
-    fallbackLocale: 'en',
+    fallbackLocale,
     loaders: [
         {locale: 'en', key: 'geoquest', loader: async () => (await import('./en.json')).default},
         {locale: 'de', key: 'geoquest', loader: async () => (await import('./de.json')).default},
@@ -12,4 +14,4 @@ const config: Config<ParserPayload> = {
     ]
 }
 
-export const {t, locale, locales, loading, loadTranslations} = new i18n(config)
+export const {t, locale, locales, loading, loadTranslations} = new i18n(translationConfig)
