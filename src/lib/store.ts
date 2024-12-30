@@ -66,7 +66,7 @@ function localStorageWritable(key: string, initial: unknown) {
     let savedValue
 
     try {
-        savedValue = browser ? JSON.parse(window.localStorage.getItem(key) || '{}') ?? initial : initial
+        savedValue = browser ? JSON.parse(window.localStorage.getItem(key) || 'null') ?? initial : initial
     } catch (err) {
         console.error(err)
     }
