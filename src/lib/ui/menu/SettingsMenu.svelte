@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {DE, ES,GB} from 'emoji-flags'
+    import emojiFlags from 'emoji-flags'
 
     import {showFlagOnly} from '$lib/store'
     import {t} from '$lib/translations'
@@ -13,9 +13,9 @@
         </div>
         <div class="flex flex-wrap gap-2 text-lg bg-foreground p-3 rounded items-center">
             <!-- Each of the language names is only directly written in their own language -->
-            <a href="/"> <button>{GB.emoji} English</button></a>
-            <a href="/de"><button>{DE.emoji} Deutsch</button></a>
-            <a href="/es"><button>{ES.emoji} Español</button></a>
+            <a href="/"> <button>{emojiFlags.GB.emoji} English</button></a>
+            <a href="/de"><button>{emojiFlags.DE.emoji} Deutsch</button></a>
+            <a href="/es"><button>{emojiFlags.ES.emoji} Español</button></a>
         </div>
     </div>
 </div>
