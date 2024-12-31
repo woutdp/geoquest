@@ -13,3 +13,4 @@ Created and maintained by Wout De Puysseleir:
 ## Contributors
 
 -   Stéphane Payrard <https://github.com/cognominal>
+-   Jonas Vander <https://github.com/jaavander>
