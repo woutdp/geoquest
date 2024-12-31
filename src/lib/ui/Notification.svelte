@@ -21,7 +21,7 @@
         <div class="mx-4 text-lg">
             {#if notification.type === 'achievement'}
                 <h1 class="text-sm">Achievement Unlocked!</h1>
-                <p class="font-extrabold">{$t(`geoquest.achivements.${notification.slug}.name`)}</p>
+                <p class="font-extrabold">{$t(`achievements.${notification.slug}.name`)}</p>
             {/if}
         </div>
     </div>

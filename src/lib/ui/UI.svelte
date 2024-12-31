@@ -109,7 +109,7 @@
                                 </div>
                             {/if}
                             {#if !$showFlagOnly}
-                                {$t(`geoquest.countries.${questionFeature?.properties?.name}`)}
+                                {$t(`countries.${questionFeature?.properties?.name}`)}
                             {/if}
                         </span>
                     </div>
@@ -139,7 +139,7 @@
         </div>
         <div class="flex">
             <button on:click={toggleMenu} class="flex p-2 transition rounded-md shadow-md pointer-events-auto text-background bg-foreground hover:bg-foreground-light">
-                <IconMenu /><span class="ml-2">{$t('geoquest.ui.menu')}</span>
+                <IconMenu /><span class="ml-2">{$t('ui.menu')}</span>
             </button>
             <button on:click={toggleFullScreen} class="mx-4 transition-transform pointer-events-auto hover:scale-110 text-foreground-light">
                 <IconFullScreen />

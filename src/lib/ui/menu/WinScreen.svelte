@@ -33,7 +33,7 @@
         <div class="flex flex-col flex-1 w-full">
             <span class="flex items-center justify-start mb-2 text-foreground">
                 {#if gameConfiguration.mode === 'dailyQuest'}
-                    <p class="font-black">{$t('geoquest.ui.dailyQuest')} <span class="font-black">{$save.dailyQuestProgress.day}</span></p>
+                    <p class="font-black">{$t('ui.dailyQuest')} <span class="font-black">{$save.dailyQuestProgress.day}</span></p>
                 {:else}
                     {originalToFind.length}
                     {#if originalToFind.length === 1}country{:else}countries{/if}:
@@ -42,22 +42,22 @@
             <span in:fly|global={{x: -10, delay: 400}} class="flex items-center justify-start text-red">
                 <IconMistake />
                 <span class="ml-1">
-                    {$t('geoquest.ui.mistakes', {mistakes})}
+                    {$t('ui.mistakes', {mistakes})}
                 </span>
             </span>
             <span in:fly|global={{x: -10, delay: 800}} class="flex items-center justify-start text-green">
                 <IconCheckmark />
                 {#if perfectScore}
-                    <span class="ml-1">{$t('geoquest.ui.allCorrect')}</span>
+                    <span class="ml-1">{$t('ui.allCorrect')}</span>
                 {:else}
-                    <span class="ml-1">{$t('geoquest.ui.correctAnswers', {correct, allAnswers: originalToFind.length})}</span>
+                    <span class="ml-1">{$t('ui.correctAnswers', {correct, allAnswers: originalToFind.length})}</span>
                 {/if}
             </span>
         </div>
     </div>
     {#if gameConfiguration.mode === 'dailyQuest'}
         <button on:click={copyToClipboard} class="flex group relative bg-background-dark text-foreground rounded mt-4 justify-center items-center p-2 font-bold">
-            <IconShare /><span class="ml-2">{$t('geoquest.ui.share')}</span>
+            <IconShare /><span class="ml-2">{$t('ui.share')}</span>
             <span
                 class="absolute hidden group-hover:flex -top-2 -translate-y-full rounded-lg text-center text-foreground text-base py-2 px-4 bg-background-dark justify-center after:content-[''] after:absolute after:top-[100%] after:border-8 after:border-x-transparent after:border-b-transparent after:border-background-dark"
             >

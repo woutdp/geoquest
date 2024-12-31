@@ -16,8 +16,8 @@
     </div>
     <div>
         <h1 class="font-black">
-            {#if unlocked}{$t(`geoquest.achivements.${slug}.name`)}{:else}???{/if}
+            {#if unlocked}{$t(`achievements.${slug}.name`)}{:else}???{/if}
         </h1>
-        <p>{$t(`geoquest.achivements.${slug}.description`)}</p>
+        <p>{$t(`achievements.${slug}.description`)}</p>
     </div>
 </div>
