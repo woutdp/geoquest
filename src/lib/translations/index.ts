@@ -1,7 +1,19 @@
+import emojiFlags from 'emoji-flags'
 import i18n, {type Config} from 'sveltekit-i18n'
 
-type ParserPayload = {[count: string]: number | string}
+type ParserPayload = {[key: string]: number | string}
 
+/**
+ * Map of available locals. For each locale, there is a country flag,
+ * as well as the name of the language, writen in the same language for easy recognition
+ *
+ * Each is listed in the setting by this name
+ */
+export const availableLocales: Record<string, [name: string, flag: emojiFlags.CountryData['emoji']]> = {
+    en: ['English', emojiFlags.GB.emoji],
+    de: ['Deutsch', emojiFlags.DE.emoji],
+    es: ['Español', emojiFlags.ES.emoji]
+}
 export const fallbackLocale = 'en'
 
 const translationConfig: Config<ParserPayload> = {
