@@ -25,3 +25,9 @@ You can preview the production build with `npm run preview`.
 ## Contributing
 
 The code at the moment is still a bit messy, especially the code for handling different 'game modes'. Feel free to refactor, fix or add features.
+
+### Contributing Translations
+
+Translations can be added, corrected in the `src/lib/translations` folder.  
+When adding a new language, add the corresponding language identifier in `index.ts` in `availableLocales`. After that, all that is left
+is to add the translation files in a folder with the same identifier. You can base model these according to the structure in the english files
