@@ -1,0 +1,70 @@
+{
+    "spin-flag": {
+        "name": "Gira la Bandera",
+        "description": "Quizás deberías intentar girar la bandera..."
+    },
+    "1-country": {
+        "name": "Apenas estamos comenzando",
+        "description": "Encuentra cualquier país en el mapa."
+    },
+    "5-streak": {
+        "name": "M-M-M-Monstruo Asesino",
+        "description": "Encuentra 5 países seguidos."
+    },
+    "10-streak": {
+        "name": "Helicóptero Artillado Entrante",
+        "description": "Encuentra 10 países seguidos."
+    },
+    "30-streak": {
+        "name": "Bomba Nuclear Táctica",
+        "description": "Encuentra 30 países seguidos."
+    },
+    "daily-challenge": {
+        "name": "Dosis Diaria",
+        "description": "Completa un desafío diario sin cometer errores."
+    },
+    "all-north-america": {
+        "name": "Victoria Cultural",
+        "description": "Encuentra todos los países de América del Norte sin cometer errores."
+    },
+    "all-balkans": {
+        "name": "Goran Bregović",
+        "description": "Encuentra todos los países de los Balcanes sin cometer errores."
+    },
+    "all-caribbean": {
+        "name": "¡Arrr, Marinero!",
+        "description": "Encuentra todos los países del Caribe sin cometer errores."
+    },
+    "all-middle-east": {
+        "name": "Donde Todo Comenzó",
+        "description": "Encuentra todos los países del Medio Oriente sin cometer errores."
+    },
+    "all-europe": {
+        "name": "12 Estrellas Doradas",
+        "description": "Encuentra todos los países de Europa sin cometer errores."
+    },
+    "all-oceania": {
+        "name": "Mundo Acuático",
+        "description": "Encuentra todos los países de Oceanía sin cometer errores."
+    },
+    "all-asia": {
+        "name": "7 Tropas Cada Turno",
+        "description": "Encuentra todos los países de Asia sin cometer errores."
+    },
+    "all-southeast-asia": {
+        "name": "Saltando entre Islas",
+        "description": "Encuentra todos los países del Sudeste Asiático sin cometer errores."
+    },
+    "all-africa": {
+        "name": "Rey de la Selva",
+        "description": "Encuentra todos los países de África sin cometer errores."
+    },
+    "all-america": {
+        "name": "Amerigo Vespucci",
+        "description": "Encuentra todos los países de América sin cometer errores."
+    },
+    "all-world": {
+        "name": "Literal 5Head",
+        "description": "Encuentra TODOS los países sin cometer errores."
+    }
+}

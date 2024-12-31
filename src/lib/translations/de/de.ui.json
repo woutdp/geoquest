@@ -1,0 +1,15 @@
+{
+    "menu": "Menü",
+    "word": "{{count:eq; 1:foobar default:barfoo}}",
+    "mistakes": "{{mistakes:gt; 0: {{mistakes; 1:Einen Fehler; default:{{mistakes}} Fehler}}; default:Keine Fehler!}}",
+    "correctAnswers": "{{correct}} von {{allAnswers}} richtig",
+    "allCorrect": "Alles gefunden!",
+    "dailyQuest": "Tägliche Aufgabe",
+    "practice": "üben",
+    "achievements": "Erfolge",
+    "settings": "Einstellungen",
+    "restart": "Neustart",
+    "share": "Teilen",
+    "start": "Start",
+    "flagsOnly": "Zeige nur Flaggen"
+}
