@@ -1,0 +1,70 @@
+{
+    "spin-flag": {
+        "name": "Dreh die Fahne",
+        "description": "Vielleicht solltest du versuchen, die Fahne zu drehen..."
+    },
+    "1-country": {
+        "name": "Wir fangen gerade erst an",
+        "description": "Finde ein beliebiges Land auf der Karte."
+    },
+    "5-streak": {
+        "name": "M-M-M-Monster Kill",
+        "description": "Finde 5 Länder in Folge."
+    },
+    "10-streak": {
+        "name": "Chopper Gunner im Anflug",
+        "description": "Finde 10 Länder in Folge."
+    },
+    "30-streak": {
+        "name": "Taktische Nuklearwaffe",
+        "description": "Finde 30 Länder in Folge."
+    },
+    "daily-challenge": {
+        "name": "Tägliche Dosis",
+        "description": "Beende eine tägliche Herausforderung ohne Fehler."
+    },
+    "all-north-america": {
+        "name": "Kultureller Sieg",
+        "description": "Finde alle Länder Nordamerikas ohne Fehler."
+    },
+    "all-balkans": {
+        "name": "Goran Bregović",
+        "description": "Finde alle Länder des Balkans ohne Fehler."
+    },
+    "all-caribbean": {
+        "name": "Arr, Kumpel!",
+        "description": "Finde alle karibischen Länder ohne Fehler."
+    },
+    "all-middle-east": {
+        "name": "Wo alles begann",
+        "description": "Finde alle Länder des Nahen Ostens ohne Fehler."
+    },
+    "all-europe": {
+        "name": "12 goldene Sterne",
+        "description": "Finde alle Länder Europas ohne Fehler."
+    },
+    "all-oceania": {
+        "name": "Wasserwelt",
+        "description": "Finde alle Länder Ozeaniens ohne Fehler."
+    },
+    "all-asia": {
+        "name": "7 Truppen pro Runde",
+        "description": "Finde alle Länder Asiens ohne Fehler."
+    },
+    "all-southeast-asia": {
+        "name": "Inselhüpfen",
+        "description": "Finde alle Länder Südostasiens ohne Fehler."
+    },
+    "all-africa": {
+        "name": "König des Dschungels",
+        "description": "Finde alle Länder Afrikas ohne Fehler."
+    },
+    "all-america": {
+        "name": "Amerigo Vespucci",
+        "description": "Finde alle Länder Amerikas ohne Fehler."
+    },
+    "all-world": {
+        "name": "Wörtlich 5Head",
+        "description": "Finde ALLE Länder ohne Fehler."
+    }
+}

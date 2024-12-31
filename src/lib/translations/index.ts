@@ -16,14 +16,27 @@ export const availableLocales: Record<string, [name: string, flag: emojiFlags.Co
 }
 export const fallbackLocale = 'en'
 
+const localeFiles = import.meta.glob('./*/*.json')
+
+const localeFileKeys = ['countries', 'regions', 'ui', 'achievements']
+
+/**
+ * Gathers translations according to locales and keys defined above.
+ * In case of errors/warnings, ensure the right json files for the language exist, according to the
+ * same schema as they do for 'en'
+ */
+const loaders: Config['loaders'] = Array.from(Object.keys(availableLocales)).flatMap(locale =>
+    localeFileKeys.map(key => ({
+        locale,
+        key,
+        loader: localeFiles[`./${locale}/${locale}.${key}.json`] as () => Promise<object>
+    }))
+)
+
 const translationConfig: Config<ParserPayload> = {
-    initLocale: 'en',
+    initLocale: fallbackLocale,
     fallbackLocale,
-    loaders: [
-        {locale: 'en', key: 'geoquest', loader: async () => (await import('./en.json')).default},
-        {locale: 'de', key: 'geoquest', loader: async () => (await import('./de.json')).default},
-        {locale: 'es', key: 'geoquest', loader: async () => (await import('./es.json')).default}
-    ]
+    loaders
 }
 
 export const {t, locale, locales, loading, loadTranslations} = new i18n(translationConfig)
