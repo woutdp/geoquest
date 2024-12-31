@@ -1,4 +1,5 @@
 import emojiFlags from 'emoji-flags'
+import _ from 'lodash'
 import i18n, {type Config} from 'sveltekit-i18n'
 
 type ParserPayload = {[key: string]: number | string}
@@ -29,7 +30,7 @@ const loaders: Config['loaders'] = Array.from(Object.keys(availableLocales)).fla
     localeFileKeys.map(key => ({
         locale,
         key,
-        loader: localeFiles[`./${locale}/${locale}.${key}.json`] as () => Promise<object>
+        loader: () => localeFiles[`./${locale}/${locale}.${key}.json`]().then(module => _.get(module, 'default', null) as unknown as object)
     }))
 )
 
