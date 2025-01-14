@@ -9,6 +9,7 @@
     import AboutMenu from '$lib/ui/menu/AboutMenu.svelte'
     import Achievements from '$lib/ui/menu/Achievements.svelte'
     import NewGameMenu from '$lib/ui/menu/NewGameMenu.svelte'
+    import SwitchQuestMenu from '$lib/ui/menu/SwitchQuestMenu.svelte'
     import SettingsMenu from '$lib/ui/menu/SettingsMenu.svelte'
     import WinScreen from '$lib/ui/menu/WinScreen.svelte'
 
@@ -49,6 +50,9 @@
         <span class="w-1/3" />
         <span class="w-1/3 uppercase">{$t('ui.achievements')}</span>
         <span class="flex justify-end w-1/3 text-sm">{$save.achievements.length} / {achievements.length}</span>
+    </button>
+    <button on:click={() => setActiveMenu(SwitchQuestMenu)} class="p-2 mb-2 text-xl uppercase text-black transition-colors rounded-md bg-foreground-light hover:bg-background hover:text-foreground">
+        {$t('ui.otherQuests')}
     </button>
     <button on:click={() => setActiveMenu(SettingsMenu)} class="p-2 mb-2 text-xl uppercase text-black transition-colors rounded-md bg-foreground-light hover:bg-background hover:text-foreground">
         {$t('ui.settings')}

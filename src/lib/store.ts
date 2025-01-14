@@ -2,6 +2,7 @@ import * as d3 from 'd3'
 import {geoMiller, geoPatterson, geoRobinson} from 'd3-geo-projection'
 import {derived, readable, writable} from 'svelte/store'
 import * as topojsonClient from 'topojson-client'
+import _ from 'lodash'
 
 import {browser} from '$app/environment'
 
@@ -17,8 +18,30 @@ export const projections = [
     {func: d3.geoOrthographic(), name: 'Globe'}
 ]
 export const maps = [
-    {topojson: import('$lib/assets/maps/topojson/world.json'), name: 'World', data: {countries: import('$lib/assets/data/countries.json')}},
-    {topojson: import('$lib/assets/maps/topojson/us-states.json'), name: 'US States', data: {states: import('$lib/assets/data/us-states.json')}}
+  {
+    id: 'world',
+    name: 'World',
+    topojson: import('$lib/assets/maps/topojson/world.json'),
+    data: {countries: import('$lib/assets/data/countries.json')},
+  },
+  {
+    id: 'usa',
+    name: 'US States',
+    topojson: import('$lib/assets/maps/topojson/us-states.json'),
+    data: {states: import('$lib/assets/data/us-states.json')},
+  },
+  {
+    id: 'china',
+    name: 'China Provinces',
+    topojson: import('$lib/assets/maps/topojson/china-provinces.json'),
+    data: {provinces: import('$lib/assets/data/china-provinces.json')},
+  },
+  {
+    id: 'france',
+    name: 'France Departments',
+    topojson: import('$lib/assets/maps/topojson/france-departments.json'),
+    data: {departements: import('$lib/assets/data/france-departments.json')},
+  }
 ] as const
 
 // Map
@@ -27,6 +50,9 @@ export const topojson = derived(loadedMap, $loadedMap => $loadedMap?.topojson)
 export const geojson = derived(topojson, $topojson => ($topojson ? topojsonClient.feature($topojson, Object.keys($topojson?.objects)[0]) : undefined))
 export const geometries = derived(topojson, $topojson => ($topojson ? Object.values($topojson?.objects)[0].geometries : undefined))
 export const projection = writable(projections[0].func)
+
+// Map choice
+export let chosenMap = _.find(maps, { id: getParam("m") }) || maps[0];
 
 // Settings
 export const soundEffects = localStorageWritable('settingsSoundEffects', true)
@@ -76,4 +102,14 @@ function localStorageWritable(key: string, initial: unknown) {
         if (browser) window.localStorage.setItem(key, JSON.stringify(value))
     })
     return w
+}
+
+function getParam (askedParam: string) {
+  try {
+    let urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(askedParam);
+  }
+  catch (err) {
+    console.error(err)
+  };
 }

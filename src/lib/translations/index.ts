@@ -13,13 +13,20 @@ type ParserPayload = {[key: string]: number | string}
 export const availableLocales: Record<string, [name: string, flag: emojiFlags.CountryData['emoji']]> = {
     en: ['English', emojiFlags.GB.emoji],
     de: ['Deutsch', emojiFlags.DE.emoji],
-    es: ['Español', emojiFlags.ES.emoji]
+    es: ['Español', emojiFlags.ES.emoji],
+    zh_CN: ['中文', emojiFlags.CN.emoji]
 }
 export const fallbackLocale = 'en'
 
 const localeFiles = import.meta.glob('./*/*.json')
 
-const localeFileKeys = ['countries', 'regions', 'ui', 'achievements']
+const localeFileKeys = [
+  'ui', 'quests', 'achievements',
+  'world-elements',   'world-groups',
+  'usa-elements',     'usa-groups',
+  'china-elements',   'china-groups',
+  'france-elements',  'france-groups'
+]
 
 /**
  * Gathers translations according to locales and keys defined above.
