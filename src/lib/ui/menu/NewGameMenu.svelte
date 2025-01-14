@@ -3,7 +3,7 @@
     import {fade} from 'svelte/transition'
 
     import tagsGroup from '$lib/assets/data/tags.json'
-    import {maps} from '$lib/store'
+    import {chosenMap} from '$lib/store'
     import {t} from '$lib/translations'
     import {getFeaturesFromTags} from '$lib/utils'
 
@@ -11,11 +11,10 @@
     export let toggleMenu
 
     type Tag = {checked: boolean; name: string}
-    let mapId = 0
     let tags: Tag[] = []
 
     function loadTags() {
-        const group = tagsGroup[maps[mapId].name]
+        const group = tagsGroup[chosenMap.name]
         tags = _(group)
             .omit(['meta'])
             .map(g => Object.values(g) as string[])
@@ -52,7 +51,7 @@
                         for={tag}
                         class="px-3 py-1 text-sm font-semibold uppercase transition-all border-2 rounded-full cursor-pointer whitespace-nowrap text-background bg-foreground hover:border-background last:mr-0 border-foreground"
                     >
-                        {$t(`regions.${tag}`)}
+                        {$t(`${chosenMap.id}-groups.${tag}`)}
                     </label>
                 </div>
             {/each}
@@ -66,7 +65,7 @@
                                 for={tag}
                                 class="px-3 py-1 text-sm font-semibold uppercase transition-all border-2 rounded-full cursor-pointer whitespace-nowrap text-background bg-foreground-light hover:border-background last:mr-0 border-foreground"
                             >
-                                {$t(`regions.${tag}`)}
+                                {$t(`${chosenMap.id}-groups.${tag}`)}
                             </label>
                         </div>
                     {/each}

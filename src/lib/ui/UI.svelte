@@ -9,7 +9,7 @@
     import IconFullScreen from '$lib/icons/IconFullScreen.svelte'
     import IconMenu from '$lib/icons/IconMenu.svelte'
     import IconMistake from '$lib/icons/IconMistake.svelte'
-    import {showFlagOnly} from '$lib/store'
+    import {chosenMap, showFlagOnly} from '$lib/store'
     import {t} from '$lib/translations'
     import BuyMeACoffee from '$lib/ui/BuyMeACoffee.svelte'
     import Menu from '$lib/ui/menu/Menu.svelte'
@@ -109,7 +109,7 @@
                                 </div>
                             {/if}
                             {#if !$showFlagOnly}
-                                {$t(`countries.${questionFeature?.properties?.name}`)}
+                                {$t(`${chosenMap.id}-elements.${questionFeature?.properties?.name}`)}
                             {/if}
                         </span>
                     </div>

@@ -2,17 +2,29 @@
     "World": {
         "Asia": ["Asia", "Middle East", "Southeast Asia", "Central Asia"],
         "Europe": ["Europe", "Balkans"],
-        "America": ["North America", "South America", "Central America", "Caribbean"],
+        "America": ["America", "North America", "South America", "Central America", "Caribbean"],
         "Africa": ["Africa", "North Africa", "Southern Africa", "West Africa", "East Africa", "Central Africa"],
         "Oceania": ["Oceania"],
         "meta": {
-            "defaults": ["North America"]
+            "defaults": ["America"]
         }
     },
     "US States": {
-        "North America": ["West", "Midwest", "Southwest", "Southeast", "Northeast"],
+        "North America": ["USA", "West", "Midwest", "Southwest", "Southeast", "Northeast", "Islands"],
         "meta": {
-            "defaults": []
+            "defaults": ["USA"]
+        }
+    },
+    "China Provinces": {
+      "China": [ "China", "Provinces", "Autonomous Regions", "Direct-administered municipalities", "Special administrative regions" ],
+        "meta": {
+            "defaults": ["China"]
+        }
+    },
+    "France Departments": {
+      "France": [ "France" ],
+        "meta": {
+            "defaults": ["France"]
         }
     }
 }

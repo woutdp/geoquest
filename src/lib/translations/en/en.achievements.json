@@ -66,5 +66,17 @@
     "all-world": {
         "name": "Literal 5Head",
         "description": "Find ALL countries without making a mistake."
+    },
+    "all-usa-sates": {
+        "name": "Yank them all",
+        "description": "Find ALL states of the USA without making a mistake."
+    },
+    "all-chinese-provinces": {
+        "name": "The middle Country",
+        "description": "Find ALL provinces of China without making a mistake."
+    },
+    "all-french-departments": {
+        "name": "Les conquêtes napoléoniennes",
+        "description": "Find ALL departments of France without making a mistake."
     }
 }

@@ -24,7 +24,7 @@
         "ISO2": "AG",
         "ISO3": "ATG",
         "color": 3,
-        "tags": ["Caribbean"],
+        "tags": ["Caribbean", "America"],
         "difficulty": 3
     },
     "Anguilla": {
@@ -32,7 +32,7 @@
         "ISO3": "AIA",
         "color": 3,
         "belongsTo": "United Kingdom",
-        "tags": ["North America", "Caribbean"],
+        "tags": ["North America", "America", "Caribbean"],
         "difficulty": 3
     },
     "Albania": {
@@ -60,7 +60,7 @@
         "ISO2": "AR",
         "ISO3": "ARG",
         "color": 3,
-        "tags": ["South America"],
+        "tags": ["South America", "America"],
         "difficulty": 1
     },
     "American Samoa": {
@@ -112,7 +112,7 @@
         "ISO2": "BB",
         "ISO3": "BRB",
         "color": 3,
-        "tags": ["Caribbean"],
+        "tags": ["Caribbean", "America"],
         "difficulty": 3
     },
     "Bangladesh": {
@@ -170,21 +170,21 @@
         "ISO3": "BMU",
         "color": 0,
         "belongsTo": "United Kingdom",
-        "tags": ["North America"],
+        "tags": ["North America", "America"],
         "difficulty": 2
     },
     "Bolivia": {
         "ISO2": "BO",
         "ISO3": "BOL",
         "color": 2,
-        "tags": ["South America"],
+        "tags": ["South America", "America"],
         "difficulty": 1
     },
     "Brazil": {
         "ISO2": "BR",
         "ISO3": "BRA",
         "color": 0,
-        "tags": ["South America"],
+        "tags": ["South America", "America"],
         "difficulty": 0
     },
     "Bhutan": {
@@ -212,14 +212,14 @@
         "ISO2": "BZ",
         "ISO3": "BLZ",
         "color": 2,
-        "tags": ["Central America"],
+        "tags": ["Central America", "America"],
         "difficulty": 1
     },
     "Canada": {
         "ISO2": "CA",
         "ISO3": "CAN",
         "color": 1,
-        "tags": ["North America", "Nato Members"],
+        "tags": ["North America", "America", "Nato Members"],
         "center": [-105.70728654359463, 58.48437067755612],
         "difficulty": 0
     },
@@ -249,7 +249,7 @@
         "ISO2": "CL",
         "ISO3": "CHL",
         "color": 0,
-        "tags": ["South America"],
+        "tags": ["South America", "America"],
         "center": [-70.76867620861314, -28.81400028445949],
         "difficulty": 1
     },
@@ -272,14 +272,14 @@
         "ISO2": "CO",
         "ISO3": "COL",
         "color": 1,
-        "tags": ["South America"],
+        "tags": ["South America", "America"],
         "difficulty": 1
     },
     "Costa Rica": {
         "ISO2": "CR",
         "ISO3": "CRI",
         "color": 2,
-        "tags": ["Central America"],
+        "tags": ["Central America", "America"],
         "center": [-83.9941012302606, 9.99734217084615],
         "difficulty": 1
     },
@@ -287,7 +287,7 @@
         "ISO2": "CU",
         "ISO3": "CUB",
         "color": 1,
-        "tags": ["Caribbean"],
+        "tags": ["Caribbean", "America"],
         "difficulty": 0
     },
     "Cape Verde": {
@@ -345,14 +345,14 @@
         "ISO2": "DM",
         "ISO3": "DMA",
         "color": 3,
-        "tags": ["Caribbean"],
+        "tags": ["Caribbean", "America"],
         "difficulty": 3
     },
     "Dominican Republic": {
         "ISO2": "DO",
         "ISO3": "DOM",
         "color": 1,
-        "tags": ["Caribbean"],
+        "tags": ["Caribbean", "America"],
         "difficulty": 2
     },
     "Algeria": {
@@ -366,7 +366,7 @@
         "ISO2": "EC",
         "ISO3": "ECU",
         "color": 0,
-        "tags": ["South America"],
+        "tags": ["South America", "America"],
         "center": [-78.62946370514271, -1.214686887656204],
         "difficulty": 2
     },
@@ -464,7 +464,7 @@
         "ISO2": "GD",
         "ISO3": "GRD",
         "color": 1,
-        "tags": ["Caribbean"],
+        "tags": ["Caribbean", "America"],
         "difficulty": 3
     },
     "Georgia": {
@@ -501,7 +501,7 @@
         "ISO2": "GL",
         "ISO3": "GRL",
         "color": 0,
-        "tags": ["North America"],
+        "tags": ["North America", "America"],
         "difficulty": 0
     },
     "Gambia": {
@@ -538,7 +538,7 @@
         "ISO2": "GT",
         "ISO3": "GTM",
         "color": 1,
-        "tags": ["Central America"],
+        "tags": ["Central America", "America"],
         "difficulty": 1
     },
     "Guam": {
@@ -559,7 +559,7 @@
         "ISO2": "GY",
         "ISO3": "GUY",
         "color": 3,
-        "tags": ["South America"],
+        "tags": ["South America", "America"],
         "difficulty": 3
     },
     "Hong Kong": {
@@ -574,7 +574,7 @@
         "ISO2": "HN",
         "ISO3": "HND",
         "color": 0,
-        "tags": ["Central America"],
+        "tags": ["Central America", "America"],
         "difficulty": 2
     },
     "Croatia": {
@@ -588,7 +588,7 @@
         "ISO2": "HT",
         "ISO3": "HTI",
         "color": 0,
-        "tags": ["Caribbean"],
+        "tags": ["Caribbean", "America"],
         "difficulty": 1
     },
     "Hungary": {
@@ -683,7 +683,7 @@
         "ISO2": "JM",
         "ISO3": "JAM",
         "color": 3,
-        "tags": ["Caribbean"],
+        "tags": ["Caribbean", "America"],
         "difficulty": 1
     },
     "Jordan": {
@@ -740,7 +740,7 @@
         "ISO2": "KN",
         "ISO3": "KNA",
         "color": 0,
-        "tags": ["Caribbean"],
+        "tags": ["Caribbean", "America"],
         "difficulty": 3
     },
     "North Korea": {
@@ -789,7 +789,7 @@
         "ISO2": "LC",
         "ISO3": "LCA",
         "color": 1,
-        "tags": ["Caribbean"],
+        "tags": ["Caribbean", "America"],
         "difficulty": 3
     },
     "Liechtenstein": {
@@ -945,7 +945,7 @@
         "ISO3": "MSR",
         "color": 1,
         "belongsTo": "United Kingdom",
-        "tags": ["Caribbean"],
+        "tags": ["Caribbean", "America"],
         "difficulty": 3
     },
     "Malta": {
@@ -980,7 +980,7 @@
         "ISO2": "MX",
         "ISO3": "MEX",
         "color": 3,
-        "tags": ["North America", "Central America"],
+        "tags": ["North America", "America", "Central America"],
         "difficulty": 0
     },
     "Malaysia": {
@@ -1036,7 +1036,7 @@
         "ISO2": "NI",
         "ISO3": "NIC",
         "color": 1,
-        "tags": ["Central America"],
+        "tags": ["Central America", "America"],
         "difficulty": 1
     },
     "Netherlands": {
@@ -1095,14 +1095,14 @@
         "ISO2": "PA",
         "ISO3": "PAN",
         "color": 0,
-        "tags": ["Central America"],
+        "tags": ["Central America", "America"],
         "difficulty": 1
     },
     "Peru": {
         "ISO2": "PE",
         "ISO3": "PER",
         "color": 3,
-        "tags": ["South America"],
+        "tags": ["South America", "America"],
         "difficulty": 1
     },
     "French Polynesia": {
@@ -1173,7 +1173,7 @@
         "ISO2": "PY",
         "ISO3": "PRY",
         "color": 1,
-        "tags": ["South America"],
+        "tags": ["South America", "America"],
         "difficulty": 2
     },
     "Qatar": {
@@ -1301,7 +1301,7 @@
         "ISO2": "SR",
         "ISO3": "SUR",
         "color": 1,
-        "tags": ["South America"],
+        "tags": ["South America", "America"],
         "difficulty": 2
     },
     "South Sudan": {
@@ -1322,7 +1322,7 @@
         "ISO2": "SV",
         "ISO3": "SLV",
         "color": 3,
-        "tags": ["Central America"],
+        "tags": ["Central America", "America"],
         "difficulty": 2
     },
     "Turks and Caicos Islands": {
@@ -1330,7 +1330,7 @@
         "ISO3": "TCA",
         "color": 2,
         "belongsTo": "United Kingdom",
-        "tags": ["Caribbean"],
+        "tags": ["Caribbean", "America"],
         "difficulty": 3
     },
     "Chad": {
@@ -1393,7 +1393,7 @@
         "ISO2": "TT",
         "ISO3": "TTO",
         "color": 0,
-        "tags": ["Caribbean"],
+        "tags": ["Caribbean", "America"],
         "difficulty": 3
     },
     "Tuvalu": {
@@ -1441,7 +1441,7 @@
         "ISO2": "UY",
         "ISO3": "URY",
         "color": 1,
-        "tags": ["South America"],
+        "tags": ["South America", "America"],
         "difficulty": 2
     },
     "Uzbekistan": {
@@ -1455,7 +1455,7 @@
         "ISO2": "VE",
         "ISO3": "VEN",
         "color": 2,
-        "tags": ["South America"],
+        "tags": ["South America", "America"],
         "difficulty": 2
     },
     "Vanuatu": {
@@ -1470,7 +1470,7 @@
         "ISO3": "WLF",
         "color": 2,
         "belongsTo": "France",
-        "tags": ["Caribbean"],
+        "tags": ["Caribbean", "America"],
         "difficulty": 3
     },
     "Samoa": {
@@ -1532,14 +1532,14 @@
         "ISO2": "BS",
         "ISO3": "BHS",
         "color": 3,
-        "tags": ["Caribbean"],
+        "tags": ["Caribbean", "America"],
         "difficulty": 3
     },
     "Saint-Barthélemy": {
         "ISO3": "BLM",
         "color": 2,
         "belongsTo": "France",
-        "tags": ["Caribbean"],
+        "tags": ["Caribbean", "America"],
         "difficulty": 3
     },
     "Brunei": {
@@ -1589,7 +1589,7 @@
         "ISO3": "FLK",
         "color": 1,
         "belongsTo": "United Kingdom",
-        "tags": ["South America"],
+        "tags": ["South America", "America"],
         "difficulty": 3
     },
     "French Southern and Antarctic Lands": {
@@ -1671,7 +1671,7 @@
         "ISO3": "SXM",
         "color": 0,
         "belongsTo": "Netherlands",
-        "tags": ["Caribbean"],
+        "tags": ["Caribbean", "America"],
         "difficulty": 3
     },
     "Syria": {
@@ -1693,7 +1693,7 @@
         "ISO2": "US",
         "ISO3": "USA",
         "color": 2,
-        "tags": ["North America", "Nato Members"],
+        "tags": ["North America", "America", "Nato Members"],
         "center": [-99.59960333023501, 39.17941584039857],
         "difficulty": 0
     },
@@ -1708,7 +1708,7 @@
         "ISO2": "VC",
         "ISO3": "VCT",
         "color": 0,
-        "tags": ["Caribbean"],
+        "tags": ["Caribbean", "America"],
         "difficulty": 3
     },
     "British Virgin Islands": {
