@@ -17,14 +17,14 @@
     },
     "China Provinces": {
       "China": [ "China", "Provinces", "Autonomous Regions", "Direct-administered municipalities", "Special administrative regions" ],
-        "meta": {
-            "defaults": ["China"]
-        }
+      "meta": {
+        "defaults": ["China"]
+      }
     },
     "France Departments": {
       "France": [ "France" ],
-        "meta": {
-            "defaults": ["France"]
-        }
+      "meta": {
+        "defaults": ["France"]
+      }
     }
 }
