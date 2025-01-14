@@ -81,13 +81,12 @@ export function achieveAchievement(slug: string) {
     }
 }
 
-export function processWorldAchievements(features) {
-    if (get(loadedMap).name !== 'World') return
+export function processExtraAchievements(features, questId) {
     const achievementsWithTags = _(achievements)
         .filter(achievement => achievement?.extra?.tags)
         .value()
 
     for (const achievement of achievementsWithTags) {
-        if (_.difference(getFeaturesFromTags(achievement.extra.tags), features).length === 0) achieveAchievement(achievement.slug)
+        if (questId == achievement.quest && _.difference(getFeaturesFromTags(achievement.extra.tags), features).length === 0) achieveAchievement(achievement.slug)
     }
 }

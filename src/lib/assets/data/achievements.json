@@ -19,60 +19,70 @@
     },
     {
         "slug": "all-north-america",
+        "quest": "world",
         "extra": {
             "tags": [ "North America" ]
         }
     },
     {
         "slug": "all-balkans",
+        "quest": "world",
         "extra": {
             "tags": [ "Balkans" ]
         }
     },
     {
         "slug": "all-caribbean",
+        "quest": "world",
         "extra": {
             "tags": [ "Caribbean" ]
         }
     },
     {
         "slug": "all-middle-east",
+        "quest": "world",
         "extra": {
             "tags": [ "Middle East" ]
         }
     },
     {
         "slug": "all-europe",
+        "quest": "world",
         "extra": {
             "tags": [ "Europe" ]
         }
     },
     {
         "slug": "all-oceania",
+        "quest": "world",
         "extra": {
             "tags": [ "Oceania" ]
         }
     },
     {
         "slug": "all-asia",
+        "quest": "world",
         "extra": {
             "tags": [ "Asia" ]
         }
     },
     {
         "slug": "all-southeast-asia",
+        "quest": "world",
         "extra": {
             "tags": [ "Southeast Asia" ]
         }
     },
     {
         "slug": "all-africa",
+        "quest": "world",
         "extra": {
             "tags": [ "Africa" ]
         }
     },
     {
         "slug": "all-america",
+        "quest": "world",
         "extra": {
             "tags": [
                 "Caribbean",
@@ -84,6 +94,7 @@
     },
     {
         "slug": "all-world",
+        "quest": "world",
         "extra": {
             "tags": [
                 "Caribbean",
@@ -99,18 +110,21 @@
     },
     {
         "slug": "all-usa-sates",
+        "quest": "usa",
         "extra": {
             "tags": [ "USA" ]
         }
     },
     {
         "slug": "all-chinese-provinces",
+        "quest": "china",
         "extra": {
             "tags": [ "China" ]
         }
     },
     {
         "slug": "all-french-departments",
+        "quest": "france",
         "extra": {
             "tags": [ "France" ]
         }

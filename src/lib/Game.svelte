@@ -13,7 +13,7 @@
     import LoadingScreen from '$lib/ui/LoadingScreen.svelte'
     import MouseTooltip from '$lib/ui/MouseTooltip.svelte'
     import UI from '$lib/ui/UI.svelte'
-    import {achieveAchievement, ALREADY_GUESSED, CORRECT, getGeojsonByName, processWorldAchievements, shuffleColors, WRONG} from '$lib/utils'
+    import {achieveAchievement, ALREADY_GUESSED, CORRECT, getGeojsonByName, processExtraAchievements, shuffleColors, WRONG} from '$lib/utils'
 
     polyfillCountryFlagEmojis()
     import dailyQuestCountries from '$lib/assets/data/daily-quest.json'
@@ -182,8 +182,8 @@
                 if (streak === 5) achieveAchievement('5-streak')
                 if (streak === 10) achieveAchievement('10-streak')
                 if (streak === 30) achieveAchievement('30-streak')
-                processWorldAchievements(correctCountries)
             }
+            processExtraAchievements(correctCountries, $loadedMap.id)
 
             return CORRECT
         }
