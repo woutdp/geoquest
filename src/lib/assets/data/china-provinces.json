@@ -1,0 +1,138 @@
+{
+		"Gansu": {
+			"color": 2,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Qinghai": {
+			"color": 2,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Guangxi": {
+			"color": 1,
+			"tags": [ "China", "Autonomous Regions" ]
+		},
+		"Guizhou": {
+			"color": 0,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Chongqing": {
+			"color": 3,
+			"tags": [ "China", "Direct-administered municipalities" ]
+		},
+		"Beijing": {
+			"color": 1,
+			"tags": [ "China", "Direct-administered municipalities" ]
+		},
+		"Fujian": {
+			"color": 2,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Anhui": {
+			"color": 1,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Guangdong": {
+			"color": 0,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Tibet": {
+			"color": 1,
+			"tags": [ "China", "Autonomous Regions" ]
+		},
+		"Xinjiang": {
+			"color": 1,
+			"tags": [ "China", "Autonomous Regions" ]
+		},
+		"Hainan": {
+			"color": 0,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Ningxia": {
+			"color": 0,
+			"tags": [ "China", "Autonomous Regions" ]
+		},
+		"Shaanxi": {
+			"color": 3,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Shanxi": {
+			"color": 2,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Hubei": {
+			"color": 3,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Hunan": {
+			"color": 1,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Sichuan": {
+			"color": 2,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Yunnan": {
+			"color": 3,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Hebei": {
+			"color": 3,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Henan": {
+			"color": 0,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Liaoning": {
+			"color": 2,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Shandong": {
+			"color": 2,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Tianjin": {
+			"color": 2,
+			"tags": [ "China", "Direct-administered municipalities" ]
+		},
+		"Jiangxi": {
+			"color": 0,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Jiangsu": {
+			"color": 2,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Shanghai": {
+			"color": 2,
+			"tags": [ "China", "Direct-administered municipalities" ]
+		},
+		"Zhejiang": {
+			"color": 2,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Jilin": {
+			"color": 1,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Inner Mongolia": {
+			"color": 0,
+			"tags": [ "China", "Autonomous Regions" ]
+		},
+		"Heilongjiang": {
+			"color": 3,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Taiwan": {
+			"color": 1,
+			"tags": [ "China", "Provinces" ]
+		},
+		"Hongkong": {
+			"color": 1,
+			"tags": [ "China", "Special administrative regions" ]
+		},
+		"Macau": {
+			"color": 2,
+			"tags": [ "China", "Special administrative regions" ]
+		}
+}

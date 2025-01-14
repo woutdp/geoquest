@@ -1,0 +1,386 @@
+{
+		"Ain": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Aisne": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Allier": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Alpes-Maritimes": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Alpes-de-Haute-Provence": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Ardennes": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Ardèche": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Ariège": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Aube": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Aude": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Aveyron": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Bas-Rhin": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Bouches-du-Rhône": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Calvados": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Cantal": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Charente": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Charente-Maritime": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Cher": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Corrèze": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Corse-du-Sud": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Creuse": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Côte-d'Or": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Côtes-d'Armor": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Deux-Sèvres": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Dordogne": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Doubs": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Drôme": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Essonne": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Eure": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Eure-et-Loir": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Finistère": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Gard": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Gers": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Gironde": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Haut-Rhin": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Haute-Corse": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Haute-Garonne": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Haute-Loire": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Haute-Marne": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Haute-Savoie": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Haute-Saône": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Haute-Vienne": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Hautes-Alpes": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Hautes-Pyrénées": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Hauts-de-Seine": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Hérault": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Ille-et-Vilaine": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Indre": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Indre-et-Loire": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Isère": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Jura": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Landes": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Loir-et-Cher": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Loire": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Loire-Atlantique": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Loiret": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Lot": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Lot-et-Garonne": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Lozère": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Maine-et-Loire": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Manche": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Marne": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Mayenne": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Meurthe-et-Moselle": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Meuse": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Morbihan": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Moselle": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Nièvre": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Nord": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Oise": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Orne": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Paris": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Pas-de-Calais": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Puy-de-Dôme": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Pyrénées-Atlantiques": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Pyrénées-Orientales": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Rhône": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Sarthe": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Savoie": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Saône-et-Loire": {
+			"color": 3,
+			"tags": ["France"]
+		},
+		"Seine-Maritime": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Seine-Saint-Denis": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Seine-et-Marne": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Somme": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Tarn": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Tarn-et-Garonne": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Territoire de Belfort": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Val-d'Oise": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Val-de-Marne": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Var": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Vaucluse": {
+			"color": 0,
+			"tags": ["France"]
+		},
+		"Vendée": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Vienne": {
+			"color": 2,
+			"tags": ["France"]
+		},
+		"Vosges": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Yonne": {
+			"color": 1,
+			"tags": ["France"]
+		},
+		"Yvelines": {
+			"color": 1,
+			"tags": ["France"]
+		}
+}

@@ -20,73 +20,55 @@
     {
         "slug": "all-north-america",
         "extra": {
-            "tags": [
-                "North America"
-            ]
+            "tags": [ "North America" ]
         }
     },
     {
         "slug": "all-balkans",
         "extra": {
-            "tags": [
-                "Balkans"
-            ]
+            "tags": [ "Balkans" ]
         }
     },
     {
         "slug": "all-caribbean",
         "extra": {
-            "tags": [
-                "Caribbean"
-            ]
+            "tags": [ "Caribbean" ]
         }
     },
     {
         "slug": "all-middle-east",
         "extra": {
-            "tags": [
-                "Middle East"
-            ]
+            "tags": [ "Middle East" ]
         }
     },
     {
         "slug": "all-europe",
         "extra": {
-            "tags": [
-                "Europe"
-            ]
+            "tags": [ "Europe" ]
         }
     },
     {
         "slug": "all-oceania",
         "extra": {
-            "tags": [
-                "Oceania"
-            ]
+            "tags": [ "Oceania" ]
         }
     },
     {
         "slug": "all-asia",
         "extra": {
-            "tags": [
-                "Asia"
-            ]
+            "tags": [ "Asia" ]
         }
     },
     {
         "slug": "all-southeast-asia",
         "extra": {
-            "tags": [
-                "Southeast Asia"
-            ]
+            "tags": [ "Southeast Asia" ]
         }
     },
     {
         "slug": "all-africa",
         "extra": {
-            "tags": [
-                "Africa"
-            ]
+            "tags": [ "Africa" ]
         }
     },
     {
@@ -113,6 +95,24 @@
                 "Asia",
                 "Oceania"
             ]
+        }
+    },
+    {
+        "slug": "all-usa-sates",
+        "extra": {
+            "tags": [ "USA" ]
+        }
+    },
+    {
+        "slug": "all-chinese-provinces",
+        "extra": {
+            "tags": [ "China" ]
+        }
+    },
+    {
+        "slug": "all-french-departments",
+        "extra": {
+            "tags": [ "France" ]
         }
     }
 ]

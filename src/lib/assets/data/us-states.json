@@ -1,203 +1,223 @@
 {
     "Alabama": {
         "color": 3,
-        "tags": ["Southeast"]
+        "tags": ["USA", "Southeast"]
     },
     "Alaska": {
         "color": 1,
-        "tags": ["West"]
+        "tags": ["USA", "West"]
+    },
+    "American Samoa": {
+        "color": 1,
+        "tags": ["USA", "Islands"]
     },
     "Arizona": {
         "color": 3,
-        "tags": ["Southwest"]
+        "tags": ["USA", "Southwest"]
     },
     "Arkansas": {
         "color": 1,
-        "tags": ["Southeast"]
+        "tags": ["USA", "Southeast"]
     },
     "California": {
         "color": 0,
-        "tags": ["West"]
+        "tags": ["USA", "West"]
     },
     "Colorado": {
         "color": 0,
-        "tags": ["West"]
+        "tags": ["USA", "West"]
+    },
+    "Commonwealth of the Northern Mariana Islands": {
+        "color": 0,
+        "tags": ["USA", "Islands"]
     },
     "Connecticut": {
         "color": 1,
-        "tags": ["Northeast"]
+        "tags": ["USA", "Northeast"]
     },
     "Delaware": {
         "color": 2,
-        "tags": ["Southeast"]
+        "tags": ["USA", "Southeast"]
     },
     "Florida": {
         "color": 2,
-        "tags": ["Southeast"]
+        "tags": ["USA", "Southeast"]
     },
     "Georgia": {
         "color": 0,
-        "tags": ["Southeast"]
+        "tags": ["USA", "Southeast"]
+    },
+    "Guam": {
+        "color": 2,
+        "tags": ["USA", "Islands"]
     },
     "Hawaii": {
         "color": 2,
-        "tags": ["West"]
+        "tags": ["USA", "West", "Islands"]
     },
     "Idaho": {
         "color": 0,
-        "tags": ["West"]
+        "tags": ["USA", "West"]
     },
     "Illinois": {
         "color": 2,
-        "tags": ["Midwest"]
+        "tags": ["USA", "Midwest"]
     },
     "Indiana": {
         "color": 3,
-        "tags": ["Midwest"]
+        "tags": ["USA", "Midwest"]
     },
     "Iowa": {
         "color": 1,
-        "tags": ["Midwest"]
+        "tags": ["USA", "Midwest"]
     },
     "Kansas": {
         "color": 3,
-        "tags": ["Midwest"]
+        "tags": ["USA", "Midwest"]
     },
     "Kentucky": {
         "color": 1,
-        "tags": ["Southeast"]
+        "tags": ["USA", "Southeast"]
     },
     "Louisiana": {
         "color": 3,
-        "tags": ["Southeast"]
+        "tags": ["USA", "Southeast"]
     },
     "Maine": {
         "color": 0,
-        "tags": ["Northeast"]
+        "tags": ["USA", "Northeast"]
     },
     "Maryland": {
         "color": 3,
-        "tags": ["Southeast"]
+        "tags": ["USA", "Southeast"]
     },
     "Massachusetts": {
         "color": 0,
-        "tags": ["Northeast"]
+        "tags": ["USA", "Northeast"]
     },
     "Michigan": {
         "color": 1,
-        "tags": ["Midwest"]
+        "tags": ["USA", "Midwest"]
     },
     "Minnesota": {
         "color": 2,
-        "tags": ["Midwest"]
+        "tags": ["USA", "Midwest"]
     },
     "Mississippi": {
         "color": 0,
-        "tags": ["Southeast"]
+        "tags": ["USA", "Southeast"]
     },
     "Missouri": {
         "color": 0,
-        "tags": ["Midwest"]
+        "tags": ["USA", "Midwest"]
     },
     "Montana": {
         "color": 2,
-        "tags": ["West"]
+        "tags": ["USA", "West"]
     },
     "Nebraska": {
         "color": 2,
-        "tags": ["Midwest"]
+        "tags": ["USA", "Midwest"]
     },
     "Nevada": {
         "color": 1,
-        "tags": ["West"]
+        "tags": ["USA", "West"]
     },
     "New Hampshire": {
         "color": 2,
-        "tags": ["Northeast"]
+        "tags": ["USA", "Northeast"]
     },
     "New Jersey": {
         "color": 0,
-        "tags": ["Northeast"]
+        "tags": ["USA", "Northeast"]
     },
     "New Mexico": {
         "color": 1,
-        "tags": ["Southwest"]
+        "tags": ["USA", "Southwest"]
     },
     "New York": {
         "color": 3,
-        "tags": ["Northeast"]
+        "tags": ["USA", "Northeast"]
     },
     "North Carolina": {
         "color": 1,
-        "tags": ["Southeast"]
+        "tags": ["USA", "Southeast"]
     },
     "North Dakota": {
         "color": 0,
-        "tags": ["Midwest"]
+        "tags": ["USA", "Midwest"]
     },
     "Ohio": {
         "color": 0,
-        "tags": ["Midwest"]
+        "tags": ["USA", "Midwest"]
     },
     "Oklahoma": {
         "color": 2,
-        "tags": ["Southwest"]
+        "tags": ["USA", "Southwest"]
     },
     "Oregon": {
         "color": 3,
-        "tags": ["West"]
+        "tags": ["USA", "West"]
     },
     "Pennsylvania": {
         "color": 1,
-        "tags": ["Northeast"]
+        "tags": ["USA", "Northeast"]
+    },
+    "Puerto Rico": {
+        "color": 2,
+        "tags": ["USA", "Southeast"]
     },
     "Rhode Island": {
         "color": 3,
-        "tags": ["Northeast"],
+        "tags": ["USA", "Northeast"],
         "helper": true
     },
     "South Carolina": {
         "color": 3,
-        "tags": ["Southeast"]
+        "tags": ["USA", "Southeast"]
     },
     "South Dakota": {
         "color": 3,
-        "tags": ["Midwest"]
+        "tags": ["USA", "Midwest"]
     },
     "Tennessee": {
         "color": 2,
-        "tags": ["Southeast"]
+        "tags": ["USA", "Southeast"]
     },
     "Texas": {
         "color": 0,
-        "tags": ["Southwest"]
+        "tags": ["USA", "Southwest"]
+    },
+    "United States Virgin Islands": {
+        "color": 0,
+        "tags": ["USA", "Islands"]
     },
     "Utah": {
         "color": 2,
-        "tags": ["West"]
+        "tags": ["USA", "West"]
     },
     "Vermont": {
         "color": 1,
-        "tags": ["Northeast"]
+        "tags": ["USA", "Northeast"]
     },
     "Virginia": {
         "color": 0,
-        "tags": ["Southeast"]
+        "tags": ["USA", "Southeast"]
     },
     "Washington": {
         "color": 2,
-        "tags": ["West"]
+        "tags": ["USA", "West"]
     },
     "West Virginia": {
         "color": 2,
-        "tags": ["Southeast"]
+        "tags": ["USA", "Southeast"]
     },
     "Wisconsin": {
         "color": 3,
-        "tags": ["Midwest"]
+        "tags": ["USA", "Midwest"]
     },
     "Wyoming": {
         "color": 1,
-        "tags": ["West"]
+        "tags": ["USA", "West"]
     }
 }
