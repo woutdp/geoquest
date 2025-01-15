@@ -14,3 +14,4 @@ Created and maintained by Wout De Puysseleir:
 
 -   Stéphane Payrard <https://github.com/cognominal>
 -   Jonas Vander <https://github.com/jaavander>
+-   Eauchat <https://github.com/eauchat>
