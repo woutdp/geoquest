@@ -1,0 +1,82 @@
+{
+	"PIEMONTE": {
+		"color": 0,
+		"tags": ["Italy"]
+	},
+	"VALLE D'AOSTA": {
+		"color": 1,
+		"tags": ["Italy"]
+	},
+	"LOMBARDIA": {
+		"color": 2,
+		"tags": ["Italy"]
+	},
+	"TRENTINO-ALTO ADIGE": {
+		"color": 2,
+		"tags": ["Italy"]
+	},
+	"VENETO": {
+		"color": 3,
+		"tags": ["Italy"]
+	},
+	"FRIULI VENEZIA GIULIA": {
+		"color": 3,
+		"tags": ["Italy"]
+	},
+	"LIGURIA": {
+		"color": 2,
+		"tags": ["Italy"]
+	},
+	"EMILIA-ROMAGNA": {
+		"color": 0,
+		"tags": ["Italy"]
+	},
+	"TOSCANA": {
+		"color": 1,
+		"tags": ["Italy"]
+	},
+	"UMBRIA": {
+		"color": 0,
+		"tags": ["Italy"]
+	},
+	"MARCHE": {
+		"color": 1,
+		"tags": ["Italy"]
+	},
+	"LAZIO": {
+		"color": 0,
+		"tags": ["Italy"]
+	},
+	"ABRUZZO": {
+		"color": 0,
+		"tags": ["Italy"]
+	},
+	"MOLISE": {
+		"color": 2,
+		"tags": ["Italy"]
+	},
+	"CAMPANIA": {
+		"color": 0,
+		"tags": ["Italy"]
+	},
+	"PUGLIA": {
+		"color": 2,
+		"tags": ["Italy"]
+	},
+	"BASILICATA": {
+		"color": 2,
+		"tags": ["Italy"]
+	},
+	"CALABRIA": {
+		"color": 1,
+		"tags": ["Italy"]
+	},
+	"SICILIA": {
+		"color": 3,
+		"tags": ["Italy"]
+	},
+	"SARDEGNA": {
+		"color": 2,
+		"tags": ["Italy"]
+	}
+}

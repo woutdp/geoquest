@@ -17,32 +17,17 @@ export const projections = [
     {func: d3.geoMercator(), name: 'Mercator'},
     {func: d3.geoOrthographic(), name: 'Globe'}
 ]
-export const maps = [
-  {
-    id: 'world',
-    name: 'World',
-    topojson: import('$lib/assets/maps/topojson/world.json'),
-    data: {countries: import('$lib/assets/data/countries.json')},
-  },
-  {
-    id: 'usa',
-    name: 'US States',
-    topojson: import('$lib/assets/maps/topojson/us-states.json'),
-    data: {states: import('$lib/assets/data/us-states.json')},
-  },
-  {
-    id: 'china',
-    name: 'China Provinces',
-    topojson: import('$lib/assets/maps/topojson/china-provinces.json'),
-    data: {provinces: import('$lib/assets/data/china-provinces.json')},
-  },
-  {
-    id: 'france',
-    name: 'France Departments',
-    topojson: import('$lib/assets/maps/topojson/france-departments.json'),
-    data: {departements: import('$lib/assets/data/france-departments.json')},
-  }
-] as const
+
+// Get list of quests, and make list of maps from it
+import quests from "$lib/assets/quests/index.json";
+export const maps = _.map(quests, function (questObject) {
+  let elements = {};
+  elements[questObject.objectsKey] = import(`$lib/assets/quests/${questObject.id}/elements.json`);
+  return Object.assign(questObject, {
+    topojson: import(`$lib/assets/quests/${questObject.id}/map.json`),
+    data: elements,
+  });
+}) as const
 
 // Map
 export const loadedMap = writable()

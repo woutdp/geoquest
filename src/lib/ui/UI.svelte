@@ -109,7 +109,7 @@
                                 </div>
                             {/if}
                             {#if !$showFlagOnly}
-                                {$t(`${chosenMap.id}-elements.${questionFeature?.properties?.name}`)}
+                                {$t(`quests/${chosenMap.id}/elements.${questionFeature?.properties?.name}`)}
                             {/if}
                         </span>
                     </div>

@@ -78,5 +78,9 @@
     "all-french-departments": {
         "name": "Les conquêtes napoléoniennes",
         "description": "Find ALL departments of France without making a mistake."
+    },
+    "all-italian-regions": {
+        "name": "Il ritorno di Julius",
+        "description": "Find ALL regions of Italy without making a mistake."
     }
 }

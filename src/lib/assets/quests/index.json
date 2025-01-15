@@ -1,0 +1,43 @@
+[
+  {
+    "id": "world-countries",
+    "name": "World countries",
+    "objectsKey": "countries",
+    "tags": [
+      "Asia", "Middle East", "Southeast Asia", "Central Asia",
+      "Europe", "Balkans",
+      "America", "North America", "South America", "Central America", "Caribbean",
+      "Africa", "North Africa", "Southern Africa", "West Africa", "East Africa", "Central Africa",
+      "Oceania"
+    ],
+    "defaultTags": ["America"]
+  },
+  {
+    "id": "usa-states",
+    "name": "US States",
+    "objectsKey": "states",
+    "tags": ["USA", "West", "Midwest", "Southwest", "Southeast", "Northeast", "Overseas"],
+    "defaultTags": ["USA"]
+  },
+  {
+    "id": "china-provinces",
+    "name": "China Provinces",
+    "objectsKey": "provinces",
+    "tags": [ "China", "Provinces", "Autonomous Regions", "Direct-administered municipalities", "Special administrative regions" ],
+    "defaultTags": ["China"]
+  },
+  {
+    "id": "france-departments",
+    "name": "France Departments",
+    "objectsKey": "departements",
+    "tags": [ "France", "Auvergne-Rhône-Alpes", "Bourgogne-Franche-Comté", "Bretagne", "Centre-Val de Loire", "Corse", "Grand Est", "Hauts-de-France", "Île-de-France", "Normandie", "Nouvelle-Aquitaine", "Occitanie", "Pays de la Loire", "Provence-Alpes-Côte d'Azur" ],
+    "defaultTags": ["France"]
+  },
+  {
+    "id": "italy-regions",
+    "name": "Italy Regions",
+    "objectsKey": "sub",
+    "tags": [ "Italy" ],
+    "defaultTags": ["Italy"]
+  }
+]
