@@ -10,7 +10,7 @@
         }
     },
     "US States": {
-        "North America": ["USA", "West", "Midwest", "Southwest", "Southeast", "Northeast", "Islands"],
+        "North America": ["USA", "West", "Midwest", "Southwest", "Southeast", "Northeast", "Overseas"],
         "meta": {
             "defaults": ["USA"]
         }

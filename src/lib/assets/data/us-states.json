@@ -9,7 +9,7 @@
     },
     "American Samoa": {
         "color": 1,
-        "tags": ["USA", "Islands"]
+        "tags": ["USA", "Overseas"]
     },
     "Arizona": {
         "color": 3,
@@ -27,16 +27,16 @@
         "color": 0,
         "tags": ["USA", "West"]
     },
-    "Commonwealth of the Northern Mariana Islands": {
-        "color": 0,
-        "tags": ["USA", "Islands"]
-    },
     "Connecticut": {
         "color": 1,
         "tags": ["USA", "Northeast"]
     },
     "Delaware": {
         "color": 2,
+        "tags": ["USA", "Southeast"]
+    },
+    "District of Columbia": {
+        "color": 1,
         "tags": ["USA", "Southeast"]
     },
     "Florida": {
@@ -49,11 +49,11 @@
     },
     "Guam": {
         "color": 2,
-        "tags": ["USA", "Islands"]
+        "tags": ["USA", "Overseas"]
     },
     "Hawaii": {
         "color": 2,
-        "tags": ["USA", "West", "Islands"]
+        "tags": ["USA", "Overseas"]
     },
     "Idaho": {
         "color": 0,
@@ -147,6 +147,10 @@
         "color": 0,
         "tags": ["USA", "Midwest"]
     },
+    "Northern Mariana Islands": {
+        "color": 0,
+        "tags": ["USA", "Overseas"]
+    },
     "Ohio": {
         "color": 0,
         "tags": ["USA", "Midwest"]
@@ -165,7 +169,7 @@
     },
     "Puerto Rico": {
         "color": 2,
-        "tags": ["USA", "Southeast", "Islands"]
+        "tags": ["USA", "Overseas"]
     },
     "Rhode Island": {
         "color": 3,
@@ -190,7 +194,7 @@
     },
     "United States Virgin Islands": {
         "color": 0,
-        "tags": ["USA", "Islands"]
+        "tags": ["USA", "Overseas"]
     },
     "Utah": {
         "color": 2,
