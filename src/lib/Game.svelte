@@ -8,7 +8,7 @@
     import {loadMap} from '$lib/map'
     import Map from '$lib/map/Map.svelte'
     import {successSound} from '$lib/sounds'
-    import {clientX, clientY, day, geojson, geometries, loadedMap, chosenMap, mousePos, save, showDebug} from '$lib/store'
+    import {chosenMap, clientX, clientY, day, geojson, geometries, loadedMap, mousePos, save, showDebug} from '$lib/store'
     import DebugInterface from '$lib/ui/DebugInterface.svelte'
     import LoadingScreen from '$lib/ui/LoadingScreen.svelte'
     import MouseTooltip from '$lib/ui/MouseTooltip.svelte'

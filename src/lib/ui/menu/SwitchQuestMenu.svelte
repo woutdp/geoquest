@@ -1,7 +1,7 @@
 <script lang="ts">
     import {browser, dev} from '$app/environment'
-    import {t} from '$lib/translations'
     import {maps} from '$lib/store'
+    import {t} from '$lib/translations'
 
     $: inIframe = browser && window.location !== window.parent.location
 </script>

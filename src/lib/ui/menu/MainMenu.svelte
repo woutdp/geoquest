@@ -9,8 +9,8 @@
     import AboutMenu from '$lib/ui/menu/AboutMenu.svelte'
     import Achievements from '$lib/ui/menu/Achievements.svelte'
     import NewGameMenu from '$lib/ui/menu/NewGameMenu.svelte'
-    import SwitchQuestMenu from '$lib/ui/menu/SwitchQuestMenu.svelte'
     import SettingsMenu from '$lib/ui/menu/SettingsMenu.svelte'
+    import SwitchQuestMenu from '$lib/ui/menu/SwitchQuestMenu.svelte'
     import WinScreen from '$lib/ui/menu/WinScreen.svelte'
 
     export let restart

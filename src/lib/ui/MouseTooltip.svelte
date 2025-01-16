@@ -1,7 +1,7 @@
 <script lang="ts">
     import emojiFlags from 'emoji-flags'
 
-    import {clientX, mousePos, chosenMap} from '$lib/store'
+    import {chosenMap,clientX, mousePos} from '$lib/store'
     import {t} from '$lib/translations'
 
     export let focusedCountry
