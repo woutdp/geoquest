@@ -76,7 +76,8 @@ function preprocessTopojson(json, dataKey, data) {
         const bbox = bboxCalc(feature)
         const xs = Math.abs(bbox[0] - bbox[2])
         const ys = Math.abs(bbox[1] - bbox[3])
-        if (countryData?.helper || (!geometry.properties.isIsland && geometry.properties.squareKm < 6000 && xs < 0.7 && ys < 0.7)) geometry.properties.helper = true
+
+        if (countryData?.helper || (countryData?.helper !== false && !geometry.properties.isIsland && geometry.properties.squareKm < 6000 && xs < 0.7 && ys < 0.7)) geometry.properties.helper = true
         else geometry.properties.helper = false
 
         return geometry
