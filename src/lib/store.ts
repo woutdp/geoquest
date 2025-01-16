@@ -1,8 +1,8 @@
 import * as d3 from 'd3'
 import {geoMiller, geoPatterson, geoRobinson} from 'd3-geo-projection'
+import _ from 'lodash'
 import {derived, readable, writable} from 'svelte/store'
 import * as topojsonClient from 'topojson-client'
-import _ from 'lodash'
 
 import {browser} from '$app/environment'
 
@@ -52,7 +52,7 @@ export const geometries = derived(topojson, $topojson => ($topojson ? Object.val
 export const projection = writable(projections[0].func)
 
 // Map choice
-export let chosenMap = _.find(maps, { id: getParam("m") }) || maps[0];
+export const chosenMap = _.find(maps, { id: getParam("m") }) || maps[0];
 
 // Settings
 export const soundEffects = localStorageWritable('settingsSoundEffects', true)
@@ -106,7 +106,7 @@ function localStorageWritable(key: string, initial: unknown) {
 
 function getParam (askedParam: string) {
   try {
-    let urlParams = new URLSearchParams(window.location.search);
+    const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get(askedParam);
   }
   catch (err) {
