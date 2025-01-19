@@ -1,82 +1,82 @@
 {
-	"PIEMONTE": {
+	"Piemonte": {
 		"color": 0,
 		"tags": ["Italy"]
 	},
-	"VALLE D'AOSTA": {
+	"Valle d'Aosta": {
 		"color": 1,
 		"tags": ["Italy"]
 	},
-	"LOMBARDIA": {
+	"Lombardia": {
 		"color": 2,
 		"tags": ["Italy"]
 	},
-	"TRENTINO-ALTO ADIGE": {
-		"color": 2,
-		"tags": ["Italy"]
-	},
-	"VENETO": {
+	"Trentino-Alto Adige": {
 		"color": 3,
 		"tags": ["Italy"]
 	},
-	"FRIULI VENEZIA GIULIA": {
+	"Veneto": {
+		"color": 0,
+		"tags": ["Italy"]
+	},
+	"Friuli Venezia Giulia": {
+		"color": 1,
+		"tags": ["Italy"]
+	},
+	"Liguria": {
+		"color": 2,
+		"tags": ["Italy"]
+	},
+	"Emilia-Romagna": {
 		"color": 3,
 		"tags": ["Italy"]
 	},
-	"LIGURIA": {
-		"color": 2,
-		"tags": ["Italy"]
-	},
-	"EMILIA-ROMAGNA": {
+	"Toscana": {
 		"color": 0,
 		"tags": ["Italy"]
 	},
-	"TOSCANA": {
+	"Umbria": {
 		"color": 1,
 		"tags": ["Italy"]
 	},
-	"UMBRIA": {
-		"color": 0,
-		"tags": ["Italy"]
-	},
-	"MARCHE": {
-		"color": 1,
-		"tags": ["Italy"]
-	},
-	"LAZIO": {
-		"color": 0,
-		"tags": ["Italy"]
-	},
-	"ABRUZZO": {
-		"color": 0,
-		"tags": ["Italy"]
-	},
-	"MOLISE": {
+	"Marche": {
 		"color": 2,
 		"tags": ["Italy"]
 	},
-	"CAMPANIA": {
-		"color": 0,
-		"tags": ["Italy"]
-	},
-	"PUGLIA": {
-		"color": 2,
-		"tags": ["Italy"]
-	},
-	"BASILICATA": {
-		"color": 2,
-		"tags": ["Italy"]
-	},
-	"CALABRIA": {
-		"color": 1,
-		"tags": ["Italy"]
-	},
-	"SICILIA": {
+	"Lazio": {
 		"color": 3,
 		"tags": ["Italy"]
 	},
-	"SARDEGNA": {
+	"Abruzzo": {
+		"color": 0,
+		"tags": ["Italy"]
+	},
+	"Molise": {
+		"color": 1,
+		"tags": ["Italy"]
+	},
+	"Campania": {
 		"color": 2,
+		"tags": ["Italy"]
+	},
+	"Puglia": {
+		"color": 3,
+		"tags": ["Italy"]
+	},
+	"Basilicata": {
+		"color": 0,
+		"tags": ["Italy"]
+	},
+	"Calabria": {
+		"color": 1,
+		"tags": ["Italy"]
+	},
+	"Sicilia": {
+		"color": 2,
+		"tags": ["Italy"]
+	},
+	"Sardegna": {
+		"color": 3,
 		"tags": ["Italy"]
 	}
 }
