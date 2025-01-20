@@ -21,11 +21,13 @@ export const projections = [
 // Get list of quests, and make list of maps from it
 import quests from "$lib/assets/quests/index.json";
 export const maps = _.map(quests, function (questObject) {
-  let elements = {};
-  elements[questObject.objectsKey] = import(`$lib/assets/quests/${questObject.id}/elements.json`);
   return Object.assign(questObject, {
-    topojson: import(`$lib/assets/quests/${questObject.id}/map.json`),
-    data: elements,
+    topojsonMaker: function () { return import(`$lib/assets/quests/${questObject.id}/map.json`); },
+    dataMaker: function () {
+      let elements = {};
+      elements[questObject.objectsKey] =  import(`$lib/assets/quests/${questObject.id}/elements.json`);
+      return elements;
+    },
   });
 }) as const
 
@@ -37,7 +39,9 @@ export const geometries = derived(topojson, $topojson => ($topojson ? Object.val
 export const projection = writable(projections[0].func)
 
 // Map choice
-export const chosenMap = _.find(maps, { id: getParam("m") }) || maps[0];
+export const chosenMap = _.find(maps, { id: getParam("m") }) || maps[0]
+chosenMap.topojson = chosenMap.topojsonMaker()
+chosenMap.data = chosenMap.dataMaker()
 
 // Settings
 export const soundEffects = localStorageWritable('settingsSoundEffects', true)
