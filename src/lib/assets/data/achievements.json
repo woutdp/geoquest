@@ -139,5 +139,12 @@
         "extra": {
             "tags": [ "Italy" ]
         }
+    },
+    {
+      "slug": "all-italian-provinces",
+      "quest": "italy-provinces",
+      "extra": {
+        "tags": [ "Italy" ]
+      }
     }
 ]

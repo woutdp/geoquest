@@ -86,5 +86,9 @@
     "all-italian-regions": {
         "name": "Il ritorno di Julius",
         "description": "Find ALL regions of Italy without making a mistake."
+    },
+    "all-italian-provinces": {
+        "name": "Questo e Julius, Nero e Dante tutti insieme",
+        "description": "Find ALL provinces of Italy without making a mistake."
     }
 }

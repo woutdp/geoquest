@@ -46,5 +46,12 @@
     "objectsKey": "sub",
     "tags": [ "Italy" ],
     "defaultTags": ["Italy"]
+  },
+  {
+    "id": "italy-provinces",
+    "name": "Provinces of Italy",
+    "objectsKey": "provinces",
+    "tags": [ "Italy", "Piemonte", "Valle d'Aosta/Vallée d'Aoste", "Lombardia", "Trentino-Alto Adige", "Veneto", "Friuli Venezia Giulia", "Liguria", "Emilia-Romagna", "Toscana", "Umbria", "Marche", "Lazio", "Abruzzo", "Molise", "Campania", "Puglia", "Basilicata", "Calabria", "Sicilia", "Sardegna" ],
+    "defaultTags": [ "Italy" ]
   }
 ]

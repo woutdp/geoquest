@@ -1,8 +1,9 @@
 {
 	"world-countries": "Countries of the world",
 	"usa-states": "US States",
-	"china-provinces": "Provinces of china",
+	"china-provinces": "Provinces of China",
+	"russia-regions": "Regions of Russia",
 	"france-departments": "French departments",
 	"italy-regions": "Regions of Italy",
-	"russia-regions": "Regions of Russia"
+	"italy-provinces": "Provinces of Italy"
 }
