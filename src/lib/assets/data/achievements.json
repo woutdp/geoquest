@@ -19,70 +19,70 @@
     },
     {
         "slug": "all-north-america",
-        "quest": "world",
+        "quest": "world-countries",
         "extra": {
             "tags": [ "North America" ]
         }
     },
     {
         "slug": "all-balkans",
-        "quest": "world",
+        "quest": "world-countries",
         "extra": {
             "tags": [ "Balkans" ]
         }
     },
     {
         "slug": "all-caribbean",
-        "quest": "world",
+        "quest": "world-countries",
         "extra": {
             "tags": [ "Caribbean" ]
         }
     },
     {
         "slug": "all-middle-east",
-        "quest": "world",
+        "quest": "world-countries",
         "extra": {
             "tags": [ "Middle East" ]
         }
     },
     {
         "slug": "all-europe",
-        "quest": "world",
+        "quest": "world-countries",
         "extra": {
             "tags": [ "Europe" ]
         }
     },
     {
         "slug": "all-oceania",
-        "quest": "world",
+        "quest": "world-countries",
         "extra": {
             "tags": [ "Oceania" ]
         }
     },
     {
         "slug": "all-asia",
-        "quest": "world",
+        "quest": "world-countries",
         "extra": {
             "tags": [ "Asia" ]
         }
     },
     {
         "slug": "all-southeast-asia",
-        "quest": "world",
+        "quest": "world-countries",
         "extra": {
             "tags": [ "Southeast Asia" ]
         }
     },
     {
         "slug": "all-africa",
-        "quest": "world",
+        "quest": "world-countries",
         "extra": {
             "tags": [ "Africa" ]
         }
     },
     {
         "slug": "all-america",
-        "quest": "world",
+        "quest": "world-countries",
         "extra": {
             "tags": [
                 "Caribbean",
@@ -94,13 +94,10 @@
     },
     {
         "slug": "all-world",
-        "quest": "world",
+        "quest": "world-countries",
         "extra": {
             "tags": [
-                "Caribbean",
-                "North America",
-                "Central America",
-                "South America",
+                "America",
                 "Europe",
                 "Africa",
                 "Asia",
@@ -110,23 +107,30 @@
     },
     {
         "slug": "all-usa-sates",
-        "quest": "usa",
+        "quest": "usa-states",
         "extra": {
             "tags": [ "USA" ]
         }
     },
     {
         "slug": "all-chinese-provinces",
-        "quest": "china",
+        "quest": "china-provinces",
         "extra": {
             "tags": [ "China" ]
         }
     },
     {
         "slug": "all-french-departments",
-        "quest": "france",
+        "quest": "france-departments",
         "extra": {
             "tags": [ "France" ]
+        }
+    },
+    {
+        "slug": "all-italian-regions",
+        "quest": "italy-regions",
+        "extra": {
+            "tags": [ "Italy" ]
         }
     }
 ]

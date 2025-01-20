@@ -18,15 +18,17 @@ export const availableLocales: Record<string, [name: string, flag: emojiFlags.Co
 }
 export const fallbackLocale = 'en'
 
-const localeFiles = import.meta.glob('./*/*.json')
+// System and quests locales
+const localeFiles = Object.assign(import.meta.glob('./*/*.json'), import.meta.glob('./*/*/*.json'), import.meta.glob('./*/*/*/*.json'))
 
-const localeFileKeys = [
-  'ui', 'quests', 'achievements',
-  'world-elements',   'world-groups',
-  'usa-elements',     'usa-groups',
-  'china-elements',   'china-groups',
-  'france-elements',  'france-groups'
-]
+// Locale file names
+const localeFileKeys = [ 'ui', 'achievements', 'quests/index', ]
+// Get list of quests, and expect translation files for each quest
+import quests from "$lib/assets/quests/index.json";
+_.each(quests, function (questObject) {
+  localeFileKeys.push(`quests/${questObject.id}/elements`);
+  localeFileKeys.push(`quests/${questObject.id}/groups`);
+});
 
 /**
  * Gathers translations according to locales and keys defined above.
@@ -37,7 +39,7 @@ const loaders: Config['loaders'] = Array.from(Object.keys(availableLocales)).fla
     localeFileKeys.map(key => ({
         locale,
         key,
-        loader: () => localeFiles[`./${locale}/${locale}.${key}.json`]().then(module => _.get(module, 'default', null) as unknown as object)
+        loader: () => localeFiles[`./${locale}/${key}.json`]().then(module => _.get(module, 'default', null) as unknown as object)
     }))
 )
 
