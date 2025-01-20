@@ -109,7 +109,8 @@
 		},
 		"Essonne": {
 			"color": 3,
-			"tags": ["France", "Île-de-France"]
+			"tags": ["France", "Île-de-France"],
+			"helper": false
 		},
 		"Eure": {
 			"color": 3,
@@ -177,7 +178,8 @@
 		},
 		"Hauts-de-Seine": {
 			"color": 0,
-			"tags": ["France", "Île-de-France"]
+			"tags": ["France", "Île-de-France"],
+			"helper": false
 		},
 		"Hérault": {
 			"color": 2,
@@ -285,7 +287,8 @@
 		},
 		"Paris": {
 			"color": 3,
-			"tags": ["France", "Île-de-France"]
+			"tags": ["France", "Île-de-France"],
+			"helper": false
 		},
 		"Pas-de-Calais": {
 			"color": 2,
@@ -325,11 +328,13 @@
 		},
 		"Seine-Saint-Denis": {
 			"color": 1,
-			"tags": ["France", "Île-de-France"]
+			"tags": ["France", "Île-de-France"],
+			"helper": false
 		},
 		"Seine-et-Marne": {
 			"color": 0,
-			"tags": ["France", "Île-de-France"]
+			"tags": ["France", "Île-de-France"],
+			"helper": false
 		},
 		"Somme": {
 			"color": 0,
@@ -345,15 +350,18 @@
 		},
 		"Territoire de Belfort": {
 			"color": 2,
-			"tags": ["France", "Bourgogne-Franche-Comté"]
+			"tags": ["France", "Bourgogne-Franche-Comté"],
+			"helper": false
 		},
 		"Val-d'Oise": {
 			"color": 2,
-			"tags": ["France", "Île-de-France"]
+			"tags": ["France", "Île-de-France"],
+			"helper": false
 		},
 		"Val-de-Marne": {
 			"color": 2,
-			"tags": ["France", "Île-de-France"]
+			"tags": ["France", "Île-de-France"],
+			"helper": false
 		},
 		"Var": {
 			"color": 2,
@@ -381,6 +389,7 @@
 		},
 		"Yvelines": {
 			"color": 1,
-			"tags": ["France", "Île-de-France"]
+			"tags": ["France", "Île-de-France"],
+			"helper": false
 		}
 }
