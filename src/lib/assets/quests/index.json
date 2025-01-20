@@ -21,7 +21,7 @@
   },
   {
     "id": "china-provinces",
-    "name": "Provinces of china",
+    "name": "Provinces of China",
     "objectsKey": "provinces",
     "tags": [ "China", "Provinces", "Autonomous Regions", "Direct-administered municipalities", "Special administrative regions" ],
     "defaultTags": ["China"]
