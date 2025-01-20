@@ -120,6 +120,13 @@
         }
     },
     {
+        "slug": "all-russian-regions",
+        "quest": "russia-regions",
+        "extra": {
+            "tags": [ "Russia" ]
+        }
+    },
+    {
         "slug": "all-french-departments",
         "quest": "france-departments",
         "extra": {

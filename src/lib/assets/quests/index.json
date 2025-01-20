@@ -27,6 +27,13 @@
     "defaultTags": ["China"]
   },
   {
+    "id": "russia-regions",
+    "name": "Regions of Russia",
+    "objectsKey": "name",
+    "tags": [ "Russia", "Northwestern", "Central", "Southern", "North Caucasia", "Volga", "Ural", "Siberean", "Far eastern" ],
+    "defaultTags": ["Russia"]
+  },
+  {
     "id": "france-departments",
     "name": "French departments",
     "objectsKey": "departements",
@@ -39,12 +46,5 @@
     "objectsKey": "sub",
     "tags": [ "Italy" ],
     "defaultTags": ["Italy"]
-  },
-  {
-    "id": "russia-regions",
-    "name": "Regions of Russia",
-    "objectsKey": "name",
-    "tags": [ "Russia", "Northwestern", "Central", "Southern", "North Caucasia", "Volga", "Ural", "Siberean", "Far eastern" ],
-    "defaultTags": ["Russia"]
   }
 ]
