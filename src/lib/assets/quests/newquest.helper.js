@@ -1,41 +1,7 @@
 #!/usr/bin/env node
 import _ from "lodash";
 import * as fs from "fs";
-
-//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
-//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
-//                                                  UTILITIES
-//\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
-
-const log = {
-  main: function (color, prefix, args) {
-    _.each(args, function (arg, i) {
-      if (i == 0) console.log(color, prefix + arg)
-      else console.log(color, arg);
-    });
-  },
-  error:   function () { log.main("\x1b[31m%s\x1b[0m", "✖ ", arguments); },
-  warning: function () { log.main("\x1b[33m%s\x1b[0m", "⚠ ", arguments); },
-  info:    function () { log.main("\x1b[35m%s\x1b[0m", "🛈 ", arguments); },
-  success: function () { log.main("\x1b[92m%s\x1b[0m", "✔ ", arguments); },
-}
-
-function abort () {
-  log.error.apply(this, arguments);
-  process.exit();
-};
-
-function json_stringify_pretty (object, morePretty) {
-  // var string = JSON.stringify(object, null, 2); // 2 spaces instead of tab
-  var string = JSON.stringify(object, null, "\t");
-  // do not exten arrays, otherwise it takes too much space
-  if (morePretty) _.each(string.match(/\[[^\]\[\{\}]*\]/g), function (subString, i) {
-    // remove spaces and line jumps
-    var prettyFiedSubString = JSON.stringify(JSON.parse(subString));
-    string = string.replace(subString, prettyFiedSubString);
-  });
-  return string;
-};
+import { log, abort, json_stringify_pretty } from "./newquest.utils.js";
 
 //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
@@ -70,6 +36,7 @@ if (!questObject.objectsKey || !mapFile.objects[questObject.objectsKey] || !mapF
 
 let questFilesPaths = {
   elements: `./${questId}/elements.json`,
+  dirTranslation: `../../translations/en/quests/${questId}/`,
   elementsTranslation: `../../translations/en/quests/${questId}/elements.json`,
   groupsTranslation: `../../translations/en/quests/${questId}/groups.json`,
   questsIndexTranslation: "../../translations/en/quests/index.json",
@@ -90,14 +57,17 @@ _.each(mapFile.objects[questObject.objectsKey].geometries, function (geometryObj
 });
 fs.writeFileSync(questFilesPaths.elements, json_stringify_pretty(elements, true), { encoding: "utf8" });
 
+// create quest directory for english translations
+if (!fs.existsSync(questFilesPaths.dirTranslation)){ fs.mkdirSync(questFilesPaths.dirTranslation); }
+
 // autogenerate english elements translation file
 let elementsEnglishTranslation = {};
 _.each(elements, function (elem, elemName) { elementsEnglishTranslation[elemName] = elemName; });
 fs.writeFileSync(questFilesPaths.elementsTranslation, json_stringify_pretty(elementsEnglishTranslation, true), { encoding: "utf8" });
 
 // check if tags have been set
-if (!questObject.tags) {
-  console.warn(`[WARNING] Skipped generating groups translation file. Missing tags for your new quest, please add them into "assets/quests/index.json".`);
+if (!questObject.tags) console.warn(`[WARNING] Skipped generating groups translation file. Missing tags for your new quest, please add them into "assets/quests/index.json".`);
+else {
   // autogenerate english groups translation file
   let groupsEnglishTranslationFile = {};
   _.each(questObject.tags, function (groupName) { groupsEnglishTranslationFile[groupName] = groupName; });
@@ -109,6 +79,7 @@ let questsListEnglishTranslation;
 try { questsListEnglishTranslation = JSON.parse(fs.readFileSync(questFilesPaths.questsIndexTranslation, { encoding: "utf8" })); }
 catch (err) { abort(`Failed to parse "${questFilesPaths.questsIndexTranslation}" file!`, err) };
 questsListEnglishTranslation[questId] = questObject.name;
+fs.writeFileSync(questFilesPaths.questsIndexTranslation, json_stringify_pretty(questsListEnglishTranslation, true), { encoding: "utf8" });
 
 //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
 //\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/
