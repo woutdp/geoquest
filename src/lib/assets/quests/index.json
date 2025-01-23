@@ -10,21 +10,21 @@
       "Africa", "North Africa", "Southern Africa", "West Africa", "East Africa", "Central Africa",
       "Oceania"
     ],
-    "defaultTags": ["America"]
+    "defaultTags": [ "America" ]
   },
   {
     "id": "usa-states",
     "name": "US States",
     "objectsKey": "states",
     "tags": ["USA", "West", "Midwest", "Southwest", "Southeast", "Northeast", "Overseas"],
-    "defaultTags": ["USA"]
+    "defaultTags": [ "USA" ]
   },
   {
     "id": "china-provinces",
     "name": "Provinces of China",
     "objectsKey": "provinces",
     "tags": [ "China", "Provinces", "Autonomous Regions", "Direct-administered municipalities", "Special administrative regions" ],
-    "defaultTags": ["China"],
+    "defaultTags": [ "China" ],
     "mapSource": "https://github.com/YipChunKit/China_map_topojson/blob/main/province.json"
   },
   {
@@ -40,7 +40,7 @@
     "name": "French departments",
     "objectsKey": "departements",
     "tags": [ "France", "Auvergne-Rhône-Alpes", "Bourgogne-Franche-Comté", "Bretagne", "Centre-Val de Loire", "Corse", "Grand Est", "Hauts-de-France", "Île-de-France", "Normandie", "Nouvelle-Aquitaine", "Occitanie", "Pays de la Loire", "Provence-Alpes-Côte d'Azur" ],
-    "defaultTags": ["France"],
+    "defaultTags": [ "France" ],
     "mapSource": "https://github.com/DucarrougeR/Custom_Maps_topojson/blob/master/france_departements.json"
   },
   {
@@ -48,7 +48,7 @@
     "name": "Regions of Italy",
     "objectsKey": "sub",
     "tags": [ "Italy" ],
-    "defaultTags": ["Italy"],
+    "defaultTags": [ "Italy" ],
     "mapSource": "https://github.com/DucarrougeR/Custom_Maps_topojson/blob/master/italy_regions.json"
   },
   {
