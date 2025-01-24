@@ -43,6 +43,43 @@ export const chosenMap = _.find(maps, { id: getParam("m") }) || maps[0]
 chosenMap.topojson = chosenMap.topojsonMaker()
 chosenMap.data = chosenMap.dataMaker()
 
+if (chosenMap.id == "world-capitals") {
+  // import basemap topojson
+  let basemapTopojson = import(`$lib/assets/maps/topojson/basemapCoordinates.json`);
+
+  // get world map arcs and geometry
+  let worldArcs
+  let worldGeometry
+  await basemapTopojson.then(function (value) {
+    worldArcs = value.arcs;
+    worldGeometry = value.objects.land.geometries[0];
+  });
+
+  // get chosenMap arcs and geometries
+  let chosenMapJson;
+  let chosenMapArcs;
+  let chosenMapGeometries;
+  await chosenMap.topojson.then(function (value) {
+    chosenMapJson = value;
+    if (!value.arcs) varlue.arcs = [];
+    chosenMapArcs = value.arcs;
+    chosenMapGeometries = value.objects[chosenMap.objectsKey].geometries;
+  });
+
+  // convert world geometry arcs index in order to add them in chosenMap
+  let chosenMapArcsLength = chosenMapArcs.length
+  function recursivelyConvertArcs (arc) {
+    if (_.isArray(arc)) return _.map(arc, recursivelyConvertArcs)
+    else return arc + chosenMapArcsLength;
+  };
+  let worldGeometryForChosenMap = Object.assign(worldGeometry, { arcs: recursivelyConvertArcs(worldGeometry.arcs) });
+
+  // add world arcs to chosenMap
+  _.each(worldArcs, function (arc) { chosenMapArcs.push(arc); });
+  // add world geometry to chosenMap geometry
+  chosenMapGeometries.unshift(worldGeometryForChosenMap);
+};
+
 // Settings
 export const soundEffects = localStorageWritable('settingsSoundEffects', true)
 export const showFlagOnly = localStorageWritable('settingsShowFlagOnly', false)
