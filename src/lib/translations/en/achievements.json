@@ -90,5 +90,9 @@
     "all-italian-provinces": {
         "name": "Questo e Julius, Nero e Dante tutti insieme",
         "description": "Find ALL provinces of Italy without making a mistake."
+    },
+    "all-canadian-provinces": {
+      "name": "The idea of North",
+      "description": "Find ALL provinces of Canada without making a mistake."
     }
 }

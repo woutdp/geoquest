@@ -146,5 +146,12 @@
       "extra": {
         "tags": [ "Italy" ]
       }
+    },
+    {
+      "slug": "all-canadian-provinces",
+      "quest": "canada-provinces",
+      "extra": {
+        "tags": [ "Canada" ]
+      }
     }
 ]
