@@ -153,5 +153,12 @@
       "extra": {
         "tags": [ "Canada" ]
       }
+    },
+    {
+      "slug": "all-world-capitals",
+      "quest": "world-capitals",
+      "extra": {
+        "tags": [ "World" ]
+      }
     }
 ]

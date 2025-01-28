@@ -94,5 +94,9 @@
     "all-canadian-provinces": {
       "name": "The idea of North",
       "description": "Find ALL provinces of Canada without making a mistake."
+    },
+    "all-world-capitals": {
+      "name": "Lost in translations",
+      "description": "Find capitals of ALL world countries without making a mistake."
     }
 }
