@@ -152,7 +152,7 @@
     <button on:click={() => map.zoomIn()} class="flex items-center justify-center w-10 h-10 transition-all duration-75 rounded-md hover:text-xl hover:text-foreground hover:bg-background">+</button>
     <button on:click={() => map.zoomOut()} class="flex items-center justify-center w-10 h-10 transition-all duration-75 rounded-md hover:text-xl hover:text-foreground hover:bg-background">-</button>
 </div>
-<div class="absolute bottom-0 right-0 m-6 md:hidden">
+<div class="absolute top-0 right-0 m-6 md:hidden">
     <button class="z-40 flex p-4 transition rounded-full shadow-md pointer-events-auto text-background bg-foreground hover:bg-foreground-light" on:click={toggleMenu}>
         <IconMenu />
     </button>
