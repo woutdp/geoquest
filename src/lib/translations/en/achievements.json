@@ -76,27 +76,27 @@
         "description": "Find ALL provinces of China without making a mistake."
     },
     "all-russian-regions": {
-      "name": "Alexander Nevsky",
-      "description": "Find ALL regions of Russia without making a mistake."
+        "name": "Alexander Nevsky",
+        "description": "Find ALL regions of Russia without making a mistake."
     },
     "all-french-departments": {
         "name": "Les conquêtes napoléoniennes",
         "description": "Find ALL departments of France without making a mistake."
     },
     "all-italian-regions": {
-        "name": "Il ritorno di Julius",
+        "name": "Goccia a goccia si scava la pietra",
         "description": "Find ALL regions of Italy without making a mistake."
     },
     "all-italian-provinces": {
-        "name": "Questo e Julius, Nero e Dante tutti insieme",
+        "name": "Et tu, Brute?",
         "description": "Find ALL provinces of Italy without making a mistake."
     },
     "all-canadian-provinces": {
-      "name": "The idea of North",
-      "description": "Find ALL provinces of Canada without making a mistake."
+        "name": "Maple syrup eh",
+        "description": "Find ALL provinces of Canada without making a mistake."
     },
     "all-world-capitals": {
-      "name": "Lost in translations",
-      "description": "Find capitals of ALL world countries without making a mistake."
+        "name": "Lost in translations",
+        "description": "Find capitals of ALL world countries without making a mistake."
     }
 }
