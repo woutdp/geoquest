@@ -52,7 +52,7 @@ if (chosenMap.id == 'world-capitals') {
     // get world map arcs and geometry
     let worldArcs
     let worldGeometry
-    await basemapTopojson.then(function (value) {
+    await basemapTopojson.then(value => {
         worldArcs = value.arcs
         worldGeometry = value.objects.land.geometries[0]
     })
@@ -60,8 +60,8 @@ if (chosenMap.id == 'world-capitals') {
     // get chosenMap arcs and geometries
     let chosenMapArcs
     let chosenMapGeometries
-    await chosenMap.topojson.then(function (value) {
-        if (!value.arcs) varlue.arcs = []
+    await chosenMap.topojson.then(value => {
+        if (!value.arcs) value.arcs = []
         chosenMapArcs = value.arcs
         chosenMapGeometries = value.objects[chosenMap.objectsKey].geometries
     })
