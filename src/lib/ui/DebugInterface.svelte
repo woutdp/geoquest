@@ -3,7 +3,7 @@
 
     // import JSONTree from 'svelte-json-tree'
     import {loadMap} from '$lib/map'
-    import {clientX, clientY, day, initialSave, maps, mousePos, notifications, projection, projections, save, showDebug, time} from '$lib/store'
+    import {day, initialSave, maps, projection, projections, save, showDebug, time} from '$lib/store'
 
     export let lastFocusedCountry
     export let toFind

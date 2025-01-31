@@ -1,8 +1,9 @@
 <script lang="ts">
     import _ from 'lodash'
+
+    import achievements from '$lib/assets/data/achievements.json'
     import IconTrophySmall from '$lib/icons/IconTrophySmall.svelte'
     import {maps, save} from '$lib/store'
-    import achievements from '$lib/assets/data/achievements.json'
     import {t} from '$lib/translations'
 
     $: missingAchievementsInQuests = _(achievements)

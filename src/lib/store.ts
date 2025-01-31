@@ -19,16 +19,18 @@ export const projections = [
 ]
 
 // Get list of quests, and make list of maps from it
-import quests from "$lib/assets/quests/index.json";
+import quests from '$lib/assets/quests/index.json'
 export const maps = _.map(quests, function (questObject) {
-  return Object.assign(questObject, {
-    topojsonMaker: function () { return import(`$lib/assets/quests/${questObject.id}/map.json`); },
-    dataMaker: function () {
-      let elements = {};
-      elements[questObject.objectsKey] =  import(`$lib/assets/quests/${questObject.id}/elements.json`);
-      return elements;
-    },
-  });
+    return Object.assign(questObject, {
+        topojsonMaker: function () {
+            return import(`$lib/assets/quests/${questObject.id}/map.json`)
+        },
+        dataMaker: function () {
+            const elements = {}
+            elements[questObject.objectsKey] = import(`$lib/assets/quests/${questObject.id}/elements.json`)
+            return elements
+        }
+    })
 }) as const
 
 // Map
@@ -39,46 +41,46 @@ export const geometries = derived(topojson, $topojson => ($topojson ? Object.val
 export const projection = writable(projections[0].func)
 
 // Map choice
-export const chosenMap = _.find(maps, { id: getParam("m") }) || maps[0]
+export const chosenMap = _.find(maps, {id: getParam('m')}) || maps[0]
 chosenMap.topojson = chosenMap.topojsonMaker()
 chosenMap.data = chosenMap.dataMaker()
 
-if (chosenMap.id == "world-capitals") {
-  // import basemap topojson
-  let basemapTopojson = import(`$lib/assets/maps/topojson/basemapCoordinates.json`);
+if (chosenMap.id == 'world-capitals') {
+    // import basemap topojson
+    const basemapTopojson = import(`$lib/assets/maps/topojson/basemapCoordinates.json`)
 
-  // get world map arcs and geometry
-  let worldArcs
-  let worldGeometry
-  await basemapTopojson.then(function (value) {
-    worldArcs = value.arcs;
-    worldGeometry = value.objects.land.geometries[0];
-  });
+    // get world map arcs and geometry
+    let worldArcs
+    let worldGeometry
+    await basemapTopojson.then(function (value) {
+        worldArcs = value.arcs
+        worldGeometry = value.objects.land.geometries[0]
+    })
 
-  // get chosenMap arcs and geometries
-  let chosenMapJson;
-  let chosenMapArcs;
-  let chosenMapGeometries;
-  await chosenMap.topojson.then(function (value) {
-    chosenMapJson = value;
-    if (!value.arcs) varlue.arcs = [];
-    chosenMapArcs = value.arcs;
-    chosenMapGeometries = value.objects[chosenMap.objectsKey].geometries;
-  });
+    // get chosenMap arcs and geometries
+    let chosenMapArcs
+    let chosenMapGeometries
+    await chosenMap.topojson.then(function (value) {
+        if (!value.arcs) varlue.arcs = []
+        chosenMapArcs = value.arcs
+        chosenMapGeometries = value.objects[chosenMap.objectsKey].geometries
+    })
 
-  // convert world geometry arcs index in order to add them in chosenMap
-  let chosenMapArcsLength = chosenMapArcs.length
-  function recursivelyConvertArcs (arc) {
-    if (_.isArray(arc)) return _.map(arc, recursivelyConvertArcs)
-    else return arc + chosenMapArcsLength;
-  };
-  let worldGeometryForChosenMap = Object.assign(worldGeometry, { arcs: recursivelyConvertArcs(worldGeometry.arcs) });
+    // convert world geometry arcs index in order to add them in chosenMap
+    const chosenMapArcsLength = chosenMapArcs.length
+    function recursivelyConvertArcs(arc) {
+        if (_.isArray(arc)) return _.map(arc, recursivelyConvertArcs)
+        else return arc + chosenMapArcsLength
+    }
+    const worldGeometryForChosenMap = Object.assign(worldGeometry, {arcs: recursivelyConvertArcs(worldGeometry.arcs)})
 
-  // add world arcs to chosenMap
-  _.each(worldArcs, function (arc) { chosenMapArcs.push(arc); });
-  // add world geometry to chosenMap geometry
-  chosenMapGeometries.unshift(worldGeometryForChosenMap);
-};
+    // add world arcs to chosenMap
+    _.each(worldArcs, function (arc) {
+        chosenMapArcs.push(arc)
+    })
+    // add world geometry to chosenMap geometry
+    chosenMapGeometries.unshift(worldGeometryForChosenMap)
+}
 
 // Settings
 export const soundEffects = localStorageWritable('settingsSoundEffects', true)
@@ -130,12 +132,11 @@ function localStorageWritable(key: string, initial: unknown) {
     return w
 }
 
-function getParam (askedParam: string) {
-  try {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(askedParam);
-  }
-  catch (err) {
-    console.error(err)
-  };
+function getParam(askedParam: string) {
+    try {
+        const urlParams = new URLSearchParams(window.location.search)
+        return urlParams.get(askedParam)
+    } catch (err) {
+        console.error(err)
+    }
 }

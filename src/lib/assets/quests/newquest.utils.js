@@ -23,7 +23,7 @@ export const json_stringify_pretty = function (object, morePretty) {
   // var string = JSON.stringify(object, null, 2); // 2 spaces instead of tab
   var string = JSON.stringify(object, null, "\t");
   // do not exten arrays, otherwise it takes too much space
-  if (morePretty) _.each(string.match(/\[[^\]\[\{\}]*\]/g), function (subString, i) {
+  if (morePretty) _.each(string.match(/\[[^\][{}]*\]/g), function (subString) {
     // remove spaces and line jumps
     var prettyFiedSubString = JSON.stringify(JSON.parse(subString));
     string = string.replace(subString, prettyFiedSubString);

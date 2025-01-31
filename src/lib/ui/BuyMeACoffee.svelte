@@ -42,13 +42,3 @@
     >
     </script>
 </svelte:head>
-
-<style global lang="stylus">
-    #bmc-wbtn
-        transform translateY(100px)
-        &.show
-            transform translateY(0)
-
-        @media screen and (max-width: 767px)
-            display none !important
-</style>
