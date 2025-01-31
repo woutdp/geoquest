@@ -33,6 +33,7 @@
               node2nix
               nodejs
               yarn
+              gh
             ];
           };
         }
