@@ -17,32 +17,19 @@ export const projections = [
     {func: d3.geoMercator(), name: 'Mercator'},
     {func: d3.geoOrthographic(), name: 'Globe'}
 ]
-export const maps = [
-  {
-    id: 'world',
-    name: 'World',
-    topojson: import('$lib/assets/maps/topojson/world.json'),
-    data: {countries: import('$lib/assets/data/countries.json')},
-  },
-  {
-    id: 'usa',
-    name: 'US States',
-    topojson: import('$lib/assets/maps/topojson/us-states.json'),
-    data: {states: import('$lib/assets/data/us-states.json')},
-  },
-  {
-    id: 'china',
-    name: 'China Provinces',
-    topojson: import('$lib/assets/maps/topojson/china-provinces.json'),
-    data: {provinces: import('$lib/assets/data/china-provinces.json')},
-  },
-  {
-    id: 'france',
-    name: 'France Departments',
-    topojson: import('$lib/assets/maps/topojson/france-departments.json'),
-    data: {departements: import('$lib/assets/data/france-departments.json')},
-  }
-] as const
+
+// Get list of quests, and make list of maps from it
+import quests from "$lib/assets/quests/index.json";
+export const maps = _.map(quests, function (questObject) {
+  return Object.assign(questObject, {
+    topojsonMaker: function () { return import(`$lib/assets/quests/${questObject.id}/map.json`); },
+    dataMaker: function () {
+      let elements = {};
+      elements[questObject.objectsKey] =  import(`$lib/assets/quests/${questObject.id}/elements.json`);
+      return elements;
+    },
+  });
+}) as const
 
 // Map
 export const loadedMap = writable()
@@ -52,7 +39,46 @@ export const geometries = derived(topojson, $topojson => ($topojson ? Object.val
 export const projection = writable(projections[0].func)
 
 // Map choice
-export const chosenMap = _.find(maps, { id: getParam("m") }) || maps[0];
+export const chosenMap = _.find(maps, { id: getParam("m") }) || maps[0]
+chosenMap.topojson = chosenMap.topojsonMaker()
+chosenMap.data = chosenMap.dataMaker()
+
+if (chosenMap.id == "world-capitals") {
+  // import basemap topojson
+  let basemapTopojson = import(`$lib/assets/maps/topojson/basemapCoordinates.json`);
+
+  // get world map arcs and geometry
+  let worldArcs
+  let worldGeometry
+  await basemapTopojson.then(function (value) {
+    worldArcs = value.arcs;
+    worldGeometry = value.objects.land.geometries[0];
+  });
+
+  // get chosenMap arcs and geometries
+  let chosenMapJson;
+  let chosenMapArcs;
+  let chosenMapGeometries;
+  await chosenMap.topojson.then(function (value) {
+    chosenMapJson = value;
+    if (!value.arcs) varlue.arcs = [];
+    chosenMapArcs = value.arcs;
+    chosenMapGeometries = value.objects[chosenMap.objectsKey].geometries;
+  });
+
+  // convert world geometry arcs index in order to add them in chosenMap
+  let chosenMapArcsLength = chosenMapArcs.length
+  function recursivelyConvertArcs (arc) {
+    if (_.isArray(arc)) return _.map(arc, recursivelyConvertArcs)
+    else return arc + chosenMapArcsLength;
+  };
+  let worldGeometryForChosenMap = Object.assign(worldGeometry, { arcs: recursivelyConvertArcs(worldGeometry.arcs) });
+
+  // add world arcs to chosenMap
+  _.each(worldArcs, function (arc) { chosenMapArcs.push(arc); });
+  // add world geometry to chosenMap geometry
+  chosenMapGeometries.unshift(worldGeometryForChosenMap);
+};
 
 // Settings
 export const soundEffects = localStorageWritable('settingsSoundEffects', true)

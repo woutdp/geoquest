@@ -1,0 +1,342 @@
+{
+	"Karachay-Cherkess": {
+		"color": 0,
+		"tags": ["Russia", "North Caucasia"]
+	},
+	"Karelia": {
+		"color": 1,
+		"tags": ["Russia", "Northwestern"]
+	},
+	"Kemerovo": {
+		"color": 2,
+		"tags": ["Russia", "Siberean"]
+	},
+	"Khabarovsk": {
+		"color": 3,
+		"tags": ["Russia", "Far eastern"]
+	},
+	"Khakass": {
+		"color": 0,
+		"tags": ["Russia", "Siberean"]
+	},
+	"Khanty-Mansiy": {
+		"color": 3,
+		"tags": ["Russia", "Ural"]
+	},
+	"Adygey": {
+		"color": 1,
+		"tags": ["Russia", "Southern"]
+	},
+	"Altay": {
+		"color": 3,
+		"tags": ["Russia", "Siberean"]
+	},
+	"Amur": {
+		"color": 0,
+		"tags": ["Russia", "Far eastern"]
+	},
+	"Arkhangel'sk": {
+		"color": 2,
+		"tags": ["Russia", "Northwestern"]
+	},
+	"Astrakhan'": {
+		"color": 0,
+		"tags": ["Russia", "Southern"]
+	},
+	"Bashkortostan": {
+		"color": 3,
+		"tags": ["Russia", "Volga"]
+	},
+	"Belgorod": {
+		"color": 2,
+		"tags": ["Russia", "Central"]
+	},
+	"Bryansk": {
+		"color": 1,
+		"tags": ["Russia", "Central"]
+	},
+	"Buryat": {
+		"color": 2,
+		"tags": ["Russia", "Siberean"]
+	},
+	"Chechnya": {
+		"color": 2,
+		"tags": ["Russia", "North Caucasia"]
+	},
+	"Chelyabinsk": {
+		"color": 1,
+		"tags": ["Russia", "Ural"]
+	},
+	"Chukot": {
+		"color": 1,
+		"tags": ["Russia", "Far eastern"]
+	},
+	"Chuvash": {
+		"color": 0,
+		"tags": ["Russia", "Volga"]
+	},
+	"Saint Petersburg City": {
+		"color": 3,
+		"tags": ["Russia", "Northwestern"]
+	},
+	"Dagestan": {
+		"color": 0,
+		"tags": ["Russia", "North Caucasia"]
+	},
+	"Gorno-Altay": {
+		"color": 1,
+		"tags": ["Russia", "Siberean"]
+	},
+	"Ingush": {
+		"color": 1,
+		"tags": ["Russia", "North Caucasia"]
+	},
+	"Ivanovo": {
+		"color": 0,
+		"tags": ["Russia", "Central"]
+	},
+	"Kabardin-Balkar": {
+		"color": 2,
+		"tags": ["Russia", "North Caucasia"]
+	},
+	"Kaliningrad": {
+		"color": 1,
+		"tags": ["Russia", "Northwestern"]
+	},
+	"Kalmyk": {
+		"color": 2,
+		"tags": ["Russia", "Southern"]
+	},
+	"Kaluga": {
+		"color": 2,
+		"tags": ["Russia", "Central"]
+	},
+	"Kirov": {
+		"color": 0,
+		"tags": ["Russia", "Volga"]
+	},
+	"Komi": {
+		"color": 1,
+		"tags": ["Russia", "Northwestern"]
+	},
+	"Kostroma": {
+		"color": 2,
+		"tags": ["Russia", "Central"]
+	},
+	"Krasnodar": {
+		"color": 3,
+		"tags": ["Russia", "Southern"]
+	},
+	"Kurgan": {
+		"color": 2,
+		"tags": ["Russia", "Ural"]
+	},
+	"Kursk": {
+		"color": 0,
+		"tags": ["Russia", "Central"]
+	},
+	"Leningrad": {
+		"color": 2,
+		"tags": ["Russia", "Northwestern"]
+	},
+	"Lipetsk": {
+		"color": 2,
+		"tags": ["Russia", "Central"]
+	},
+	"Magadan": {
+		"color": 0,
+		"tags": ["Russia", "Far eastern"]
+	},
+	"Mariy-El": {
+		"color": 1,
+		"tags": ["Russia", "Volga"]
+	},
+	"Mordovia": {
+		"color": 2,
+		"tags": ["Russia", "Volga"]
+	},
+	"Moskva": {
+		"color": 3,
+		"tags": ["Russia", "Central"]
+	},
+	"Murmansk": {
+		"color": 0,
+		"tags": ["Russia", "Northwestern"]
+	},
+	"Nenets": {
+		"color": 3,
+		"tags": ["Russia", "Northwestern"]
+	},
+	"Nizhegorod": {
+		"color": 3,
+		"tags": ["Russia", "Volga"]
+	},
+	"North Ossetia": {
+		"color": 3,
+		"tags": ["Russia", "North Caucasia"]
+	},
+	"Novgorod": {
+		"color": 0,
+		"tags": ["Russia", "Northwestern"]
+	},
+	"Novosibirsk": {
+		"color": 1,
+		"tags": ["Russia", "Siberean"]
+	},
+	"Omsk": {
+		"color": 2,
+		"tags": ["Russia", "Siberean"]
+	},
+	"Orel": {
+		"color": 3,
+		"tags": ["Russia", "Central"]
+	},
+	"Orenburg": {
+		"color": 0,
+		"tags": ["Russia", "Volga"]
+	},
+	"Penza": {
+		"color": 3,
+		"tags": ["Russia", "Volga"]
+	},
+	"Primor'ye": {
+		"color": 2,
+		"tags": ["Russia", "Far eastern"]
+	},
+	"Pskov": {
+		"color": 3,
+		"tags": ["Russia", "Northwestern"]
+	},
+	"Rostov": {
+		"color": 0,
+		"tags": ["Russia", "Southern"]
+	},
+	"Ryazan'": {
+		"color": 1,
+		"tags": ["Russia", "Central"]
+	},
+	"Sakha": {
+		"color": 2,
+		"tags": ["Russia", "Far eastern"]
+	},
+	"Sakhalin": {
+		"color": 1,
+		"tags": ["Russia", "Far eastern"]
+	},
+	"Samara": {
+		"color": 3,
+		"tags": ["Russia", "Volga"]
+	},
+	"Saratov": {
+		"color": 2,
+		"tags": ["Russia", "Volga"]
+	},
+	"Smolensk": {
+		"color": 0,
+		"tags": ["Russia", "Central"]
+	},
+	"Stavropol'": {
+		"color": 1,
+		"tags": ["Russia", "North Caucasia"]
+	},
+	"Sverdlovsk": {
+		"color": 0,
+		"tags": ["Russia", "Ural"]
+	},
+	"Tambov": {
+		"color": 0,
+		"tags": ["Russia", "Central"]
+	},
+	"Tatarstan": {
+		"color": 2,
+		"tags": ["Russia", "Volga"]
+	},
+	"Tomsk": {
+		"color": 0,
+		"tags": ["Russia", "Siberean"]
+	},
+	"Tula": {
+		"color": 0,
+		"tags": ["Russia", "Central"]
+	},
+	"Tuva": {
+		"color": 3,
+		"tags": ["Russia", "Siberean"]
+	},
+	"Tver'": {
+		"color": 2,
+		"tags": ["Russia", "Central"]
+	},
+	"Tyumen'": {
+		"color": 1,
+		"tags": ["Russia", "Ural"]
+	},
+	"Udmurt": {
+		"color": 1,
+		"tags": ["Russia", "Volga"]
+	},
+	"Ul'yanovsk": {
+		"color": 1,
+		"tags": ["Russia", "Volga"]
+	},
+	"Vladimir": {
+		"color": 2,
+		"tags": ["Russia", "Central"]
+	},
+	"Volgograd": {
+		"color": 3,
+		"tags": ["Russia", "Southern"]
+	},
+	"Vologda": {
+		"color": 3,
+		"tags": ["Russia", "Northwestern"]
+	},
+	"Voronezh": {
+		"color": 1,
+		"tags": ["Russia", "Central"]
+	},
+	"Yamal-Nenets": {
+		"color": 0,
+		"tags": ["Russia", "Ural"]
+	},
+	"Yaroslavl'": {
+		"color": 1,
+		"tags": ["Russia", "Central"]
+	},
+	"Yevrey": {
+		"color": 0,
+		"tags": ["Russia", "Far eastern"]
+	},
+	"Crimea": {
+		"color": 1,
+		"tags": ["Russia", "Southern"]
+	},
+	"Sevastolol'": {
+		"color": 2,
+		"tags": ["Russia", "Southern"]
+	},
+	"Krasnoyarsk": {
+		"color": 1,
+		"tags": ["Russia", "Siberean"]
+	},
+	"Zabaykal'ye": {
+		"color": 3,
+		"tags": ["Russia", "Siberean"]
+	},
+	"Irkutsk": {
+		"color": 0,
+		"tags": ["Russia", "Siberean"]
+	},
+	"Perm'": {
+		"color": 2,
+		"tags": ["Russia", "Volga"]
+	},
+	"Kamchatka": {
+		"color": 3,
+		"tags": ["Russia", "Far eastern"]
+	},
+	"Moscow City": {
+		"color": 0,
+		"tags": ["Russia", "Central"]
+	}
+}

@@ -1,0 +1,537 @@
+{
+	"Torino": {
+		"color": 2,
+		"tags": ["Italy","Piemonte"],
+		"helper": false
+	},
+	"Vercelli": {
+		"color": 1,
+		"tags": ["Italy","Piemonte"],
+		"helper": false
+	},
+	"Novara": {
+		"color": 2,
+		"tags": ["Italy","Piemonte"],
+		"helper": false
+	},
+	"Cuneo": {
+		"color": 3,
+		"tags": ["Italy","Piemonte"],
+		"helper": false
+	},
+	"Asti": {
+		"color": 0,
+		"tags": ["Italy","Piemonte"],
+		"helper": false
+	},
+	"Alessandria": {
+		"color": 3,
+		"tags": ["Italy","Piemonte"],
+		"helper": false
+	},
+	"Biella": {
+		"color": 3,
+		"tags": ["Italy","Piemonte"],
+		"helper": false
+	},
+	"Verbano-Cusio-Ossola": {
+		"color": 3,
+		"tags": ["Italy","Piemonte"],
+		"helper": false
+	},
+	"Valle d'Aosta/Vallée d'Aoste": {
+		"color": 0,
+		"tags": ["Italy","Valle d'Aosta/Vallée d'Aoste"],
+		"helper": false
+	},
+	"Varese": {
+		"color": 1,
+		"tags": ["Italy","Lombardia"],
+		"helper": false
+	},
+	"Como": {
+		"color": 2,
+		"tags": ["Italy","Lombardia"],
+		"helper": false
+	},
+	"Sondrio": {
+		"color": 0,
+		"tags": ["Italy","Lombardia"],
+		"helper": false
+	},
+	"Milano": {
+		"color": 3,
+		"tags": ["Italy","Lombardia"],
+		"helper": false
+	},
+	"Bergamo": {
+		"color": 1,
+		"tags": ["Italy","Lombardia"],
+		"helper": false
+	},
+	"Brescia": {
+		"color": 3,
+		"tags": ["Italy","Lombardia"],
+		"helper": false
+	},
+	"Pavia": {
+		"color": 0,
+		"tags": ["Italy","Lombardia"],
+		"helper": false
+	},
+	"Cremona": {
+		"color": 0,
+		"tags": ["Italy","Lombardia"],
+		"helper": false
+	},
+	"Mantova": {
+		"color": 2,
+		"tags": ["Italy","Lombardia"],
+		"helper": false
+	},
+	"Lecco": {
+		"color": 3,
+		"tags": ["Italy","Lombardia"],
+		"helper": false
+	},
+	"Lodi": {
+		"color": 1,
+		"tags": ["Italy","Lombardia"],
+		"helper": false
+	},
+	"Monza e della Brianza": {
+		"color": 0,
+		"tags": ["Italy","Lombardia"],
+		"helper": false
+	},
+	"Bolzano/Bozen": {
+		"color": 1,
+		"tags": ["Italy","Trentino-Alto Adige/Südtirol"],
+		"helper": false
+	},
+	"Trento": {
+		"color": 2,
+		"tags": ["Italy","Trentino-Alto Adige/Südtirol"],
+		"helper": false
+	},
+	"Verona": {
+		"color": 1,
+		"tags": ["Italy","Veneto"],
+		"helper": false
+	},
+	"Vicenza": {
+		"color": 0,
+		"tags": ["Italy","Veneto"],
+		"helper": false
+	},
+	"Belluno": {
+		"color": 3,
+		"tags": ["Italy","Veneto"],
+		"helper": false
+	},
+	"Treviso": {
+		"color": 1,
+		"tags": ["Italy","Veneto"],
+		"helper": false
+	},
+	"Venezia": {
+		"color": 3,
+		"tags": ["Italy","Veneto"],
+		"helper": false
+	},
+	"Padova": {
+		"color": 2,
+		"tags": ["Italy","Veneto"],
+		"helper": false
+	},
+	"Rovigo": {
+		"color": 0,
+		"tags": ["Italy","Veneto"],
+		"helper": false
+	},
+	"Udine": {
+		"color": 2,
+		"tags": ["Italy","Friuli-Venezia Giulia"],
+		"helper": false
+	},
+	"Gorizia": {
+		"color": 3,
+		"tags": ["Italy","Friuli-Venezia Giulia"],
+		"helper": false
+	},
+	"Trieste": {
+		"color": 0,
+		"tags": ["Italy","Friuli-Venezia Giulia"],
+		"helper": false
+	},
+	"Pordenone": {
+		"color": 0,
+		"tags": ["Italy","Friuli-Venezia Giulia"],
+		"helper": false
+	},
+	"Imperia": {
+		"color": 2,
+		"tags": ["Italy","Liguria"],
+		"helper": false
+	},
+	"Savona": {
+		"color": 1,
+		"tags": ["Italy","Liguria"],
+		"helper": false
+	},
+	"Genova": {
+		"color": 0,
+		"tags": ["Italy","Liguria"],
+		"helper": false
+	},
+	"La Spezia": {
+		"color": 2,
+		"tags": ["Italy","Liguria"],
+		"helper": false
+	},
+	"Piacenza": {
+		"color": 2,
+		"tags": ["Italy","Emilia-Romagna"],
+		"helper": false
+	},
+	"Parma": {
+		"color": 3,
+		"tags": ["Italy","Emilia-Romagna"],
+		"helper": false
+	},
+	"Reggio nell'Emilia": {
+		"color": 0,
+		"tags": ["Italy","Emilia-Romagna"],
+		"helper": false
+	},
+	"Modena": {
+		"color": 3,
+		"tags": ["Italy","Emilia-Romagna"],
+		"helper": false
+	},
+	"Bologna": {
+		"color": 2,
+		"tags": ["Italy","Emilia-Romagna"],
+		"helper": false
+	},
+	"Ferrara": {
+		"color": 1,
+		"tags": ["Italy","Emilia-Romagna"],
+		"helper": false
+	},
+	"Ravenna": {
+		"color": 0,
+		"tags": ["Italy","Emilia-Romagna"],
+		"helper": false
+	},
+	"Forlì-Cesena": {
+		"color": 1,
+		"tags": ["Italy","Emilia-Romagna"],
+		"helper": false
+	},
+	"Rimini": {
+		"color": 3,
+		"tags": ["Italy","Emilia-Romagna"],
+		"helper": false
+	},
+	"Massa-Carrara": {
+		"color": 1,
+		"tags": ["Italy","Toscana"],
+		"helper": false
+	},
+	"Lucca": {
+		"color": 2,
+		"tags": ["Italy","Toscana"],
+		"helper": false
+	},
+	"Pistoia": {
+		"color": 1,
+		"tags": ["Italy","Toscana"],
+		"helper": false
+	},
+	"Firenze": {
+		"color": 3,
+		"tags": ["Italy","Toscana"],
+		"helper": false
+	},
+	"Livorno": {
+		"color": 1,
+		"tags": ["Italy","Toscana"],
+		"helper": false
+	},
+	"Pisa": {
+		"color": 0,
+		"tags": ["Italy","Toscana"],
+		"helper": false
+	},
+	"Arezzo": {
+		"color": 2,
+		"tags": ["Italy","Toscana"],
+		"helper": false
+	},
+	"Siena": {
+		"color": 1,
+		"tags": ["Italy","Toscana"],
+		"helper": false
+	},
+	"Grosseto": {
+		"color": 3,
+		"tags": ["Italy","Toscana"],
+		"helper": false
+	},
+	"Prato": {
+		"color": 0,
+		"tags": ["Italy","Toscana"],
+		"helper": false
+	},
+	"Perugia": {
+		"color": 0,
+		"tags": ["Italy","Umbria"],
+		"helper": false
+	},
+	"Terni": {
+		"color": 2,
+		"tags": ["Italy","Umbria"],
+		"helper": false
+	},
+	"Pesaro e Urbino": {
+		"color": 1,
+		"tags": ["Italy","Marche"],
+		"helper": false
+	},
+	"Ancona": {
+		"color": 2,
+		"tags": ["Italy","Marche"],
+		"helper": false
+	},
+	"Macerata": {
+		"color": 1,
+		"tags": ["Italy","Marche"],
+		"helper": false
+	},
+	"Ascoli Piceno": {
+		"color": 2,
+		"tags": ["Italy","Marche"],
+		"helper": false
+	},
+	"Fermo": {
+		"color": 3,
+		"tags": ["Italy","Marche"],
+		"helper": false
+	},
+	"Viterbo": {
+		"color": 0,
+		"tags": ["Italy","Lazio"],
+		"helper": false
+	},
+	"Rieti": {
+		"color": 1,
+		"tags": ["Italy","Lazio"],
+		"helper": false
+	},
+	"Roma": {
+		"color": 2,
+		"tags": ["Italy","Lazio"],
+		"helper": false
+	},
+	"Latina": {
+		"color": 3,
+		"tags": ["Italy","Lazio"],
+		"helper": false
+	},
+	"Frosinone": {
+		"color": 1,
+		"tags": ["Italy","Lazio"],
+		"helper": false
+	},
+	"L'Aquila": {
+		"color": 3,
+		"tags": ["Italy","Abruzzo"],
+		"helper": false
+	},
+	"Teramo": {
+		"color": 0,
+		"tags": ["Italy","Abruzzo"],
+		"helper": false
+	},
+	"Pescara": {
+		"color": 1,
+		"tags": ["Italy","Abruzzo"],
+		"helper": false
+	},
+	"Chieti": {
+		"color": 0,
+		"tags": ["Italy","Abruzzo"],
+		"helper": false
+	},
+	"Campobasso": {
+		"color": 1,
+		"tags": ["Italy","Molise"],
+		"helper": false
+	},
+	"Isernia": {
+		"color": 2,
+		"tags": ["Italy","Molise"],
+		"helper": false
+	},
+	"Caserta": {
+		"color": 0,
+		"tags": ["Italy","Campania"],
+		"helper": false
+	},
+	"Benevento": {
+		"color": 3,
+		"tags": ["Italy","Campania"],
+		"helper": false
+	},
+	"Napoli": {
+		"color": 2,
+		"tags": ["Italy","Campania"],
+		"helper": false
+	},
+	"Avellino": {
+		"color": 1,
+		"tags": ["Italy","Campania"],
+		"helper": false
+	},
+	"Salerno": {
+		"color": 0,
+		"tags": ["Italy","Campania"],
+		"helper": false
+	},
+	"Foggia": {
+		"color": 0,
+		"tags": ["Italy","Puglia"],
+		"helper": false
+	},
+	"Bari": {
+		"color": 0,
+		"tags": ["Italy","Puglia"],
+		"helper": false
+	},
+	"Taranto": {
+		"color": 2,
+		"tags": ["Italy","Puglia"],
+		"helper": false
+	},
+	"Brindisi": {
+		"color": 3,
+		"tags": ["Italy","Puglia"],
+		"helper": false
+	},
+	"Lecce": {
+		"color": 0,
+		"tags": ["Italy","Puglia"],
+		"helper": false
+	},
+	"Barletta-Andria-Trani": {
+		"color": 1,
+		"tags": ["Italy","Puglia"],
+		"helper": false
+	},
+	"Potenza": {
+		"color": 2,
+		"tags": ["Italy","Basilicata"],
+		"helper": false
+	},
+	"Matera": {
+		"color": 3,
+		"tags": ["Italy","Basilicata"],
+		"helper": false
+	},
+	"Cosenza": {
+		"color": 0,
+		"tags": ["Italy","Calabria"],
+		"helper": false
+	},
+	"Catanzaro": {
+		"color": 1,
+		"tags": ["Italy","Calabria"],
+		"helper": false
+	},
+	"Reggio di Calabria": {
+		"color": 2,
+		"tags": ["Italy","Calabria"],
+		"helper": false
+	},
+	"Crotone": {
+		"color": 3,
+		"tags": ["Italy","Calabria"],
+		"helper": false
+	},
+	"Vibo Valentia": {
+		"color": 0,
+		"tags": ["Italy","Calabria"],
+		"helper": false
+	},
+	"Trapani": {
+		"color": 1,
+		"tags": ["Italy","Sicilia"],
+		"helper": false
+	},
+	"Palermo": {
+		"color": 2,
+		"tags": ["Italy","Sicilia"],
+		"helper": false
+	},
+	"Messina": {
+		"color": 1,
+		"tags": ["Italy","Sicilia"],
+		"helper": false
+	},
+	"Agrigento": {
+		"color": 0,
+		"tags": ["Italy","Sicilia"],
+		"helper": false
+	},
+	"Caltanissetta": {
+		"color": 1,
+		"tags": ["Italy","Sicilia"],
+		"helper": false
+	},
+	"Enna": {
+		"color": 0,
+		"tags": ["Italy","Sicilia"],
+		"helper": false
+	},
+	"Catania": {
+		"color": 3,
+		"tags": ["Italy","Sicilia"],
+		"helper": false
+	},
+	"Ragusa": {
+		"color": 0,
+		"tags": ["Italy","Sicilia"],
+		"helper": false
+	},
+	"Siracusa": {
+		"color": 1,
+		"tags": ["Italy","Sicilia"],
+		"helper": false
+	},
+	"Sassari": {
+		"color": 2,
+		"tags": ["Italy","Sardegna"],
+		"helper": false
+	},
+	"Nuoro": {
+		"color": 3,
+		"tags": ["Italy","Sardegna"],
+		"helper": false
+	},
+	"Cagliari": {
+		"color": 0,
+		"tags": ["Italy","Sardegna"],
+		"helper": false
+	},
+	"Oristano": {
+		"color": 1,
+		"tags": ["Italy","Sardegna"],
+		"helper": false
+	},
+	"Sud Sardegna": {
+		"color": 2,
+		"tags": ["Italy","Sardegna"],
+		"helper": false
+	}
+}

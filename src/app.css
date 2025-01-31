@@ -33,3 +33,8 @@ body {
     --json-tree-font-size: 16px;
     --json-tree-font-family: 'Roboto';
 }
+
+.fill-gray {
+  stroke: white;
+  stroke-width: 0.1px;
+}

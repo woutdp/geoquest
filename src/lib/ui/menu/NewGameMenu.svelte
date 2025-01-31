@@ -2,7 +2,6 @@
     import _ from 'lodash'
     import {fade} from 'svelte/transition'
 
-    import tagsGroup from '$lib/assets/data/tags.json'
     import {chosenMap} from '$lib/store'
     import {t} from '$lib/translations'
     import {getFeaturesFromTags} from '$lib/utils'
@@ -14,14 +13,10 @@
     let tags: Tag[] = []
 
     function loadTags() {
-        const group = tagsGroup[chosenMap.name]
-        tags = _(group)
-            .omit(['meta'])
-            .map(g => Object.values(g) as string[])
-            .flatten()
+        tags = _(chosenMap.tags)
             .uniq()
             .sort()
-            .map(tag => ({name: tag, checked: (group.meta.defaults as string[]).includes(tag)}))
+            .map(tag => ({name: tag, checked: (chosenMap.defaultTags as string[]).includes(tag)}))
             .value()
     }
 
@@ -51,7 +46,7 @@
                         for={tag}
                         class="px-3 py-1 text-sm font-semibold uppercase transition-all border-2 rounded-full cursor-pointer whitespace-nowrap text-background bg-foreground hover:border-background last:mr-0 border-foreground"
                     >
-                        {$t(`${chosenMap.id}-groups.${tag}`)}
+                        {$t(`quests/${chosenMap.id}/groups.${tag}`)}
                     </label>
                 </div>
             {/each}
@@ -65,7 +60,7 @@
                                 for={tag}
                                 class="px-3 py-1 text-sm font-semibold uppercase transition-all border-2 rounded-full cursor-pointer whitespace-nowrap text-background bg-foreground-light hover:border-background last:mr-0 border-foreground"
                             >
-                                {$t(`${chosenMap.id}-groups.${tag}`)}
+                                {$t(`quests/${chosenMap.id}/groups.${tag}`)}
                             </label>
                         </div>
                     {/each}
@@ -79,7 +74,7 @@
             toggleMenu()
         }}
         {disabled}
-        class="p-2 mb-2 text-xl font-bold transition-colors rounded-md disabled:hover:bg-foreground disabled:opacity-10 disabled:hover:text-black disabled:cursor-not-allowed bg-foreground-light text-background hover:bg-green outline outline-4 transition-opacity"
+        class="p-2 mb-2 text-xl font-bold rounded-md disabled:hover:bg-foreground disabled:opacity-10 disabled:hover:text-black disabled:cursor-not-allowed bg-foreground-light text-background hover:bg-green outline outline-4 transition-opacity"
     >
         {$t('ui.start')}
     </button>

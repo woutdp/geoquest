@@ -33,13 +33,13 @@
             <div class="flex flex-col p-5">
                 <div class="flex justify-between mb-4">
                     {#if activeMenu !== MainMenu}
-                        <button on:click={() => setActiveMenu(MainMenu)} class="p-2 transition-colors rounded-full hover:bg-foreground-light">
+                        <button on:click={() => setActiveMenu(MainMenu)} class="p-2 rounded-full hover:bg-foreground-light">
                             <IconArrowLeft />
                         </button>
                     {:else}
                         <span />
                     {/if}
-                    <button on:click={toggleMenu} class="p-2 transition-colors rounded-full hover:bg-foreground-light">
+                    <button on:click={toggleMenu} class="p-2 rounded-full hover:bg-foreground-light">
                         <IconClose />
                     </button>
                 </div>

@@ -177,7 +177,7 @@
                 if (mistakes === 0 && gameConfiguration.mode === 'dailyQuest') achieveAchievement('daily-challenge')
             }
 
-            if ($loadedMap.name === 'World') {
+            if ($loadedMap.id === 'world-countries') {
                 achieveAchievement('1-country')
                 if (streak === 5) achieveAchievement('5-streak')
                 if (streak === 10) achieveAchievement('10-streak')
