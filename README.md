@@ -31,3 +31,5 @@ The code at the moment is still a bit messy, especially the code for handling di
 Translations can be added, corrected in the `src/lib/translations` folder.  
 When adding a new language, add the corresponding language identifier in `index.ts` in `availableLocales`. After that, all that is left
 is to add the translation files in a folder with the same identifier. You can base model these according to the structure in the english files
+
+If you want to add maps, feel free to do so, but be aware that we're almost hitting the storage limit of Cloudflare Pages so it might not be possible to do so.
