@@ -13,11 +13,27 @@
     "defaultTags": [ "America" ]
   },
   {
+    "id": "world-capitals",
+    "name": "Capitals of the world",
+    "objectsKey": "capitals",
+    "tags": [ "World" ],
+    "defaultTags": [ "World" ],
+    "mapSource": "https://github.com/Stefie/geojson-world"
+  },
+  {
     "id": "usa-states",
     "name": "US States",
     "objectsKey": "states",
     "tags": ["USA", "West", "Midwest", "Southwest", "Southeast", "Northeast", "Overseas"],
     "defaultTags": [ "USA" ]
+  },
+  {
+    "id": "canada-provinces",
+    "name": "Provinces of Canada",
+    "objectsKey": "provinces",
+    "tags": [ "Canada" ],
+    "defaultTags": [ "Canada" ],
+    "mapSource": "https://gist.githubusercontent.com/Saw-mon-and-Natalie/a11f058fc0dcce9343b02498a46b3d44/raw/e8afc74f791169a64d6e8df033d7e88ff85ba673/canada.json"
   },
   {
     "id": "china-provinces",
@@ -58,21 +74,5 @@
     "tags": [ "Italy", "Piemonte", "Valle d'Aosta/Vallée d'Aoste", "Lombardia", "Trentino-Alto Adige", "Veneto", "Friuli Venezia Giulia", "Liguria", "Emilia-Romagna", "Toscana", "Umbria", "Marche", "Lazio", "Abruzzo", "Molise", "Campania", "Puglia", "Basilicata", "Calabria", "Sicilia", "Sardegna" ],
     "defaultTags": [ "Italy" ],
     "mapSource": "https://github.com/openpolis/geojson-italy/blob/master/topojson/limits_IT_provinces.topo.json"
-  },
-  {
-    "id": "canada-provinces",
-    "name": "Provinces of Canada",
-    "objectsKey": "provinces",
-    "tags": [ "Canada" ],
-    "defaultTags": [ "Canada" ],
-    "mapSource": "https://gist.githubusercontent.com/Saw-mon-and-Natalie/a11f058fc0dcce9343b02498a46b3d44/raw/e8afc74f791169a64d6e8df033d7e88ff85ba673/canada.json"
-  },
-  {
-    "id": "world-capitals",
-    "name": "Capitals of the world",
-    "objectsKey": "capitals",
-    "tags": [ "World" ],
-    "defaultTags": [ "World" ],
-    "mapSource": "https://github.com/Stefie/geojson-world"
   }
 ]
