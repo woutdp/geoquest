@@ -85,6 +85,8 @@ if (chosenMap.id == 'world-capitals') {
 // Settings
 export const soundEffects = localStorageWritable('settingsSoundEffects', true)
 export const showFlagOnly = localStorageWritable('settingsShowFlagOnly', false)
+// Game settings
+export const noPanNoZoom = localStorageWritable('settingsNoPanNoZom', false)
 
 // Game
 export const mousePos = writable({x: 0, y: 0})

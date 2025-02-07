@@ -11,5 +11,6 @@
     "restart": "Neustart",
     "share": "Teilen",
     "start": "Start",
-    "flagsOnly": "Zeige nur Flaggen"
+    "flagsOnly": "Zeige nur Flaggen",
+    "noPanNoZoom": "Schwenken und Zoomen deaktivieren"
 }
