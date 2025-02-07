@@ -37,10 +37,8 @@
             .pointRadius(0.01 * s)
     }
 
-    let lastEventTranslate: {x: number; y: number}
     function zoomed(e) {
         const t = e.transform
-        lastEventTranslate = t
         t.x = Math.min($clientX / 2, Math.max(t.x, $clientX / 2 - $clientX * t.k))
         t.y = Math.min($clientY / 2, Math.max(t.y, $clientY / 2 - $clientY * t.k))
         transform = t
