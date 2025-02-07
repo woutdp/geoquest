@@ -11,5 +11,6 @@
     "restart": "reiniciar",
     "share": "Compartir",
     "start": "Comenzar",
-    "flagsOnly": "Mostrar solo banderas"
+    "flagsOnly": "Mostrar solo banderas",
+    "noPanNoZoom": "Desactivar la panorámica y el zoom"
 }

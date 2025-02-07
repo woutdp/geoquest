@@ -9,12 +9,13 @@
     import IconFullScreen from '$lib/icons/IconFullScreen.svelte'
     import IconMenu from '$lib/icons/IconMenu.svelte'
     import IconMistake from '$lib/icons/IconMistake.svelte'
-    import {chosenMap, showFlagOnly} from '$lib/store'
+    import {chosenMap, noPanNoZoom, showFlagOnly} from '$lib/store'
     import {t} from '$lib/translations'
     import BuyMeACoffee from '$lib/ui/BuyMeACoffee.svelte'
     import Menu from '$lib/ui/menu/Menu.svelte'
     import Notifications from '$lib/ui/Notifications.svelte'
     import {achieveAchievement} from '$lib/utils'
+    import IconLock from '$lib/icons/IconLock.svelte'
 
     export let foundFeatures
     export let originalToFind
@@ -130,11 +131,23 @@
     {/if}
     <div class="container absolute z-40 items-start justify-between hidden mt-4 pointer-events-none md:flex">
         <div class="flex flex-col font-black rounded-md shadow-md pointer-events-auto text-md text-foreground-light bg-background-dark">
-            <button on:click={() => map.zoomIn()} class="flex items-center justify-center w-10 h-10 transition-all duration-75 rounded-md hover:text-xl hover:text-foreground hover:bg-background"
-                >+</button
+            <div class="relative">
+                <input id="noPanNoZoom" class="absolute opacity-0 peer" type="checkbox" bind:checked={$noPanNoZoom} />
+                <label
+                    for="noPanNoZoom"
+                    class="flex items-center justify-center w-10 h-10 transition-all duration-75 rounded-md hover:text-xl hover:text-foreground hover:bg-background peer-checked:bg-foreground peer-checked:text-background"
+                    ><span class="sr-only">{$t('ui.noPanNoZoom')}</span><IconLock /></label
+                >
+            </div>
+            <button
+                on:click={() => map.zoomIn()}
+                class="flex items-center justify-center w-10 h-10 transition-all duration-75 rounded-md hover:text-xl hover:text-foreground hover:bg-background disabled:opacity-50 disabled:pointer-events-none"
+                disabled={$noPanNoZoom}>+</button
             >
-            <button on:click={() => map.zoomOut()} class="flex items-center justify-center w-10 h-10 transition-all duration-75 rounded-md hover:text-xl hover:text-foreground hover:bg-background"
-                >-</button
+            <button
+                on:click={() => map.zoomOut()}
+                class="flex items-center justify-center w-10 h-10 transition-all duration-75 rounded-md hover:text-xl hover:text-foreground hover:bg-background disabled:opacity-50 disabled:pointer-events-none"
+                disabled={$noPanNoZoom}>-</button
             >
         </div>
         <div class="flex">
