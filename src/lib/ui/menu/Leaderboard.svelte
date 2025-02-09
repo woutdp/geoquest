@@ -4,7 +4,7 @@
 
     export let gameConfiguration
 
-    const leaderboardEntries = $save.localLeaderboard[`${chosenMap.id}-${gameConfiguration.countries}`] ?? []
+    $: leaderboardEntries = $save.localLeaderboard[`${chosenMap.id}-${gameConfiguration.countries}`] ?? []
 </script>
 
 <ol role="list">
