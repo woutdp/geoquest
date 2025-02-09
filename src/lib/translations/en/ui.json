@@ -13,5 +13,6 @@
     "share": "Share",
     "start": "Start",
     "flagsOnly": "Display Flag Only",
-    "noPanNoZoom": "Disable pan and zoom"
+    "noPanNoZoom": "Disable pan and zoom",
+    "leaderboard": "Leaderboard"
 }

@@ -195,6 +195,15 @@
             if (toFind.length === 0) {
                 clearInterval(intervalId)
 
+                const currentQuestId = `${chosenMap.id}-${gameConfiguration.countries}`
+                const currentQuestLeaderboard = $save.localLeaderboard[currentQuestId]
+                const leaderboardEntry = {total: originalToFind.length, correct: correct + 1 /* correct counter hasnt't yet updated */, timeMs, createdAt: Date.now()}
+                if (!currentQuestLeaderboard) {
+                    $save.localLeaderboard[currentQuestId] = [leaderboardEntry]
+                } else {
+                    $save.localLeaderboard[currentQuestId] = [...currentQuestLeaderboard, leaderboardEntry]
+                }
+
                 showMenu = true
                 showWinScreen = true
                 focusedCountry = undefined
