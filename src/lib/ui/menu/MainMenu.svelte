@@ -67,7 +67,7 @@
         {$t('ui.restart')}
     </button>
     <button on:click={() => setActiveMenu(Leaderboard)} class="p-2 mb-2 text-xl uppercase text-black rounded-md bg-foreground-light hover:bg-background hover:text-foreground">
-        {$t('ui.leaderboard')}
+        {$t('ui.highscores')}
     </button>
     <div class="flex items-center justify-between mt-3">
         <button on:click={() => setActiveMenu(AboutMenu)} class="p-2 rounded-full cursor-pointer bg-foreground-light text-background hover:bg-background hover:text-foreground">
