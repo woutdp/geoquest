@@ -91,10 +91,10 @@ export function processExtraAchievements(features, questId) {
     }
 }
 
-export function getTimeStringFromMs(timeMs: number): string {
-    return `${formatTime(timeMs / 1000 / 60)}:${formatTime((timeMs / 1000) % 60)}`
+export function getTimeStringFromMs(timeMs: number, withMs?: boolean): string {
+    return `${formatTimeUnit(Math.floor(timeMs / 1000 / 60))}:${formatTimeUnit(Math.floor((timeMs / 1000) % 60))}${withMs ? '.' + (timeMs % 1000) : ''}`
 }
 
-function formatTime(time: number): string {
-    return String(Math.round(time)).padStart(2, '0')
+function formatTimeUnit(time: number): string {
+    return String(time).padStart(2, '0')
 }

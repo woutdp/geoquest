@@ -58,7 +58,7 @@
             <span in:fly|global={{x: -10, delay: 1200}} class="flex items-center justify-start text-foreground">
                 <IconMistake />
                 <span class="ml-1">
-                    {getTimeStringFromMs(timeMs)}
+                    {getTimeStringFromMs(timeMs, true)}
                 </span>
             </span>
         </div>
