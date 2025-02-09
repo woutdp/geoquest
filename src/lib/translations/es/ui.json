@@ -12,5 +12,6 @@
     "share": "Compartir",
     "start": "Comenzar",
     "flagsOnly": "Mostrar solo banderas",
-    "noPanNoZoom": "Desactivar la panorámica y el zoom"
+    "noPanNoZoom": "Desactivar la panorámica y el zoom",
+    "leaderboard": "Tabla de clasificación"
 }

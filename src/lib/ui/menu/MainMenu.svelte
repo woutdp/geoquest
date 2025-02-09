@@ -12,8 +12,10 @@
     import SettingsMenu from '$lib/ui/menu/SettingsMenu.svelte'
     import SwitchQuestMenu from '$lib/ui/menu/SwitchQuestMenu.svelte'
     import WinScreen from '$lib/ui/menu/WinScreen.svelte'
+    import Leaderboard from './Leaderboard.svelte'
 
     export let restart
+    export let gameConfiguration
     export let toggleMenu
     export let showWinScreen
     export let newDailyQuest
@@ -24,7 +26,7 @@
 </script>
 
 {#if showWinScreen}
-    <WinScreen {...$$restProps} />
+    <WinScreen {gameConfiguration} {...$$restProps} />
 {/if}
 
 <div class="flex flex-col">
@@ -63,6 +65,9 @@
         class="p-2 mb-2 text-xl text-black uppercase rounded-md bg-foreground-light hover:bg-background hover:text-foreground disabled:opacity-30 disabled:hover:bg-foreground disabled:hover:text-background"
     >
         {$t('ui.restart')}
+    </button>
+    <button on:click={() => setActiveMenu(Leaderboard)} class="p-2 mb-2 text-xl uppercase text-black rounded-md bg-foreground-light hover:bg-background hover:text-foreground">
+        {$t('ui.leaderboard')}
     </button>
     <div class="flex items-center justify-between mt-3">
         <button on:click={() => setActiveMenu(AboutMenu)} class="p-2 rounded-full cursor-pointer bg-foreground-light text-background hover:bg-background hover:text-foreground">
