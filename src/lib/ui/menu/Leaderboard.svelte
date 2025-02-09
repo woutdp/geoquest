@@ -15,6 +15,6 @@
             <span class="">{entry.correct}/{entry.total}</span>
         </li>
     {:else}
-        <li class="text-center font-bold mb-8">No leaderboard entries</li>
+        <li class="text-center font-bold mb-8">No higscores yet</li>
     {/each}
 </ol>
