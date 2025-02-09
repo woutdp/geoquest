@@ -14,5 +14,6 @@
     "start": "Start",
     "flagsOnly": "Display Flag Only",
     "noPanNoZoom": "Disable pan and zoom",
-    "leaderboard": "Leaderboard"
+    "leaderboard": "Leaderboard",
+    "newBest": "New best!"
 }
