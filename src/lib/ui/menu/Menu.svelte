@@ -11,6 +11,7 @@
     export let toggleMenu
     export let gameConfiguration
     export let timeMs
+    export let showWinScreen
 
     let activeMenu = MainMenu
 
@@ -41,7 +42,7 @@
             out:fly|global={{y: 5, duration: 100}}
             class="relative inline-block w-full text-left align-bottom transition-all transform rounded-lg shadow-xl bg-gradient-to-br from-green outline outline-8 outline-background text-background bg-foreground sm:my-8 sm:align-middle sm:max-w-lg"
         >
-            {#if isNewBest && activeMenu === MainMenu}
+            {#if isNewBest && showWinScreen && activeMenu === MainMenu}
                 <div class="absolute z-20 -top-8 -left-8 -rotate-12 flex items-center gap-2 px-4 py-2 w-fit rounded-md bg-background text-yellow" in:fly|global={{y: 20, duration: 500}}>
                     <IconTrophy />
                     <p class="text-xl font-medium">{$t('ui.newBest')}</p>

@@ -18,6 +18,13 @@
     polyfillCountryFlagEmojis()
     import dailyQuestCountries from '$lib/assets/data/daily-quest.json'
 
+    interface LeaderboardEntry {
+        total: number
+        correct: number
+        timeMs: number
+        createdAt: number
+    }
+
     let questionFeature
     let lastFocusedCountry
     let focusedCountry
@@ -195,18 +202,8 @@
             if (toFind.length === 0) {
                 clearInterval(intervalId)
 
-                const currentQuestId = `${chosenMap.id}-${gameConfiguration.countries}`
-                const currentQuestLeaderboard = $save.localLeaderboard[currentQuestId]
-                const leaderboardEntry = {total: originalToFind.length, correct: correct + 1 /* correct counter hasnt't yet updated */, timeMs, createdAt: Date.now()}
-                if (!currentQuestLeaderboard) {
-                    $save.localLeaderboard[currentQuestId] = [leaderboardEntry]
-                } else {
-                    const place = currentQuestLeaderboard.findIndex(entry => entry.timeMs >= timeMs)
-                    if (place !== -1) {
-                        currentQuestLeaderboard.splice(place, 0, leaderboardEntry)
-                        $save.localLeaderboard[currentQuestId] = currentQuestLeaderboard.slice(0, 10)
-                    }
-                }
+                const leaderboardEntry: LeaderboardEntry = {total: originalToFind.length, correct: correct + 1 /* correct counter hasnt't yet updated */, timeMs, createdAt: Date.now()}
+                saveToLeaderboard(leaderboardEntry)
 
                 showMenu = true
                 showWinScreen = true
@@ -241,6 +238,22 @@
         mistakes += 1
         streak = 0
         return WRONG
+    }
+
+    function saveToLeaderboard(leaderboardEntry: LeaderboardEntry) {
+        const currentQuestId = `${chosenMap.id}-${gameConfiguration.countries}`
+        const currentQuestLeaderboard = $save.localLeaderboard[currentQuestId]
+        if (!currentQuestLeaderboard) {
+            $save.localLeaderboard[currentQuestId] = [leaderboardEntry]
+        } else {
+            const place = currentQuestLeaderboard.findIndex(entry => entry.timeMs >= timeMs)
+            if (place !== -1) {
+                currentQuestLeaderboard.splice(place, 0, leaderboardEntry)
+                $save.localLeaderboard[currentQuestId] = currentQuestLeaderboard.slice(0, 10)
+            } else if (place === -1 && currentQuestLeaderboard.length < 10) {
+                $save.localLeaderboard[currentQuestId] = [...currentQuestLeaderboard, leaderboardEntry]
+            }
+        }
     }
 
     function countryFocusedHandler(feature = undefined) {
