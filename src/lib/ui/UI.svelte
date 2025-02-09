@@ -16,6 +16,7 @@
     import Notifications from '$lib/ui/Notifications.svelte'
     import {achieveAchievement, getTimeStringFromMs} from '$lib/utils'
     import IconLock from '$lib/icons/IconLock.svelte'
+    import IconTimer from '$lib/icons/IconTimer.svelte'
 
     export let foundFeatures
     export let originalToFind
@@ -83,9 +84,9 @@
                         {/key}
                     </span>
                     <span class="flex items-center justify-center mx-2 text-foreground">
-                        <IconCheckmark />
+                        <IconTimer />
                         {#key timeMs}
-                            <span in:scale|global={{start: 1.5}} class="ml-1">{getTimeStringFromMs(timeMs)}</span>
+                            <span class="ml-1">{getTimeStringFromMs(timeMs)}</span>
                         {/key}
                     </span>
                     <span class="mx-5 whitespace-nowrap">{foundFeatures.length} / {originalToFind.length}</span>

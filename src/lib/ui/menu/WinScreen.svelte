@@ -8,6 +8,7 @@
     import {save} from '$lib/store'
     import {t} from '$lib/translations'
     import {getTimeStringFromMs} from '$lib/utils'
+    import IconTimer from '$lib/icons/IconTimer.svelte'
 
     export let mistakes: number
     export let correct: number
@@ -56,7 +57,7 @@
                 {/if}
             </span>
             <span in:fly|global={{x: -10, delay: 1200}} class="flex items-center justify-start text-foreground">
-                <IconMistake />
+                <IconTimer />
                 <span class="ml-1">
                     {getTimeStringFromMs(timeMs, true)}
                 </span>
