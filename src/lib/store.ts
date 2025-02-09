@@ -114,15 +114,17 @@ export const timeLeft = derived(time, $time => {
 export const showDebug = writable(false)
 
 // Save files
-export const initialSave = {achievements: [], dailyQuestProgress: {}}
-export const save = localStorageWritable('save', initialSave)
+export const initialSave = {achievements: [], dailyQuestProgress: {}, localLeaderboard: {}}
+export const save = localStorageWritable('save', initialSave, initialSave)
 
 // Utils
-function localStorageWritable(key: string, initial: unknown) {
+function localStorageWritable(key: string, initial: unknown, defaultValue?: object) {
     let savedValue
 
     try {
-        savedValue = browser ? JSON.parse(window.localStorage.getItem(key) || 'null') ?? initial : initial
+        const parsedLocalStorageItem = JSON.parse(window.localStorage.getItem(key) || 'null')
+        const parsedItemWithDefault = defaultValue ? {...defaultValue, ...parsedLocalStorageItem} : parsedLocalStorageItem
+        savedValue = browser ? parsedItemWithDefault ?? initial : initial
     } catch (err) {
         console.error(err)
     }
