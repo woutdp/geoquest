@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {showFlagOnly} from '$lib/store'
+    import {showFlagOnly, showTimer} from '$lib/store'
     import {availableLocales, t} from '$lib/translations'
 </script>
 
@@ -8,6 +8,10 @@
         <div class="flex flex-wrap text-lg bg-foreground p-3 rounded items-center">
             <input id="displayFlagOnly" class="form-checkbox h-6 w-6 rounded text-gray focus:ring-0 focus:ring-offset-0 transition cursor-pointer" type="checkbox" bind:checked={$showFlagOnly} />
             <label for="displayFlagOnly" class="ml-2 cursor-pointer">{$t('ui.flagsOnly')}</label>
+        </div>
+        <div class="flex flex-wrap text-lg bg-foreground p-3 rounded items-center">
+            <input id="showTimer" class="form-checkbox h-6 w-6 rounded text-gray focus:ring-0 focus:ring-offset-0 transition cursor-pointer" type="checkbox" bind:checked={$showTimer} />
+            <label for="showTimer" class="ml-2 cursor-pointer">{$t('ui.showTimer')}</label>
         </div>
         <div class="flex flex-wrap gap-2 text-lg bg-foreground p-3 rounded items-center">
             <!-- Each of the language names is only directly written in their own language -->

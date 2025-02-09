@@ -9,7 +9,7 @@
     import IconFullScreen from '$lib/icons/IconFullScreen.svelte'
     import IconMenu from '$lib/icons/IconMenu.svelte'
     import IconMistake from '$lib/icons/IconMistake.svelte'
-    import {chosenMap, noPanNoZoom, showFlagOnly} from '$lib/store'
+    import {chosenMap, noPanNoZoom, showFlagOnly, showTimer} from '$lib/store'
     import {t} from '$lib/translations'
     import BuyMeACoffee from '$lib/ui/BuyMeACoffee.svelte'
     import Menu from '$lib/ui/menu/Menu.svelte'
@@ -83,12 +83,14 @@
                             <span in:scale|global={{start: 1.5}} class="ml-1">{correct}</span>
                         {/key}
                     </span>
-                    <span class="flex items-center justify-center mx-2 text-foreground">
-                        <IconTimer />
-                        {#key timeMs}
-                            <span class="ml-1">{getTimeStringFromMs(timeMs)}</span>
-                        {/key}
-                    </span>
+                    {#if $showTimer}
+                        <span class="flex items-center justify-center mx-2 text-foreground">
+                            <IconTimer />
+                            {#key timeMs}
+                                <span class="ml-1">{getTimeStringFromMs(timeMs)}</span>
+                            {/key}
+                        </span>
+                    {/if}
                     <span class="mx-5 whitespace-nowrap">{foundFeatures.length} / {originalToFind.length}</span>
                     {#key streak}
                         {#if streak > 1}

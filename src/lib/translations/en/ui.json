@@ -13,6 +13,7 @@
     "share": "Share",
     "start": "Start",
     "flagsOnly": "Display Flag Only",
+    "showTimer": "Display Timer",
     "noPanNoZoom": "Disable pan and zoom",
     "leaderboard": "Leaderboard",
     "newBest": "New best!"
