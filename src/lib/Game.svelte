@@ -29,6 +29,8 @@
     let streak = 0
     let mistakes = 0
     let mistakesThisGuess = 0
+    let intervalId: NodeJS.Timeout
+    let timeMs: number
     let interfaceLoaded = false
     let showMenu: boolean
     let showWinScreen = false
@@ -54,6 +56,7 @@
 
     function restart() {
         showWinScreen = false
+        timeMs = 0
         mistakes = 0
         mistakesThisGuess = 0
         streak = 0
@@ -63,6 +66,12 @@
 
         if (gameConfiguration.possibleCountries === 'all') unfoundFeatures = $geometries
         else unfoundFeatures = toFind
+
+        clearInterval(intervalId)
+        const startTime = Date.now()
+        intervalId = setInterval(() => {
+            timeMs = Date.now() - startTime
+        }, 1000)
 
         questionFeature = undefined
         shuffleColors()
@@ -76,6 +85,16 @@
             .sortBy(g => _(configuration.countries).findIndex(c => c === g.properties.name))
             .value()
         originalToFind = toFind
+
+        clearInterval(intervalId)
+        const startTime = Date.now()
+        intervalId = setInterval(() => {
+            timeMs = Date.now() - startTime
+
+            if (configuration?.mode === 'dailyQuest') {
+                $save.dailyQuestProgress = {...$save.dailyQuestProgress, timeMs: timeMs}
+            }
+        }, 1000)
 
         if (configuration?.restart ?? true) restart()
 
@@ -100,6 +119,8 @@
                 .flatten()
                 .reject(c => configuration.countries.includes(c))
                 .value().length
+
+            timeMs = $save.dailyQuestProgress.timeMs
 
             if (alreadyFound.length === progress.length) mistakesThisGuess = 0
             else mistakesThisGuess = _(progress.slice(-1)[0]).difference(configuration.countries).value().length
@@ -128,6 +149,8 @@
                 questionFeature = undefined
                 pickFeature()
             } else {
+                clearInterval(intervalId)
+
                 unfoundFeatures = []
                 showMenu = true
                 showWinScreen = true
@@ -136,7 +159,7 @@
     }
 
     function newDailyQuest() {
-        if ($save?.dailyQuestProgress?.day !== $day) $save.dailyQuestProgress = {...$save.dailyQuestProgress, progress: [], day: $day}
+        if ($save?.dailyQuestProgress?.day !== $day) $save.dailyQuestProgress = {...$save.dailyQuestProgress, progress: [], day: $day, timeMs: 0}
 
         newGame({
             mode: 'dailyQuest',
@@ -170,6 +193,8 @@
             ui.triggerArrow()
 
             if (toFind.length === 0) {
+                clearInterval(intervalId)
+
                 showMenu = true
                 showWinScreen = true
                 focusedCountry = undefined
@@ -244,6 +269,7 @@
     {originalToFind}
     {mistakes}
     {correct}
+    {timeMs}
     {restart}
     {newGame}
     {showWinScreen}

@@ -90,3 +90,11 @@ export function processExtraAchievements(features, questId) {
         if (questId == achievement.quest && _.difference(getFeaturesFromTags(achievement.extra.tags), features).length === 0) achieveAchievement(achievement.slug)
     }
 }
+
+export function getTimeStringFromMs(timeMs: number): string {
+    return `${formatTime(timeMs / 1000 / 60)}:${formatTime((timeMs / 1000) % 60)}`
+}
+
+function formatTime(time: number): string {
+    return String(Math.round(time)).padStart(2, '0')
+}
