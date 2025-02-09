@@ -6,6 +6,7 @@
     import MainMenu from '$lib/ui/menu/MainMenu.svelte'
     import {chosenMap, save} from '$lib/store'
     import IconTrophy from '$lib/icons/IconTrophy.svelte'
+    import {t} from '$lib/translations'
 
     export let toggleMenu
     export let gameConfiguration
@@ -43,7 +44,7 @@
             {#if isNewBest && activeMenu === MainMenu}
                 <div class="absolute z-20 -top-8 -left-8 -rotate-12 flex items-center gap-2 px-4 py-2 w-fit rounded-md bg-background text-yellow" in:fly|global={{y: 20, duration: 500}}>
                     <IconTrophy />
-                    <p class="text-xl font-medium">new best!</p>
+                    <p class="text-xl font-medium">{$t('ui.newBest')}</p>
                 </div>
             {/if}
             <div class="flex flex-col p-5">

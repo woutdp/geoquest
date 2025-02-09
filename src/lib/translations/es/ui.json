@@ -13,5 +13,6 @@
     "start": "Comenzar",
     "flagsOnly": "Mostrar solo banderas",
     "noPanNoZoom": "Desactivar la panorámica y el zoom",
-    "leaderboard": "Tabla de clasificación"
+    "leaderboard": "Tabla de clasificación",
+    "newBest": "¡Nuevo mejor!"
 }

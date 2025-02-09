@@ -13,5 +13,6 @@
     "start": "Start",
     "flagsOnly": "Zeige nur Flaggen",
     "noPanNoZoom": "Schwenken und Zoomen deaktivieren",
-    "leaderboard": "Bestenliste"
+    "leaderboard": "Bestenliste",
+    "newBest": "Neues Bestes!"
 }
