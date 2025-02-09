@@ -201,7 +201,11 @@
                 if (!currentQuestLeaderboard) {
                     $save.localLeaderboard[currentQuestId] = [leaderboardEntry]
                 } else {
-                    $save.localLeaderboard[currentQuestId] = [...currentQuestLeaderboard, leaderboardEntry]
+                    const place = currentQuestLeaderboard.findIndex(entry => entry.timeMs >= timeMs)
+                    if (place !== -1) {
+                        currentQuestLeaderboard.splice(place, 0, leaderboardEntry)
+                        $save.localLeaderboard[currentQuestId] = currentQuestLeaderboard.slice(0, 10)
+                    }
                 }
 
                 showMenu = true
