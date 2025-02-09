@@ -37,7 +37,7 @@
     let mistakes = 0
     let mistakesThisGuess = 0
     let intervalId: NodeJS.Timeout
-    let timeMs: number
+    let timeMs: number, startTimeMs: number
     let interfaceLoaded = false
     let showMenu: boolean
     let showWinScreen = false
@@ -75,9 +75,9 @@
         else unfoundFeatures = toFind
 
         clearInterval(intervalId)
-        const startTime = Date.now()
+        startTimeMs = Date.now()
         intervalId = setInterval(() => {
-            timeMs = Date.now() - startTime
+            timeMs = Date.now() - startTimeMs
         }, 1000)
 
         questionFeature = undefined
@@ -94,9 +94,9 @@
         originalToFind = toFind
 
         clearInterval(intervalId)
-        const startTime = Date.now()
+        startTimeMs = Date.now()
         intervalId = setInterval(() => {
-            timeMs = Date.now() - startTime
+            timeMs = Date.now() - startTimeMs
 
             if (configuration?.mode === 'dailyQuest') {
                 $save.dailyQuestProgress = {...$save.dailyQuestProgress, timeMs: timeMs}
@@ -202,7 +202,13 @@
             if (toFind.length === 0) {
                 clearInterval(intervalId)
 
-                const leaderboardEntry: LeaderboardEntry = {total: originalToFind.length, correct: correct + 1 /* correct counter hasnt't yet updated */, timeMs, createdAt: Date.now()}
+                timeMs = Date.now() - startTimeMs
+                const leaderboardEntry: LeaderboardEntry = {
+                    total: originalToFind.length,
+                    correct: correct + 1 /* correct counter hasnt't yet updated */,
+                    timeMs,
+                    createdAt: Date.now()
+                }
                 saveToLeaderboard(leaderboardEntry)
 
                 showMenu = true

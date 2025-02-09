@@ -11,7 +11,7 @@
     {#each leaderboardEntries as entry, i}
         <li class="flex px-8 py-2 mb-2 text-xl text-black rounded-md bg-foreground-light">
             <span class="opacity-50 mr-2">{i + 1}.</span>
-            <span class="grow">{getTimeStringFromMs(entry.timeMs)}</span>
+            <span class="grow">{getTimeStringFromMs(entry.timeMs, true)}</span>
             <span class="">{entry.correct}/{entry.total}</span>
         </li>
     {:else}
