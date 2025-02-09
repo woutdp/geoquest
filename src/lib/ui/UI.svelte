@@ -14,13 +14,14 @@
     import BuyMeACoffee from '$lib/ui/BuyMeACoffee.svelte'
     import Menu from '$lib/ui/menu/Menu.svelte'
     import Notifications from '$lib/ui/Notifications.svelte'
-    import {achieveAchievement} from '$lib/utils'
+    import {achieveAchievement, getTimeStringFromMs} from '$lib/utils'
     import IconLock from '$lib/icons/IconLock.svelte'
 
     export let foundFeatures
     export let originalToFind
     export let questionFeature
     export let streak
+    export let timeMs
     export let restart
     export let showMenu = false
     export let mistakes
@@ -79,6 +80,12 @@
                         <IconCheckmark />
                         {#key correct}
                             <span in:scale|global={{start: 1.5}} class="ml-1">{correct}</span>
+                        {/key}
+                    </span>
+                    <span class="flex items-center justify-center mx-2 text-foreground">
+                        <IconCheckmark />
+                        {#key timeMs}
+                            <span in:scale|global={{start: 1.5}} class="ml-1">{getTimeStringFromMs(timeMs)}</span>
                         {/key}
                     </span>
                     <span class="mx-5 whitespace-nowrap">{foundFeatures.length} / {originalToFind.length}</span>
