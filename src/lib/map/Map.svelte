@@ -12,7 +12,7 @@
     let transform = d3.zoomIdentity
     $: d3Svg && ($noPanNoZoom ? disableZoom() : enableZoom())
     function disableZoom() {
-        d3Svg.call(zoom).on('mousedown.zoom', null).on('touchstart.zoom', null).on('touchmove.zoom', null).on('touchend.zoom', null).on('dblclick.zoom', null)
+        d3Svg.call(zoom).on('.zoom', null)
     }
     function enableZoom() {
         d3Svg.call(zoom)
