@@ -4,9 +4,7 @@
 
     export let gameConfiguration
 
-    const hasTimeMs = (value: unknown): value is {timeMs: number} => typeof value === 'object' && value !== null && 'timeMs' in value && typeof value.timeMs === 'number'
-
-    const leaderboardEntries = $save.localLeaderboard[`${chosenMap.id}-${gameConfiguration.countries}`]?.sort((a: unknown, b: unknown) => hasTimeMs(a) && hasTimeMs(b) && a.timeMs - b.timeMs) ?? []
+    const leaderboardEntries = $save.localLeaderboard[`${chosenMap.id}-${gameConfiguration.countries}`] ?? []
 </script>
 
 <ol role="list">
