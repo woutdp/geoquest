@@ -20,7 +20,7 @@
         .value()
 </script>
 
-<div class="flex flex-col">
+<div class="flex flex-col gap-2">
     {#each maps as map}
         <button
             on:click={() => {
@@ -28,10 +28,10 @@
                 urlParams.set('m', map.id)
                 window.location.search = urlParams
             }}
-            class="flex items-center p-2 mb-2 text-xl text-black rounded-md bg-foreground-light hover:bg-background hover:text-foreground group"
+            class="flex items-center py-2 px-4 text-xl text-black rounded-md bg-foreground-light hover:bg-background hover:text-foreground group"
         >
-            <div class="flex flex-grow p-2 transition-transform group-hover:translate-x-2">{$t(`quests/index.${map.id}`)}</div>
-            {#if !missingAchievementsInQuests[map.id]} <IconTrophySmall /> {/if}
+            <div class="flex flex-grow py-1 transition-transform group-hover:translate-x-2">{$t(`quests/index.${map.id}`)}</div>
+            {#if !missingAchievementsInQuests[map.id]}<IconTrophySmall />{/if}
         </button>
     {/each}
 </div>
