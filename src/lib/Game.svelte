@@ -252,13 +252,7 @@
         if (!currentQuestLeaderboard) {
             $save.localLeaderboard[currentQuestId] = [leaderboardEntry]
         } else {
-            const place = currentQuestLeaderboard.findIndex(entry => entry.timeMs >= timeMs)
-            if (place !== -1) {
-                currentQuestLeaderboard.splice(place, 0, leaderboardEntry)
-                $save.localLeaderboard[currentQuestId] = currentQuestLeaderboard.slice(0, 10)
-            } else if (place === -1 && currentQuestLeaderboard.length < 10) {
-                $save.localLeaderboard[currentQuestId] = [...currentQuestLeaderboard, leaderboardEntry]
-            }
+            $save.localLeaderboard[currentQuestId] = [...currentQuestLeaderboard, leaderboardEntry]
         }
     }
 
