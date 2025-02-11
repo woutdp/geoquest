@@ -18,8 +18,9 @@ export async function POST({request, platform}) {
     const data = JSON.parse(rawBody)
 
     if (data.type === 'donation.created') {
+        const code = generateCode(6)
         const email = data.data.supporter_email
-        await platform.env.DB.prepare('INSERT INTO users (email) VALUES (?)').bind(email).run()
+        await platform.env.DB.prepare('INSERT OR IGNORE INTO users (email, code) VALUES (?, ?)').bind(email, code).run()
         return json({success: true}, {status: 200})
     }
 
@@ -41,4 +42,9 @@ async function generateSignature(secret, rawBody) {
     return Array.from(new Uint8Array(signatureBuffer))
         .map(b => b.toString(16).padStart(2, '0'))
         .join('')
+}
+
+function generateCode(length = 10) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
+    return Array.from({length}, () => characters[Math.floor(Math.random() * characters.length)]).join('')
 }
