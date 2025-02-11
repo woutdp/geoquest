@@ -10,3 +10,4 @@ node_modules
 !.env.example
 .direnv
 .wrangler
+wrangler.toml
