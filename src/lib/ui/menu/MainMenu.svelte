@@ -14,6 +14,9 @@
     import SwitchQuestMenu from '$lib/ui/menu/SwitchQuestMenu.svelte'
     import WinScreen from '$lib/ui/menu/WinScreen.svelte'
     import Leaderboard from './Leaderboard.svelte'
+    import Supporter from './Supporter.svelte'
+    import {isSupporter} from '$lib/jwt'
+    import {onMount} from 'svelte'
 
     export let restart
     export let gameConfiguration
@@ -22,6 +25,14 @@
     export let newDailyQuest
     export let canRestart
     export let setActiveMenu
+
+    let supporter = false
+    let checking = true
+
+    onMount(async () => {
+        supporter = await isSupporter()
+        checking = false
+    })
 
     $: disabledDailyQuest = $save?.dailyQuestProgress?.day === $day
 </script>
@@ -73,6 +84,20 @@
     </button>
     <button on:click={() => setActiveMenu(Leaderboard)} class="p-2 mb-2 text-xl uppercase text-black rounded-md bg-foreground-light hover:bg-background hover:text-foreground">
         {$t('ui.highscores')}
+    </button>
+    <button
+        on:click={() => setActiveMenu(Supporter)}
+        class="p-2 mb-2 text-xl uppercase text-black rounded-md bg-foreground-light hover:bg-background hover:text-foreground border-2 gap-2 flex items-center justify-center"
+    >
+        {#if checking}
+            <p>Checking...</p>
+        {:else if supporter}
+            <span class="bg-[#83c92c] px-2 py-1 rounded-lg font-bold text-sm">SUPPORTER</span>
+            view benefits
+        {:else}
+            <span class="bg-red px-2 py-1 rounded-lg font-bold text-sm">UNVERIFIED</span>
+            {$t('ui.becomeASupporter')}
+        {/if}
     </button>
     <div class="flex items-center justify-between mt-3">
         <button on:click={() => setActiveMenu(AboutMenu)} class="p-2 rounded-full cursor-pointer bg-foreground-light text-background hover:bg-background hover:text-foreground">

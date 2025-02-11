@@ -56,6 +56,8 @@
         "vite": "^5.0.0"
     },
     "dependencies": {
+        "jose": "^5.9.6",
+        "jsonwebtoken": "^9.0.2",
         "lodash": "^4.17.21",
         "nodemailer": "^6.10.0",
         "nodemailer-mailgun-transport": "^2.1.5",
