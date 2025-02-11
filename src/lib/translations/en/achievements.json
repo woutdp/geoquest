@@ -98,5 +98,9 @@
     "all-world-capitals": {
         "name": "Lost in translations",
         "description": "Find capitals of ALL world countries without making a mistake."
+    },
+    "supporter": {
+        "name": "Patron",
+        "description": "Become a supporter!"
     }
 }

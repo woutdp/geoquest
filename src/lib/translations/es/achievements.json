@@ -66,5 +66,10 @@
     "all-world": {
         "name": "Literal 5Head",
         "description": "Encuentra TODOS los países sin cometer errores."
+    },
+    "supporter": {
+        "name": "Mecena",
+        "description": "¡Conviértete en un mecena!"
     }
 }
+

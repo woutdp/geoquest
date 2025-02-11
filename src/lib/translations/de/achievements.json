@@ -66,5 +66,10 @@
     "all-world": {
         "name": "Wörtlich 5Head",
         "description": "Finde ALLE Länder ohne Fehler."
+    },
+    "supporter": {
+        "name": "Mäzen",
+        "description": "Werde ein Mäzen!"
     }
 }
+
