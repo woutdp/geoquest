@@ -57,6 +57,8 @@
     },
     "dependencies": {
         "lodash": "^4.17.21",
+        "nodemailer": "^6.10.0",
+        "nodemailer-mailgun-transport": "^2.1.5",
         "svelte-json-tree": "^1.0.0",
         "sveltekit-i18n": "^2.4.2"
     }
