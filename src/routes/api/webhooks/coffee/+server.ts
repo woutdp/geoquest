@@ -1,5 +1,7 @@
 import {json} from '@sveltejs/kit'
 import {dev} from '$app/environment'
+import nodemailer from 'nodemailer'
+import mailgun from 'nodemailer-mailgun-transport'
 
 export async function POST({request, platform}) {
     const secret = platform.env.COFFEE_WEBHOOK_SECRET || 'SECRET'
@@ -20,7 +22,8 @@ export async function POST({request, platform}) {
     if (data.type === 'donation.created') {
         const code = generateCode(6)
         const email = data.data.supporter_email
-        await platform.env.DB.prepare('INSERT OR IGNORE INTO users (email, code) VALUES (?, ?)').bind(email, code).run()
+        let queryResult = await platform.env.DB.prepare('INSERT OR IGNORE INTO users (email, code) VALUES (?, ?)').bind(email, code).run()
+        if (queryResult.meta.changes > 0) sendEmail(email, code, platform.env.MAILGUN_API_KEY)
         return json({success: true}, {status: 200})
     }
 
@@ -47,4 +50,25 @@ async function generateSignature(secret, rawBody) {
 function generateCode(length = 10) {
     const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
     return Array.from({length}, () => characters[Math.floor(Math.random() * characters.length)]).join('')
+}
+
+function sendEmail(email, code, api_key) {
+    const auth = {auth: {api_key: api_key, domain: 'geoquest.gg'}}
+    const transporter = nodemailer.createTransport(mailgun(auth))
+
+    const mailOptions = {
+        from: 'noreply@geoquest.gg',
+        to: email,
+        subject: 'GeoQuest.gg - Your passcode',
+        text: `Thank you for your support! Your GeoQuest passcode is: ${code}`,
+        html: `Thank you for your support! Your <a href="https://geoquest.gg">GeoQuest</a> passcode is: <b>${code}</b>`
+    }
+
+    transporter.sendMail(mailOptions, (err, info) => {
+        if (err) {
+            console.error('Error:', err)
+        } else {
+            console.log('Email sent:', info)
+        }
+    })
 }
