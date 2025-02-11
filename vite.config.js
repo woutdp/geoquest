@@ -6,5 +6,10 @@ export default defineConfig({
     build: {
         target: 'es2022',
         sourcemap: false
+    },
+    resolve: {
+        alias: {
+            crypto: 'node:crypto'
+        }
     }
 })
