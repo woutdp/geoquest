@@ -1,17 +1,19 @@
 <script lang="ts">
     import Cookies from 'js-cookie'
+    import {isSupporter} from '$lib/jwt'
     import {onMount} from 'svelte'
-
-    import {browser} from '$app/environment'
 
     const cookieName = 'buymeacoffeevisible'
 
     let timer = 300
     let el: HTMLElement | null
 
-    if (browser) {
+    onMount(async () => {
+        el = document.getElementById('bmc-wbtn')
+        const supporter = await isSupporter()
+
         const interval = setInterval(() => {
-            if (timer <= 0 || Cookies.get(cookieName)) {
+            if ((timer <= 0 || Cookies.get(cookieName)) && !supporter) {
                 el?.classList?.add('show')
                 Cookies.set(cookieName, true)
                 clearInterval(interval)
@@ -19,10 +21,6 @@
             }
             timer = timer - 1
         }, 1000)
-    }
-
-    onMount(() => {
-        el = document.getElementById('bmc-wbtn')
     })
 </script>
 
@@ -42,3 +40,12 @@
     >
     </script>
 </svelte:head>
+
+<style global lang="stylus">
+    #bmc-wbtn
+        transform translateY(100px)
+        &.show
+            transform translateY(0)
+        @media screen and (max-width: 767px)
+            display none !important
+</style>
