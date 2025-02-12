@@ -142,10 +142,10 @@
     <div class="container absolute z-40 items-start justify-between hidden mt-4 pointer-events-none md:flex">
         <div class="flex flex-col font-black rounded-md shadow-md pointer-events-auto text-md text-foreground-light bg-background-dark">
             <div class="relative">
-                <input id="noPanNoZoom" class="absolute opacity-0 peer" type="checkbox" bind:checked={$noPanNoZoom} />
+                <input id="noPanNoZoom" class="absolute opacity-0 peer cursor-pointer" type="checkbox" bind:checked={$noPanNoZoom} />
                 <label
                     for="noPanNoZoom"
-                    class="flex items-center justify-center w-10 h-10 transition-all duration-75 rounded-md hover:text-xl hover:text-foreground hover:bg-background peer-checked:bg-foreground peer-checked:text-background"
+                    class="flex items-center justify-center w-10 h-10 transition-all duration-75 rounded-md hover:text-xl hover:text-foreground hover:bg-background peer-checked:bg-foreground peer-checked:text-background cursor-pointer"
                     ><span class="sr-only">{$t('ui.noPanNoZoom')}</span><IconLock /></label
                 >
             </div>
