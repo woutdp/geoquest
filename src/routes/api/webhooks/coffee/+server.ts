@@ -1,7 +1,5 @@
 import {json} from '@sveltejs/kit'
 import {dev} from '$app/environment'
-import nodemailer from 'nodemailer'
-import mailgun from 'nodemailer-mailgun-transport'
 
 export async function POST({request, platform}) {
     const secret = platform.env.COFFEE_WEBHOOK_SECRET || 'SECRET'
@@ -23,7 +21,7 @@ export async function POST({request, platform}) {
         const code = generateCode(6)
         const email = data.data.supporter_email
         let queryResult = await platform.env.DB.prepare('INSERT OR IGNORE INTO users (email, code) VALUES (?, ?)').bind(email, code).run()
-        if (queryResult.meta.changes > 0) sendEmail(email, code, platform.env.MAILGUN_API_KEY)
+        if (queryResult.meta.changes > 0) await sendEmail(email, code, platform.env.MAILGUN_API_KEY)
         return json({success: true}, {status: 200})
     }
 
@@ -52,23 +50,28 @@ function generateCode(length = 10) {
     return Array.from({length}, () => characters[Math.floor(Math.random() * characters.length)]).join('')
 }
 
-function sendEmail(email, code, api_key) {
-    const auth = {auth: {api_key: api_key, domain: 'geoquest.gg'}}
-    const transporter = nodemailer.createTransport(mailgun(auth))
+async function sendEmail(email, code, api_key) {
+    const domain = 'geoquest.gg'
+    const url = `https://api.mailgun.net/v3/${domain}/messages`
+    const params = new URLSearchParams()
+    params.append('from', 'noreply@geoquest.gg')
+    params.append('to', email)
+    params.append('subject', 'GeoQuest.gg - Your passcode')
+    params.append('text', `Thank you for your support! Your GeoQuest passcode is: ${code}`)
+    params.append('html', `Thank you for your support! Your <a href="https://geoquest.gg">GeoQuest</a> passcode is: <b>${code}</b>`)
 
-    const mailOptions = {
-        from: 'noreply@geoquest.gg',
-        to: email,
-        subject: 'GeoQuest.gg - Your passcode',
-        text: `Thank you for your support! Your GeoQuest passcode is: ${code}`,
-        html: `Thank you for your support! Your <a href="https://geoquest.gg">GeoQuest</a> passcode is: <b>${code}</b>`
-    }
-
-    transporter.sendMail(mailOptions, (err, info) => {
-        if (err) {
-            console.error('Error:', err)
-        } else {
-            console.log('Email sent:', info)
-        }
+    const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+            Authorization: 'Basic ' + Buffer.from(`api:${api_key}`).toString('base64'),
+            'Content-Type': 'application/x-www-form-urlencoded'
+        },
+        body: params.toString()
     })
+
+    if (!response.ok) {
+        console.error('Error sending email:', await response.text())
+    } else {
+        console.log('Email sent:', await response.json())
+    }
 }
