@@ -6,11 +6,18 @@
     "allCorrect": "All found!",
     "dailyQuest": "Daily Quest",
     "practice": "practice",
+    "newGame": "New Game",
     "achievements": "achievements",
     "changeMap": "change map",
     "settings": "settings",
     "restart": "restart",
     "share": "Share",
     "start": "Start",
-    "flagsOnly": "Display Flag Only"
+    "flagsOnly": "Display Flag Only",
+    "showTimer": "Display Timer",
+    "noPanNoZoom": "Disable pan and zoom",
+    "highscores": "Highscores",
+    "becomeASupporter": "Become A Supporter",
+    "viewBenefits": "View Benefits",
+    "newBest": "New best!"
 }

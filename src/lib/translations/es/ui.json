@@ -6,11 +6,18 @@
     "allCorrect": "¡Todo encontrado!",
     "dailyQuest": "Misión diaria",
     "practice": "practicar",
+    "newGame": "Nuevo juego",
     "achievements": "logros",
     "changeMap": "cambiar tarjeta",
     "settings": "configuración",
     "restart": "reiniciar",
     "share": "Compartir",
     "start": "Comenzar",
-    "flagsOnly": "Mostrar solo banderas"
+    "flagsOnly": "Mostrar solo banderas",
+    "showTimer": "Temporizador de pantalla",
+    "noPanNoZoom": "Desactivar la panorámica y el zoom",
+    "highscores": "Puntuaciones",
+    "becomeASupporter": "Conviértete en un partidario",
+    "viewBenefits": "Ver beneficios",
+    "newBest": "¡Nuevo mejor!"
 }

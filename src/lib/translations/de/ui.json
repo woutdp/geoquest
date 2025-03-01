@@ -6,11 +6,18 @@
     "allCorrect": "Alles gefunden!",
     "dailyQuest": "Tägliche Aufgabe",
     "practice": "üben",
+    "newGame": "Neues Spiel",
     "achievements": "Erfolge",
     "changeMap": "Karte ändern",
     "settings": "Einstellungen",
     "restart": "Neustart",
     "share": "Teilen",
     "start": "Start",
-    "flagsOnly": "Zeige nur Flaggen"
+    "flagsOnly": "Zeige nur Flaggen",
+    "showTimer": "Timeranzeige",
+    "noPanNoZoom": "Schwenken und Zoomen deaktivieren",
+    "highscores": "Bestenliste",
+    "becomeASupporter": "Unterstützer werden",
+    "viewBenefits": "Vorteile anzeigen",
+    "newBest": "Neues Bestes!"
 }

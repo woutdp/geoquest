@@ -98,5 +98,9 @@
     "all-world-capitals": {
         "name": "Verloren in Übersetzungen",
         "description": "Finde die Hauptstädte ALLER Länder der Welt, ohne einen Fehler zu machen."
+    },
+    "supporter": {
+        "name": "Mäzen",
+        "description": "Werde ein Mäzen!"
     }
 }

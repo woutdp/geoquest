@@ -18,6 +18,13 @@
     polyfillCountryFlagEmojis()
     import dailyQuestCountries from '$lib/assets/data/daily-quest.json'
 
+    interface LeaderboardEntry {
+        total: number
+        correct: number
+        timeMs: number
+        createdAt: number
+    }
+
     let questionFeature
     let lastFocusedCountry
     let focusedCountry
@@ -29,6 +36,8 @@
     let streak = 0
     let mistakes = 0
     let mistakesThisGuess = 0
+    let intervalId: NodeJS.Timeout
+    let timeMs: number, startTimeMs: number
     let interfaceLoaded = false
     let showMenu: boolean
     let showWinScreen = false
@@ -54,6 +63,7 @@
 
     function restart() {
         showWinScreen = false
+        timeMs = 0
         mistakes = 0
         mistakesThisGuess = 0
         streak = 0
@@ -63,6 +73,12 @@
 
         if (gameConfiguration.possibleCountries === 'all') unfoundFeatures = $geometries
         else unfoundFeatures = toFind
+
+        clearInterval(intervalId)
+        startTimeMs = Date.now()
+        intervalId = setInterval(() => {
+            timeMs = Date.now() - startTimeMs
+        }, 1000)
 
         questionFeature = undefined
         shuffleColors()
@@ -76,6 +92,16 @@
             .sortBy(g => _(configuration.countries).findIndex(c => c === g.properties.name))
             .value()
         originalToFind = toFind
+
+        clearInterval(intervalId)
+        startTimeMs = Date.now()
+        intervalId = setInterval(() => {
+            timeMs = Date.now() - startTimeMs
+
+            if (configuration?.mode === 'dailyQuest') {
+                $save.dailyQuestProgress = {...$save.dailyQuestProgress, timeMs: timeMs}
+            }
+        }, 1000)
 
         if (configuration?.restart ?? true) restart()
 
@@ -100,6 +126,8 @@
                 .flatten()
                 .reject(c => configuration.countries.includes(c))
                 .value().length
+
+            timeMs = $save.dailyQuestProgress.timeMs
 
             if (alreadyFound.length === progress.length) mistakesThisGuess = 0
             else mistakesThisGuess = _(progress.slice(-1)[0]).difference(configuration.countries).value().length
@@ -128,6 +156,8 @@
                 questionFeature = undefined
                 pickFeature()
             } else {
+                clearInterval(intervalId)
+
                 unfoundFeatures = []
                 showMenu = true
                 showWinScreen = true
@@ -136,7 +166,7 @@
     }
 
     function newDailyQuest() {
-        if ($save?.dailyQuestProgress?.day !== $day) $save.dailyQuestProgress = {...$save.dailyQuestProgress, progress: [], day: $day}
+        if ($save?.dailyQuestProgress?.day !== $day) $save.dailyQuestProgress = {...$save.dailyQuestProgress, progress: [], day: $day, timeMs: 0}
 
         newGame({
             mode: 'dailyQuest',
@@ -170,6 +200,17 @@
             ui.triggerArrow()
 
             if (toFind.length === 0) {
+                clearInterval(intervalId)
+
+                timeMs = Date.now() - startTimeMs
+                const leaderboardEntry: LeaderboardEntry = {
+                    total: originalToFind.length,
+                    correct: correct + 1 /* correct counter hasnt't yet updated */,
+                    timeMs,
+                    createdAt: Date.now()
+                }
+                saveToLeaderboard(leaderboardEntry)
+
                 showMenu = true
                 showWinScreen = true
                 focusedCountry = undefined
@@ -203,6 +244,16 @@
         mistakes += 1
         streak = 0
         return WRONG
+    }
+
+    function saveToLeaderboard(leaderboardEntry: LeaderboardEntry) {
+        const currentQuestId = `${chosenMap.id}-${gameConfiguration.countries}`
+        const currentQuestLeaderboard = $save.localLeaderboard[currentQuestId]
+        if (!currentQuestLeaderboard) {
+            $save.localLeaderboard[currentQuestId] = [leaderboardEntry]
+        } else {
+            $save.localLeaderboard[currentQuestId] = [...currentQuestLeaderboard, leaderboardEntry]
+        }
     }
 
     function countryFocusedHandler(feature = undefined) {
@@ -244,6 +295,7 @@
     {originalToFind}
     {mistakes}
     {correct}
+    {timeMs}
     {restart}
     {newGame}
     {showWinScreen}

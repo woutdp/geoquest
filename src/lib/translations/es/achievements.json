@@ -98,5 +98,9 @@
     "all-world-capitals": {
         "name": "Perdido en traducciones",
         "description": "Encuentra las capitales de TODOS los países del mundo sin cometer un error."
+    },
+    "supporter": {
+        "name": "Mecena",
+        "description": "¡Conviértete en un mecena!"
     }
 }

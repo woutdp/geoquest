@@ -9,17 +9,20 @@
     import IconFullScreen from '$lib/icons/IconFullScreen.svelte'
     import IconMenu from '$lib/icons/IconMenu.svelte'
     import IconMistake from '$lib/icons/IconMistake.svelte'
-    import {chosenMap, showFlagOnly} from '$lib/store'
+    import {chosenMap, noPanNoZoom, showFlagOnly, showTimer} from '$lib/store'
     import {t} from '$lib/translations'
     import BuyMeACoffee from '$lib/ui/BuyMeACoffee.svelte'
     import Menu from '$lib/ui/menu/Menu.svelte'
     import Notifications from '$lib/ui/Notifications.svelte'
-    import {achieveAchievement} from '$lib/utils'
+    import {achieveAchievement, getTimeStringFromMs} from '$lib/utils'
+    import IconLock from '$lib/icons/IconLock.svelte'
+    import IconTimer from '$lib/icons/IconTimer.svelte'
 
     export let foundFeatures
     export let originalToFind
     export let questionFeature
     export let streak
+    export let timeMs
     export let restart
     export let showMenu = false
     export let mistakes
@@ -80,6 +83,14 @@
                             <span in:scale|global={{start: 1.5}} class="ml-1">{correct}</span>
                         {/key}
                     </span>
+                    {#if $showTimer}
+                        <span class="flex items-center justify-center mx-2 text-foreground">
+                            <IconTimer />
+                            {#key timeMs}
+                                <span class="ml-1">{getTimeStringFromMs(timeMs)}</span>
+                            {/key}
+                        </span>
+                    {/if}
                     <span class="mx-5 whitespace-nowrap">{foundFeatures.length} / {originalToFind.length}</span>
                     {#key streak}
                         {#if streak > 1}
@@ -130,11 +141,23 @@
     {/if}
     <div class="container absolute z-40 items-start justify-between hidden mt-4 pointer-events-none md:flex">
         <div class="flex flex-col font-black rounded-md shadow-md pointer-events-auto text-md text-foreground-light bg-background-dark">
-            <button on:click={() => map.zoomIn()} class="flex items-center justify-center w-10 h-10 transition-all duration-75 rounded-md hover:text-xl hover:text-foreground hover:bg-background"
-                >+</button
+            <div class="relative">
+                <input id="noPanNoZoom" class="absolute opacity-0 peer cursor-pointer" type="checkbox" bind:checked={$noPanNoZoom} />
+                <label
+                    for="noPanNoZoom"
+                    class="flex items-center justify-center w-10 h-10 transition-all duration-75 rounded-md hover:text-xl hover:text-foreground hover:bg-background peer-checked:bg-foreground peer-checked:text-background cursor-pointer"
+                    ><span class="sr-only">{$t('ui.noPanNoZoom')}</span><IconLock /></label
+                >
+            </div>
+            <button
+                on:click={() => map.zoomIn()}
+                class="flex items-center justify-center w-10 h-10 transition-all duration-75 rounded-md hover:text-xl hover:text-foreground hover:bg-background disabled:opacity-50 disabled:pointer-events-none"
+                disabled={$noPanNoZoom}>+</button
             >
-            <button on:click={() => map.zoomOut()} class="flex items-center justify-center w-10 h-10 transition-all duration-75 rounded-md hover:text-xl hover:text-foreground hover:bg-background"
-                >-</button
+            <button
+                on:click={() => map.zoomOut()}
+                class="flex items-center justify-center w-10 h-10 transition-all duration-75 rounded-md hover:text-xl hover:text-foreground hover:bg-background disabled:opacity-50 disabled:pointer-events-none"
+                disabled={$noPanNoZoom}>-</button
             >
         </div>
         <div class="flex">

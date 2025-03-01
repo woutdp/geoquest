@@ -7,9 +7,17 @@
     import Country from '$lib/map/Country.svelte'
     import CountryHelper from '$lib/map/CountryHelper.svelte'
     import IslandHelper from '$lib/map/IslandHelper.svelte'
-    import {clientX, clientY, geojson, geometries, mousePos, projection} from '$lib/store'
+    import {clientX, clientY, geojson, geometries, mousePos, noPanNoZoom, projection} from '$lib/store'
 
     let transform = d3.zoomIdentity
+    $: d3Svg && ($noPanNoZoom ? disableZoom() : enableZoom())
+    function disableZoom() {
+        d3Svg.call(zoom).on('.zoom', null)
+    }
+    function enableZoom() {
+        d3Svg.call(zoom)
+    }
+
     let svg
     let d3Svg
     let scale = 1
@@ -57,7 +65,11 @@
 
     onMount(async () => {
         d3Svg = d3.select(svg)
-        d3Svg.call(zoom)
+        if ($noPanNoZoom) {
+            disableZoom()
+        } else {
+            enableZoom()
+        }
 
         centerMap()
     })

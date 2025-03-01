@@ -7,9 +7,12 @@
     import IconShare from '$lib/icons/IconShare.svelte'
     import {save} from '$lib/store'
     import {t} from '$lib/translations'
+    import {getTimeStringFromMs} from '$lib/utils'
+    import IconTimer from '$lib/icons/IconTimer.svelte'
 
     export let mistakes: number
     export let correct: number
+    export let timeMs: number
     export let originalToFind: unknown[]
     export let gameConfiguration
 
@@ -52,6 +55,12 @@
                 {:else}
                     <span class="ml-1">{$t('ui.correctAnswers', {correct, allAnswers: originalToFind.length})}</span>
                 {/if}
+            </span>
+            <span in:fly|global={{x: -10, delay: 1200}} class="flex items-center justify-start text-foreground">
+                <IconTimer />
+                <span class="ml-1">
+                    {getTimeStringFromMs(timeMs, true)}
+                </span>
             </span>
         </div>
     </div>

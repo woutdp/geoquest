@@ -34,6 +34,7 @@
               nodejs
               yarn
               gh
+              wrangler
             ];
           };
         }
