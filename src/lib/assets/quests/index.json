@@ -74,5 +74,13 @@
     "tags": [ "Italy", "Piemonte", "Valle d'Aosta/Vallée d'Aoste", "Lombardia", "Trentino-Alto Adige", "Veneto", "Friuli Venezia Giulia", "Liguria", "Emilia-Romagna", "Toscana", "Umbria", "Marche", "Lazio", "Abruzzo", "Molise", "Campania", "Puglia", "Basilicata", "Calabria", "Sicilia", "Sardegna" ],
     "defaultTags": [ "Italy" ],
     "mapSource": "https://github.com/openpolis/geojson-italy/blob/master/topojson/limits_IT_provinces.topo.json"
+  },
+  {
+    "id": "germany-states",
+    "name": "States of Germany",
+    "objectsKey": "states",
+    "tags": ["Germany", "Former West Germany", "Former East Germany", "Western Germany", "Northern Germany", "Eastern Germany", "Southern Germany"],
+    "defaultTags": ["Germany"],
+    "mapSource": "https://github.com/isellsoap/deutschlandGeoJSON/blob/main/2_bundeslaender/4_niedrig.geo.json"
   }
 ]
