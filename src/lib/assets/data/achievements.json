@@ -155,6 +155,13 @@
       }
     },
     {
+      "slug": "all-germany-states",
+      "quest": "germany-states",
+      "extra": {
+        "tags": ["Germany"]
+      }
+    },
+    {
       "slug": "all-world-capitals",
       "quest": "world-capitals",
       "extra": {
