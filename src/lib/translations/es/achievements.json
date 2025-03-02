@@ -75,6 +75,10 @@
         "name": "El país del medio",
         "description": "Encuentra TODAS las provincias de China sin cometer un error."
     },
+    "all-germany-states": {
+        "name": "Del Mar del Norte a los Alpes",
+        "description": "Encuentra TODOS los estados de Alemania sin cometer un error."
+    },
     "all-russian-regions": {
         "name": "Alejandro Nevski",
         "description": "Encuentra TODAS las regiones de Rusia sin cometer un error."
