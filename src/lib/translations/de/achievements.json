@@ -75,6 +75,10 @@
         "name": "Das Reich der Mitte",
         "description": "Finde ALLE Provinzen Chinas, ohne einen Fehler zu machen."
     },
+    "all-germany-states": {
+        "name": "Vom Nordsee bis zu den Alpen",
+        "description": "Finde ALLE Bundesländer Deutschlands ohne einen Fehler."
+    },
     "all-russian-regions": {
         "name": "Alexander Newski",
         "description": "Finde ALLE Regionen Russlands, ohne einen Fehler zu machen."
