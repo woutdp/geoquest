@@ -75,6 +75,10 @@
         "name": "The middle Country",
         "description": "Find ALL provinces of China without making a mistake."
     },
+    "all-germany-states": {
+        "name": "From North Sea to Alps",
+        "description": "Find ALL states of Germany without making a mistake."
+    },
     "all-russian-regions": {
         "name": "Alexander Nevsky",
         "description": "Find ALL regions of Russia without making a mistake."
