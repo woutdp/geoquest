@@ -1,11 +1,13 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/typescript-node
 {
-    "name": "Node.js & TypeScript",
-    "image": "mcr.microsoft.com/devcontainers/typescript-node:18-bullseye",
+    "name": "Geoquest",
+    "image": "debian:12.8-slim",
 
     // Features to add to the dev container. More info: https://containers.dev/features.
-    // "features": {},
+    "features": {
+        "ghcr.io/devcontainers/features/node:1": {}
+    },
 
     // Use 'forwardPorts' to make a list of ports inside the container available locally.
     "forwardPorts": [5173],

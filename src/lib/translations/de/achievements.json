@@ -67,9 +67,40 @@
         "name": "Wörtlich 5Head",
         "description": "Finde ALLE Länder ohne Fehler."
     },
+    "all-usa-sates": {
+        "name": "Reiß sie alle raus",
+        "description": "Finde ALLE Bundesstaaten der USA, ohne einen Fehler zu machen."
+    },
+    "all-chinese-provinces": {
+        "name": "Das Reich der Mitte",
+        "description": "Finde ALLE Provinzen Chinas, ohne einen Fehler zu machen."
+    },
+    "all-russian-regions": {
+        "name": "Alexander Newski",
+        "description": "Finde ALLE Regionen Russlands, ohne einen Fehler zu machen."
+    },
+    "all-french-departments": {
+        "name": "Die napoleonischen Eroberungen",
+        "description": "Finde ALLE Départements Frankreichs, ohne einen Fehler zu machen."
+    },
+    "all-italian-regions": {
+        "name": "Tropfen für Tropfen höhlt den Stein",
+        "description": "Finde ALLE Regionen Italiens, ohne einen Fehler zu machen."
+    },
+    "all-italian-provinces": {
+        "name": "Auch du, Brutus?",
+        "description": "Finde ALLE Provinzen Italiens, ohne einen Fehler zu machen."
+    },
+    "all-canadian-provinces": {
+        "name": "Ahornsirup, eh",
+        "description": "Finde ALLE Provinzen Kanadas, ohne einen Fehler zu machen."
+    },
+    "all-world-capitals": {
+        "name": "Verloren in Übersetzungen",
+        "description": "Finde die Hauptstädte ALLER Länder der Welt, ohne einen Fehler zu machen."
+    },
     "supporter": {
         "name": "Mäzen",
         "description": "Werde ein Mäzen!"
     }
 }
-

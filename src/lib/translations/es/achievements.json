@@ -67,9 +67,40 @@
         "name": "Literal 5Head",
         "description": "Encuentra TODOS los países sin cometer errores."
     },
+    "all-usa-sates": {
+        "name": "Arráncalos todos",
+        "description": "Encuentra TODOS los estados de EE. UU. sin cometer un error."
+    },
+    "all-chinese-provinces": {
+        "name": "El país del medio",
+        "description": "Encuentra TODAS las provincias de China sin cometer un error."
+    },
+    "all-russian-regions": {
+        "name": "Alejandro Nevski",
+        "description": "Encuentra TODAS las regiones de Rusia sin cometer un error."
+    },
+    "all-french-departments": {
+        "name": "Las conquistas napoleónicas",
+        "description": "Encuentra TODOS los departamentos de Francia sin cometer un error."
+    },
+    "all-italian-regions": {
+        "name": "Gota a gota se ahueca la piedra",
+        "description": "Encuentra TODAS las regiones de Italia sin cometer un error."
+    },
+    "all-italian-provinces": {
+        "name": "¿También tú, Bruto?",
+        "description": "Encuentra TODAS las provincias de Italia sin cometer un error."
+    },
+    "all-canadian-provinces": {
+        "name": "Jarabe de arce, ¿eh?",
+        "description": "Encuentra TODAS las provincias de Canadá sin cometer un error."
+    },
+    "all-world-capitals": {
+        "name": "Perdido en traducciones",
+        "description": "Encuentra las capitales de TODOS los países del mundo sin cometer un error."
+    },
     "supporter": {
         "name": "Mecena",
         "description": "¡Conviértete en un mecena!"
     }
 }
-
