@@ -123,10 +123,6 @@
 			"color": 3,
 			"tags": [ "China", "Provinces" ]
 		},
-		"Taiwan": {
-			"color": 1,
-			"tags": [ "China", "Provinces" ]
-		},
 		"Hongkong": {
 			"color": 3,
 			"tags": [ "China", "Special administrative regions" ]
