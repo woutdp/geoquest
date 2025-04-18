@@ -1,0 +1,52 @@
+From: https://geojson.xyz/
+Downloaded: https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_10m_populated_places_simple.geojson
+Processing:
+    - Added "gq_region" to each feature.properties (manually)
+    - Added "gq_tags" to each feature.properties (with p = feature.properties):
+        PROPERTIES MODIFICATION                 FILTER
+        tag("Capitals:world")                   p.adm0cap && p.featureclass == "Admin-0 capital"
+        tag(`CountryCapitals:${p.sov0name}`)    _.indexOf(["Admin-1 capital", "Admin-0 region capital", "Admin-1 region capital"], p.featureclass) != -1 && _.indexOf(["United States", "China", "Canada", "Russia", "India", "Brazil", "Indonesia", "Australia"], p.sov0name) != -1
+        tag("Population:>500K")                 p.pop_max > 500000
+        tag("Population:>1M")                   p.pop_max > 1000000
+        tag("Population:>2M")                   p.pop_max > 2000000
+        _.each(p.gq_region, region => tag(`Capitals:${region}`))
+                                                p.adm0cap && p.featureclass == "Admin-0 capital"
+        _.each(p.gq_region, region => tag(`MainCities:${region}`))
+                                                p.pop_max > 500000
+        tag(`MainCities:${p.sov0name}`)         p.pop_max > 500000 && _.indexOf(["United States", "China", "Russia", "India", "Brazil", "Indonesia", "Japan"], p.sov0name) != -1
+    - Added "gq_info" to each feature.properties
+        p.gq_info = {
+            country: p.sov0name,
+            region: p.adm1name,
+            population: p.pop_max > 1000000 ? $$.round(p.pop_max / 1000000) +"M" : Math.round(p.pop_max / 1000) +"K",
+        }
+                                                true
+        p.gq_info.country = p.adm0name          ["French Republic", "Kingdom of Spain"].includes(p.gq_info.country)
+    - Manually adapted not to have duplicate names:
+        * Santiago (DR)
+        * Vancouver (USA)
+        * Hyderabad (P)
+        * Hyderabad (I)
+        * St. Petersburg (F)
+        * Barcelona (V)
+        * Victoria (CA)
+        * Newcastle (A)
+        * San Jose (USA)
+        * Valencia (V)
+        * Natal (RGN)
+        * Natal (A)
+        * Vila Velha (A)
+        * Vila Velha (ES)
+        * Salem (USA)
+        * Salem (I)
+        * Suzhou (AH)
+        * Suzhou (JS)
+        * Birmingham (USA)
+        * Yichun (HLJ)
+        * Yichun (JX)
+        * Al Hillah (S)
+        * Al Hillah (I)
+    - Removed duplicate point "Bandar Lampung" keeping the one with regional capital property.
+    - Removed duplicate point "Kansas City" keeping Missouri's one.
+    - Removed "Vatican City", it overlaps with Rome and is not clickable.
+Name in properties: "name"

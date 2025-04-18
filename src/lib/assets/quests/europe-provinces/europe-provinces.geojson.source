@@ -1,0 +1,50 @@
+From: https://github.com/nvkelso/natural-earth-vector/tree/master/geojson
+Downloaded: https://raw.githubusercontent.com/nvkelso/natural-earth-vector/refs/heads/master/geojson/ne_10m_admin_1_states_provinces_lakes.geojson
+Processing:
+    - Autodetermined colors
+    - Added "gq_region" to each feature.properties (manually)
+        PROPERTIES MODIFICATION:
+            var regionName = "<regionName>";
+            if (!p.gq_region) p.gq_region = [];
+            if (!p.gq_region.includes(regionName)) p.gq_region.push(regionName);
+        FILTER:
+            p.gq_region.includes("<regionName>")
+    - Filtered features with the following filter:
+        if (p.gq_region) p.gq_region.includes("Europe")
+    - Added "gq_tags" to each feature.properties (with p = feature.properties):
+        PROPERTIES MODIFICATION:
+            var correspondances = {
+                GB1: "United Kingdom",
+                FR1: "France",
+                ESP: "Spain",
+                PRT: "Portugal",
+                DN1: "Denmark",
+                FI1: "Finland",
+            };
+            tag(correspondances[p.sov_a3] || p.admin)
+        FILTER:
+            true
+    - Fixed many doubles
+        FILTER:
+            _.chain(map.geojson.features).pluck("properties").where({ name: p.name }).value().length > 1;
+    - Added "gq_info.country" to each feature.properties
+        PROPERTIES MODIFICATION:
+            p.gq_info = {
+                country: p.gq_tags[0]
+            }
+        FILTER:
+            true
+    - Added "gq_info.region" to feature.properties having a region set (and added additional tags by region)
+        PROPERTIES MODIFICATION:
+            p.gq_info.region = p.region;
+            if (!["Croatia", "Bosnia and Herzegovina", "Belgium", "Greece", "Macedonia", "Republic of Serbia"].includes(p.admin)) tag(p.gq_info.country +":"+ p.gq_info.region);
+        FILTER:
+            p.region
+    - Corrected tags for "France" and "United Kingdom" overseas territories
+        PROPERTIES MODIFICATION:
+            tag(p.gq_info.country +":Overseas")
+        FILTER (just un indication, shapes then chosen manually):
+            (p.gq_info.country == "France" && p.gq_tags.includes("France:Overseas")) || p.gq_info.country != "France"
+            (p.gq_info.country == "United Kingdom" && p.gq_tags.includes("United Kingdom:Overseas")) || p.gq_info.country != "United Kingdom"
+    - Various other improvements gq_info
+Name in properties: "name"

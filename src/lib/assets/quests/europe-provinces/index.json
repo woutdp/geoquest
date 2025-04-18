@@ -1,0 +1,24 @@
+{
+    "id": "europe-provinces",
+    "name": "🇪🇺 Provinces of Europe",
+    "objectsKey": "provinces",
+    "helpers": false,
+    "maxZoom": 1000,
+    "maps": [
+        {
+            "type": "basemap",
+            "style": "stroke-width: 0.2;",
+            "filePathRelativeToQuestDir": "../../basemaps/world-countries-simple.geojson",
+            "namePropertyKey": "name"
+        },
+        {
+            "type": "elements",
+            "style": "stroke-width: 0.03;",
+            "islandHelpersMargin": 5,
+            "filePathRelativeToQuestDir": "./europe-provinces.geojson",
+            "namePropertyKey": "name"
+        }
+    ],
+    "defaultTags": ["Germany"],
+    "tags": ["United Kingdom","Cyprus","France","France:Overseas","Ukraine","Belarus","Lithuania","Czech Republic","Germany","Estonia","Latvia","Latvia:Vidzeme","Latvia:Riga","Latvia:Latgale","Latvia:Zemgale","Latvia:Kurzeme","Norway","Sweden","Finland","Luxembourg","France:Hauts-de-France","Belgium","France:Grand Est","Macedonia","Albania","Kosovo","Kosovo:Đakovica","Kosovo:Prizren","Turkey","Spain","Spain:Ceuta","Denmark","Romania","Hungary","Hungary:Northern Great Plain","Hungary:Great Southern Plain","Slovakia","Poland","Ireland","Ireland:Border","United Kingdom:Northern Ireland","Greece","Austria","Hungary:Western Transdanubia","Italy","Italy:Valle d'Aosta","Switzerland","Italy:Piemonte","Italy:Lombardia","Italy:Trentino-Alto Adige","Netherlands","Liechtenstein","Italy:Liguria","France:Provence-Alpes-Côte-d'Azur","France:Auvergne-Rhône-Alpes","Republic of Serbia","Croatia","Hungary:Southern Transdanubia","Slovenia","Slovenia:Obalno-kraška","Slovenia:Pomurska","Bulgaria","Spain:Melilla","San Marino","Italy:Emilia-Romagna","Italy:Marche","Italy:Veneto","Italy:Friuli-Venezia Giulia","Monaco","Slovenia:Gorenjska","Slovenia:Goriška","France:Nouvelle-Aquitaine","Spain:Foral de Navarra","Spain:País Vasco","Spain:Aragón","France:Occitanie","Spain:Cataluña","Kosovo:Gnjilane","Kosovo:Uroševac","Montenegro","Bosnia and Herzegovina","Kosovo:Kosovska Mitrovica","Kosovo:Pristina","Kosovo:Peć","France:Bourgogne-Franche-Comté","Spain:Extremadura","Portugal","Portugal:Alentejo","Slovenia:Podravska","Slovenia:Koroška","Slovenia:Savinjska","Hungary:Northern Hungary","Hungary:Central Transdanubia","Hungary:Central Hungary","Moldova","Spain:Andalucía","Northern Cyprus","Slovenia:Spodnjeposavska","Slovenia:Jugovzhodna Slovenija","Slovenia:Notranjsko-kraška","Spain:Galicia","Portugal:Norte","Portugal:Centro","Spain:Castilla y León","Portugal:Algarve","United Kingdom:West Wales and the Valleys","United Kingdom:North West","United Kingdom:West Midlands","United Kingdom:South West","United Kingdom:Eastern","United Kingdom:North East","United Kingdom:South Western","Ireland:Dublin","Ireland:Mid-East","Ireland:South-East","Ireland:South-West","Ireland:Mid-West","Ireland:West","United Kingdom:Yorkshire and the Humber","United Kingdom:East Midlands","United Kingdom:East","United Kingdom:South East","United Kingdom:East Wales","United Kingdom:Highlands and Islands","United Kingdom:North Eastern","Iceland","Italy:Abruzzo","Italy:Molise","Italy:Apulia","Italy:Basilicata","Italy:Calabria","Italy:Campania","Italy:Lazio","Italy:Toscana","Spain:Valenciana","Spain:Murcia","Portugal:Lisbon","Portugal:Norte, Centro","Spain:Asturias","Spain:Cantabria","France:Pays de la Loire","France:Bretagne","France:Normandie","United Kingdom:Overseas","Spain:Canary Is.","Italy:Sicily","Spain:Islas Baleares","Italy:Sardegna","France:Corse","Slovenia:Osrednjeslovenska","Slovenia:Zasavska","Spain:La Rioja","Spain:Castilla-La Mancha","Ireland:Midlands","United Kingdom:Greater London","Italy:Umbria","France:Centre-Val de Loire","France:Île-de-France","Spain:Madrid","Andorra","Malta","Malta:Malta Xlokk","Malta:Malta Majjistral","Malta:Gozo"]
+}

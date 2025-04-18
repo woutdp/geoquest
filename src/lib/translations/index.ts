@@ -22,12 +22,13 @@ export const fallbackLocale = 'en'
 const localeFiles = Object.assign(import.meta.glob('./*/*.json'), import.meta.glob('./*/*/*.json'), import.meta.glob('./*/*/*/*.json'))
 
 // Locale file names
-const localeFileKeys = [ 'ui', 'achievements', 'quests/index', ]
+const localeFileKeys = [ 'ui', 'quests/index', ]
 // Get list of quests, and expect translation files for each quest
 import quests from "$lib/assets/quests/index.json";
-_.each(quests, function (questObject) {
-  localeFileKeys.push(`quests/${questObject.id}/elements`);
-  localeFileKeys.push(`quests/${questObject.id}/groups`);
+_.each(quests, function (questId) {
+    localeFileKeys.push(`quests/${questId}/achievements`);
+    localeFileKeys.push(`quests/${questId}/elements`);
+    localeFileKeys.push(`quests/${questId}/groups`);
 });
 
 /**

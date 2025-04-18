@@ -22,13 +22,28 @@
 
     loadTags()
 
+    function toggleGroupDisplay(event) {
+        event.target.classList.toggle("foldable-menu-open")
+        event.target.nextElementSibling.classList.toggle("hidden")
+        event.target.parentElement.classList.toggle("foldable-group-open")
+    }
+
     $: selectedTags = _(tags)
         .filter(tag => tag.checked)
         .map(tag => tag.name)
         .value()
-    $: unselected = _(tags)
+    $: unselectedTranslatedGrouped = _(tags)
         .filter(tag => !tag.checked)
-        .map(tag => tag.name)
+        .map(tag => {
+            let translatedTagName = $t(`quests/${chosenMap.id}/groups.${tag.name}`)
+            let translatedTagNameSplit = translatedTagName.split(":")
+            return {
+                fullName: translatedTagName,
+                nameWithoutGroup: translatedTagNameSplit.length > 1 ? _.drop(translatedTagNameSplit).join(":") : translatedTagNameSplit[0],
+                groupName: translatedTagNameSplit.length > 1 ? translatedTagNameSplit[0] : undefined,
+            }
+        })
+        .groupBy("groupName")
         .value()
 
     $: disabled = selectedTags.length === 0
@@ -40,14 +55,24 @@
             {#each tags as tag}
                 <input id={tag.name} type="checkbox" class="hidden" hidden bind:checked={tag.checked} />
             {/each}
-            {#each unselected as tag}
-                <div class="flex justify-center mb-2 mr-2">
-                    <label
-                        for={tag}
-                        class="px-3 py-1 text-sm font-semibold uppercase transition-all border-2 rounded-full cursor-pointer whitespace-nowrap text-background bg-foreground hover:border-background last:mr-0 border-foreground"
-                    >
-                        {$t(`quests/${chosenMap.id}/groups.${tag}`)}
-                    </label>
+            {#each Object.entries(unselectedTranslatedGrouped) as [groupName, groupTags]}
+                <div class="pl-2 pr-2">
+                    {#if groupName !== "undefined"}
+                        <button on:click={(e) => { toggleGroupDisplay(e, this) }} class="p-2 mb-2 text-xl font-bold foldable-menu">{groupName}</button>
+                    {/if}
+                    <div class="flex flex-wrap {groupName !== "undefined" ? "hidden": ""}">
+                        {#each groupTags as tagObject}
+                            <div class="flex justify-center mb-2 mr-2">
+                                <label
+                                    for={tagObject.fullName}
+                                    class="px-3 py-1 text-sm font-semibold transition-all border-2 rounded-full cursor-pointer whitespace-nowrap text-background bg-foreground hover:border-background last:mr-0 border-foreground"
+                                    title="{tagObject.fullName}"
+                                >
+                                    {tagObject.nameWithoutGroup}
+                                </label>
+                            </div>
+                        {/each}
+                    </div>
                 </div>
             {/each}
         </div>
@@ -58,9 +83,9 @@
                         <div class="flex justify-center my-1 mr-2">
                             <label
                                 for={tag}
-                                class="px-3 py-1 text-sm font-semibold uppercase transition-all border-2 rounded-full cursor-pointer whitespace-nowrap text-background bg-foreground-light hover:border-background last:mr-0 border-foreground"
+                                class="px-3 py-1 text-sm font-semibold transition-all border-2 rounded-full cursor-pointer whitespace-nowrap text-background bg-foreground-light hover:border-background last:mr-0 border-foreground"
                             >
-                                {$t(`quests/${chosenMap.id}/groups.${tag}`)}
+                                <span class="text-[#666]">{$t(`quests/${chosenMap.id}/groups.${tag}`).match(/[^\:]*:/) || ""}</span><span>{$t(`quests/${chosenMap.id}/groups.${tag}`).replace(/[^\:]*:/, "")}</span>
                             </label>
                         </div>
                     {/each}

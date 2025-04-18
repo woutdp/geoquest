@@ -1,16 +1,15 @@
 <script lang="ts">
     import _ from 'lodash'
 
-    import achievements from '$lib/assets/data/achievements.json'
     import IconTrophySmall from '$lib/icons/IconTrophySmall.svelte'
-    import {maps, save} from '$lib/store'
+    import {achievements, maps, save} from '$lib/store'
     import {t} from '$lib/translations'
 
     $: missingAchievementsInQuests = _(achievements)
         .groupBy('quest')
-        .mapValues(function (achivementsForThisQuest) {
+        .mapValues(function (achievementsForThisQuest) {
             return _.reduce(
-                achivementsForThisQuest,
+                achievementsForThisQuest,
                 function (iteratee, achievement) {
                     return iteratee + ($save.achievements.includes(achievement.slug) ? 0 : 1)
                 },

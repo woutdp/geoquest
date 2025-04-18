@@ -12,6 +12,7 @@
     import DebugInterface from '$lib/ui/DebugInterface.svelte'
     import LoadingScreen from '$lib/ui/LoadingScreen.svelte'
     import MouseTooltip from '$lib/ui/MouseTooltip.svelte'
+    import InfoTooltip from '$lib/ui/InfoTooltip.svelte'
     import UI from '$lib/ui/UI.svelte'
     import {achieveAchievement, ALREADY_GUESSED, CORRECT, getGeojsonByName, processExtraAchievements, shuffleColors, WRONG} from '$lib/utils'
 
@@ -92,6 +93,10 @@
             .sortBy(g => _(configuration.countries).findIndex(c => c === g.properties.name))
             .value()
         originalToFind = toFind
+
+        // zoom to fit geometries to find
+        let toFindGeojson = _.filter($geojson.features, geometry => configuration.countries.includes(geometry.properties.name))
+        map.focusGeometries(toFindGeojson)
 
         clearInterval(intervalId)
         startTimeMs = Date.now()
@@ -278,7 +283,7 @@
 
     onMount(async () => {
         await loadMap(chosenMap)
-        newDailyQuest()
+        if (chosenMap.id == "world-countries") newDailyQuest() // run on start only for countries because daily quest does not support other maps so far
     })
 </script>
 
@@ -317,3 +322,4 @@
 {/if}
 
 <MouseTooltip {focusedCountry} {unfoundFeatures} />
+<InfoTooltip {focusedCountry} {unfoundFeatures} />

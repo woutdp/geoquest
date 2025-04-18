@@ -2,8 +2,7 @@ import * as turf from '@turf/turf'
 import _ from 'lodash'
 import {get} from 'svelte/store'
 
-import achievements from '$lib/assets/data/achievements.json'
-import {notifications, save} from '$lib/store'
+import {achievements, notifications, save} from '$lib/store'
 import {countryColors, geometries, loadedMap} from '$lib/store'
 
 export const CORRECT = 'correct'
@@ -27,9 +26,9 @@ export function antimeridian(featureCollection) {
     return featureCollection
 }
 
-export function buffer(feature) {
+export function buffer(feature, margin=40) {
     if (feature === null) return ''
-    return turf.concave(antimeridian(turf.explode(turf.buffer(feature, 40))), {units: 'kilometers', maxEdge: 300})
+    return turf.concave(antimeridian(turf.explode(turf.buffer(feature, margin))), {units: 'kilometers', maxEdge: 300})
 }
 
 export function dictToArray(d) {

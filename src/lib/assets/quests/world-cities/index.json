@@ -1,0 +1,25 @@
+{
+    "id": "world-cities",
+    "name": "🌆 Cities of the world",
+    "objectsKey": "cities",
+    "maps": [
+        {
+            "type": "basemap",
+            "filePathRelativeToQuestDir": "../../basemaps/world-countries-simple.geojson",
+            "namePropertyKey": "name"
+        },
+        {
+            "type": "basemap",
+            "style": "stroke-width: 0.03; fill: none;",
+            "filePathRelativeToQuestDir": "../world-bigger-provinces/world-bigger-provinces.geojson",
+            "namePropertyKey": "name"
+        },
+        {
+            "type": "elements",
+            "filePathRelativeToQuestDir": "world-cities.geojson",
+            "namePropertyKey": "name"
+        }
+    ],
+    "defaultTags": ["Capitals:world"],
+    "tags": ["Population:>500K","MainCities:Africa","CountryCapitals:Russia","MainCities:Asia","MainCities:Middle East","CountryCapitals:India","Population:>1M","MainCities:America","MainCities:North America","MainCities:United States","CountryCapitals:United States","MainCities:South America","MainCities:Europe","MainCities:China","MainCities:Japan","MainCities:India","CountryCapitals:Brazil","MainCities:Brazil","Population:>2M","MainCities:Oceania","MainCities:Russia","MainCities:Indonesia","CountryCapitals:Indonesia","CountryCapitals:Japan","Capitals:world","Capitals:Europe","CountryCapitals:China","CountryCapitals:Canada","Capitals:Oceania","Capitals:Africa","Capitals:America","Capitals:Caribbean","Capitals:Asia","Capitals:Middle East","MainCities:Caribbean","Capitals:South America","Capitals:North America","CountryCapitals:Australia"]
+}

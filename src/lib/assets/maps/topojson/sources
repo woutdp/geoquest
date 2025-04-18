@@ -1,2 +1,0 @@
-basemap.json < https://cdn.jsdelivr.net/npm/world-atlas@2/land-50m.json (https://github.com/topojson/world-atlas)
-basemapCoordinates.json < https://github.com/simonepri/geo-maps/releases/latest/download/earth-lands-10km.geo.json (https://github.com/simonepri/geo-maps/blob/master/info/earth-lands.md)
