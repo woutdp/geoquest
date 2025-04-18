@@ -1,0 +1,56 @@
+[
+    {
+        "slug": "all-usa-sates",
+        "extra": {
+            "tags": [ "United States of America" ]
+        }
+    },
+    {
+        "slug": "all-chinese-provinces",
+        "extra": {
+            "tags": [ "China" ]
+        }
+    },
+    {
+        "slug": "all-russian-regions",
+        "extra": {
+            "tags": [ "Russia" ]
+        }
+    },
+    {
+        "slug": "all-brazilian-regions",
+        "extra": {
+            "tags": [ "Brazil" ]
+        }
+    },
+    {
+        "slug": "all-indian-regions",
+        "extra": {
+            "tags": [ "India" ]
+        }
+    },
+    {
+        "slug": "all-indonesian-provinces",
+        "extra": {
+            "tags": [ "Indonesia" ]
+        }
+    },
+    {
+        "slug": "all-canadian-provinces",
+        "extra": {
+            "tags": [ "Canada" ]
+        }
+    },
+    {
+        "slug": "all-australian-provinces",
+        "extra": {
+            "tags": [ "Australia" ]
+        }
+    },
+    {
+        "slug": "all-southafrican-provinces",
+        "extra": {
+            "tags": [ "South Africa" ]
+        }
+    }
+]

@@ -1,0 +1,97 @@
+[
+    {
+        "slug": "spin-flag"
+    },
+    {
+        "slug": "1-country"
+    },
+    {
+        "slug": "5-streak"
+    },
+    {
+        "slug": "10-streak"
+    },
+    {
+        "slug": "30-streak"
+    },
+    {
+        "slug": "daily-challenge"
+    },
+    {
+        "slug": "all-north-america",
+        "extra": {
+            "tags": [ "North America" ]
+        }
+    },
+    {
+        "slug": "all-balkans",
+        "extra": {
+            "tags": [ "Balkans" ]
+        }
+    },
+    {
+        "slug": "all-caribbean",
+        "extra": {
+            "tags": [ "Caribbean" ]
+        }
+    },
+    {
+        "slug": "all-middle-east",
+        "extra": {
+            "tags": [ "Middle East" ]
+        }
+    },
+    {
+        "slug": "all-europe",
+        "extra": {
+            "tags": [ "Europe" ]
+        }
+    },
+    {
+        "slug": "all-oceania",
+        "extra": {
+            "tags": [ "Oceania" ]
+        }
+    },
+    {
+        "slug": "all-asia",
+        "extra": {
+            "tags": [ "Asia" ]
+        }
+    },
+    {
+        "slug": "all-southeast-asia",
+        "extra": {
+            "tags": [ "Southeast Asia" ]
+        }
+    },
+    {
+        "slug": "all-africa",
+        "extra": {
+            "tags": [ "Africa" ]
+        }
+    },
+    {
+        "slug": "all-america",
+        "extra": {
+            "tags": [
+                "Caribbean",
+                "North America",
+                "Central America",
+                "South America"
+            ]
+        }
+    },
+    {
+        "slug": "all-world",
+        "extra": {
+            "tags": [
+                "America",
+                "Europe",
+                "Africa",
+                "Asia",
+                "Oceania"
+            ]
+        }
+    }
+]

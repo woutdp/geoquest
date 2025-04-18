@@ -1,0 +1,44 @@
+[
+    {
+        "slug": "all-german-landers",
+        "extra": {
+            "tags": [ "Germany" ]
+        }
+    },
+    {
+        "slug": "all-uk-provinces",
+        "extra": {
+            "tags": [ "United Kingdom" ]
+        }
+    },
+    {
+        "slug": "all-french-departments",
+        "extra": {
+            "tags": [ "France" ]
+        }
+    },
+    {
+        "slug": "all-italian-provinces",
+        "extra": {
+            "tags": [ "Italy" ]
+        }
+    },
+    {
+        "slug": "all-spanish-regions",
+        "extra": {
+            "tags": [ "Spain" ]
+        }
+    },
+    {
+        "slug": "all-polish-provinces",
+        "extra": {
+            "tags": [ "Poland" ]
+        }
+    },
+    {
+        "slug": "all-slovenian-provinces",
+        "extra": {
+            "tags": [ "Slovenia" ]
+        }
+    }
+]

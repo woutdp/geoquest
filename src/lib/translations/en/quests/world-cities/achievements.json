@@ -1,0 +1,46 @@
+{
+    "all-caribbean-capitals": {
+        "name": "Well you're good at clicking, because they weren't all easy to reach ;-)",
+        "description": "Find ALL Carribean capitals without making a mistake."
+    },
+    "all-american-capitals": {
+        "name": "Between Stanley and Nuuk",
+        "description": "Find ALL American capitals without making a mistake."
+    },
+    "all-european-capitals": {
+        "name": "The highest rated places for selfies?",
+        "description": "Find ALL European capitals without making a mistake."
+    },
+    "all-middleeastern-capitals": {
+        "name": "Uncle Sam is always ready to make them great again",
+        "description": "Find ALL Middle capitals countries without making a mistake."
+    },
+    "all-asian-capitals": {
+        "name": "Ants are less numerous",
+        "description": "Find ALL Asian capitals without making a mistake."
+    },
+    "all-african-capitals": {
+        "name": "World of youth",
+        "description": "Find ALL African capitals without making a mistake."
+    },
+    "all-oceanian-capitals": {
+        "name": "Capital villages",
+        "description": "Find ALL Oceanian capitals without making a mistake."
+    },
+    "all-world-capitals": {
+        "name": "Lost in translations",
+        "description": "Find ALL world capitals without making a mistake."
+    },
+    "world-cities-population-more-than-500K": {
+        "name": "That was really a lot!!!",
+        "description": "Find ALL world cities with more than half a million inhabitants."
+    },
+    "world-cities-population-more-than-1M": {
+        "name": "That was really a lot!!!",
+        "description": "Find ALL world cities with more than 1 million inhabitants."
+    },
+    "world-cities-population-more-than-2M": {
+        "name": "That was really a lot!!!",
+        "description": "Find ALL world cities with more than 2 million inhabitants."
+    }
+}

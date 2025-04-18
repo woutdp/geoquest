@@ -1,0 +1,9 @@
+From: https://github.com/nvkelso/natural-earth-vector/tree/master/geojson
+Downloaded: https://raw.githubusercontent.com/nvkelso/natural-earth-vector/refs/heads/master/geojson/ne_50m_admin_1_states_provinces_lakes.geojson
+Processing:
+    - Autocolored (added "gq_color")
+    - Added "gq_tags" to each feature.properties (with p = feature.properties):
+        PROPERTIES MODIFICATION                 FILTER
+        tag(p.admin)                            true
+    - Renamed "Georgia" to "Georgia " to avoid same exact name with the country messing up display.
+Name in properties: "name"

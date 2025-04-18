@@ -1,0 +1,20 @@
+{
+    "id": "world-bigger-provinces",
+    "name": "🗺️ Provinces of world's biggest countries",
+    "objectsKey": "provinces",
+    "maps": [
+        {
+            "type": "basemap",
+            "style": "stroke-width: 0.2;",
+            "filePathRelativeToQuestDir": "../../basemaps/world-countries-simple.geojson",
+            "namePropertyKey": "name"
+        },
+        {
+            "type": "elements",
+            "filePathRelativeToQuestDir": "./world-bigger-provinces.geojson",
+            "namePropertyKey": "name"
+        }
+    ],
+    "defaultTags": ["United States of America"],
+    "tags": ["Australia","Brazil","Canada","United States of America","China","India","Indonesia","Russia","South Africa"]
+}

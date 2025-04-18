@@ -4,6 +4,7 @@
     import {t} from '$lib/translations'
 
     export let slug
+    export let quest
 
     let unlocked = false
 
@@ -16,8 +17,8 @@
     </div>
     <div>
         <h1 class="font-black">
-            {#if unlocked}{$t(`achievements.${slug}.name`)}{:else}???{/if}
+            {#if unlocked}{$t(`quests/${quest}/achievements.${slug}.name`)}{:else}???{/if}
         </h1>
-        <p>{$t(`achievements.${slug}.description`)}</p>
+        <p>{$t(`quests/${quest}/achievements.${slug}.description`)}</p>
     </div>
 </div>
