@@ -47,4 +47,9 @@ Processing:
             (p.gq_info.country == "France" && p.gq_tags.includes("France:Overseas")) || p.gq_info.country != "France"
             (p.gq_info.country == "United Kingdom" && p.gq_tags.includes("United Kingdom:Overseas")) || p.gq_info.country != "United Kingdom"
     - Various other improvements gq_info
+    - Merged some areas of regions of French and UK overseas territories: Anguilla, Caicos and Turks, Bermudes, Montserrat, New Caledonia, St pierre and Miquelon and maybe more
+    - Manually improved coloring (especially for islands)
+    - Removed Vatican point
+    - Renamed Sark to Guernsey
+    - And maybe many more changes that I forgot to write here
 Name in properties: "name"
