@@ -1,5 +1,13 @@
 [
     {
+        "slug": "daily-challenge",
+        "hideQuestName": true
+    },
+    {
+        "slug": "supporter",
+        "hideQuestName": true
+    },
+    {
         "slug": "spin-flag"
     },
     {
@@ -13,9 +21,6 @@
     },
     {
         "slug": "30-streak"
-    },
-    {
-        "slug": "daily-challenge"
     },
     {
         "slug": "all-north-america",

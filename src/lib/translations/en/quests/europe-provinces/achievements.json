@@ -1,30 +1,30 @@
 {
     "all-french-departments": {
         "name": "Les conquêtes napoléoniennes",
-        "description": "Find ALL departments of France without making a mistake."
+        "description": "Find all departments of France without making a mistake."
     },
     "all-italian-provinces": {
         "name": "E tu, Brute?",
-        "description": "Find ALL provinces of Italy without making a mistake."
+        "description": "Find all provinces of Italy without making a mistake."
     },
-    "all-german-provinces": {
+    "all-german-landers": {
         "name": "Bismarck is back!!!",
-        "description": "Find ALL provinces of Germany without making a mistake."
+        "description": "Find all provinces of Germany without making a mistake."
     },
     "all-uk-provinces": {
         "name": "Don't tell me you've lost the crown!",
-        "description": "Find ALL provinces of the UK without making a mistake."
+        "description": "Find all provinces of the UK without making a mistake."
     },
-    "all-spanish-provinces": {
+    "all-spanish-regions": {
         "name": "Velazquez could have painted you if you hadn't moved around so much!",
-        "description": "Find ALL provinces of Spain without making a mistake."
+        "description": "Find all provinces of Spain without making a mistake."
     },
     "all-polish-provinces": {
         "name": "No please, no more potatoes please!",
-        "description": "Find ALL provinces of Poland without making a mistake."
+        "description": "Find all provinces of Poland without making a mistake."
     },
     "all-slovenian-provinces": {
         "name": "Welll, after all this ramblin' if you haven't seen any bear you must have cheated",
-        "description": "Find ALL provinces of Slovenia without making a mistake."
+        "description": "Find all provinces of Slovenia without making a mistake."
     }
 }
