@@ -5,6 +5,7 @@
 
     export let slug
     export let quest
+    export let hideQuestName
 
     let unlocked = false
 
@@ -20,5 +21,6 @@
             {#if unlocked}{$t(`quests/${quest}/achievements.${slug}.name`)}{:else}???{/if}
         </h1>
         <p>{$t(`quests/${quest}/achievements.${slug}.description`)}</p>
+        {#if !hideQuestName}<div class="text-xs"><i>{$t(`quests/index.${quest}`)}</i></div>{/if}
     </div>
 </div>

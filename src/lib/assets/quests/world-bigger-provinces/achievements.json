@@ -18,13 +18,13 @@
         }
     },
     {
-        "slug": "all-brazilian-regions",
+        "slug": "all-brazilian-provinces",
         "extra": {
             "tags": [ "Brazil" ]
         }
     },
     {
-        "slug": "all-indian-regions",
+        "slug": "all-indian-provinces",
         "extra": {
             "tags": [ "India" ]
         }

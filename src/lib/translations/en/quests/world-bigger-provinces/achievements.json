@@ -1,38 +1,38 @@
 {
     "all-usa-sates": {
         "name": "Yank them all",
-        "description": "Find ALL states of the USA without making a mistake."
+        "description": "Find all states of the USA without making a mistake."
     },
     "all-chinese-provinces": {
         "name": "The middle country",
-        "description": "Find ALL provinces of China without making a mistake."
+        "description": "Find all provinces of China without making a mistake."
     },
     "all-russian-regions": {
         "name": "Alexander Nevsky",
-        "description": "Find ALL regions of Russia without making a mistake."
+        "description": "Find all regions of Russia without making a mistake."
     },
     "all-canadian-provinces": {
         "name": "Maple syrup eh",
-        "description": "Find ALL provinces of Canada without making a mistake."
+        "description": "Find all provinces of Canada without making a mistake."
     },
     "all-brazilian-provinces": {
         "name": "Samba o cachaça?",
-        "description": "Find ALL provinces of Brazil without making a mistake."
+        "description": "Find all provinces of Brazil without making a mistake."
     },
     "all-indian-provinces": {
         "name": "Hope after meeting so many vegeterians you're convinced.",
-        "description": "Find ALL provinces of India without making a mistake."
+        "description": "Find all provinces of India without making a mistake."
     },
     "all-indonesian-provinces": {
         "name": "Island hopping, again",
-        "description": "Find ALL provinces of Indonesia without making a mistake."
+        "description": "Find all provinces of Indonesia without making a mistake."
     },
     "all-australian-provinces": {
         "name": "Ain't you seen the kangaroo?",
-        "description": "Find ALL provinces of Australia without making a mistake."
+        "description": "Find all provinces of Australia without making a mistake."
     },
     "all-southafrican-provinces": {
         "name": "South sea shores",
-        "description": "Find ALL provinces of South Africa without making a mistake."
+        "description": "Find all provinces of South Africa without making a mistake."
     }
 }
