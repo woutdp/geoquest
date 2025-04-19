@@ -49,4 +49,5 @@ Processing:
     - Removed duplicate point "Bandar Lampung" keeping the one with regional capital property.
     - Removed duplicate point "Kansas City" keeping Missouri's one.
     - Removed "Vatican City", it overlaps with Rome and is not clickable.
+    - Manually improved coloring
 Name in properties: "name"

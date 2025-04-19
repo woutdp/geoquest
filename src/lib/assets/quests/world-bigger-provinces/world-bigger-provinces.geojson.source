@@ -6,4 +6,5 @@ Processing:
         PROPERTIES MODIFICATION                 FILTER
         tag(p.admin)                            true
     - Renamed "Georgia" to "Georgia " to avoid same exact name with the country messing up display.
+    - Small manual improvements of coloring
 Name in properties: "name"
