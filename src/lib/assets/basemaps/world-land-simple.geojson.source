@@ -1,0 +1,21 @@
+From: https://geojson.xyz/
+Downloaded: https://d2ad6b4ur7yvpq.cloudfront.net/naturalearth-3.3.0/ne_110m_land.geojson
+
+And merged it's Polygon features into a single MultiPolygon feature with the following:
+```
+const worldSimple = {
+    type: "FeatureCollection",
+    features: [
+        {
+            type: "Feature",
+            properties: { name: "World" },
+            geometry: { type: "MultiPolygon", coordinates: [] }
+        }
+    ]
+}
+_.each(ne_110m_land.features, function (feature) {
+    worldSimple.geometry.coordinates.push(feature.geometry.coordinates);
+})
+```
+
+Name in properties: "name"

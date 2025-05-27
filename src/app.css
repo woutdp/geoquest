@@ -31,7 +31,17 @@ body {
     --json-tree-font-family: 'Roboto';
 }
 
-.fill-gray {
-  stroke: white;
-  stroke-width: 0.1px;
+.stroke-disabled_point {
+    stroke-width: 0.03px;
+}
+
+.foldable-menu:before {
+    content: "▶";
+    padding-right: 0.5em;
+}
+.foldable-menu.foldable-menu-open:before {
+    content: "▼";
+}
+.foldable-group-open {
+    width: 100%;
 }

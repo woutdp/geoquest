@@ -1,8 +1,7 @@
 <script lang="ts">
     import _ from 'lodash'
 
-    import achievements from '$lib/assets/data/achievements.json'
-    import {save} from '$lib/store'
+    import {achievements, save} from '$lib/store'
     import Achievement from '$lib/ui/menu/Achievement.svelte'
 
     $: sortedAchievements = _(achievements)

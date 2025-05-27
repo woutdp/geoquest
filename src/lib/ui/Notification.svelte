@@ -4,7 +4,7 @@
 
     import IconClose from '$lib/icons/IconClose.svelte'
     import IconTrophy from '$lib/icons/IconTrophy.svelte'
-    import {notifications} from '$lib/store'
+    import {chosenMap, notifications} from '$lib/store'
     import {t} from '$lib/translations'
 
     export let notification
@@ -21,7 +21,7 @@
         <div class="mx-4 text-lg">
             {#if notification.type === 'achievement'}
                 <h1 class="text-sm">Achievement Unlocked!</h1>
-                <p class="font-extrabold">{$t(`achievements.${notification.slug}.name`)}</p>
+                <p class="font-extrabold">{$t(`quests/${chosenMap.id}/achievements.${notification.slug}.name`)}</p>
             {/if}
         </div>
     </div>

@@ -1,0 +1,68 @@
+[
+    {
+        "slug": "all-american-capitals",
+        "extra": {
+            "tags": [ "Capitals:America" ]
+        }
+    },
+    {
+        "slug": "all-caribbean-capitals",
+        "extra": {
+            "tags": [ "Capitals:Caribbean" ]
+        }
+    },
+    {
+        "slug": "all-european-capitals",
+        "extra": {
+            "tags": [ "Capitals:Europe" ]
+        }
+    },
+    {
+        "slug": "all-asian-capitals",
+        "extra": {
+            "tags": [ "Capitals:Asia" ]
+        }
+    },
+    {
+        "slug": "all-african-capitals",
+        "extra": {
+            "tags": [ "Capitals:Africa" ]
+        }
+    },
+    {
+        "slug": "all-oceanian-capitals",
+        "extra": {
+            "tags": [ "Capitals:Oceania" ]
+        }
+    },
+    {
+        "slug": "all-middleeastern-capitals",
+        "extra": {
+            "tags": [ "Capitals:Middle East" ]
+        }
+    },
+    {
+        "slug": "all-world-capitals",
+        "extra": {
+            "tags": [ "Capitals:world" ]
+        }
+    },
+    {
+        "slug": "world-cities-population-more-than-500K",
+        "extra": {
+            "tags": [ "Population:>500K" ]
+        }
+    },
+    {
+        "slug": "world-cities-population-more-than-1M",
+        "extra": {
+            "tags": [ "Population:>1M" ]
+        }
+    },
+    {
+        "slug": "world-cities-population-more-than-2M",
+        "extra": {
+            "tags": [ "Population:>2M" ]
+        }
+    }
+]

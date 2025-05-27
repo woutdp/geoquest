@@ -19,14 +19,14 @@ export async function loadMap(map) {
     for (const [key, dataPromise] of Object.entries(map.data)) {
         const data = (await dataPromise).default
         loadedMap.data[key] = data
-        json = preprocessTopojson(json, key, data)
+        json = preprocessTopojson(json, key, data, loadedMap)
     }
 
     map.loaded = true
     loadedMapStore.set(loadedMap)
 }
 
-function preprocessTopojson(json, dataKey, data) {
+function preprocessTopojson(json, dataKey, data, mapObject) {
     const geometriesByName = _.keyBy(json.objects[dataKey].geometries, 'properties.name')
     const mergeGroups = _(data)
         .pickBy(value => _.has(value, 'belongsTo'))
@@ -77,7 +77,8 @@ function preprocessTopojson(json, dataKey, data) {
         const xs = Math.abs(bbox[0] - bbox[2])
         const ys = Math.abs(bbox[1] - bbox[3])
 
-        if (countryData?.helper || (countryData?.helper !== false && !geometry.properties.isIsland && geometry.properties.squareKm < 6000 && xs < 0.7 && ys < 0.7)) geometry.properties.helper = true
+
+        if (countryData?.helper || (mapObject?.helpers !== false && countryData?.helper !== false && !geometry.properties.isIsland && geometry.properties.squareKm < 6000 && xs < 0.7 && ys < 0.7)) geometry.properties.helper = true
         else geometry.properties.helper = false
 
         return geometry

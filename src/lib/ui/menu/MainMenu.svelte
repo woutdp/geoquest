@@ -1,11 +1,10 @@
 <script lang="ts">
-    import achievements from '$lib/assets/data/achievements.json'
     import IconInfo from '$lib/icons/IconInfo.svelte'
     import IconRestart from '$lib/icons/IconRestart.svelte'
     import IconLock from '$lib/icons/IconLock.svelte'
     import IconVolumeOff from '$lib/icons/IconVolumeOff.svelte'
     import IconVolumeUp from '$lib/icons/IconVolumeUp.svelte'
-    import {day, save, soundEffects, timeLeft} from '$lib/store'
+    import {achievements, day, save, soundEffects, timeLeft} from '$lib/store'
     import {t} from '$lib/translations'
     import AboutMenu from '$lib/ui/menu/AboutMenu.svelte'
     import Achievements from '$lib/ui/menu/Achievements.svelte'

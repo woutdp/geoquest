@@ -18,20 +18,35 @@ export const projections = [
     {func: d3.geoOrthographic(), name: 'Globe'}
 ]
 
-// Get list of quests, and make list of maps from it
-import quests from '$lib/assets/quests/index.json'
-export const maps = _.map(quests, function (questObject) {
-    return Object.assign(questObject, {
-        topojsonMaker: function () {
-            return import(`$lib/assets/quests/${questObject.id}/map.json`)
-        },
-        dataMaker: function () {
-            const elements = {}
-            elements[questObject.objectsKey] = import(`$lib/assets/quests/${questObject.id}/elements.json`)
-            return elements
-        }
-    })
-}) as const
+// Import all "index.json" in "quests/<quest-id>" directories
+import questsList from '$lib/assets/quests/index.json'
+// import.meta.glob('$lib/assets/quests/*/index.json'); // would also work without needing the "quests/index.json" file, but without good ordering
+const questsJsonFiles = _.map(questsList, questId => import(`$lib/assets/quests/${questId}/index.json`));
+async function loadJsonFiles (jsonFiles) {
+    return await Promise.all(_.map(jsonFiles, async file => {
+        // import json file
+        const module = await file;
+        // export json content
+        return module.default;
+    }));
+}
+
+// make complete list of achievements
+export const achievements = await buildAchievementsList();
+async function buildAchievementsList () {
+    return _.reduce(questsList, async (iteratee, questId) => {
+        let achievementsList = await iteratee;
+        let questAchievements = await import(`$lib/assets/quests/${questId}/achievements.json`);
+        _.each(questAchievements.default, function (achievementObject) {
+            achievementObject.quest = questId;
+            achievementsList.push(achievementObject);
+        });
+        return achievementsList;
+    }, []);
+};
+
+// Make "maps" variable from all quests json files
+export const maps = await loadJsonFiles(questsJsonFiles) as const;
 
 // Map
 export const loadedMap = writable()
@@ -40,47 +55,11 @@ export const geojson = derived(topojson, $topojson => ($topojson ? topojsonClien
 export const geometries = derived(topojson, $topojson => ($topojson ? Object.values($topojson?.objects)[0].geometries : undefined))
 export const projection = writable(projections[0].func)
 
-// Map choice
-export const chosenMap = _.find(maps, {id: getParam('m')}) || maps[0]
-chosenMap.topojson = chosenMap.topojsonMaker()
-chosenMap.data = chosenMap.dataMaker()
-
-if (chosenMap.id == 'world-capitals') {
-    // import basemap topojson
-    const basemapTopojson = import(`$lib/assets/maps/topojson/basemapCoordinates.json`)
-
-    // get world map arcs and geometry
-    let worldArcs
-    let worldGeometry
-    await basemapTopojson.then(value => {
-        worldArcs = value.arcs
-        worldGeometry = value.objects.land.geometries[0]
-    })
-
-    // get chosenMap arcs and geometries
-    let chosenMapArcs
-    let chosenMapGeometries
-    await chosenMap.topojson.then(value => {
-        if (!value.arcs) value.arcs = []
-        chosenMapArcs = value.arcs
-        chosenMapGeometries = value.objects[chosenMap.objectsKey].geometries
-    })
-
-    // convert world geometry arcs index in order to add them in chosenMap
-    const chosenMapArcsLength = chosenMapArcs.length
-    function recursivelyConvertArcs(arc) {
-        if (_.isArray(arc)) return _.map(arc, recursivelyConvertArcs)
-        else return arc + chosenMapArcsLength
-    }
-    const worldGeometryForChosenMap = Object.assign(worldGeometry, {arcs: recursivelyConvertArcs(worldGeometry.arcs)})
-
-    // add world arcs to chosenMap
-    _.each(worldArcs, function (arc) {
-        chosenMapArcs.push(arc)
-    })
-    // add world geometry to chosenMap geometry
-    chosenMapGeometries.unshift(worldGeometryForChosenMap)
-}
+// Choose map and build import it's contents
+export const chosenMap = _.find(maps, { id: getParam('m') }) || _.find(maps, { id: "world-countries", });
+chosenMap.topojson = import(`$lib/assets/quests/${chosenMap.id}/map.json`)
+chosenMap.data = {};
+chosenMap.data[chosenMap.objectsKey] = import(`$lib/assets/quests/${chosenMap.id}/elements.json`)
 
 // Settings
 export const soundEffects = localStorageWritable('settingsSoundEffects', true)

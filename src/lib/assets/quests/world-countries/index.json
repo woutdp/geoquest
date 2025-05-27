@@ -1,0 +1,13 @@
+{
+    "id": "world-countries",
+    "name": "🇺🇳 Countries of the world",
+    "objectsKey": "countries",
+    "tags": [
+      "Asia", "Middle East", "Southeast Asia", "Central Asia",
+      "Europe", "Balkans",
+      "America", "North America", "South America", "Central America", "Caribbean",
+      "Africa", "North Africa", "Southern Africa", "West Africa", "East Africa", "Central Africa",
+      "Oceania"
+    ],
+    "defaultTags": ["America"]
+}
