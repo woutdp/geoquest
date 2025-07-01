@@ -15,6 +15,7 @@
     "start": "Start",
     "flagsOnly": "Display Flag Only",
     "showTimer": "Display Timer",
+    "greyOutFoundFeatures": "Grey Out Found Features",
     "noPanNoZoom": "Disable pan and zoom",
     "highscores": "Highscores",
     "becomeASupporter": "Become A Supporter",
