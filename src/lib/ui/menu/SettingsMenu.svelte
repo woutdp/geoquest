@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {showFlagOnly, showTimer} from '$lib/store'
+    import {greyOutFoundFeatures,showFlagOnly, showTimer} from '$lib/store'
     import {availableLocales, t} from '$lib/translations'
 </script>
 
@@ -13,6 +13,16 @@
             <input id="showTimer" class="form-checkbox h-6 w-6 rounded text-gray focus:ring-0 focus:ring-offset-0 transition cursor-pointer" type="checkbox" bind:checked={$showTimer} />
             <label for="showTimer" class="ml-2 cursor-pointer">{$t('ui.showTimer')}</label>
         </div>
+        <div class="flex flex-wrap text-lg bg-foreground p-3 rounded items-center">
+            <input
+                id="greyOutFoundFeatures"
+                class="form-checkbox h-6 w-6 rounded text-gray focus:ring-0 focus:ring-offset-0 transition cursor-pointer"
+                type="checkbox"
+                bind:checked={$greyOutFoundFeatures}
+            />
+            <label for="greyOutFoundFeatures" class="ml-2 cursor-pointer">{$t('ui.greyOutFoundFeatures')}</label>
+        </div>
+
         <div class="flex flex-wrap gap-2 text-lg bg-foreground p-3 rounded items-center">
             <!-- Each of the language names is only directly written in their own language -->
             {#each Object.entries(availableLocales) as [locale, [name, flag]] (locale)}

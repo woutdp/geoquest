@@ -65,6 +65,8 @@ chosenMap.data[chosenMap.objectsKey] = import(`$lib/assets/quests/${chosenMap.id
 export const soundEffects = localStorageWritable('settingsSoundEffects', true)
 export const showFlagOnly = localStorageWritable('settingsShowFlagOnly', false)
 export const showTimer = localStorageWritable('settingsShowTimer', false)
+export const greyOutFoundFeatures = localStorageWritable('settingsGreyOutFoundFeatures', true)
+
 // Game settings
 export const noPanNoZoom = localStorageWritable('settingsNoPanNoZom', false)
 
