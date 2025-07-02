@@ -7,7 +7,7 @@
 
     export let lastFocusedCountry
     export let toFind
-    export let unfoundFeatures
+    export let activeFeatures
     export let mistakesThisGuess
 
     let mapId = 0
@@ -37,7 +37,7 @@
     </p>
     <p>
         Unfound: <JSONTree
-            value={_(unfoundFeatures)
+            value={_(activeFeatures)
                 .map(f => f.properties.name)
                 .value()}
         />
@@ -46,5 +46,20 @@
     <JSONTree value={{x: $clientX, y: $clientY}} />
     <JSONTree value={$save} />
     <JSONTree value={$notifications} /> -->
+    <p>
+        to find: {JSON.stringify(
+            _(toFind)
+                .map(f => f.properties.name)
+                .value()
+        )}
+    </p>
+    <p>
+        unfound features: {JSON.stringify(
+            _(activeFeatures)
+                .map(f => f.properties.name)
+                .value()
+        )}
+    </p>
+
     <button on:click={() => ($save = {...initialSave})} class="mt-4 rounded-md bg-foreground text-background hover:bg-foreground-light">Reset Savefile</button>
 </div>
