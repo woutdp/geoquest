@@ -4,7 +4,7 @@
     export let data
     export let foundFeatures
     export let path
-    export let unfoundFeatures
+    export let activeFeatures
     export let clickCountryHandler
     export let countryFocusedHandler
     export let strokeWidth
@@ -13,7 +13,7 @@
     let topojson = data[1]
 
     $: found = foundFeatures.includes(topojson)
-    $: disabled = !unfoundFeatures.includes(topojson)
+    $: disabled = !activeFeatures.includes(topojson)
     $: isGreyedOut = (found && $greyOutFoundFeatures) || disabled
 </script>
 

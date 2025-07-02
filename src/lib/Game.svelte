@@ -12,7 +12,6 @@
     import DebugInterface from '$lib/ui/DebugInterface.svelte'
     import LoadingScreen from '$lib/ui/LoadingScreen.svelte'
     import MouseTooltip from '$lib/ui/MouseTooltip.svelte'
-    import InfoTooltip from '$lib/ui/InfoTooltip.svelte'
     import UI from '$lib/ui/UI.svelte'
     import {achieveAchievement, ALREADY_GUESSED, CORRECT, getGeojsonByName, processExtraAchievements, shuffleColors, WRONG} from '$lib/utils'
 
@@ -30,7 +29,7 @@
     let lastFocusedCountry
     let focusedCountry
     let foundFeatures = [] // already found by user
-    let unfoundFeatures = [] // colored on the map, i.e. not greyed out
+    let activeFeatures = [] // colored on the map, i.e. not greyed out
     let toFind = [] // remaining countries to find
     let originalToFind = []
     let correctCountries = []
@@ -72,8 +71,8 @@
         foundFeatures = []
         correctCountries = []
 
-        if (gameConfiguration.possibleCountries === 'all') unfoundFeatures = $geometries
-        else unfoundFeatures = toFind
+        if (gameConfiguration.possibleCountries === 'all') activeFeatures = $geometries
+        else activeFeatures = toFind
 
         clearInterval(intervalId)
         startTimeMs = Date.now()
@@ -94,10 +93,6 @@
             .value()
         originalToFind = toFind
 
-        // zoom to fit geometries to find
-        let toFindGeojson = _.filter($geojson.features, geometry => configuration.countries.includes(geometry.properties.name))
-        map.focusGeometries(toFindGeojson)
-
         clearInterval(intervalId)
         startTimeMs = Date.now()
         intervalId = setInterval(() => {
@@ -113,8 +108,8 @@
         if (configuration?.mode === 'dailyQuest') {
             const progress = $save.dailyQuestProgress.progress
 
-            if (gameConfiguration.possibleCountries === 'all') unfoundFeatures = $geometries
-            else unfoundFeatures = toFind
+            if (gameConfiguration.possibleCountries === 'all') activeFeatures = $geometries
+            else activeFeatures = toFind
 
             const alreadyFound = _(progress)
                 .filter(arr => configuration.countries.includes(arr.slice(-1)[0]))
@@ -163,7 +158,7 @@
             } else {
                 clearInterval(intervalId)
 
-                unfoundFeatures = []
+                activeFeatures = []
                 showMenu = true
                 showWinScreen = true
             }
@@ -185,12 +180,15 @@
 
     function clickCountryHandler(feature) {
         if (foundFeatures.includes(feature)) {
+            /* this is a harder game-mode where countries _aren't_ greyed out
+             after they've been found. */
             if (!$greyOutFoundFeatures) {
-                console.log('already guessed:', feature.properties.name)
+                ui.triggerAlreadyGuessed()
+                mistakes += 1
             }
             return ALREADY_GUESSED
         }
-        if (!unfoundFeatures.includes(feature)) return ALREADY_GUESSED
+        if (!activeFeatures.includes(feature)) return ALREADY_GUESSED
 
         if (questionFeature?.properties?.name === feature.properties.name) {
             successSound.play()
@@ -202,7 +200,7 @@
 
             /* remove country from 'clickable' countries, depending on setting */
             if ($greyOutFoundFeatures) {
-                unfoundFeatures = _.filter(unfoundFeatures, e => e.properties.name !== feature.properties.name)
+                activeFeatures = _.filter(activeFeatures, e => e.properties.name !== feature.properties.name)
             }
 
             pickFeature()
@@ -228,7 +226,7 @@
                 showMenu = true
                 showWinScreen = true
                 focusedCountry = undefined
-                unfoundFeatures = []
+                activeFeatures = []
                 if (mistakes === 0 && gameConfiguration.mode === 'dailyQuest') achieveAchievement('daily-challenge')
             }
 
@@ -292,14 +290,14 @@
 
     onMount(async () => {
         await loadMap(chosenMap)
-        if (chosenMap.id == "world-countries") newDailyQuest() // run on start only for countries because daily quest does not support other maps so far
+        newDailyQuest()
     })
 </script>
 
 <svelte:window on:keypress={handleKeypress} on:mousemove={handleMousemove} bind:innerWidth={$clientX} bind:innerHeight={$clientY} />
 
 {#if dev}
-    <DebugInterface {mistakesThisGuess} {toFind} {unfoundFeatures} {lastFocusedCountry} />
+    <DebugInterface {mistakesThisGuess} {toFind} {activeFeatures} {lastFocusedCountry} />
 {/if}
 
 <UI
@@ -323,12 +321,11 @@
 />
 
 {#if $loadedMap && interfaceLoaded}
-    <Map bind:this={map} {clickCountryHandler} {countryFocusedHandler} {foundFeatures} {unfoundFeatures} {toFind} />
+    <Map bind:this={map} {clickCountryHandler} {countryFocusedHandler} {foundFeatures} {activeFeatures} {toFind} />
 {/if}
 
 {#if showLoadingScreen}
     <LoadingScreen />
 {/if}
 
-<MouseTooltip {focusedCountry} {unfoundFeatures} />
-<InfoTooltip {focusedCountry} {unfoundFeatures} />
+<MouseTooltip {focusedCountry} {activeFeatures} />

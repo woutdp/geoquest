@@ -1,18 +1,18 @@
 <script lang="ts">
     import emojiFlags from 'emoji-flags'
 
-    import {chosenMap,clientX, mousePos} from '$lib/store'
+    import {chosenMap, clientX, mousePos} from '$lib/store'
     import {t} from '$lib/translations'
 
     export let focusedCountry
-    export let unfoundFeatures
+    export let activeFeatures
 
     let h
     let show
 
     $: ({x, y} = $mousePos)
     $: flag = focusedCountry?.properties?.ISO2 ? emojiFlags.countryCode(focusedCountry?.properties?.ISO2).emoji : undefined
-    $: show = focusedCountry && !unfoundFeatures.includes(focusedCountry) && $clientX > 700
+    $: show = focusedCountry && !activeFeatures.includes(focusedCountry) && $clientX > 700
 </script>
 
 {#if show}
