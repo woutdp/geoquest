@@ -31,6 +31,8 @@
     export let showWinScreen
     export let arrowRotation: undefined | number
     export let arrowTimeout: number
+    export let showAlreadyGuessed: boolean = false
+    export let showAlreadyGuessedTimeout: number
     export let map
 
     let rotateFlag = false
@@ -56,9 +58,17 @@
     }
 
     export function triggerArrow(bearing?: number) {
+        showAlreadyGuessed = false
         clearTimeout(arrowTimeout)
         arrowRotation = bearing ? [360, 45, 90, 135, 180, 225, 270, 315][Math.round(bearing / 45) % 8] : undefined
         arrowTimeout = window.setTimeout(() => (arrowRotation = undefined), 4000)
+    }
+
+    export function triggerAlreadyGuessed() {
+        arrowRotation = undefined
+        clearTimeout(showAlreadyGuessedTimeout)
+        showAlreadyGuessed = true
+        showAlreadyGuessedTimeout = window.setTimeout(() => (showAlreadyGuessed = false), 4000)
     }
 
     onMount(async () => {
@@ -129,12 +139,21 @@
             {#if arrowRotation}
                 <div
                     in:fly|global={{y: -80, duration: 200}}
-                    out:fly|global={{y: 20, duration: 2500, easing: quartOut}}
+                    out:fly|global={{y: 20, duration: showAlreadyGuessed ? 0 : 2500, easing: quartOut}}
                     class="z-20 flex items-center justify-center w-10 h-10 mt-10 text-xl font-black rounded-full pointer-events-auto bg-background-dark"
                 >
                     <div style="transform: rotate({arrowRotation}deg);" class="transition-all rounded-full shadow-md bg-background-dark">
                         <IconArrowUp />
                     </div>
+                </div>
+            {/if}
+            {#if showAlreadyGuessed}
+                <div
+                    in:fly|global={{y: -80, duration: 200}}
+                    out:fly|global={{y: 20, duration: arrowRotation ? 0 : 2500, easing: quartOut}}
+                    class="z-20 flex items-center justify-center w-10 h-10 mt-10 text-xl font-black rounded-full pointer-events-auto bg-background-dark"
+                >
+                    <div class="transition-all rounded-full shadow-md bg-background-dark">Already guessed!</div>
                 </div>
             {/if}
         </div>
