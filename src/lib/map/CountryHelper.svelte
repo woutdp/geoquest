@@ -1,4 +1,6 @@
 <script lang="ts">
+    import {greyOutFoundFeatures} from '$lib/store'
+
     export let data
     export let foundFeatures
     export let path
@@ -12,6 +14,7 @@
 
     $: found = foundFeatures.includes(topojson)
     $: disabled = !unfoundFeatures.includes(topojson)
+    $: isGreyedOut = (found && $greyOutFoundFeatures) || disabled
 </script>
 
 <!-- svelte-ignore a11y-mouse-events-have-key-events -->
@@ -20,6 +23,6 @@
     on:mouseleave={() => countryFocusedHandler()}
     on:click={() => clickCountryHandler(topojson)}
     style="stroke-width: {strokeWidth}px"
-    class={found || disabled ? 'opacity-0' : `hover:opacity-90 fill-transparent stroke-white hover:fill-white cursor-pointer`}
+    class={isGreyedOut ? 'opacity-0' : `hover:opacity-90 fill-transparent stroke-white hover:fill-white cursor-pointer`}
     d={path(feature.properties.center)}
 />

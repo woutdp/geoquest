@@ -8,7 +8,7 @@
     import {loadMap} from '$lib/map'
     import Map from '$lib/map/Map.svelte'
     import {successSound} from '$lib/sounds'
-    import {chosenMap, clientX, clientY, day, geojson, geometries, loadedMap, mousePos, save, showDebug} from '$lib/store'
+    import {chosenMap, clientX, clientY, day, geojson, geometries, loadedMap, mousePos, save, showDebug, greyOutFoundFeatures} from '$lib/store'
     import DebugInterface from '$lib/ui/DebugInterface.svelte'
     import LoadingScreen from '$lib/ui/LoadingScreen.svelte'
     import MouseTooltip from '$lib/ui/MouseTooltip.svelte'
@@ -29,9 +29,9 @@
     let questionFeature
     let lastFocusedCountry
     let focusedCountry
-    let foundFeatures = []
-    let unfoundFeatures = []
-    let toFind = []
+    let foundFeatures = [] // already found by user
+    let unfoundFeatures = [] // colored on the map, i.e. not greyed out
+    let toFind = [] // remaining countries to find
     let originalToFind = []
     let correctCountries = []
     let streak = 0
@@ -184,7 +184,12 @@
     }
 
     function clickCountryHandler(feature) {
-        if (foundFeatures.includes(feature)) return ALREADY_GUESSED
+        if (foundFeatures.includes(feature)) {
+            if (!$greyOutFoundFeatures) {
+                console.log('already guessed:', feature.properties.name)
+            }
+            return ALREADY_GUESSED
+        }
         if (!unfoundFeatures.includes(feature)) return ALREADY_GUESSED
 
         if (questionFeature?.properties?.name === feature.properties.name) {
@@ -193,8 +198,12 @@
             if (gameConfiguration.mode === 'dailyQuest') logGuess(feature.properties.name)
 
             foundFeatures = [...foundFeatures, feature]
-            unfoundFeatures = _.filter(unfoundFeatures, e => e.properties.name !== feature.properties.name)
             toFind = _.filter(toFind, e => e.properties.name !== feature.properties.name)
+
+            /* remove country from 'clickable' countries, depending on setting */
+            if ($greyOutFoundFeatures) {
+                unfoundFeatures = _.filter(unfoundFeatures, e => e.properties.name !== feature.properties.name)
+            }
 
             pickFeature()
 
