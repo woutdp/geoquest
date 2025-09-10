@@ -50,4 +50,5 @@ Processing:
     - Removed duplicate point "Kansas City" keeping Missouri's one.
     - Removed "Vatican City", it overlaps with Rome and is not clickable.
     - Manually improved coloring
+    - Remove some additional capitals to keep only one per country (removed: Bloemfontain and Sucre, removed capital status from: Abidjan and Cape town)
 Name in properties: "name"
