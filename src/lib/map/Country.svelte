@@ -11,6 +11,17 @@
 
     let feature = data[0]
     let topojson = data[1]
+    let type = data[0]?.properties.type
+    let style = data[0]?.properties.style
+
+    let fill = (isGreyedOut, found, disabled, color, geometryType) => {
+        if (!isGreyedOut) return `${color} hover:fill-foreground cursor-pointer`
+
+        if (type == 'basemap') return 'fill-gray stroke-white stroke-[0.1]'
+        else if (found) return 'fill-gray stroke-white stroke-[0.1]'
+        else if (disabled) return `fill-gray stroke-white ${geometryType == 'Point' ? 'stroke-disabled_point' : 'stroke-[0.1]'}`
+        else return `${color} hover:fill-foreground cursor-pointer`
+    }
 
     $: color = getCountryColor(topojson, $countryColors)
     $: found = foundFeatures.includes(topojson)
@@ -24,7 +35,8 @@
         on:mouseover={() => countryFocusedHandler(topojson)}
         on:mouseleave={() => countryFocusedHandler()}
         on:click={() => clickCountryHandler(topojson)}
-        class={isGreyedOut ? 'fill-gray' : `${color} hover:fill-foreground cursor-pointer`}
+        class={fill(isGreyedOut, found, disabled, color, feature.geometry.type)}
+        {style}
         d={path(feature)}
     />
 {/key}
