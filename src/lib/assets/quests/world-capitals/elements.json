@@ -1,914 +1,1370 @@
 {
 	"Dhaka": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Brussels": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Ouagadougou": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Sofia": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Sarajevo": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Bridgetown": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Mata-Utu": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Gustavia": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Hamilton": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"North America"
+		]
 	},
 	"Bandar Seri Begawan": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"La Paz": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"South America"
+		]
 	},
 	"Manama": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Bujumbura": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Porto-Novo": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Thimphu": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Kingston": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Gaborone": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Apia": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Brasilia": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"South America"
+		]
 	},
 	"Nassau": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Saint Helier": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Minsk": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Belmopan": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"North America"
+		]
 	},
 	"Moscow": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Kigali": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Belgrade": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Dili": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Ashgabat": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Dushanbe": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Bucharest": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Bissau": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Hagatna": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Guatemala City": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"North America"
+		]
 	},
 	"Athens": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Malabo": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Tokyo": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Georgetown": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"South America"
+		]
 	},
 	"Saint Peter Port": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"T'bilisi": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Saint George's": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"London": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Libreville": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"San Salvador": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"North America"
+		]
 	},
 	"Conakry": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Banjul": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Nuuk": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"North America"
+		]
 	},
 	"Gibraltar": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Accra": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Muscat": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Tunis": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Amman": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Zagreb": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Port-au-Prince": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Budapest": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Hong Kong": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Tegucigalpa": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"North America"
+		]
 	},
 	"Caracas": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"South America"
+		]
 	},
 	"San Juan": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Melekeok": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Lisbon": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Longyearbyen": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Asuncion": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"South America"
+		]
 	},
 	"Baghdad": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Panama City": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"North America"
+		]
 	},
 	"Papeete": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Port Moresby": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Lima": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"South America"
+		]
 	},
 	"Islamabad": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Manila": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Adamstown": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Warsaw": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Saint-Pierre": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"North America"
+		]
 	},
 	"Lusaka": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Tallinn": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Cairo": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Pretoria": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Quito": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"South America"
+		]
 	},
 	"Rome": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Hanoi": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Honiara": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Addis Ababa": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Mogadishu": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Harare": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Riyadh": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Madrid": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Asmara": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Podgorica": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Chisinau": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Antananarivo": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Marigot": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Rabat": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Monaco": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Tashkent": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Rangoon": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Bamako": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Ulaanbaatar": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Majuro": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Skopje": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Port Louis": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Valletta": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Lilongwe": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Male": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Saipan": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Plymouth": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Nouakchott": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Douglas": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Kampala": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Kuala Lumpur": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Mexico City": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"North America"
+		]
 	},
 	"Jerusalem": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Paris": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Jamestown": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Helsinki": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Suva": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Stanley": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"South America"
+		]
 	},
 	"Palikir": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Torshavn": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Managua": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"North America"
+		]
 	},
 	"Amsterdam": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Oslo": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Windhoek": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Port-Vila": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Noumea": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Niamey": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Abuja": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Wellington": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Kathmandu": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Alofi": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Avarua": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Yamoussoukro": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Bern": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Bogota": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"South America"
+		]
 	},
 	"Beijing": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Yaounde": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Santiago": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"South America"
+		]
 	},
 	"West Island": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Ottawa": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"North America"
+		]
 	},
 	"Brazzaville": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Bangui": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Kinshasa": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Prague": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Nicosia": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"The Settlement": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"San Jose": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"North America"
+		]
 	},
 	"Praia": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Havana": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Mbabane": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Damascus": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Bishkek": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Nairobi": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Paramaribo": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"South America"
+		]
 	},
 	"Tarawa": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Phnom Penh": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Basseterre": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Moroni": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Sao Tome": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Bratislava": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Seoul": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Ljubljana": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Pyongyang": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Kuwait City": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Dakar": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"San Marino": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Freetown": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Victoria": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Astana": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"George Town": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Singapore": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Stockholm": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Khartoum": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Santo Domingo": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Roseau": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Djibouti": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Copenhagen": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Road Town": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Berlin": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Sanaa": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Algiers": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Washington, DC": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"North America"
+		]
 	},
 	"Montevideo": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"South America"
+		]
 	},
 	"Mamoudzou": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Beirut": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Castries": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Vientiane": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Funafuti": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Taipei": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Port-of-Spain": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Ankara": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Colombo": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Vaduz": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Riga": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Nuku'alofa": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Vilnius": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Luxembourg": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Monrovia": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Maseru": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Bangkok": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Lome": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"N'Djamena": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Grand Turk": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Tripoli": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Vatican City": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Kingstown": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Abu Dhabi": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Andorra la Vella": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Saint John's": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Kabul": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"The Valley": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Charlotte Amalie": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Reykjavik": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Tehran": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Yerevan": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Tirana": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Luanda": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Willemstad": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"Pago Pago": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Buenos Aires": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"South America"
+		]
 	},
 	"Canberra": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Oceania"
+		]
 	},
 	"Vienna": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Oranjestad": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Caribbean"
+		]
 	},
 	"New Delhi": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Dar es Salaam": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	},
 	"Baku": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Dublin": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Jakarta": {
 		"color": 1,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Kiew": {
 		"color": 2,
-		"tags": ["World"]
+		"tags": [
+			"Europe"
+		]
 	},
 	"Doha": {
 		"color": 3,
-		"tags": ["World"]
+		"tags": [
+			"Asia"
+		]
 	},
 	"Maputo": {
 		"color": 0,
-		"tags": ["World"]
+		"tags": [
+			"Africa"
+		]
 	}
 }
